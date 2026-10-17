@@ -6,6 +6,8 @@ On Codex CLI 0.163.0-alpha.10.2, the 0.2.0 package installed but the host report
 
 The updated isolated install discovered SessionStart, UserPromptSubmit and Stop as enabled, untrusted plugin hooks with no loading errors; all three cached commands passed. Local Windows regression: 90 tests, 89 passed and 1 POSIX-only test skipped. Host discovery is distinct from trust and lifecycle execution; those require a reviewed, trusted installation and a live session.
 
+After installing the public GitHub source in the real user HOME, each of the three hooks was reviewed and trusted through the native Codex /hooks UI. A new ephemeral, read-only app-server session then ran one controlled [kpdm] turn without tools. Actual hook/started and hook/completed notifications recorded all three KnowTether hooks with status completed: SessionStart emitted knowledge guidance, UserPromptSubmit emitted guidance, and Stop emitted CITATION_PLACEHOLDER for the deliberately unfinished citation. The turn completed normally. Existing user KPDM hooks also completed and were preserved. This checks lifecycle execution and advisory output, not improvements to real knowledge quality. No credentials or user configuration are included in this record.
+
 ## 0.2.0: Codex plugin and repository marketplace
 
 The installed local Codex CLI was `0.163.0-alpha.10.2`. A fresh test HOME inside the project was used; the user's active Codex configuration, credentials and hook trust were not changed. The real CLI registered a local fixture marketplace, installed `knowtether@knowtether` version `0.2.0`, and listed it as installed/enabled. The fixture used a copy of the actual public plugin components with a local source entry. The downloaded GitHub source path is checked separately before release.
