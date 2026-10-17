@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kpdm-hooks"
+version = "0.1.0"
+description = "Advisory KPDM hooks for grounded, usable knowledge outputs in Codex and Claude Code"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "MC"}]
+keywords = ["kpdm", "agent", "hooks", "knowledge", "codex", "claude-code"]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+dependencies = []
+
+[project.scripts]
+kpdm-hooks = "kpdm_hooks.cli:main"
+
+[project.urls]
+Repository = "https://github.com/mchenla/kpdm-hooks"
+Issues = "https://github.com/mchenla/kpdm-hooks/issues"
+
+[tool.setuptools.packages.find]
+include = ["kpdm_hooks*"]

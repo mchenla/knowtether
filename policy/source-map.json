@@ -1,0 +1,19 @@
+{
+  "adapter_version": "0.1.0",
+  "reference_version": "0.5.0-rc.2",
+  "reference_status": "candidate",
+  "accepted_baseline": "0.4.0 trial / conditional-pass",
+  "checked_on": "2026-10-17",
+  "authority": "KPDM author's source documents; originals are not distributed in this repository",
+  "note": "Hashes identify consulted files. They do not prove semantic validity or grant permission to redistribute originals.",
+  "documents": [
+    {"path": "README.md", "sha256": "81241b856397821f91c4ff34e5708198e38818a04d07ba65499e2273ecaeeda1"},
+    {"path": "00 Start/快速入门.md", "sha256": "cfa14c832f11f545aef7ad533c1658eb6cec66b004fef109c6dd5c84af62e676"},
+    {"path": "01 Foundations/KPDM 三层元模型.md", "sha256": "d8bb8b6c1040d80ed95710704d2f5a88f40240c58957729b47becda6bcccb4b6"},
+    {"path": "01 Foundations/KPDM 质量约束.md", "sha256": "7237fa73bd7fd168cb67b6d4599f6648c82c45982a19cad82832300880575261"},
+    {"path": "02 Methods and Protocols/KPDM 生产控制层.md", "sha256": "2fb77f489ae2b6ed96332cda9d3cc6db6c32266396bfde639442871064756eba"},
+    {"path": "02 Methods and Protocols/人机协作协议.md", "sha256": "aae7a07962fcf3c4726c7b5bccade3a501c81f35c019d938e6247fb1607daa6a"},
+    {"path": "03 Quality and Governance/发布前合规与完整性检查.md", "sha256": "df77e4791265231dd81a8390817472dc2c7a3ae8bea300eef390479027cb7031"},
+    {"path": "04 Templates/轻量工作单模板.md", "sha256": "b5c9fd8a746283613bfec62e1d729777e75950318e107551f3c05132f2f46631"}
+  ]
+}

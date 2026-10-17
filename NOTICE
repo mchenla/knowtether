@@ -1,0 +1,30 @@
+KPDM Hooks 0.1.0
+Copyright (c) 2026 MC (mchenla)
+https://github.com/mchenla/kpdm-hooks
+
+This repository contains original software, original examples, and rewritten
+adaptation guidance for selected requirements of KPDM (Knowledge Product
+Development Meta-Model / 知识产品开发元模型), developed by MC (mchenla).
+
+Adaptation reference: KPDM 0.5.0-rc.2, candidate.
+Latest accepted framework baseline: 0.4.0 trial / conditional-pass.
+Installing, testing, or publishing this adapter does not change those statuses.
+
+The MIT license in this repository applies to this project's original code,
+examples, and adaptation text. It does not relicense the upstream KPDM
+specification, source vault, templates, machine models, or other works as a
+whole. The upstream specification library is not bundled here. Any separately
+obtained upstream material remains subject to its own applicable rights.
+
+The adaptation was informed by the upstream work entry, quick start, Core-6
+meta-model, quality constraints, production controls, human-agent protocol,
+lightweight worksheet, and pre-release checklist. docs/rules.md records the
+document titles and the scope of this project's mapping. This adapter is not
+the authoritative KPDM machine model or a certification of conformance.
+
+Host protocols referenced by this project:
+Codex Hooks: https://learn.chatgpt.com/docs/hooks
+Claude Code Hooks: https://code.claude.com/docs/en/hooks
+
+Attribution and traceability do not by themselves grant permission to copy,
+adapt, distribute, or disclose third-party material.

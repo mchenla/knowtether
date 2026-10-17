@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "mode": "warn",
+  "session_id": "EXAMPLE-REPLACE-WITH-CURRENT-SESSION-ID",
+  "policy_version": "0.5.0-rc.2",
+  "input_version": "example-task-1",
+  "artifact_version": "demo-1",
+  "status": "draft",
+  "allowed_write_roots": [],
+  "open_issues": [
+    "这是虚构教学示例；尚未进行真实读者任务，不得记录为独立验证或发布批准。",
+    "实际使用前填入项目绝对写入目录，并核对当前会话委托。"
+  ],
+  "worksheet": {
+    "intent": "面向维护团队复盘记录的同事，提供一段方法解释与接手练习；仅作演示，Q1。",
+    "central_idea": "方法建议：为方便接手者找到下一项工作，记录发生了什么、准备改变什么、由谁在何时查看结果。没有实证绩效主张。",
+    "expression_structure": "examples/good.md 先说明读者任务，再用虚构记录解释方法，给出练习、推理依据及不适用情况。",
+    "evidence_and_scope": "仅用原创虚构情节和设计推理，不使用真实研究、外部引文或个人信息。S-DEMO 定位示例。适用于日常可向团队共享的行动记录；不推广至所有复盘。",
+    "delegation": "输入 example-task-1；Agent 可改写教学措辞并检查记录一致性。引入绩效结论、真实数据、敏感材料或扩大用途时返回人判断。",
+    "acceptance": "演示验收：文本标明方法建议和虚构情节，未把设计推理写成实证结论，保留用途和限制。实际使用验收还需真实接手者复述任务，目前未执行。",
+    "results_and_revisions": "已完成演示内容整理；没有真实研究或真实读者结果。机械检查结果由实际运行者另行记录。",
+    "human_decision": "尚无人接受具体成果版本，独立核验与发布决定均待定。"
+  },
+  "claims": [
+    {
+      "id": "C-DEMO",
+      "text": "可在日常行动记录中写明发生的事、拟议改变、负责人和检查时间，供接手者寻找下一项工作。",
+      "type": "method",
+      "source_ids": ["S-DEMO"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S-DEMO",
+      "locator": "examples/good.md",
+      "rights_status": "original",
+      "verification": "原创虚构教学示例；不是实证来源，未进行真实读者验证。"
+    }
+  ]
+}
