@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 - 2026-10-17
+
+- Fix hook discovery on Codex 0.163 alpha by using the compatibility manifest alone and the standard hooks/hooks.json path.
+- Verify all three hooks through the actual app-server hooks/list API during the isolated install check, before executing their commands.
+
 ## 0.2.0 - 2026-10-17
 
 - Add Codex plugin manifests, a GitHub-backed marketplace catalog, a knowledge-work skill and an original SVG icon.

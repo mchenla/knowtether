@@ -14,7 +14,7 @@ def main():
 
     if git('status', '--porcelain', '--untracked-files=no').strip():
         raise SystemExit('Commit tracked changes before packaging a release')
-    version = json.loads(git('show', 'HEAD:plugin.json'))['version']
+    version = json.loads(git('show', 'HEAD:.codex-plugin/plugin.json'))['version']
     output = repo / 'dist'
     output.mkdir(exist_ok=True)
     wheel = output / ('kpdm_hooks-' + version + '-py3-none-any.whl')
@@ -26,19 +26,19 @@ def main():
     plugin = output / ('knowtether-' + version + '-plugin.zip')
     files = git('ls-tree', '-r', '--name-only', 'HEAD').decode('utf-8').splitlines()
     roots = ('.codex-plugin/', 'assets/', 'hooks/', 'kpdm_hooks/', 'skills/', 'docs/', 'policy/', 'examples/')
-    names = {'plugin.json', 'README.md', 'README.en.md', 'LICENSE', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md'}
+    names = {'README.md', 'README.en.md', 'LICENSE', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md'}
     included = [name for name in files if name in names or name.startswith(roots)]
     with zipfile.ZipFile(plugin, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
         for name in included:
             archive.writestr('knowtether/' + name, git('show', 'HEAD:' + name))
     with zipfile.ZipFile(plugin) as archive:
         entries = archive.namelist()
-        required = ('plugin.json', '.codex-plugin/plugin.json', 'hooks/codex-hooks.json',
+        required = ('.codex-plugin/plugin.json', 'hooks/hooks.json',
                     'hooks/plugin_entry.py', 'kpdm_hooks/hooks.py', 'skills/knowtether/SKILL.md',
                     'assets/knowtether.svg', 'docs/codex-plugin.md')
         assert all('knowtether/' + name in entries for name in required)
         assert all('/.agents/' not in name and '/.kpdm/' not in name and '/.venv/' not in name for name in entries)
-        metadata = json.loads(archive.read('knowtether/plugin.json'))
+        metadata = json.loads(archive.read('knowtether/.codex-plugin/plugin.json'))
         assert metadata['name'] == 'knowtether' and metadata['version'] == version
     sums = output / ('v' + version) / 'SHA256SUMS'
     sums.parent.mkdir(exist_ok=True)

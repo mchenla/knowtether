@@ -25,17 +25,14 @@ class PluginPackageTests(unittest.TestCase):
         self.assertEqual(entry['name'], 'knowtether')
         self.assertEqual(entry['source'], {'source': 'url', 'url': 'https://github.com/mchenla/knowtether.git', 'ref': 'main'})
 
-    def test_manifests_share_identity_metadata_and_contained_components(self):
-        portable = json.loads((REPO / 'plugin.json').read_text(encoding='utf-8'))
+    def test_manifest_has_contained_components_and_compatible_discovery(self):
         legacy = json.loads((REPO / '.codex-plugin/plugin.json').read_text(encoding='utf-8'))
-        self.assertEqual(portable['$schema'], 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json')
-        for key in ('name', 'version', 'description', 'author', 'license', 'repository'):
-            self.assertEqual(portable[key], legacy[key])
-        self.assertEqual(portable['version'], __version__)
-        extension = portable['extensions']['com.openai']
-        self.assertEqual(extension['interface'], legacy['interface'])
-        self.assertEqual(extension['hooks'], legacy['hooks'])
-        self.assertLessEqual(len(extension['interface']['shortDescription']), 30)
+        # Codex 0.163 alpha selects root plugin.json but ignores its hook extension.
+        # Keep one compatibility manifest until real host discovery supports both.
+        self.assertFalse((REPO / 'plugin.json').exists())
+        self.assertEqual(legacy['name'], 'knowtether')
+        self.assertEqual(legacy['version'], __version__)
+        self.assertLessEqual(len(legacy['interface']['shortDescription']), 30)
         for relative in (legacy['hooks'], legacy['skills'], legacy['interface']['logo']):
             target = (REPO / relative).resolve(strict=True)
             self.assertIn(REPO, target.parents)
@@ -50,7 +47,7 @@ class PluginPackageTests(unittest.TestCase):
         spec = importlib.util.spec_from_file_location('hook_builder', REPO / 'scripts/build_plugin_hooks.py')
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        actual = json.loads((REPO / 'hooks/codex-hooks.json').read_text(encoding='utf-8'))
+        actual = json.loads((REPO / 'hooks/hooks.json').read_text(encoding='utf-8'))
         self.assertEqual(actual, module.definition())
         self.assertEqual(set(actual['hooks']), set(EVENTS))
         for event, groups in actual['hooks'].items():
@@ -136,7 +133,7 @@ class PluginRuntimeTests(unittest.TestCase):
         bundle.mkdir()
         for name in ('hooks', 'kpdm_hooks'):
             shutil.copytree(REPO / name, bundle / name, ignore=shutil.ignore_patterns('__pycache__'))
-        manifest = json.loads((REPO / 'hooks/codex-hooks.json').read_text(encoding='utf-8'))
+        manifest = json.loads((REPO / 'hooks/hooks.json').read_text(encoding='utf-8'))
         command = manifest['hooks']['SessionStart'][0]['hooks'][0]['commandWindows']
         env = dict(os.environ, PLUGIN_ROOT=str(bundle))
         event = json.dumps({'hook_event_name': 'SessionStart', 'cwd': str(self.root)})

@@ -2,10 +2,45 @@
 import argparse
 import json
 import os
+import queue
+import threading
 from pathlib import Path
 import shutil
 import subprocess
 import sys
+
+
+def discover_hooks(codex, env, project):
+    """Ask the actual host to load hooks; executing commands alone misses manifests."""
+    process = subprocess.Popen([codex, 'app-server'], env=env, cwd=project,
+                               stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                               stderr=subprocess.DEVNULL, text=True, encoding='utf-8')
+    messages = queue.Queue()
+
+    def read_messages():
+        for line in process.stdout:
+            try:
+                messages.put(json.loads(line))
+            except ValueError:
+                pass
+    threading.Thread(target=read_messages, daemon=True).start()
+
+    def call(request_id, method, params):
+        process.stdin.write(json.dumps({'id': request_id, 'method': method, 'params': params}) + '\n')
+        process.stdin.flush()
+        while True:
+            message = messages.get(timeout=45)
+            if message.get('id') == request_id:
+                if 'error' in message:
+                    raise RuntimeError(message['error'])
+                return message['result']
+    try:
+        call(1, 'initialize', {'clientInfo': {'name': 'knowtether-install-check', 'version': '1'},
+                               'capabilities': {'experimentalApi': True}})
+        return call(2, 'hooks/list', {'cwds': [str(project)]})
+    finally:
+        process.terminate()
+        process.wait(timeout=10)
 
 
 def main():
@@ -31,7 +66,7 @@ def main():
         bundle.mkdir(parents=True)
         for name in ('.codex-plugin', 'assets', 'hooks', 'kpdm_hooks', 'skills', 'docs', 'policy'):
             shutil.copytree(workspace / name, bundle / name, ignore=shutil.ignore_patterns('__pycache__'))
-        for name in ('plugin.json', 'README.md', 'README.en.md', 'LICENSE', 'NOTICE', 'SECURITY.md'):
+        for name in ('README.md', 'README.en.md', 'LICENSE', 'NOTICE', 'SECURITY.md'):
             shutil.copyfile(workspace / name, bundle / name)
         catalog = json.loads((workspace / '.agents/plugins/marketplace.json').read_text(encoding='utf-8'))
         catalog['plugins'][0]['source'] = {'source': 'local', 'path': './plugins/knowtether'}
@@ -56,7 +91,7 @@ def main():
             return result.returncode
     install = json.loads(records[1]['stdout'])
     listing = json.loads(records[2]['stdout'])
-    expected_version = json.loads((workspace / 'plugin.json').read_text(encoding='utf-8'))['version']
+    expected_version = json.loads((workspace / '.codex-plugin/plugin.json').read_text(encoding='utf-8'))['version']
     assert install['pluginId'] == 'knowtether@knowtether'
     assert install['version'] == expected_version
     assert any(item['pluginId'] == 'knowtether@knowtether' and item['enabled'] is True
@@ -65,9 +100,16 @@ def main():
     cache = (codex_home / 'plugins/cache').resolve(strict=True)
     assert cache in installed.parents, 'Installation must remain in the isolated cache'
     assert (installed / 'skills/knowtether/SKILL.md').is_file()
-    hooks = json.loads((installed / 'hooks/codex-hooks.json').read_text(encoding='utf-8'))
+    hooks = json.loads((installed / 'hooks/hooks.json').read_text(encoding='utf-8'))
     project = home / 'creative-project'
     project.mkdir()
+    discovered = discover_hooks(args.codex, env, project)
+    records.append({'host_hook_discovery': discovered})
+    (home / 'results.json').write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
+    rows = discovered['data']
+    assert len(rows) == 1 and not rows[0]['errors'], discovered
+    found = [item for item in rows[0]['hooks'] if 'knowtether@knowtether:' in item['key']]
+    assert {item['eventName'] for item in found} == {'sessionStart', 'userPromptSubmit', 'stop'}, discovered
     for event in ('SessionStart', 'UserPromptSubmit', 'Stop'):
         payload = {'hook_event_name': event, 'cwd': str(project), 'session_id': 'smoke',
                    'prompt': '[kpdm] Write a research article',
@@ -90,9 +132,9 @@ def main():
         records.append({'event': event, 'response': response, 'exit_code': result.returncode})
     assert list(project.iterdir()) == [], 'Hooks must not create project files'
     (home / 'results.json').write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(json.dumps({'installed': True, 'version': expected_version, 'skill_found': True, 'hook_commands_checked': 3,
+    print(json.dumps({'installed': True, 'version': expected_version, 'skill_found': True, 'host_hooks_discovered': 3, 'hook_commands_checked': 3,
                       'source': args.source, 'trust_modified': False,
-                      'note': 'Isolated install and command execution; no model turn or global configuration changed.'}))
+                      'note': 'Isolated install, host discovery and command execution; no model turn or global configuration changed.'}))
     return 0
 
 

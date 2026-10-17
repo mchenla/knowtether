@@ -1,5 +1,11 @@
 # Validation records
 
+## 0.2.1: actual host discovery
+
+On Codex CLI 0.163.0-alpha.10.2, the 0.2.0 package installed but the host reported no plugin hooks. An isolated A/B check found that root plugin.json shadowed the compatibility manifest while the host ignored its hook extension. Version 0.2.1 uses only .codex-plugin/plugin.json and hooks/hooks.json. The isolated checker now calls the real app-server hooks/list API and requires all three plugin event entries before command checks. It never changes trust or copies credentials.
+
+The updated isolated install discovered SessionStart, UserPromptSubmit and Stop as enabled, untrusted plugin hooks with no loading errors; all three cached commands passed. Local Windows regression: 90 tests, 89 passed and 1 POSIX-only test skipped. Host discovery is distinct from trust and lifecycle execution; those require a reviewed, trusted installation and a live session.
+
 ## 0.2.0: Codex plugin and repository marketplace
 
 The installed local Codex CLI was `0.163.0-alpha.10.2`. A fresh test HOME inside the project was used; the user's active Codex configuration, credentials and hook trust were not changed. The real CLI registered a local fixture marketplace, installed `knowtether@knowtether` version `0.2.0`, and listed it as installed/enabled. The fixture used a copy of the actual public plugin components with a local source entry. The downloaded GitHub source path is checked separately before release.

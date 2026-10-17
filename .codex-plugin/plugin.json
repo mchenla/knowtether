@@ -1,6 +1,6 @@
 {
   "name": "knowtether",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "KPDM-based knowledge-work guidance and advisory checks for Codex. Bundled Python hooks and a reusable skill; no pip installation required.",
   "author": {"name": "MC", "url": "https://github.com/mchenla"},
   "homepage": "https://github.com/mchenla/knowtether",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "keywords": ["kpdm", "knowledge", "writing", "research", "hooks"],
   "skills": "./skills/",
-  "hooks": "./hooks/codex-hooks.json",
+  "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "知据 KnowTether",
     "shortDescription": "Grounded knowledge work",

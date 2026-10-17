@@ -52,7 +52,7 @@ codex plugin add knowtether@knowtether
 
 ## 包结构与检查边界
 
-仓库同时提供根 `plugin.json` 和 `.codex-plugin/plugin.json` 兼容描述，市场清单为 `.agents/plugins/marketplace.json`。Skill 位于 `skills/knowtether/`，Hooks 位于 `hooks/codex-hooks.json`，代码直接从安装后的插件包导入。
+仓库使用 `.codex-plugin/plugin.json` 描述插件，以兼容已实测的 Codex 0.163 alpha。该版本遇到根 `plugin.json` 会漏载 Hook，因此暂不同时提供根清单，市场清单为 `.agents/plugins/marketplace.json`。Skill 位于 `skills/knowtether/`，Hooks 位于 `hooks/hooks.json`，代码直接从安装后的插件包导入。
 
 POSIX 启动脚本为 `hooks/run-posix.sh`。Windows 入口使用显式 PowerShell 启动器，避免依赖 Codex 当前选用 cmd 还是 PowerShell；编码的命令只加载可审阅的 `hooks/run-windows.ps1`。Windows 的 `ExecutionPolicy Bypass` 仅作用于这个子进程，不修改持久策略，也不替代 Codex 的 Hook 信任。重新生成配置：`python scripts/build_plugin_hooks.py`；只校验：增加 `--check`。
 
