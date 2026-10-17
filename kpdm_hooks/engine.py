@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import re
 
+from . import __version__
+
 MAX_BYTES = 1_000_000
 POLICY_VERSION = "0.5.0-rc.2"
 FIELDS = ("intent", "central_idea", "expression_structure", "evidence_and_scope",
@@ -67,7 +69,7 @@ def knowledge_prompt(text: str) -> bool:
 
 def context() -> str:
     return (
-        "KPDM knowledge-work guidance (adapter 0.1.0; source 0.5.0-rc.2 candidate; "
+        f"KnowTether / KPDM knowledge-work guidance (adapter {__version__}; source 0.5.0-rc.2 candidate; "
         "accepted baseline 0.4.0 trial / conditional-pass). Apply only to knowledge outputs "
         "such as articles, reports, explanations and research; ordinary code or account tasks are outside scope.\n"
         "为具体读者解决明确问题；覆盖目的、知识内核、依据、可用化、表达、验证与演进，"

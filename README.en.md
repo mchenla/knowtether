@@ -1,24 +1,35 @@
-# KPDM Hooks
+# KnowTether (知据)
 
 [中文文档](README.md)
 
 A local, warning-only Hook adapter for knowledge writing in Codex and Claude Code. It reminds agents to identify the audience and purpose, distinguish facts from inference, preserve sources and limitations, and keep human acceptance separate from release approval.
 
-Version `0.1.0`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
+Version `0.1.1`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
 
 ## Install
 
+Public downloads require no GitHub account: [Python wheel](https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl), [source ZIP](https://github.com/mchenla/knowtether/releases/download/v0.1.1/knowtether-0.1.1-source.zip), [SHA-256 checksums](https://github.com/mchenla/knowtether/releases/download/v0.1.1/SHA256SUMS), and [release notes](https://github.com/mchenla/knowtether/releases/latest).
+
 ```bash
-git clone https://github.com/mchenla/kpdm-hooks.git
-cd kpdm-hooks
+python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl"
+knowtether --version
+```
+
+The primary command is `knowtether`. For compatibility, the Python distribution remains `kpdm-hooks`; the `kpdm-hooks` command, `kpdm_hooks` module and existing hook registrations remain supported. Add `--upgrade` to the install command to update an earlier version.
+
+Alternatively, install from source:
+
+```bash
+git clone https://github.com/mchenla/knowtether.git
+cd knowtether
 python -m pip install .
 ```
 
 From your writing project, choose `codex` or `claude`:
 
 ```bash
-kpdm-hooks install --root . --host codex --dry-run
-kpdm-hooks install --root . --host codex
+knowtether install --root . --host codex --dry-run
+knowtether install --root . --host codex
 ```
 
 The installer merges project configuration and backs up existing configuration before changing it: `.codex/hooks.json` for Codex and `.claude/settings.local.json` for Claude Code. It also creates `.kpdm/config.json` if missing. In Codex, review and trust the configuration with `/hooks`; installation does not grant trust or globally enable Hooks. Claude Code requires support for the current `command` + `args` exec form; upgrade older versions if needed. Restart or reload the session as required by your host. See the official [Codex Hooks](https://learn.chatgpt.com/docs/hooks) and [Claude Code Hooks](https://code.claude.com/docs/en/hooks) protocols.
@@ -28,10 +39,10 @@ The installer merges project configuration and backs up existing configuration b
 ## Optional worksheet and checks
 
 ```bash
-kpdm-hooks init --root . --session-id YOUR_CURRENT_SESSION_ID
-kpdm-hooks context --root .
-kpdm-hooks check --root . --artifact article.md
-kpdm-hooks check --root . --artifact article.md --strict
+knowtether init --root . --session-id YOUR_CURRENT_SESSION_ID
+knowtether context --root .
+knowtether check --root . --artifact article.md
+knowtether check --root . --artifact article.md --strict
 ```
 
 Session IDs can also come from supported environment variables. Fill the eight worksheet fields in `.kpdm/work.json`; see [the example](examples/work.json). Review the current delegation before using `bind`; binding does not renew human authorization. `close` disables the worksheet. All commands also work through `python -m kpdm_hooks`.
@@ -39,8 +50,8 @@ Session IDs can also come from supported environment variables. Fill the eight w
 Default checks report warnings without blocking. Strict checks return `1` for warning/error findings; CLI execution errors return `2`. Host Hooks return `0` and do not approve or block actions.
 
 ```bash
-kpdm-hooks uninstall --root . --host codex --dry-run
-kpdm-hooks uninstall --root . --host codex
+knowtether uninstall --root . --host codex --dry-run
+knowtether uninstall --root . --host codex
 ```
 
 Uninstall removes this project's handlers while preserving unrelated configuration.

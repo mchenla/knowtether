@@ -1,3 +1,3 @@
-"""Portable, advisory KPDM hooks for knowledge work."""
+"""KnowTether (知据): portable, advisory KPDM hooks for knowledge work."""
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"

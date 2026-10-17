@@ -12,6 +12,6 @@
 
 ## 报告漏洞
 
-优先使用仓库 [Security Advisories](https://github.com/mchenla/kpdm-hooks/security/advisories) 中的私密报告入口（如果已启用）。若入口不可用，请在 [Issues](https://github.com/mchenla/kpdm-hooks/issues) 只留下请求私密联系的信息，不公开凭据、个人数据或可直接利用的细节。
+优先使用仓库 [Security Advisories](https://github.com/mchenla/knowtether/security/advisories) 中的私密报告入口（如果已启用）。若入口不可用，请在 [Issues](https://github.com/mchenla/knowtether/issues) 只留下请求私密联系的信息，不公开凭据、个人数据或可直接利用的细节。
 
 报告应包含受影响版本、最小复现、预期行为、实际影响及适用环境。项目当前没有承诺响应时限或长期支持周期；安全修复将记录于后续版本的发布说明。

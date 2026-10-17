@@ -21,7 +21,7 @@ def emit(value) -> None:
 def main(argv: list[str] | None = None) -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="Advisory KPDM hooks for knowledge outputs")
+    parser = argparse.ArgumentParser(description="KnowTether (知据): advisory KPDM hooks for knowledge outputs")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="action", required=True)
     for name in ("init", "bind", "close", "context", "check", "install", "uninstall", "hook"):
@@ -89,5 +89,5 @@ def main(argv: list[str] | None = None) -> int:
             # Do not echo event bodies, project paths, or arbitrary exception text into context.
             emit({"systemMessage": "[KPDM CHECK_SKIPPED] 输入或项目配置异常，本次检查已跳过；未阻断操作。"})
             return 0
-        print("kpdm-hooks: " + str(exc), file=sys.stderr)
+        print("knowtether: " + str(exc), file=sys.stderr)
         return 2

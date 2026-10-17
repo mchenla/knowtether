@@ -1,4 +1,10 @@
-# Validation record: 0.1.0
+# Validation records
+
+## 0.1.1: KnowTether naming release
+
+This release adds the KnowTether name, the `knowtether` command alias and direct public downloads. The rule engine, legacy command, Python distribution and installed-hook ownership markers remain compatible. The release is checked with the existing regression suite, an isolated wheel installation, both command names, and the Windows/Linux Python matrix in Actions. See the actual run results for the release commit and the release notes; these mechanical checks do not establish new semantic validation.
+
+## 0.1.0
 
 Checked on 2026-10-17 using Windows and Python 3.13. Automated tests cover rule consistency, session isolation, malformed input, path traversal, size limits, host JSON fixtures, non-blocking Stop output, installation preservation, repeated installs, uninstall, CLI exit codes and generated command execution.
 

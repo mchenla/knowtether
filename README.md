@@ -1,33 +1,51 @@
-# KPDM Hooks
+# 知据 KnowTether
 
 [English](README.en.md)
 
 让 Agent 在撰写文章、报告、研究概览等知识成果时，记得说明读者与用途，区分事实、推断和建议，保留来源、适用范围、未知项与人的决定。
 
-`kpdm-hooks` 是一个 Python 标准库实现的本地 Hook 适配器，支持 Codex 和 Claude Code。它把 KPDM 的部分要求转成会话提示、工作单检查和文本告警。默认告警模式不阻断 Agent，也不替人批准主张或发布。
+**知据（KnowTether）** 是一个 Python 标准库实现的本地 Hook 适配器，支持 Codex 和 Claude Code。名字取“知识有据”之意：让知识输出连接回资料、推理和人的判断。它把 KPDM 的部分要求转成会话提示、工作单检查和文本告警。默认告警模式不阻断 Agent，也不替人批准主张或发布。
 
-当前软件版本：`0.1.0`。适配参考为 **KPDM 0.5.0-rc.2 candidate**，最近接受基线仍为 **0.4.0 trial / conditional-pass**。本项目的安装、测试或发布不会提升 KPDM 框架状态。
+当前软件版本：`0.1.1`。适配参考为 **KPDM 0.5.0-rc.2 candidate**，最近接受基线仍为 **0.4.0 trial / conditional-pass**。本项目的安装、测试或发布不会提升 KPDM 框架状态。
+
+## 公开下载
+
+仓库和安装包公开可访问，下载不需要 GitHub 账户。
+
+- [下载 Python 安装包（v0.1.1）](https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl)
+- [下载源代码 ZIP（v0.1.1）](https://github.com/mchenla/knowtether/releases/download/v0.1.1/knowtether-0.1.1-source.zip)
+- [下载 SHA-256 校验文件](https://github.com/mchenla/knowtether/releases/download/v0.1.1/SHA256SUMS)
+- [查看版本说明及所有下载项](https://github.com/mchenla/knowtether/releases/latest)
+
+有 Python 3.10 或更新版本时，可以直接安装公开下载地址：
+
+```bash
+python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl"
+knowtether --version
+```
+
+主命令为 `knowtether`。为兼容早期版本，Python 发行包仍为 `kpdm-hooks`，旧命令 `kpdm-hooks`、模块 `kpdm_hooks` 和已有 Hook 配置继续可用。升级可在上面的安装命令中增加 `--upgrade`。
 
 ## 开始使用
 
 需要 Python 3.10 或更新版本，以及支持相应 Hook 事件的主机。Claude Code 需要 2.1.139 或更新版本，以支持本安装器使用的 `args` 直接执行形式，见[官方更新记录](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21139)。请在知识创作项目中操作，避免把工作文件放进 KPDM 规范源目录。
 
 ```bash
-git clone https://github.com/mchenla/kpdm-hooks.git
-cd kpdm-hooks
+git clone https://github.com/mchenla/knowtether.git
+cd knowtether
 python -m pip install .
 ```
 
 切换到要启用的项目目录，先预览配置变化，再安装。按使用的主机选择其中一项：
 
 ```bash
-kpdm-hooks install --root . --host codex --dry-run
-kpdm-hooks install --root . --host codex
+knowtether install --root . --host codex --dry-run
+knowtether install --root . --host codex
 ```
 
 ```bash
-kpdm-hooks install --root . --host claude --dry-run
-kpdm-hooks install --root . --host claude
+knowtether install --root . --host claude --dry-run
+knowtether install --root . --host claude
 ```
 
 安装器合并项目配置，修改已有配置前建立备份；遇到无法安全处理的配置会报告错误。配置位置为：
@@ -56,13 +74,13 @@ Hook 不读取完整会话来还原授权，不会因提示内容产生新的授
 ## 为持续任务建立工作单
 
 ```bash
-kpdm-hooks init --root .
+knowtether init --root .
 ```
 
 `init` 依次尝试 `CODEX_THREAD_ID`、`CODEX_SESSION_ID`、`CLAUDE_SESSION_ID`。这些变量在某些运行方式下不存在，此时使用当前 Hook 输入中的 `session_id` 显式传入：
 
 ```bash
-kpdm-hooks init --root . --session-id YOUR_CURRENT_SESSION_ID
+knowtether init --root . --session-id YOUR_CURRENT_SESSION_ID
 ```
 
 补充 `.kpdm/work.json` 中的八项 `worksheet`。起草前把前六项写到够用；检查时再更新后两项。已有资料可以引用，未知项保持未知，填写“不适用”时说明原因。
@@ -83,21 +101,21 @@ kpdm-hooks init --root . --session-id YOUR_CURRENT_SESSION_ID
 接手已有工作单时，先核对当前委托，再绑定当前会话：
 
 ```bash
-kpdm-hooks bind --root . --session-id YOUR_CURRENT_SESSION_ID
-kpdm-hooks context --root .
+knowtether bind --root . --session-id YOUR_CURRENT_SESSION_ID
+knowtether context --root .
 ```
 
 `bind` 只更新工具绑定，不表示人的授权已续期。多个会话并行创作时使用各自的项目工作目录。停用当前工作单：
 
 ```bash
-kpdm-hooks close --root .
+knowtether close --root .
 ```
 
 ## 检查一份成果
 
 ```bash
-kpdm-hooks check --root . --artifact article.md
-kpdm-hooks check --root . --artifact article.md --strict
+knowtether check --root . --artifact article.md
+knowtether check --root . --artifact article.md --strict
 ```
 
 不传 `--artifact` 时检查项目工作单。文本检查只提供可复核的提示：即使没有告警，也需要核对来源是否真实且支持主张，并让目标读者实际尝试预设任务。
@@ -116,8 +134,8 @@ kpdm-hooks check --root . --artifact article.md --strict
 ## 卸载
 
 ```bash
-kpdm-hooks uninstall --root . --host codex --dry-run
-kpdm-hooks uninstall --root . --host codex
+knowtether uninstall --root . --host codex --dry-run
+knowtether uninstall --root . --host codex
 ```
 
 Claude Code 使用 `--host claude`。卸载仅移除本项目安装的 handler，保留他人的 Hook 与配置。Python 包可另行使用 `python -m pip uninstall kpdm-hooks` 移除。

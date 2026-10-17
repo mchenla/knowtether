@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kpdm-hooks"
-version = "0.1.0"
-description = "Advisory KPDM hooks for grounded, usable knowledge outputs in Codex and Claude Code"
+version = "0.1.1"
+description = "KnowTether: advisory KPDM hooks for grounded knowledge outputs in Codex and Claude Code"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
@@ -15,11 +15,12 @@ classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Pytho
 dependencies = []
 
 [project.scripts]
+knowtether = "kpdm_hooks.cli:main"
 kpdm-hooks = "kpdm_hooks.cli:main"
 
 [project.urls]
-Repository = "https://github.com/mchenla/kpdm-hooks"
-Issues = "https://github.com/mchenla/kpdm-hooks/issues"
+Repository = "https://github.com/mchenla/knowtether"
+Issues = "https://github.com/mchenla/knowtether/issues"
 
 [tool.setuptools.packages.find]
 include = ["kpdm_hooks*"]

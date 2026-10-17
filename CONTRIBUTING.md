@@ -1,6 +1,6 @@
 # 贡献说明
 
-欢迎报告主机兼容问题、提醒误报或漏报，并提交范围清楚的修复。讨论入口为 [GitHub Issues](https://github.com/mchenla/kpdm-hooks/issues)，代码修改通过 Pull Request。
+欢迎报告主机兼容问题、提醒误报或漏报，并提交范围清楚的修复。讨论入口为 [GitHub Issues](https://github.com/mchenla/knowtether/issues)，代码修改通过 Pull Request。
 
 ## 提交问题
 
