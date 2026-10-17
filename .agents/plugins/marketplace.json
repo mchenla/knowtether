@@ -1,0 +1,16 @@
+{
+  "name": "knowtether",
+  "interface": {"displayName": "KnowTether"},
+  "plugins": [
+    {
+      "name": "knowtether",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mchenla/knowtether.git",
+        "ref": "main"
+      },
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "description": "KnowTether advisory hooks; bundled Python 3.10+ code, no pip install, no blocking.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" SessionStart",
+            "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand JABwAD0AJABlAG4AdgA6AFAATABVAEcASQBOAF8AUgBPAE8AVAA7ACAAaQBmACAAKAAtAG4AbwB0ACAAJABwACkAIAB7ACAAJABwAD0AJABlAG4AdgA6AEMATABBAFUARABFAF8AUABMAFUARwBJAE4AXwBSAE8ATwBUACAAfQA7ACAAJgAgACgASgBvAGkAbgAtAFAAYQB0AGgAIAAkAHAAIAAnAGgAbwBvAGsAcwAvAHIAdQBuAC0AdwBpAG4AZABvAHcAcwAuAHAAcwAxACcAKQAgAC0ARQB2AGUAbgB0ACAAJwBTAGUAcwBzAGkAbwBuAFMAdABhAHIAdAAnADsAIABlAHgAaQB0ACAAMAA=",
+            "timeout": 10,
+            "statusMessage": "KnowTether: SessionStart",
+            "additionalContextLimit": 1600
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" UserPromptSubmit",
+            "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand JABwAD0AJABlAG4AdgA6AFAATABVAEcASQBOAF8AUgBPAE8AVAA7ACAAaQBmACAAKAAtAG4AbwB0ACAAJABwACkAIAB7ACAAJABwAD0AJABlAG4AdgA6AEMATABBAFUARABFAF8AUABMAFUARwBJAE4AXwBSAE8ATwBUACAAfQA7ACAAJgAgACgASgBvAGkAbgAtAFAAYQB0AGgAIAAkAHAAIAAnAGgAbwBvAGsAcwAvAHIAdQBuAC0AdwBpAG4AZABvAHcAcwAuAHAAcwAxACcAKQAgAC0ARQB2AGUAbgB0ACAAJwBVAHMAZQByAFAAcgBvAG0AcAB0AFMAdQBiAG0AaQB0ACcAOwAgAGUAeABpAHQAIAAwAA==",
+            "timeout": 10,
+            "statusMessage": "KnowTether: UserPromptSubmit",
+            "additionalContextLimit": 1600
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" Stop",
+            "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand JABwAD0AJABlAG4AdgA6AFAATABVAEcASQBOAF8AUgBPAE8AVAA7ACAAaQBmACAAKAAtAG4AbwB0ACAAJABwACkAIAB7ACAAJABwAD0AJABlAG4AdgA6AEMATABBAFUARABFAF8AUABMAFUARwBJAE4AXwBSAE8ATwBUACAAfQA7ACAAJgAgACgASgBvAGkAbgAtAFAAYQB0AGgAIAAkAHAAIAAnAGgAbwBvAGsAcwAvAHIAdQBuAC0AdwBpAG4AZABvAHcAcwAuAHAAcwAxACcAKQAgAC0ARQB2AGUAbgB0ACAAJwBTAHQAbwBwACcAOwAgAGUAeABpAHQAIAAwAA==",
+            "timeout": 10,
+            "statusMessage": "KnowTether: Stop"
+          }
+        ]
+      }
+    ]
+  }
+}

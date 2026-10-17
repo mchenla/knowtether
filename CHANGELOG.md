@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 - 2026-10-17
+
+- Add Codex plugin manifests, a GitHub-backed marketplace catalog, a knowledge-work skill and an original SVG icon.
+- Bundle Python code with cross-platform hooks; no separate pip install or per-project initialization is needed for plugin guidance.
+- Read records from the current event's project cwd, respect explicit project disable settings and yield to existing project registrations for the same event.
+- Add real isolated Codex CLI install checks and tests for cached plugin hooks, paths with spaces/Unicode/shell characters and missing runtimes.
+- Retain the Python CLI, legacy command and worksheet format.
+
 ## 0.1.1 - 2026-10-17
 
 - Name the project **KnowTether (知据)** and move the public repository to `mchenla/knowtether`.

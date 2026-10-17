@@ -4,14 +4,29 @@
 
 A local, warning-only Hook adapter for knowledge writing in Codex and Claude Code. It reminds agents to identify the audience and purpose, distinguish facts from inference, preserve sources and limitations, and keep human acceptance separate from release approval.
 
-Version `0.1.1`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
+Version `0.2.0`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
 
-## Install
+## Codex: install in two commands
 
-Public downloads require no GitHub account: [Python wheel](https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl), [source ZIP](https://github.com/mchenla/knowtether/releases/download/v0.1.1/knowtether-0.1.1-source.zip), [SHA-256 checksums](https://github.com/mchenla/knowtether/releases/download/v0.1.1/SHA256SUMS), and [release notes](https://github.com/mchenla/knowtether/releases/latest).
+Use a Codex CLI with plugin commands and Python 3.10+ on its non-interactive PATH:
 
 ```bash
-python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl"
+codex plugin marketplace add mchenla/knowtether
+codex plugin add knowtether@knowtether
+```
+
+Open `/hooks` in Codex, review and trust the three KnowTether hooks, then start a new session. Restart the desktop app after installation. Code is bundled; no separate pip install or project worksheet is required. This is a GitHub-backed marketplace, following Ponytail's distribution pattern. See [plugin behavior and configuration](docs/codex-plugin.md).
+
+## Downloads and optional project CLI
+
+The commands below are for the separately installed Python CLI, including the existing Claude Code integration. Codex plugin users can use the bundled skill and automatic guidance without installing this CLI.
+
+An independent [Codex plugin ZIP](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-plugin.zip) is also available. The two-command marketplace flow above is the primary Codex installation method.
+
+Public downloads require no GitHub account: [Python wheel](https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl), [source ZIP](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-source.zip), [SHA-256 checksums](https://github.com/mchenla/knowtether/releases/download/v0.2.0/SHA256SUMS), and [release notes](https://github.com/mchenla/knowtether/releases/latest).
+
+```bash
+python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl"
 knowtether --version
 ```
 
@@ -60,7 +75,7 @@ Uninstall removes this project's handlers while preserving unrelated configurati
 
 Core-6 describes functional coverage, not six required headings or a fixed sequence. Exploratory work may leave its central claim undecided. Missing warnings do not establish truth, adequate citations, legal permission, reader comprehension, or release readiness. Public knowledge products require the framework's Q3 checks, independent review, reader tasks, and a separate human release decision.
 
-Local tests, protocol fixtures, and shell execution of generated commands do not establish end-to-end operation in actual host applications. Real Codex and Claude Code integration still needs host-level verification. Examples are fictional teaching materials, with no real research data or reader results. The example worksheet intentionally retains open issues and an unverified source record; do not invent verification to silence warnings.
+Checks cover automated tests, an isolated real Codex CLI installation, and execution of the installed plugin's three hook commands. Full interactive lifecycle behavior, trust UI, and knowledge-quality improvements still need evaluation. Examples are fictional teaching materials, with no real research data or reader results. The example worksheet intentionally retains open issues and an unverified source record; do not invent verification to silence warnings.
 
 See [rule mapping](docs/rules.md), [design](docs/design.md), [contributing](CONTRIBUTING.md), and [security](SECURITY.md).
 

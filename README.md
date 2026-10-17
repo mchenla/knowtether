@@ -6,27 +6,43 @@
 
 **知据（KnowTether）** 是一个 Python 标准库实现的本地 Hook 适配器，支持 Codex 和 Claude Code。名字取“知识有据”之意：让知识输出连接回资料、推理和人的判断。它把 KPDM 的部分要求转成会话提示、工作单检查和文本告警。默认告警模式不阻断 Agent，也不替人批准主张或发布。
 
-当前软件版本：`0.1.1`。适配参考为 **KPDM 0.5.0-rc.2 candidate**，最近接受基线仍为 **0.4.0 trial / conditional-pass**。本项目的安装、测试或发布不会提升 KPDM 框架状态。
+当前软件版本：`0.2.0`。适配参考为 **KPDM 0.5.0-rc.2 candidate**，最近接受基线仍为 **0.4.0 trial / conditional-pass**。本项目的安装、测试或发布不会提升 KPDM 框架状态。
+
+## Codex：两条命令安装
+
+准备支持插件命令的 Codex CLI，并将 Python 3.10+ 放在非交互环境的 `PATH` 上，然后运行：
+
+```bash
+codex plugin marketplace add mchenla/knowtether
+codex plugin add knowtether@knowtether
+```
+
+之后运行 Codex，进入 `/hooks` 审阅并信任三个 KnowTether Hooks，再开始新会话。桌面端安装后重启以载入插件。插件自带代码，无须另行 `pip install`，也无须先创建工作单或配置文件。
+
+这是与 Ponytail 相同的 GitHub 仓库市场分发方式。完整使用、按项目停用、升级和旧版兼容见 [Codex 插件说明](docs/codex-plugin.md)。
 
 ## 公开下载
 
 仓库和安装包公开可访问，下载不需要 GitHub 账户。
 
-- [下载 Python 安装包（v0.1.1）](https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl)
-- [下载源代码 ZIP（v0.1.1）](https://github.com/mchenla/knowtether/releases/download/v0.1.1/knowtether-0.1.1-source.zip)
-- [下载 SHA-256 校验文件](https://github.com/mchenla/knowtether/releases/download/v0.1.1/SHA256SUMS)
+- [下载独立 Codex 插件 ZIP（v0.2.0）](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-plugin.zip)
+- [下载 Python 安装包（v0.2.0）](https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl)
+- [下载源代码 ZIP（v0.2.0）](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-source.zip)
+- [下载 SHA-256 校验文件](https://github.com/mchenla/knowtether/releases/download/v0.2.0/SHA256SUMS)
 - [查看版本说明及所有下载项](https://github.com/mchenla/knowtether/releases/latest)
 
 有 Python 3.10 或更新版本时，可以直接安装公开下载地址：
 
 ```bash
-python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.1.1/kpdm_hooks-0.1.1-py3-none-any.whl"
+python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl"
 knowtether --version
 ```
 
 主命令为 `knowtether`。为兼容早期版本，Python 发行包仍为 `kpdm-hooks`，旧命令 `kpdm-hooks`、模块 `kpdm_hooks` 和已有 Hook 配置继续可用。升级可在上面的安装命令中增加 `--upgrade`。
 
-## 开始使用
+## 按项目安装：兼容原 CLI 与 Claude Code
+
+本节及后续 `knowtether` CLI 命令适用于单独安装 Python 发行包的用户。只使用上述 Codex 插件时无须执行这些步骤；可直接使用随插件安装的 `knowtether` Skill 和自动提醒。
 
 需要 Python 3.10 或更新版本，以及支持相应 Hook 事件的主机。Claude Code 需要 2.1.139 或更新版本，以支持本安装器使用的 `args` 直接执行形式，见[官方更新记录](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21139)。请在知识创作项目中操作，避免把工作文件放进 KPDM 规范源目录。
 
@@ -146,7 +162,7 @@ Core-6 表示目的、知识内核、依据、可用化、表达、验证与演�
 
 自动检查能提示记录缺失、明显状态表述和部分文本信号；无法判断事实真假、引用是否支持主张、版权是否允许使用、文字是否被真实读者理解。公开知识成果按原规范至少采用 Q3，另行完成独立事实与引用检查、独立编辑或真实目标读者任务，以及人的发布决定。
 
-当前验证包含本地测试、协议 fixture 与生成命令的 shell 执行；真实 Codex、Claude Code 安装后的端到端验证仍需在实际主机完成。fixture 通过只说明样例输入输出符合本项目预期。
+当前验证包含自动测试、真实 Codex CLI 的隔离安装和插件缓存中的三个 Hook 命令执行；完整交互会话中的 Hook 触发、信任界面与知识质量效果仍需评估。机械检查不代表内容真实或通过 KPDM 验收，见 [验证记录](docs/validation.md)。
 
 详见 [规则与人工责任](docs/rules.md)、[设计与优化方向](docs/design.md)、[安全说明](SECURITY.md)。欢迎按 [贡献说明](CONTRIBUTING.md) 报告误报、漏报与主机兼容问题。
 

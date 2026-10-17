@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "knowtether",
+  "version": "0.2.0",
+  "description": "KPDM-based knowledge-work guidance and advisory checks for Codex. Bundled Python hooks and a reusable skill; no pip installation required.",
+  "author": {"name": "MC", "url": "https://github.com/mchenla"},
+  "homepage": "https://github.com/mchenla/knowtether",
+  "repository": "https://github.com/mchenla/knowtether",
+  "license": "MIT",
+  "keywords": ["kpdm", "knowledge", "writing", "research", "hooks"],
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/codex-hooks.json",
+      "interface": {
+        "displayName": "知据 KnowTether",
+        "shortDescription": "Grounded knowledge work",
+        "longDescription": "Guidance for articles, research overviews, reports and explanations using selected KPDM principles. Distinguish facts and inference, trace sources, preserve limitations and separate draft, review and release decisions. Hooks provide advisory record and text checks; they do not verify truth or approve publication. Requires Python 3.10+ on PATH and trusted hooks.",
+        "developerName": "MC",
+        "category": "Productivity",
+        "capabilities": ["Skills", "Lifecycle hooks"],
+        "websiteURL": "https://github.com/mchenla/knowtether",
+        "defaultPrompt": ["Use KnowTether to draft a grounded knowledge article.", "Review this report's claims, sources and limitations."],
+        "brandColor": "#115e59",
+        "composerIcon": "./assets/knowtether.svg",
+        "logo": "./assets/knowtether.svg"
+      }
+    }
+  }
+}

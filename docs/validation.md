@@ -1,5 +1,17 @@
 # Validation records
 
+## 0.2.0: Codex plugin and repository marketplace
+
+The installed local Codex CLI was `0.163.0-alpha.10.2`. A fresh test HOME inside the project was used; the user's active Codex configuration, credentials and hook trust were not changed. The real CLI registered a local fixture marketplace, installed `knowtether@knowtether` version `0.2.0`, and listed it as installed/enabled. The fixture used a copy of the actual public plugin components with a local source entry. The downloaded GitHub source path is checked separately before release.
+
+All three hook commands from the installed cache were executed with fixture events against a new project that had no `.kpdm` directory. The skill was present, startup/prompt returned context, Stop returned only a warning, and no project files were created. This verifies installation and installed-command execution; it does not mean the interactive host's lifecycle or trust UI was tested.
+
+New regression cases cover manifest consistency, contained component references, project defaults/disable settings, legacy-registration deduplication, event.cwd isolation, malformed events, guard against Stop continuation, and cross-platform launchers. Windows paths with spaces, Chinese characters, apostrophes, ampersands, dollar signs and percent signs were exercised through both cmd and PowerShell. POSIX runtime-present/runtime-missing checks run on Linux in CI. The original rule/CLI suite is retained.
+
+Local Windows run: 90 tests ran successfully, with the POSIX-only launcher test skipped (89 passed, 1 skipped). The matching 0.2.0 wheel was built and installed in the project's virtual environment; both CLI names returned 0.2.0.
+
+The reproducible install checker is `python scripts/smoke_codex_plugin.py --home <new-test-directory>`. Use `--source mchenla/knowtether` to test the exact public two-command flow in an isolated HOME. It never copies credentials, modifies trust or runs a model turn. Check the actual Actions run and release notes for the release commit; a configured matrix alone is not proof of a successful run.
+
 ## 0.1.1: KnowTether naming release
 
 This release adds the KnowTether name, the `knowtether` command alias and direct public downloads. The rule engine, legacy command, Python distribution and installed-hook ownership markers remain compatible. The release is checked with the existing regression suite, an isolated wheel installation, both command names, and the Windows/Linux Python matrix in Actions. See the actual run results for the release commit and the release notes; these mechanical checks do not establish new semantic validation.

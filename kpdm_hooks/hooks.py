@@ -9,17 +9,34 @@ from .engine import (check_work, context, knowledge_prompt, lint_text, load_work
 EVENTS = ("SessionStart", "UserPromptSubmit", "Stop")
 
 
-def handle(event: dict, root: Path, expected_event: str) -> dict:
+def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False) -> dict:
     if not isinstance(event, dict) or expected_event not in EVENTS or event.get("hook_event_name") != expected_event:
         raise ValueError("Invalid hook event")
     config_path = safe_path(root, ".kpdm/config.json")
-    if not config_path.exists():
+    if not config_path.exists() and not plugin:
         return {}
-    config = read_object(config_path)
+    config = read_object(config_path) if config_path.exists() else {"schema_version": 1}
     if config.get("enabled") is False:
         return {}
     if config.get("schema_version") != 1:
         raise ValueError("Unsupported config version")
+    if plugin:
+        # Existing project-level Codex registrations keep ownership of their
+        # events. Avoid duplicate guidance when upgrading from the CLI install.
+        native_path = safe_path(root, ".codex/hooks.json")
+        if native_path.exists():
+            from .install import _ours
+            native = read_object(native_path)
+            native_hooks = native.get("hooks", {})
+            if not isinstance(native_hooks, dict):
+                raise ValueError("Invalid native hook configuration")
+            groups = native_hooks.get(expected_event, [])
+            if not isinstance(groups, list):
+                raise ValueError("Invalid native event groups")
+            for group in groups:
+                if isinstance(group, dict) and isinstance(group.get("hooks"), list):
+                    if any(_ours(handler) for handler in group["hooks"]):
+                        return {}
     if expected_event == "SessionStart":
         note = context()
         state = load_work(root)

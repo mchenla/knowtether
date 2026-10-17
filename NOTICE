@@ -1,4 +1,4 @@
-KnowTether (知据) 0.1.1
+KnowTether (知据) 0.2.0
 Previously named KPDM Hooks; Python distribution: kpdm-hooks.
 Copyright (c) 2026 MC (mchenla)
 https://github.com/mchenla/knowtether
@@ -26,6 +26,10 @@ the authoritative KPDM machine model or a certification of conformance.
 Host protocols referenced by this project:
 Codex Hooks: https://learn.chatgpt.com/docs/hooks
 Claude Code Hooks: https://code.claude.com/docs/en/hooks
+
+The GitHub-backed Codex marketplace distribution pattern was reviewed alongside
+Ponytail (https://github.com/DietrichGebert/ponytail). KnowTether's package,
+guidance, launchers and icon are implemented in this repository.
 
 Attribution and traceability do not by themselves grant permission to copy,
 adapt, distribute, or disclose third-party material.
