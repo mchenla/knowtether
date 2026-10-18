@@ -1,0 +1,179 @@
+{
+  "adapter_version": "0.4.0",
+  "runtime_source_commit": "c84dea16ac9854bd1b4b4e58d27bfa17f41119d8",
+  "host": "Codex 0.163.0-alpha.10.2 on Windows",
+  "date": "2026-10-17",
+  "method": "six real model tasks; AI review, not independent validation or causal comparison",
+  "context_characters": 5594,
+  "context_sha256": "4e84ffd684803ef1dc0b6b8c7b5ca471c5a6b2dc1213c5a2033d879f3d69314b",
+  "source_documents": [
+    {
+      "path": "framework/kpdm/spec/00 Start/快速入门.md",
+      "sha256": "0b2562070d8498a7666f83a0746a706dd6ae6cf4fa5ab71094ae87bca331c529"
+    },
+    {
+      "path": "framework/kpdm/spec/01 Foundations/KPDM 质量约束.md",
+      "sha256": "895ed5456ac22c602dec7d5581b516461d4bdb037a476f5e91a62f1d89a78dff"
+    },
+    {
+      "path": "framework/kpdm/spec/02 Methods and Protocols/人机协作协议.md",
+      "sha256": "ffa8887b73e97806f5c310640ede0574e90156ff9340021c17befb37af5c35ad"
+    }
+  ],
+  "collaboration_sha256": "b1defa1381f66ea23d12d08f1230e84474244ac0ce6173ddde167210bf440cad",
+  "cases": [
+    {
+      "case": "natural-writing",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "prompt_sha256": "c61070196f23ef0ad8bb873401992aa8e63219610dcbbf67c3cff04711f14275",
+      "output_sha256": "b6c5618f8744e9e0293ee0c4098a2a7cbe3cf9609c3dbe685639f67e6d9419f5",
+      "output_characters": 2479,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_context_matches_expected": true,
+      "project_files_created": 0
+    },
+    {
+      "case": "author-enthusiastic",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "prompt_sha256": "0cd66b0ba9e2972039888fc31f042219bbf6a6fbac0601573ccbd4154bfd75ce",
+      "output_sha256": "e34a3256bc72dc2fa1539937d193a6e7ad81eaca34a66f8a14a68091c539c6d3",
+      "output_characters": 215,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_context_matches_expected": true,
+      "project_files_created": 0
+    },
+    {
+      "case": "author-disappointed",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "prompt_sha256": "948ee0e2590e672b0e54e39fbd234040b8a09d6940d0aa78f45ead92c8442431",
+      "output_sha256": "ed676add1e4c0cf243c755ce37257f177035e3341a87da30edea1eee70eca5d1",
+      "output_characters": 201,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_context_matches_expected": true,
+      "project_files_created": 0
+    },
+    {
+      "case": "classification",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "prompt_sha256": "e12fc74bfce37a699b9d166c5a0ff584666165d1fd95388e7f2dedd5c0236b8f",
+      "output_sha256": "6d2be7d78a935ee290da7fca2ca0177d05893b8be50c62b6094640a0c04e06b8",
+      "output_characters": 342,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_context_matches_expected": true,
+      "project_files_created": 0
+    },
+    {
+      "case": "open-examples",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "prompt_sha256": "13647e9d21e26e727cb73ab2c04bdfc116f49361a26769d70c479ce7c6fc2150",
+      "output_sha256": "0bfd1f1710c46d00d285c44e0b14711c6baa9cdafdfe0dfb623181d365d351a8",
+      "output_characters": 207,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_context_matches_expected": true,
+      "project_files_created": 0
+    },
+    {
+      "case": "context-and-obedience",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "prompt_sha256": "2bb2cb510b354729397b8a7f053407125dfcf5561e7c33e4970cd03734c47a5c",
+      "output_sha256": "75d6fdd52635cdc1a59063cd0327c48ddd7b8b7fc982cdd9ba133e357204da94",
+      "output_characters": 242,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_context_matches_expected": true,
+      "project_files_created": 0
+    }
+  ],
+  "known_limitations": [
+    "No controlled effect estimate or real reader evaluation",
+    "Long-dash ranges violate a bundled expression convention",
+    "No semantic, grammar or watermark guarantee"
+  ],
+  "setup_failures_retained": [
+    "Hook review required before first model task",
+    "Second attempt aborted due to relative cwd in evaluation harness; fixed before third attempt"
+  ]
+}

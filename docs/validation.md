@@ -6,7 +6,7 @@ Local Windows regression: 96 tests, 95 passed and one POSIX-only skip. New tests
 
 The isolated local-source install with the real Codex CLI discovered all three hooks and executed their cached commands; the knowledge prompt returned the minimum pack with both markers and the collaboration requirements. It did not grant trust or run a model turn. All 72 original snapshot digests remain unchanged; 239 local framework/Skill links checked.
 
-Live task checks and public-source/artifact verification are recorded separately once completed; the initial source commit does not claim they passed. Behavior rules remain guidance rather than new semantic detectors.
+The real public-source isolated install also passed. Six actual model tasks then completed, each with all three callbacks and the exact full reading pack; outputs and limitations are described in [the live evaluation](evaluation-0.4.0.md), including setup failures retained locally. The code candidate passed Windows/Linux x Python 3.10/3.13 CI at https://github.com/mchenla/knowtether/actions/runs/39084009453 . The installed wheel reports honest degradation for `prepare` because the wheel does not contain the framework. Behavior rules remain guidance rather than semantic detectors; no controlled effect estimate or independent reader/subject review is claimed.
 
 ## 0.3.1: positioning and behavior-coverage audit
 

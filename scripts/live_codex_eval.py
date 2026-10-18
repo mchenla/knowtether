@@ -123,6 +123,9 @@ def main():
     parser.add_argument('--model', default='gpt-6.1-sol')
     parser.add_argument('--case', action='append', help='Run only these case ids')
     args = parser.parse_args()
+    # app-server resolves cwd relative to its own process cwd. Passing a relative
+    # output path here otherwise repeats its parent segments in thread/start.
+    args.output = args.output.resolve()
     if not args.codex or args.output.exists():
         parser.error('A Codex executable and a new output directory are required')
     cases = json.loads((Path(__file__).resolve().parents[1] / 'examples/live-cases.json').read_text(encoding='utf-8'))
