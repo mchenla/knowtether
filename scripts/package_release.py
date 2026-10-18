@@ -24,7 +24,7 @@ def main():
     subprocess.run(['git', 'archive', '--format=zip', '--prefix=knowtether-' + version + '/',
                     '--output=' + str(source), 'HEAD'], cwd=repo, check=True)
     plugin = output / ('knowtether-' + version + '-plugin.zip')
-    files = git('ls-tree', '-r', '--name-only', 'HEAD').decode('utf-8').splitlines()
+    files = [name for name in git('ls-tree', '-r', '-z', '--name-only', 'HEAD').decode('utf-8').split('\0') if name]
     roots = ('.codex-plugin/', 'assets/', 'hooks/', 'kpdm_hooks/', 'skills/', 'docs/', 'policy/', 'examples/', 'framework/')
     names = {'README.md', 'README.en.md', 'LICENSE', 'LICENSING.md', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md'}
     included = [name for name in files if name in names or name.startswith(roots)]
