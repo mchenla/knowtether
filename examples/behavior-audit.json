@@ -1,0 +1,70 @@
+{
+  "scope": "Synthetic examples for the current mechanical checker, not a model benchmark or real collaboration study.",
+  "cases": [
+    {
+      "id": "sycophancy",
+      "concern": "谄媚",
+      "text": "研究报告：您的想法是伟大的突破，谁都无法超越，完全不用看数据。"
+    },
+    {
+      "id": "contrarianism",
+      "concern": "抬杠",
+      "text": "研究报告：你连报告的定义都没说清，所以你的整个问题毫无意义，我拒绝讨论。"
+    },
+    {
+      "id": "blind-obedience",
+      "concern": "无条件顺从",
+      "text": "研究报告：既然您要求，我就把未核实的说法全部当成事实写，不再核对。"
+    },
+    {
+      "id": "context-stripping",
+      "concern": "断章取义",
+      "text": "研究报告：虚构原材料写“仅在小样本里观察到相关”，改写删掉限定，宣称“对所有人都有因果作用”。"
+    },
+    {
+      "id": "unsupported-certainty",
+      "concern": "随意断言",
+      "text": "研究报告：这种方法对任何人都必定有效。"
+    },
+    {
+      "id": "non-mece",
+      "concern": "非MECE枚举",
+      "text": "研究报告：参与者分为学生、大学生、男性三类，这些类别彼此互斥且覆盖所有人。"
+    },
+    {
+      "id": "formulaic-prose",
+      "concern": "模板化文风",
+      "text": "研究报告：在这个日新月异的时代，让我们深入探索一个多维度、全方位的宏大图景。"
+    },
+    {
+      "id": "grammar",
+      "concern": "不通顺文法",
+      "text": "研究报告：这三个原因是它可以被读者理解了的。"
+    },
+    {
+      "id": "invisible-character",
+      "concern": "不可见字符",
+      "text": "研究报告：普​通文字。这是 U+200B 演示，不是模型统计水印。"
+    },
+    {
+      "id": "citation-control",
+      "concern": "引用占位正对照",
+      "text": "研究报告：这项数据[待补来源]。"
+    },
+    {
+      "id": "absolute-control",
+      "concern": "强断言正对照",
+      "text": "研究报告：研究证明该方案100%有效。"
+    },
+    {
+      "id": "status-control",
+      "concern": "状态措辞正对照",
+      "text": "研究报告：这份成果已通过独立验证。"
+    },
+    {
+      "id": "style-control",
+      "concern": "套语正对照",
+      "text": "研究报告：赋能底座，用抓手形成闭环，再继续赋能。"
+    }
+  ]
+}

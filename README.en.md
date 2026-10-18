@@ -1,88 +1,46 @@
-# KPDM + KnowTether (知据)
+# KnowTether (知据)
 
-[中文文档](README.md)
+**Work with AI to turn sources and ideas into clearer, better-grounded articles and reports.**
 
-A local, warning-only Hook adapter for knowledge writing in Codex and Claude Code. It reminds agents to identify the audience and purpose, distinguish facts from inference, preserve sources and limitations, and keep human acceptance separate from release approval.
+[中文](README.md) · [KPDM framework](framework/kpdm/README.md) · [Capability audit](docs/capabilities.md) · [Downloads](https://github.com/mchenla/knowtether/releases/latest)
 
-Version `0.3.0`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
+| Question | Answer |
+| --- | --- |
+| Ontology | An open-source human–AI knowledge-work assistant: a framework plus an agent plugin. |
+| Why | Bring source, judgment and writing requirements into AI work so people can review and revise it. |
+| What | A method, templates, task reminders, optional work records and limited automated checks. |
+| Where | Codex plugin; project hooks for Claude Code. The framework also works on its own. |
+| Who | People writing articles, reports, research reviews or developing frameworks with AI. |
+| When | When defining, drafting, reviewing and delivering knowledge work. |
+| How | Install and trust the hooks, then ask normally. The agent receives guidance; people check the work and decide. |
 
-## Framework and implementation
+**KPDM: Knowledge Product Development Meta-Model (知识产品开发元模型).** It describes how people and AI can develop knowledge that others can understand, use and check. KnowTether adapts selected requirements for agents.
 
-[KPDM](framework/kpdm/README.md) is the knowledge-product framework, with specifications, templates, machine models and schemas under **CC BY 4.0**. KnowTether implements selected requirements through advisory hooks and a skill under **MIT**. See [licensing by path](LICENSING.md).
+## Codex: two commands
 
-The Codex plugin bundles the framework snapshot, so agents do not need access to the author's private vault. Read the framework independently or install the plugin. The Python wheel remains a lightweight software-only package. A separate [framework ZIP](https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm-0.5.0-rc.2-public-snapshot.zip) is available.
-
-## Codex: install in two commands
-
-Use a Codex CLI with plugin commands and Python 3.10+ on its non-interactive PATH:
+Requires Codex plugin commands and Python 3.10+ on the non-interactive PATH:
 
 ```bash
 codex plugin marketplace add mchenla/knowtether
 codex plugin add knowtether@knowtether
 ```
 
-Open `/hooks` in Codex, review and trust the three KnowTether hooks, then start a new session. Restart the desktop app after installation. Code is bundled; no separate pip install or project worksheet is required. This is a GitHub-backed marketplace, following Ponytail's distribution pattern. See [plugin behavior and configuration](docs/codex-plugin.md).
+Review and trust the three hooks in `/hooks`, then start a new session; restart the desktop app after installation. No separate pip install is needed. Ask in ordinary language without a manual marker. Request detection can miss cases; automatic reading of bundled specifications is not reliably established.
 
-## Downloads and optional project CLI
+To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugin add knowtether@knowtether`.
 
-The commands below are for the separately installed Python CLI, including the existing Claude Code integration. Codex plugin users can use the bundled skill and automatic guidance without installing this CLI.
+[Plugin guide](docs/codex-plugin.md) · [Python CLI and Claude Code](docs/cli.md)
 
-An independent [Codex plugin ZIP](https://github.com/mchenla/knowtether/releases/download/v0.3.0/knowtether-0.3.0-plugin.zip) is also available. The two-command marketplace flow above is the primary Codex installation method.
+## What is actually checked
 
-Public downloads require no GitHub account: [Python wheel](https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm_hooks-0.3.0-py3-none-any.whl), [source ZIP](https://github.com/mchenla/knowtether/releases/download/v0.3.0/knowtether-0.3.0-source.zip), [SHA-256 checksums](https://github.com/mchenla/knowtether/releases/download/v0.3.0/SHA256SUMS), and [release notes](https://github.com/mchenla/knowtether/releases/latest).
+Text checks cover citation placeholders, a narrow pattern of absolute research claims, independent-validation wording and concentrated stock phrases. Optional worksheets add record/version consistency checks.
 
-```bash
-python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm_hooks-0.3.0-py3-none-any.whl"
-knowtether --version
-```
+These checks do not guarantee freedom from sycophancy, contrarianism, blind obedience, cherry-picking, factual errors, classification gaps or formulaic prose. There is no grammar correction or technical watermark detection/removal. In the latest live writing case, the agent read the skill but did not open the bundled specification. Silence is not a quality pass. See the [capability audit](docs/capabilities.md) and [validation record](docs/validation.md).
 
-The primary command is `knowtether`. For compatibility, the Python distribution remains `kpdm-hooks`; the `kpdm-hooks` command, `kpdm_hooks` module and existing hook registrations remain supported. Add `--upgrade` to the install command to update an earlier version.
+## Open source
 
-Alternatively, install from source:
+Software **0.3.1**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
 
-```bash
-git clone https://github.com/mchenla/knowtether.git
-cd knowtether
-python -m pip install .
-```
+KPDM remains **0.5.0-rc.2 candidate**, with **0.4.0 trial / conditional-pass** as the latest accepted baseline. Software release is not framework acceptance.
 
-From your writing project, choose `codex` or `claude`:
-
-```bash
-knowtether install --root . --host codex --dry-run
-knowtether install --root . --host codex
-```
-
-The installer merges project configuration and backs up existing configuration before changing it: `.codex/hooks.json` for Codex and `.claude/settings.local.json` for Claude Code. It also creates `.kpdm/config.json` if missing. In Codex, review and trust the configuration with `/hooks`; installation does not grant trust or globally enable Hooks. Claude Code requires support for the current `command` + `args` exec form; upgrade older versions if needed. Restart or reload the session as required by your host. See the official [Codex Hooks](https://learn.chatgpt.com/docs/hooks) and [Claude Code Hooks](https://code.claude.com/docs/en/hooks) protocols.
-
-`SessionStart` supplies conditional guidance, `UserPromptSubmit` matches likely knowledge tasks, and `Stop` checks the last assistant message plus a worksheet bound to the current session. Short tasks can use guidance without creating a worksheet.
-
-## Optional worksheet and checks
-
-```bash
-knowtether init --root . --session-id YOUR_CURRENT_SESSION_ID
-knowtether context --root .
-knowtether check --root . --artifact article.md
-knowtether check --root . --artifact article.md --strict
-```
-
-Session IDs can also come from supported environment variables. Fill the eight worksheet fields in `.kpdm/work.json`; see [the example](examples/work.json). Review the current delegation before using `bind`; binding does not renew human authorization. `close` disables the worksheet. All commands also work through `python -m kpdm_hooks`.
-
-Default checks report warnings without blocking. Strict checks return `1` for warning/error findings; CLI execution errors return `2`. Host Hooks return `0` and do not approve or block actions.
-
-```bash
-knowtether uninstall --root . --host codex --dry-run
-knowtether uninstall --root . --host codex
-```
-
-Uninstall removes this project's handlers while preserving unrelated configuration.
-
-## Limits
-
-Core-6 describes functional coverage, not six required headings or a fixed sequence. Exploratory work may leave its central claim undecided. Missing warnings do not establish truth, adequate citations, legal permission, reader comprehension, or release readiness. Public knowledge products require the framework's Q3 checks, independent review, reader tasks, and a separate human release decision.
-
-Checks cover automated tests, isolated real Codex installation, host hook discovery, native trust review and live lifecycle execution. One natural writing task without a manual marker also triggered all three hooks; it is not a controlled quality study or a real-reader validation. Examples are fictional teaching materials, with no real research data or reader results. The example worksheet intentionally retains open issues and an unverified source record; do not invent verification to silence warnings.
-
-See [rule mapping](docs/rules.md), [design](docs/design.md), [contributing](CONTRIBUTING.md), and [security](SECURITY.md).
-
-Original project code and adaptation text are [MIT licensed](LICENSE), copyright `2026 MC (mchenla)`. The bundled original KPDM material under framework/kpdm is CC BY 4.0, licensed by its author. See [LICENSING.md](LICENSING.md) and [NOTICE](NOTICE).
+[Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)

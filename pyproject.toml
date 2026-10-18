@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kpdm-hooks"
-version = "0.3.0"
-description = "KnowTether: advisory KPDM hooks for grounded knowledge outputs in Codex and Claude Code"
+version = "0.3.1"
+description = "KnowTether: guidance and advisory checks for writing articles and reports with AI"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}

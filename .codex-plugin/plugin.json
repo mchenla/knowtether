@@ -1,7 +1,7 @@
 {
   "name": "knowtether",
-  "version": "0.3.0",
-  "description": "KPDM framework and KnowTether advisory hooks for grounded knowledge work. Bundled specifications, templates, models and a reusable skill.",
+  "version": "0.3.1",
+  "description": "Work with AI to write articles, reports and research reviews with clearer sources and reasoning. Includes KPDM guidance and limited advisory checks.",
   "author": {
     "name": "MC",
     "url": "https://github.com/mchenla"
@@ -20,8 +20,8 @@
   "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "知据 KnowTether",
-    "shortDescription": "Grounded knowledge work",
-    "longDescription": "Guidance for articles, research overviews, reports and explanations using selected KPDM principles. Distinguish facts and inference, trace sources, preserve limitations and separate draft, review and release decisions. Hooks provide advisory record and text checks; they do not verify truth or approve publication. Requires Python 3.10+ on PATH and trusted hooks.",
+    "shortDescription": "和 AI 一起，写得有据、讲得清",
+    "longDescription": "知据为用 AI 写文章、报告和研究综述的人提供方法、模板、任务提醒与有限检查。KPDM 全称 Knowledge Product Development Meta-Model（知识产品开发元模型）。当前不保证纠正迎合、事实错误、语法或技术水印，也未可靠实现随包规范自动读取。需要 Python 3.10+，使用前审阅并信任 Hooks。",
     "developerName": "MC",
     "category": "Productivity",
     "capabilities": [

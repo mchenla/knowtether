@@ -1,5 +1,11 @@
 # Validation records
 
+## 0.3.1: positioning and behavior-coverage audit
+
+This release simplifies the public introduction and explicitly separates framework requirements, model guidance and implemented detection. The Hook logic and skill guidance are unchanged. A reproducible synthetic audit calls the real Stop handler in plugin mode: four positive controls trigger the existing four text diagnostics, while nine illustrative problematic samples return no warning. This demonstrates coverage gaps, not a benchmark detection rate or a guarantee of agent behavior. See [the capability audit](capabilities.md) and `python scripts/audit_behavior.py`.
+
+A separate live 0.3.0 writing case used an ordinary Chinese request without framework names or markers. All three hooks completed and the agent read the installed skill, but no tool call opened the bundled framework specifications. The output had sources, limitations and exercises; that is not evidence of reading the specifications or a controlled quality improvement. The public package contains only this observation summary, not private session files or the unpublished article.
+
 ## 0.3.0: framework and plugin integration
 
 The author selected CC BY 4.0 for KPDM specifications, templates and machine models; KnowTether software/adaptation material remains MIT. The public snapshot contains 72 source documents. scripts/check_framework.py verifies each published file digest, unchanged JSON bytes relative to source, well-formed JSON, consulted-source fingerprints and 234 local Markdown file links. Obsidian links are converted, omitted references marked and all transformations recorded. This is a distribution/integrity check, not a new semantic or Q3 framework acceptance. The author source was not edited.
@@ -50,4 +56,4 @@ These are mechanical and protocol checks. They do not establish that the host ha
 4. Test adversarial or contradictory work records; measure useful review findings separately from metadata completeness.
 5. Use those results to adjust rules while preserving unknowns, candidate status and human decisions.
 
-The source identities used for this adaptation are recorded in [source-map.json](../policy/source-map.json). The original framework remains outside this repository and keeps its own version, status and rights.
+The source identities used for this adaptation are recorded in [source-map.json](../policy/source-map.json). The author source keeps its own version and authority; a CC BY 4.0 public snapshot is bundled under framework/kpdm.

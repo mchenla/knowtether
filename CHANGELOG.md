@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1 - 2026-10-17
+
+- Explain KPDM in full and introduce KnowTether through seven plain questions: identity, purpose, contents, environment, audience, timing and use.
+- Shorten Chinese/English homepages and move detailed project CLI instructions into docs/cli.md.
+- Publish a scoped collaboration-behavior audit and reproducible synthetic Stop examples, including known misses.
+- State the observed gap in automatic bundled-specification reading; do not claim semantic, grammar, style or watermark guarantees.
+- Keep Hook commands, runtime rules, skill guidance and the KPDM specification snapshot unchanged.
+
 ## 0.3.0 - 2026-10-17
 
 - Publish the author-licensed KPDM framework snapshot under CC BY 4.0; retain MIT for KnowTether software and adaptation material.
