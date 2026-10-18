@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add a Claude Code plugin from the same repository: `.claude-plugin` manifest and marketplace, the shared advisory hooks, and Claude-only commands under `claude/` (start, research, draft, check, release, handoff, adopt) with verifier, researcher and simulated-reader agents.
+- Resolve the hook launcher from `PLUGIN_ROOT` or `CLAUDE_PLUGIN_ROOT`; the plugin yields to an existing project install for the running host (`.codex/hooks.json` or `.claude/settings.local.json`).
+- License adapted Claude Code templates under CC BY 4.0 with attribution and change notes. Claude Code hooks on Windows are not yet run-tested.
+
 ## 0.6.0 - 2026-10-18
 
 - Remove nested PowerShell and repeated Python probes from Windows plugin startup; preserve three advisory events and normal host trust review.

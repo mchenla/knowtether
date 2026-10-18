@@ -53,7 +53,7 @@ class PluginPackageTests(unittest.TestCase):
         for event, groups in actual['hooks'].items():
             handler = groups[0]['hooks'][0]
             self.assertEqual(handler['type'], 'command')
-            self.assertIn('$PLUGIN_ROOT/hooks/run-posix.sh', handler['command'])
+            self.assertIn('${PLUGIN_ROOT:-$CLAUDE_PLUGIN_ROOT}/hooks/run-posix.sh', handler['command'])
             self.assertIn('!PLUGIN_ROOT!\\hooks\\run-windows.cmd', handler['commandWindows'])
             self.assertTrue(handler['commandWindows'].endswith(' ' + event))
             self.assertNotIn('BypassHookTrust', handler['commandWindows'])

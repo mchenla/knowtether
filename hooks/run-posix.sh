@@ -1,5 +1,6 @@
 #!/bin/sh
-# Codex provides PLUGIN_ROOT. No pip install, downloads, or project writes.
+# Codex provides PLUGIN_ROOT; Claude Code provides CLAUDE_PLUGIN_ROOT.
+# No pip install, downloads, or project writes.
 plugin_root=${PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-}}
 if [ -z "$plugin_root" ]; then
     printf '%s\n' '{"systemMessage":"[KnowTether CHECK_SKIPPED] Plugin root is unavailable; hook skipped."}'

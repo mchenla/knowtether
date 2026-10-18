@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" SessionStart",
+            "command": "sh \"${PLUGIN_ROOT:-$CLAUDE_PLUGIN_ROOT}/hooks/run-posix.sh\" SessionStart",
             "commandWindows": "cmd.exe /d /v:on /c \"!PLUGIN_ROOT!\\hooks\\run-windows.cmd\" SessionStart",
             "timeout": 10,
             "statusMessage": "KnowTether: SessionStart",
@@ -20,7 +20,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" UserPromptSubmit",
+            "command": "sh \"${PLUGIN_ROOT:-$CLAUDE_PLUGIN_ROOT}/hooks/run-posix.sh\" UserPromptSubmit",
             "commandWindows": "cmd.exe /d /v:on /c \"!PLUGIN_ROOT!\\hooks\\run-windows.cmd\" UserPromptSubmit",
             "timeout": 10,
             "statusMessage": "KnowTether: UserPromptSubmit",
@@ -34,7 +34,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" Stop",
+            "command": "sh \"${PLUGIN_ROOT:-$CLAUDE_PLUGIN_ROOT}/hooks/run-posix.sh\" Stop",
             "commandWindows": "cmd.exe /d /v:on /c \"!PLUGIN_ROOT!\\hooks\\run-windows.cmd\" Stop",
             "timeout": 10,
             "statusMessage": "KnowTether: Stop"

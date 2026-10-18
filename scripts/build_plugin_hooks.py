@@ -10,7 +10,9 @@ def definition():
         # Delayed expansion occurs only in the inner cmd; percent signs in the
         # resulting path are not expanded again. The batch disables it on entry.
         handler = {"type": "command",
-                   "command": 'sh "$PLUGIN_ROOT/hooks/run-posix.sh" ' + event,
+                   # Codex sets PLUGIN_ROOT; Claude Code sets only CLAUDE_PLUGIN_ROOT
+                   # and runs this command (it has no commandWindows field).
+                   "command": 'sh "${PLUGIN_ROOT:-$CLAUDE_PLUGIN_ROOT}/hooks/run-posix.sh" ' + event,
                    "commandWindows": 'cmd.exe /d /v:on /c "!PLUGIN_ROOT!\\hooks\\run-windows.cmd" ' + event,
                    "timeout": 10,
                    "statusMessage": "KnowTether: " + event}

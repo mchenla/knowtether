@@ -12,7 +12,8 @@ from .evidence import compile_task, evidence_context, audit_product
 EVENTS = ("SessionStart", "UserPromptSubmit", "Stop")
 
 
-def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False) -> dict:
+def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False,
+           host: str = "codex") -> dict:
     if not isinstance(event, dict) or expected_event not in EVENTS or event.get("hook_event_name") != expected_event:
         raise ValueError("Invalid hook event")
     config_path = safe_path(root, ".kpdm/config.json")
@@ -24,11 +25,12 @@ def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False
     if config.get("schema_version") != 1:
         raise ValueError("Unsupported config version")
     if plugin:
-        # Existing project-level Codex registrations keep ownership of their
-        # events. Avoid duplicate guidance when upgrading from the CLI install.
-        native_path = safe_path(root, ".codex/hooks.json")
+        # Existing project-level registrations for the running host keep
+        # ownership of their events. Avoid duplicate guidance when upgrading
+        # from the CLI install.
+        from .install import HOST_PATHS, _ours
+        native_path = safe_path(root, HOST_PATHS[host])
         if native_path.exists():
-            from .install import _ours
             native = read_object(native_path)
             native_hooks = native.get("hooks", {})
             if not isinstance(native_hooks, dict):

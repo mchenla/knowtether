@@ -3,7 +3,8 @@ Copyright (c) 2026 MC (mchenla)
 https://github.com/mchenla/knowtether
 
 KnowTether software, skills, original examples and adaptation documentation
-outside framework/kpdm are MIT licensed. The author selected CC BY 4.0 for
+outside framework/kpdm are MIT licensed, except claude/templates, which are
+adapted from KPDM templates and remain CC BY 4.0. The author selected CC BY 4.0 for
 original KPDM material under framework/kpdm on 2026-10-17. Preserve both
 licenses when redistributing the combined plugin/source package.
 See LICENSING.md for scope and framework/kpdm/LICENSE for CC BY 4.0.
