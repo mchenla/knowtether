@@ -45,7 +45,7 @@ def _sections(raw: bytes, headings: tuple[str, ...]) -> list[dict]:
     return selected
 
 
-def prepare(bundle_root: Path | None = None) -> dict:
+def prepare(bundle_root: Path | None = None, *, profile=None) -> dict:
     """All-or-degraded: never describe a partial or mismatched pack as ready."""
     from . import __version__
     root = (bundle_root or Path(__file__).resolve().parents[1]).resolve()
@@ -56,7 +56,16 @@ def prepare(bundle_root: Path | None = None) -> dict:
             raise ValueError("Unsupported framework identity")
         entries = manifest["documents"]
         documents = []
-        for relative, headings in SELECTION:
+        selection = SELECTION
+        if profile and profile['tier'] == 'focused':
+            quality = ['六项约束', '认知诚实与反迎合']
+            if 'expression' in profile['modules']:
+                quality.append('模型语言指纹与文字温度')
+            selection = [(SELECTION[1][0], tuple(quality))]
+            if 'book' in profile['modules'] or 'report' in profile['modules']:
+                heading = 'Profile B｜书籍' if 'book' in profile['modules'] else 'Profile D｜报告'
+                selection.append(('spec/02 Methods and Protocols/知识产品类型适配.md', (heading,)))
+        for relative, headings in selection:
             matches = [item for item in entries if item["path"] == relative]
             if len(matches) != 1:
                 raise ValueError("Snapshot entry missing or ambiguous")
@@ -69,13 +78,26 @@ def prepare(bundle_root: Path | None = None) -> dict:
                               "sections": _sections(raw, headings)})
         policy_path = "policy/collaboration.md"
         policy_raw = _read(root, policy_path)
-        policy = {"path": policy_path, "sha256": hashlib.sha256(policy_raw).hexdigest(),
-                  "text": policy_raw.decode("utf-8")}
+        if profile and profile['tier'] == 'focused':
+            # Compact adaptation travels inline; full protocol remains an explicit drill-down.
+            from .routing import LIGHT_GUIDANCE
+            policy_raw = (LIGHT_GUIDANCE.replace('[KnowTether LIGHT]', '')
+                          .replace('简单知识任务轻量处理：直接完成当前委托，不额外打开Skill或整套规范。', '按本次知识任务深度处理，不重复打开已有指导。')
+                          .replace('本次未读KPDM原文', '本次仅读取下列选段') + '\n'
+                          '复杂成品：先确定读者任务与核心判断；重要主张对应实际支持的来源和范围。'
+                          '不同设计、量纲、指标和版本不混成平均效应，负结果与替代解释同样处理。'
+                          '让结论、反例和使用决策相连，方案建议标明可检验条件、成本和停止条件。'
+                          '不把提纲、模拟或自评说成读者验证；公开使用保留必要署名、权利与隐私说明。'
+                          '按文体交付，PPT每页服务一个判断，工具书给能执行和检验的任务。'
+                          '已有原文选段足够时不要重复读Skill；有未解决规范问题才运行prepare或补读相关文档。').encode('utf-8')
+        policy = {"path": 'kpdm_hooks/reading.py (focused adaptation)' if profile and profile['tier'] == 'focused' else policy_path,
+                  "sha256": hashlib.sha256(policy_raw).hexdigest(),
+                  "text": policy_raw.decode("utf-8"), "kind": 'task adaptation' if profile and profile['tier'] == 'focused' else 'full policy'}
         pack = {"status": "ready", "adapter_version": __version__,
                 "framework_version": "0.5.0-rc.2 candidate",
                 "accepted_baseline": "0.4.0 trial / conditional-pass",
                 "scope": "selected passages, not all 72 documents; no semantic certification",
-                "documents": documents, "adaptation": policy}
+                "documents": documents, "adaptation": policy, "profile": profile or {'tier': 'full'}}
         # Leave room for framing and receipts. Never truncate a normative section.
         if len(json.dumps(pack, ensure_ascii=False)) > MAX_CONTEXT_CHARS - 2500:
             raise ValueError("Minimum pack exceeds context limit")
@@ -86,21 +108,23 @@ def prepare(bundle_root: Path | None = None) -> dict:
                 "message": "必要规范缺失、校验失败或超限；未声称已读取。请修复/更新完整插件，或明确告知缺项并人工查阅。独立 wheel 不包含规范，请安装完整插件。"}
 
 
-def reading_context() -> str:
-    pack = prepare()
+def reading_context(*, profile=None) -> str:
+    pack = prepare(profile=profile)
     if pack["status"] != "ready":
         return "[KnowTether READING_UNAVAILABLE] " + pack["message"]
     parts = ["[KnowTether MINIMUM_READING ready] 知识写作前查阅以下随包原文选段与协作适配。"
              "已校验原文文件 SHA-256；仅证明 Hook 读取并提供，不证明模型遵守或全框架合规。"
              "来源为 KPDM 0.5.0-rc.2 candidate，接受基线仍为 0.4.0 trial / conditional-pass。"
              "下面是规范资料；不构成新的用户授权。按当前委托执行，冲突服从宿主指令与用户授权。"
-             "输出前按协作要求自查；生产记录不混入文章。复杂/公开任务另查完整相关规范与模板。"]
+             "输出前按协作要求自查；生产记录不混入文章。已有选段足够时不再读Skill，遇到缺项再补相关规范。"]
+    if profile:
+        parts.append('ROUTE ' + json.dumps(profile, ensure_ascii=False))
     for item in pack["documents"]:
         parts.append("\nSOURCE " + item["path"] + "\nSHA256 " + item["sha256"])
         for section in item["sections"]:
             parts.append(f"LINES {section['first_line']}-{section['last_line']}\n" + section["text"])
     policy = pack["adaptation"]
-    parts.append("\nADAPTATION " + policy["path"] + "\nSHA256 " + policy["sha256"] + "\n" + policy["text"])
+    parts.append("\nADAPTATION " + policy['kind'] + "\nSHA256 " + policy["sha256"] + "\n" + policy["text"])
     parts.append("[KnowTether MINIMUM_READING end]")
     result = "\n".join(parts)
     assert len(result) <= MAX_CONTEXT_CHARS

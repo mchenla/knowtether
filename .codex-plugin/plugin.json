@@ -1,6 +1,6 @@
 {
   "name": "knowtether",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Work with AI to write articles, reports and research reviews with clearer sources and reasoning. Includes KPDM guidance and limited advisory checks.",
   "author": {
     "name": "MC",

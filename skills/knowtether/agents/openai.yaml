@@ -1,0 +1,5 @@
+interface:
+  display_name: "知据：完整知识创作流程"
+  short_description: "主动展开 KPDM 工作流、模板和审阅"
+policy:
+  allow_implicit_invocation: false

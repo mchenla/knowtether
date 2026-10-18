@@ -5,7 +5,7 @@ from pathlib import Path
 
 from .engine import (check_work, context, knowledge_prompt, lint_text, load_work,
                      read_object, safe_path)
-from .reading import reading_context
+from .routing import prompt_context
 
 EVENTS = ("SessionStart", "UserPromptSubmit", "Stop")
 
@@ -47,7 +47,7 @@ def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False
     if expected_event == "UserPromptSubmit":
         if not knowledge_prompt(event.get("prompt", "")):
             return {}
-        return {"hookSpecificOutput": {"hookEventName": expected_event, "additionalContext": reading_context()}}
+        return {"hookSpecificOutput": {"hookEventName": expected_event, "additionalContext": prompt_context(event.get('prompt', ''))}}
     if event.get("stop_hook_active") is True:
         return {}
     notes = []

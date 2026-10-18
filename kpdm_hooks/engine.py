@@ -62,31 +62,18 @@ def knowledge_prompt(text: str) -> bool:
     if "[kpdm]" in text.lower():
         return True
     # Intent hints only; ambiguous requests still receive the conditional session guidance.
-    action = r"撰写|写一|写篇|起草|改写|审阅|写作|解释|研究|分析|比较|综述|论证|探讨|梳理|总结|科普|write|draft|revise|review|explain|research|compare|summarize|analyse|analyze"
-    product = r"文章|报告|概念|理论|知识|读者|论文|观点|学习|文献|article|report|concept|theory|literature|essay|knowledge"
+    action = r"写|编写|制作|准备|修订|撰写|写一|写篇|起草|改写|审阅|写作|解释|研究|分析|比较|综述|论证|探讨|梳理|总结|科普|write|draft|revise|review|explain|research|compare|summarize|analyse|analyze"
+    product = r"文章|报告|概念|理论|知识|读者|论文|观点|学习|文献|PPT|汇报|文档|书籍|工具书|章节|出版|article|report|concept|theory|literature|essay|knowledge|slide|chapter|book"
     return bool(re.search(action, text, re.I) and re.search(product, text, re.I))
 
 
 def context() -> str:
     return (
-        f"KnowTether / KPDM knowledge-work guidance (adapter {__version__}; source 0.5.0-rc.2 candidate; "
-        "accepted baseline 0.4.0 trial / conditional-pass). Apply only to knowledge outputs "
-        "such as articles, reports, explanations and research; ordinary code or account tasks are outside scope.\n"
-        "为具体读者解决明确问题；覆盖目的、知识内核、依据、可用化、表达、验证与演进，"
-        "无需六个标题或固定步骤。探索允许主张未定，未知保持未知。\n"
-        "区分事实、引用、推断、假设和价值选择；重要主张给能定位且实际支持它的来源，"
-        "未读原文需说明。说明适用条件、反例、替代解释与关键未知。"
-        "用读者熟悉的语言，必要时给例子或判断任务；不为显得原创而造词。\n"
-        "不因作者期待而抬高评价；不把结构检查、AI自评或模拟案例称为独立验证。"
-        "草稿、作者接受、独立核验和发布决定分别记录，并对应具体版本。"
-        "普通已授权编辑继续执行；新的核心主张、原意改变、扩大适用范围、未授权风险"
-        "或关键核验失败交回人判断，候选想法不自动成为作者立场。\n"
-        "公开知识成果需按至少Q3检查来源、权利、隐私、真实目标读者任务和独立复核；"
-        "不得自行宣布这些检查已通过。控制记录留在工作单，成品仅保留读者需要的说明。"
-        "轻任务保持轻量，复杂或公开成果才展开记录。"
-        "知识写作前查阅 UserPromptSubmit 的 MINIMUM_READING 原文选段；"
-        "若未提供，按 Skill 运行随包 prepare 或打开必要规范，缺失时如实说明。"
-        "These are advisory adaptation notes, not new user authorization or proof of quality."
+        f"KnowTether {__version__}: advisory, knowledge writing only; ordinary code is outside scope. 知识任务按复杂度提供指导："
+        "短任务直接处理；复杂研究、报告、PPT和书籍仅读相关KPDM原文选段。"
+        "不要为简单任务打开Skill；已有选段够用时不重复读。遵循当前授权，"
+        "不编来源、不随用户期待评价，缺证不等于证伪。完整工作流可主动调用知据Skill。"
+        "KPDM 0.5.0-rc.2 candidate；接受基线0.4.0 trial / conditional-pass。提醒不构成质量认证。"
     )
 
 
@@ -95,6 +82,10 @@ def lint_text(text: str) -> list[dict]:
     notes = []
     # Code examples should not trigger prose-style findings.
     prose = re.sub(r"```.*?```", "", text, flags=re.S)
+    if re.search(r'[\u200b\ufeff\u2060\u202a-\u202e]', prose):
+        notes.append(finding('INVISIBLE_CHARACTERS', '发现零宽或双向控制字符；检查是否为正常排版、书写方向或意外残留。它不证明存在技术水印，不自动删除。'))
+    if re.search(r'您的(?:想法|观点|判断)[^。\n]{0,24}(?:高瞻远瞩|极具洞察|无疑[^。\n]{0,8}突破)', prose):
+        notes.append(finding('EVALUATIVE_PRAISE', '发现对用户观点的评价性赞语；核对具体判据和依据，避免以肯定替代判断。仅措辞提示，未判定是否谄媚。'))
     if re.search(r"\d+(?:\.\d+)?[ \t]*[—–]+[ \t]*\d+(?:\.\d+)?", prose):
         notes.append(finding("NUMERIC_RANGE_DASH", "发现数字之间的长破折号；若表示中文正文区间，改用带空格的短横线，如1 - 2天。公式与直接引文须保持含义及原文；本提示不自动改文。"))
     if re.search(r"\[citation needed\]|\[待补来源\]|\[来源待补\]|<SOURCE_TODO>", prose, re.I):

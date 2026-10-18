@@ -86,7 +86,7 @@ class ReadingTests(unittest.TestCase):
         event["prompt"] = "Fix the unit test"
         self.assertEqual(handle(event, self.root, "UserPromptSubmit", plugin=True), {})
         with patch("kpdm_hooks.reading.prepare", return_value={"status": "degraded", "message": "missing"}):
-            event["prompt"] = "write a knowledge article"
+            event["prompt"] = "write a 1500 words knowledge article"
             text = handle(event, self.root, "UserPromptSubmit", plugin=True)["hookSpecificOutput"]["additionalContext"]
             self.assertIn("READING_UNAVAILABLE", text)
             self.assertNotIn("ready", text)

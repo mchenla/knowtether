@@ -5,6 +5,7 @@ an already installed/trusted plugin. Does not grant trust or alter configuration
 Records no reasoning items. Keep output outside the public repository.
 """
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import queue
@@ -18,6 +19,14 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
     target = base / case['id']
     project = target / 'project'
     project.mkdir(parents=True)
+    provided = {}
+    for name, content in case.get('materials', {}).items():
+        path = (project / name).resolve()
+        if project.resolve() not in path.parents:
+            raise ValueError('Material path escapes the project')
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding='utf-8', newline='\n')
+        provided[name] = hashlib.sha256(path.read_bytes()).hexdigest()
     (target / 'input.json').write_text(json.dumps(case, ensure_ascii=False, indent=2), encoding='utf-8')
     started = time.monotonic()
     override = 'plugins."knowtether@knowtether".enabled=' + str(enabled).lower()
@@ -83,7 +92,7 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
         skills = [s for row in skills_result['data'] for s in row['skills']
                   if s.get('enabled', True) and (s.get('pluginId') == 'knowtether@knowtether'
                      or s.get('name') in ('knowtether', 'knowtether:knowtether'))]
-        if bool(skills) != enabled:
+        if not enabled and skills:
             raise RuntimeError('Plugin skill condition does not match requested on/off state')
         if env is not None and env.get('KNOWTETHER_CONTROLLED_EVAL') == '1':
             others = [h for row in listing['data'] for h in row['hooks']
@@ -116,10 +125,14 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
         runs = [r['params']['run'] for r in records if r.get('method') == 'hook/completed'
                 and r['params']['run'].get('statusMessage', '').startswith('KnowTether:')]
         packed = json.dumps([r for r in runs if r['eventName'] == 'userPromptSubmit'], ensure_ascii=False)
+        light = '[KnowTether LIGHT]' in packed
+        contexts = [e['text'] for r in runs for e in r['entries'] if e['kind'] == 'context']
         result = {'case': case['id'], 'model': model, 'effort': 'medium',
                   'thread_id': thread, 'output_characters': len(article),
                   'hook_events': [{'event': r['eventName'], 'status': r['status']} for r in runs],
                   'reading_pack_complete': 'MINIMUM_READING ready' in packed and 'MINIMUM_READING end' in packed,
+                  'guidance_mode': 'light' if light else ('focused' if 'ROUTE' in packed else 'full'),
+                  'context_characters': sum(len(t) for t in contexts),
                   'plugin_enabled': enabled, 'active_knowtether_skills': len(skills),
                   'elapsed_seconds': round(time.monotonic() - started, 3),
                   'tool_items': [r['params']['item']['type'] for r in records
@@ -127,12 +140,15 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
                                  and r['params']['item']['type'] not in ('userMessage', 'agentMessage')],
                   'token_usage': next((r['params'].get('tokenUsage') for r in reversed(records)
                                        if r.get('method') == 'thread/tokenUsage/updated'), None),
-                  'project_files': [str(f.relative_to(project)) for f in project.rglob('*') if f.is_file()],
+                  'provided_files_sha256': provided,
+                  'materials_unchanged': all(hashlib.sha256((project/n).read_bytes()).hexdigest()==h for n,h in provided.items()),
+                  'project_files': [str(f.relative_to(project)) for f in project.rglob('*')
+                                    if f.is_file() and str(f.relative_to(project)) not in provided],
                   'semantic_grade': 'not-automatically-assessed'}
         (target / 'summary.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
         if enabled and ({r['eventName'] for r in runs} != {'sessionStart', 'userPromptSubmit', 'stop'}
                 or not all(r['status'] == 'completed' for r in runs)
-                or not result['reading_pack_complete'] or not article):
+                or not (result['reading_pack_complete'] or light) or not article):
             raise RuntimeError('Lifecycle, minimum pack or final output missing; inspect saved records')
         if not enabled and (runs or result['reading_pack_complete'] or not article):
             raise RuntimeError('Control received plugin callbacks/context or has no output')

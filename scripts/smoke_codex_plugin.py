@@ -116,7 +116,7 @@ def main():
     assert {item['eventName'] for item in found} == {'sessionStart', 'userPromptSubmit', 'stop'}, discovered
     for event in ('SessionStart', 'UserPromptSubmit', 'Stop'):
         payload = {'hook_event_name': event, 'cwd': str(project), 'session_id': 'smoke',
-                   'prompt': '[kpdm] Write a research article',
+                   'prompt': '[kpdm] Write a 1500 words research report',
                    'last_assistant_message': 'Research report: explain knowledge [citation needed]'}
         handler = hooks['hooks'][event][0]['hooks'][0]
         hook_env = dict(env, PLUGIN_ROOT=str(installed))

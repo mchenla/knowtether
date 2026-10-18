@@ -1,11 +1,15 @@
 ---
 name: knowtether
-description: "Use for knowledge outputs such as articles, research overviews, reports, explanations, and original frameworks when the user wants grounded, understandable, reviewable work using selected KPDM principles. Not for ordinary code maintenance, account management, or pure fiction."
+description: "Explicitly expand the complete KPDM workflow, templates or publication review when requested. Automatic lightweight and focused guidance is supplied by hooks; do not load this skill for ordinary short writing."
 ---
 
 # KnowTether: knowledge with traceable grounds
 
 This is a practical adaptation of selected KPDM requirements, not the full framework or a certificate of quality. The reference is KPDM 0.5.0-rc.2 candidate; the accepted baseline remains 0.4.0 trial / conditional-pass. The author-licensed framework snapshot is bundled at [KPDM](../../framework/kpdm/README.md). See [rule mapping](../../docs/rules.md) and [source identities](../../policy/source-map.json).
+
+## Expand only when needed
+
+Automatic Hook routing handles simple and focused tasks without loading this file. Use this complete workflow when explicitly invoked or the user asks to expand KPDM. A LIGHT context is an adaptation summary, not a claim that specifications were read. A focused pack identifies only the exact source passages supplied.
 
 ## Consult the minimum sources before knowledge writing
 
