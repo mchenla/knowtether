@@ -8,6 +8,7 @@ if sys.version_info < (3, 10):
 
 from pathlib import Path
 import json
+import os
 
 # Keep the installed bundle read-only, including Python bytecode caches.
 sys.dont_write_bytecode = True
@@ -34,7 +35,9 @@ def main():
         root = Path(cwd).resolve(strict=True)
         if not root.is_dir():
             raise ValueError("project cwd is not a directory")
-        result = handle(event, root, expected, plugin=True)
+        # Codex sets PLUGIN_ROOT; Claude Code sets only CLAUDE_PLUGIN_ROOT.
+        host = "claude" if os.environ.get("CLAUDE_PLUGIN_ROOT") and not os.environ.get("PLUGIN_ROOT") else "codex"
+        result = handle(event, root, expected, plugin=True, host=host)
     except (OSError, ValueError, TypeError, AttributeError, RecursionError):
         result = {"systemMessage": "[KnowTether CHECK_SKIPPED] 输入或项目配置异常，已跳过检查；未阻断操作。"}
     print(json.dumps(result, ensure_ascii=False))

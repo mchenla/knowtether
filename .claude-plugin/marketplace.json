@@ -1,0 +1,17 @@
+{
+  "name": "knowtether",
+  "description": "知据 KnowTether: human-led, agent-assisted knowledge writing with KPDM.",
+  "owner": {
+    "name": "MC",
+    "url": "https://github.com/mchenla"
+  },
+  "plugins": [
+    {
+      "name": "knowtether",
+      "source": "./",
+      "description": "Advisory KPDM hooks plus commands to start a worksheet, research with tethered sources, draft inside a mandate, verify independently and gate release.",
+      "category": "productivity",
+      "tags": ["kpdm", "writing", "research", "fact-checking"]
+    }
+  ]
+}

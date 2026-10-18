@@ -11,7 +11,7 @@
 | 是什么 · Ontology | 一个开源的人机知识协作助手，由 KPDM 方法与 KnowTether 插件组成。 |
 | 为什么用 · Why | 把来源、判断和表达要求带进 AI 写作，方便核对与修改。 |
 | 提供什么 · What | 方法规范、模板、写作提醒、工作记录和有限的自动检查。 |
-| 在哪里用 · Where | Codex 插件；Claude Code 项目 Hook。规范也能单独阅读使用。 |
+| 在哪里用 · Where | Codex 插件；Claude Code 插件或项目 Hook。规范也能单独阅读使用。 |
 | 谁来用 · Who | 用 AI 写工作文档、汇报、学术报告、知识文章或书籍的人。 |
 | 什么时候用 · When | 明确任务、起草、审阅与交付知识成果时。 |
 | 怎么用 · How | 安装并信任 Hook，照常用自然语言提任务；Agent 接收提醒，人核对并作决定。 |
@@ -57,6 +57,16 @@ codex plugin add knowtether@knowtether
 照常提任务，无需提示标签。**短任务只给简短指导；复杂写作才读相关KPDM选段**，如报告或书籍的专门要求。已有足够指导时不再重复打开Skill；需要完整流程可明确要求“按完整KPDM处理”。[分层读取与局限](docs/minimum-reading.md)
 
 已有用户先运行 `codex plugin marketplace upgrade knowtether`，再执行上述 `codex plugin add` 命令。[完整插件说明](docs/codex-plugin.md) · [Python CLI 与 Claude Code](docs/cli.md)
+
+## Claude Code：一条命令安装
+
+需要 Claude Code 2.1.275+ 与 `PATH` 上的 Python 3.10+。在会话中运行：
+
+```
+/plugin install knowtether --marketplace mchenla/knowtether
+```
+
+同一组 Hook 照常提醒；另有 `/knowtether:start`、`research`、`draft`、`check`、`release`、`handoff`、`adopt` 七个命令，从一句话任务到发布前检查。[Claude Code 插件说明](docs/claude-plugin.md)
 
 ## 实际能做到什么
 

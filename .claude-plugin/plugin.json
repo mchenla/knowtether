@@ -1,0 +1,27 @@
+{
+  "name": "knowtether",
+  "displayName": "知据 KnowTether",
+  "version": "0.6.0",
+  "description": "Work with AI on grounded articles, reports, presentations and books. Advisory KPDM hooks keep short tasks light; commands start a worksheet, run a steerable research loop, draft inside a mandate, verify independently and gate release.",
+  "author": {
+    "name": "MC",
+    "url": "https://github.com/mchenla"
+  },
+  "homepage": "https://github.com/mchenla/knowtether",
+  "repository": "https://github.com/mchenla/knowtether",
+  "license": "MIT AND CC-BY-4.0",
+  "keywords": [
+    "kpdm",
+    "knowledge",
+    "writing",
+    "research",
+    "fact-checking",
+    "hooks"
+  ],
+  "skills": "./claude/skills/",
+  "agents": [
+    "./claude/agents/verifier.md",
+    "./claude/agents/researcher.md",
+    "./claude/agents/reader-sim.md"
+  ]
+}

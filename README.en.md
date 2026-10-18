@@ -9,7 +9,7 @@
 | Ontology | An open-source human–AI knowledge-work assistant: a framework plus an agent plugin. |
 | Why | Bring source, judgment and writing requirements into AI work so people can review and revise it. |
 | What | A method, templates, task reminders, optional work records and limited automated checks. |
-| Where | Codex plugin; project hooks for Claude Code. The framework also works on its own. |
+| Where | Codex plugin; Claude Code plugin or project hooks. The framework also works on its own. |
 | Who | People writing articles, reports, research reviews or developing frameworks with AI. |
 | When | When defining, drafting, reviewing and delivering knowledge work. |
 | How | Install and trust the hooks, then ask normally. The agent receives guidance; people check the work and decide. |
@@ -30,6 +30,16 @@ Review and trust the three hooks in `/hooks`, then start a new session; restart 
 To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugin add knowtether@knowtether`.
 
 [Plugin guide](docs/codex-plugin.md) · [Python CLI and Claude Code](docs/cli.md)
+
+## Claude Code: one command
+
+Requires Claude Code 2.1.275+ and Python 3.10+ on PATH. In a session, run:
+
+```
+/plugin install knowtether --marketplace mchenla/knowtether
+```
+
+The same hooks provide guidance. Seven commands add an explicit path from a one-sentence task to a release check: `/knowtether:start`, `research`, `draft`, `check`, `release`, `handoff` and `adopt`. See the [Claude Code plugin guide](docs/claude-plugin.md) (Chinese).
 
 ## What is actually checked
 
