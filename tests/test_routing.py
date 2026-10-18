@@ -31,6 +31,16 @@ class RoutingTests(unittest.TestCase):
         self.assertIn('模型语言指纹与文字温度', text)
         self.assertIn('Profile B｜书籍', text)
 
+    def test_explicit_full_request_reaches_hook_without_product_keywords(self):
+        from kpdm_hooks.hooks import handle
+        with tempfile.TemporaryDirectory() as folder:
+            for prompt in ['请按完整KPDM处理', '请按KPDM完整流程处理', 'Use full KPDM']:
+                result = handle({'hook_event_name': 'UserPromptSubmit', 'prompt': prompt}, Path(folder), 'UserPromptSubmit', plugin=True)
+                text = result['hookSpecificOutput']['additionalContext']
+                self.assertIn('MINIMUM_READING ready', text)
+                self.assertIn('full policy', text)
+                self.assertIn('一、从一句话任务开始', text)
+
     def test_focused_receipts_match_source_and_missing_type_degrades(self):
         from kpdm_hooks.reading import prepare
         repo = Path(__file__).resolve().parents[1]

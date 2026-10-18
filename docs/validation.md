@@ -2,7 +2,7 @@
 
 ## 0.5.0: adaptive guidance and complex writing
 
-Windows regression: 110 tests, 109 passed and one POSIX-only skip. Focused receipts match exact source bytes and lines; missing type passages degrade honestly. Seven advisory signals have positive synthetic controls in a 15-case coverage demonstration; broader semantic misses remain. The 72-document snapshot and 239 framework/Skill file links remain intact.
+Windows regression: 111 tests, 110 passed and one POSIX-only skip. Focused receipts match exact source bytes and lines; missing type passages degrade honestly. Explicit full-workflow requests reach the Hook even without product keywords. Seven advisory signals have positive synthetic controls in a 15-case coverage demonstration; broader semantic misses remain. The 72-document snapshot and 239 framework/Skill file links remain intact.
 
 The preregistered 18-output live comparison completed without a failed attempt. All active runs received exact expected guidance and three completed hooks; controls had no plugin callbacks or active Skill. All complex turns read the immutable source packet; no project files were added. Eight new-version active turns did not read the Skill. Short-task guidance fell from 7,940 to 547 characters relative to 0.4.1, with median time 25.255s to 17.5415s; disabled was 8.176s. Complex tasks remained slower than disabled.
 

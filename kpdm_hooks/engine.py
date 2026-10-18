@@ -61,6 +61,8 @@ def knowledge_prompt(text: str) -> bool:
         return False
     if "[kpdm]" in text.lower():
         return True
+    if re.search(r'完整.*KPDM|KPDM.*完整|full.*KPDM', text, re.I):
+        return True
     # Intent hints only; ambiguous requests still receive the conditional session guidance.
     action = r"写|编写|制作|准备|修订|撰写|写一|写篇|起草|改写|审阅|写作|解释|研究|分析|比较|综述|论证|探讨|梳理|总结|科普|write|draft|revise|review|explain|research|compare|summarize|analyse|analyze"
     product = r"文章|报告|概念|理论|知识|读者|论文|观点|学习|文献|PPT|汇报|文档|书籍|工具书|章节|出版|article|report|concept|theory|literature|essay|knowledge|slide|chapter|book"

@@ -91,7 +91,7 @@
     "n=2 per task, descriptive pilot only",
     "Research excerpts, not full independent literature verification or actual organizational/reader trial",
     "Cumulative input includes cached/multiple requests, not monetary cost",
-    "Final release changes documentation, audit examples and tests after the frozen runtime; generated guidance code and hook definitions unchanged"
+    "Final release also fixes explicit full-KPDM prompt recognition without product keywords; all 18 experimental requests retain identical matching and context. This extra entry is regression-tested, not separately model-evaluated."
   ],
   "metrics_medians": [
     {
