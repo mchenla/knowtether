@@ -102,6 +102,8 @@ def main():
     assert (installed / 'skills/knowtether/SKILL.md').is_file()
     assert (installed / 'framework/kpdm/README.md').is_file()
     assert (installed / 'framework/kpdm/LICENSE').is_file()
+    assert (installed / 'framework/kpdm/spec/00 Start/快速入门.md').is_file()
+    assert (installed / 'framework/kpdm/spec/04 Templates/轻量工作单模板.md').is_file()
     hooks = json.loads((installed / 'hooks/hooks.json').read_text(encoding='utf-8'))
     project = home / 'creative-project'
     project.mkdir()

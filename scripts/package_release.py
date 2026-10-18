@@ -39,6 +39,10 @@ def main():
                     'framework/kpdm/README.md', 'framework/kpdm/LICENSE', 'framework/kpdm/snapshot.json', 'LICENSING.md')
         assert all('knowtether/' + name in entries for name in required)
         assert all('/.agents/' not in name and '/.kpdm/' not in name and '/.venv/' not in name for name in entries)
+        snapshot = json.loads(archive.read('knowtether/framework/kpdm/snapshot.json'))
+        for document in snapshot['documents']:
+            data = archive.read('knowtether/framework/kpdm/' + document['path'])
+            assert hashlib.sha256(data).hexdigest() == document['published_sha256'], document['path']
         metadata = json.loads(archive.read('knowtether/.codex-plugin/plugin.json'))
         assert metadata['name'] == 'knowtether' and metadata['version'] == version
     framework = output / 'kpdm-0.5.0-rc.2-public-snapshot.zip'
@@ -48,6 +52,9 @@ def main():
                 archive.writestr('kpdm/' + name.removeprefix('framework/kpdm/'), git('show', 'HEAD:' + name))
     with zipfile.ZipFile(framework) as archive:
         assert 'kpdm/LICENSE' in archive.namelist() and 'kpdm/spec/README.md' in archive.namelist()
+        snapshot = json.loads(archive.read('kpdm/snapshot.json'))
+        for document in snapshot['documents']:
+            assert hashlib.sha256(archive.read('kpdm/' + document['path'])).hexdigest() == document['published_sha256']
     with zipfile.ZipFile(wheel) as archive:
         assert not any(name.startswith('framework/') for name in archive.namelist())
     sums = output / ('v' + version) / 'SHA256SUMS'
