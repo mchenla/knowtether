@@ -1,0 +1,5 @@
+{
+  "purpose": "Positive and negative instances for kpdm.schema.v0.5.0-rc.2.json (PRD R12). Each invalid-* file must be rejected by the schema.",
+  "applies_to": "0.5.0-rc.2",
+  "structural_only": "Passing the schema proves structure and declared configuration only; it does not prove semantic consistency with the prose or real-world validity."
+}

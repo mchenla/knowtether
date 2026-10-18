@@ -1,5 +1,11 @@
 # Validation records
 
+## 0.3.0: framework and plugin integration
+
+The author selected CC BY 4.0 for KPDM specifications, templates and machine models; KnowTether software/adaptation material remains MIT. The public snapshot contains 72 source documents. scripts/check_framework.py verifies each published file digest, unchanged JSON bytes relative to source, well-formed JSON, consulted-source fingerprints and 234 local Markdown file links. Obsidian links are converted, omitted references marked and all transformations recorded. This is a distribution/integrity check, not a new semantic or Q3 framework acceptance. The author source was not edited.
+
+Windows regression ran 90 tests: 89 passed and one POSIX-only launcher check skipped. The isolated real Codex CLI installed version 0.3.0 with the framework and both licenses present, discovered all three hooks through the actual host API, and executed the three cached commands successfully. No user trust or settings were changed by that isolated check. Hook commands and runtime behavior remain unchanged; the new skill can read bundled framework files. Public-source and artifact checks are reported in the release notes.
+
 ## 0.2.1: actual host discovery
 
 On Codex CLI 0.163.0-alpha.10.2, the 0.2.0 package installed but the host reported no plugin hooks. An isolated A/B check found that root plugin.json shadowed the compatibility manifest while the host ignored its hook extension. Version 0.2.1 uses only .codex-plugin/plugin.json and hooks/hooks.json. The isolated checker now calls the real app-server hooks/list API and requires all three plugin event entries before command checks. It never changes trust or copies credentials.

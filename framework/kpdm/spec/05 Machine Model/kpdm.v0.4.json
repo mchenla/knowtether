@@ -1,0 +1,93 @@
+{
+  "name": "KPDM",
+  "display_name": "知识产品开发元模型",
+  "english_name": "Knowledge Product Development Meta-Model",
+  "namespace": "KPDM",
+  "version": "0.4.0",
+  "status": "trial",
+  "positioning": "面向人机协作的框架、知识体系、著作与出版物开发元模型",
+  "legacy_namespaces": ["Meta-Framework", "MF"],
+  "universal_principles": [
+    "truth-first",
+    "problem-and-audience-first",
+    "predefine-quality-height",
+    "objects-before-expression",
+    "claim-evidence-fit",
+    "originality-with-provenance",
+    "citation-and-permission-separated",
+    "human-accountability",
+    "production-validation-separation",
+    "traceability-and-reproducibility",
+    "privacy-security-confidentiality",
+    "disclose-boundaries-failures-corrections"
+  ],
+  "release_redlines": [
+    "untraceable-core-facts-or-data",
+    "unverified-or-fabricated-citations",
+    "unknown-rights-for-reproduced-or-adapted-material",
+    "unverified-ai-generated-facts-quotes-or-data",
+    "unauthorized-sensitive-information",
+    "marketing-claims-exceed-evidence",
+    "concealed-authorship-conflict-or-material-ai-use"
+  ],
+  "quality_levels": [
+    {"id": "Q0", "name": "Capture", "external_use": false},
+    {"id": "Q1", "name": "Working", "external_use": false},
+    {"id": "Q2", "name": "Professional", "external_use": false},
+    {"id": "Q3", "name": "Publishable", "external_use": true},
+    {"id": "Q4", "name": "Authority Candidate", "external_use": true}
+  ],
+  "meta_objects": [
+    "Project", "Problem", "Audience", "Concept", "Claim", "Evidence", "Source",
+    "Architecture", "Method", "Tool", "PublicationUnit", "Product", "Validation",
+    "Decision", "QualityTarget", "ProvenanceRecord", "RightsRecord", "DataReference",
+    "AIContribution", "ContextPack", "WorkPacket", "ClaimGraph", "QualitySLO",
+    "UncertaintyItem", "RegressionTest", "GoldenCase", "ReleaseCandidate"
+  ],
+  "production_modes": ["Explore", "Architect", "Produce", "Verify"],
+  "confidence_dimensions": ["C", "E", "A", "R", "U", "P", "X"],
+  "gates": [
+    {"id": "G0", "name": "立项与定位", "weight": 0.05},
+    {"id": "G1", "name": "研究与主张", "weight": 0.15},
+    {"id": "G2", "name": "知识架构", "weight": 0.15},
+    {"id": "G3", "name": "规范冻结", "weight": 0.1},
+    {"id": "G4", "name": "内容与工具生产", "weight": 0.2},
+    {"id": "G5", "name": "验证", "weight": 0.2},
+    {"id": "G6", "name": "出版工程", "weight": 0.1},
+    {"id": "G7", "name": "发布与演进", "weight": 0.05}
+  ],
+  "profiles": [
+    {"id": "knowledge-system", "default_quality": "Q4"},
+    {"id": "book-publication", "default_quality": "Q3"},
+    {"id": "article", "default_quality": "Q3"},
+    {"id": "content-series", "default_quality": "Q3"}
+  ],
+  "protocols": [
+    {"id": "KPDM-INIT-01", "name": "实例化初始化", "mandatory": true},
+    {"id": "KPDM-HAI-01", "name": "人机协作", "mandatory": true},
+    {"id": "KPDM-PRD-01", "name": "版权、引用、数据与来源", "mandatory": true},
+    {"id": "KPDM-PROD-01", "name": "人机协作知识生产", "mandatory": true},
+    {"id": "KPDM-WP-01", "name": "上下文包与工作包", "mandatory": true},
+    {"id": "KPDM-RC-01", "name": "回归测试与发布候选", "mandatory": true}
+  ],
+  "validation_cases": [
+    {
+      "project": "CBBOK",
+      "profile": "knowledge-system",
+      "result": "conditional-pass",
+      "limitations": ["single-source-project", "not-yet-migrated-to-kpdm-production-objects"]
+    },
+    {
+      "project": "Meta-Framework-v0.3-self-bootstrap",
+      "profile": "knowledge-system",
+      "result": "conditional-pass",
+      "limitations": ["legacy-namespace", "self-referential-case", "not-cross-project-validation"]
+    },
+    {
+      "project": "KPDM-v0.4-namespace-migration",
+      "profile": "knowledge-system",
+      "result": "conditional-pass",
+      "limitations": ["identity-migration-only", "not-external-validation"]
+    }
+  ]
+}

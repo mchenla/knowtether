@@ -1,4 +1,4 @@
-# 知据 KnowTether
+# KPDM + 知据 KnowTether
 
 [English](README.en.md)
 
@@ -6,7 +6,13 @@
 
 **知据（KnowTether）** 是一个 Python 标准库实现的本地 Hook 适配器，支持 Codex 和 Claude Code。名字取“知识有据”之意：让知识输出连接回资料、推理和人的判断。它把 KPDM 的部分要求转成会话提示、工作单检查和文本告警。默认告警模式不阻断 Agent，也不替人批准主张或发布。
 
-当前软件版本：`0.2.0`。适配参考为 **KPDM 0.5.0-rc.2 candidate**，最近接受基线仍为 **0.4.0 trial / conditional-pass**。本项目的安装、测试或发布不会提升 KPDM 框架状态。
+当前软件版本：`0.3.0`。适配参考为 **KPDM 0.5.0-rc.2 candidate**，最近接受基线仍为 **0.4.0 trial / conditional-pass**。本项目的安装、测试或发布不会提升 KPDM 框架状态。
+
+## 方法规范与 Agent 实现
+
+本仓库同时开源两部分：[KPDM 规范、模板与机器模型](framework/kpdm/README.md)采用 **CC BY 4.0**；KnowTether 的代码、Hook、Skill 与适配说明采用 **MIT**。完整许可范围见 [LICENSING.md](LICENSING.md)。
+
+KPDM 规定知识产品如何形成、表达与核验；知据把其中部分要求带入 Agent 工作流。既可以只使用规范，也可以安装插件。插件 ZIP 和市场安装已包含规范，无须访问作者的 Obsidian 库；Python wheel 保持软件部分轻量分发。
 
 ## Codex：两条命令安装
 
@@ -25,16 +31,17 @@ codex plugin add knowtether@knowtether
 
 仓库和安装包公开可访问，下载不需要 GitHub 账户。
 
-- [下载独立 Codex 插件 ZIP（v0.2.0）](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-plugin.zip)
-- [下载 Python 安装包（v0.2.0）](https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl)
-- [下载源代码 ZIP（v0.2.0）](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-source.zip)
-- [下载 SHA-256 校验文件](https://github.com/mchenla/knowtether/releases/download/v0.2.0/SHA256SUMS)
+- [下载独立 Codex 插件 ZIP（v0.3.0）](https://github.com/mchenla/knowtether/releases/download/v0.3.0/knowtether-0.3.0-plugin.zip)
+- [下载独立 KPDM 规范包](https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm-0.5.0-rc.2-public-snapshot.zip)
+- [下载 Python 安装包（v0.3.0）](https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm_hooks-0.3.0-py3-none-any.whl)
+- [下载源代码 ZIP（v0.3.0）](https://github.com/mchenla/knowtether/releases/download/v0.3.0/knowtether-0.3.0-source.zip)
+- [下载 SHA-256 校验文件](https://github.com/mchenla/knowtether/releases/download/v0.3.0/SHA256SUMS)
 - [查看版本说明及所有下载项](https://github.com/mchenla/knowtether/releases/latest)
 
 有 Python 3.10 或更新版本时，可以直接安装公开下载地址：
 
 ```bash
-python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl"
+python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm_hooks-0.3.0-py3-none-any.whl"
 knowtether --version
 ```
 
@@ -162,10 +169,10 @@ Core-6 表示目的、知识内核、依据、可用化、表达、验证与演�
 
 自动检查能提示记录缺失、明显状态表述和部分文本信号；无法判断事实真假、引用是否支持主张、版权是否允许使用、文字是否被真实读者理解。公开知识成果按原规范至少采用 Q3，另行完成独立事实与引用检查、独立编辑或真实目标读者任务，以及人的发布决定。
 
-当前验证包含自动测试、真实 Codex CLI 的隔离安装和插件缓存中的三个 Hook 命令执行；完整交互会话中的 Hook 触发、信任界面与知识质量效果仍需评估。机械检查不代表内容真实或通过 KPDM 验收，见 [验证记录](docs/validation.md)。
+当前验证包含自动测试、真实 Codex CLI 的隔离安装、宿主发现检查、信任界面和三个 Hook 的真实生命周期执行。一次不带显式标签的知识写作任务也触发了三 Hook 并产出有来源和限制的草稿；没有对照组或真实读者验证，尚未证明知识质量提升。机械检查不代表内容真实或通过 KPDM 验收，见 [验证记录](docs/validation.md)。
 
 详见 [规则与人工责任](docs/rules.md)、[设计与优化方向](docs/design.md)、[安全说明](SECURITY.md)。欢迎按 [贡献说明](CONTRIBUTING.md) 报告误报、漏报与主机兼容问题。
 
 ## 许可与来源
 
-本仓库原创代码和适配说明采用 [MIT](LICENSE)，版权声明为 `2026 MC (mchenla)`。KPDM 原规范未整体重许可，本仓库不复制原规范库；适配来源、版本和许可范围见 [NOTICE](NOTICE)。引用来源与取得使用许可是两件事。
+KnowTether 原创代码和适配说明采用 [MIT](LICENSE)；`framework/kpdm/` 中的 KPDM 原创规范、模板、机器模型与公开快照采用 [CC BY 4.0](framework/kpdm/LICENSE)。版权声明为 `2026 MC (mchenla)`。外部作品仍按其各自条件使用；范围与署名见 [LICENSING.md](LICENSING.md) 和 [NOTICE](NOTICE)。

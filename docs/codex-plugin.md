@@ -59,3 +59,7 @@ POSIX 启动脚本为 `hooks/run-posix.sh`。Windows 入口使用显式 PowerShe
 安装流程、打包检查和事件 fixture 不证明事实可靠、读者理解、独立核验或真实知识质量改善。完整评估范围见 [验证记录](validation.md)。
 
 参考：[OpenAI 插件打包与市场说明](https://developers.openai.com/plugins/build/plugins)、[Codex Hooks](https://learn.chatgpt.com/docs/hooks)。分发结构参考 [Ponytail](https://github.com/DietrichGebert/ponytail)；知据的规则、脚本和图标为本项目实现。
+
+## 随包规范
+
+从 0.3.0 起，插件同时包含 `framework/kpdm/` 的 CC BY 4.0 规范快照；代码与适配 Skill 继续为 MIT。Skill 按需链接到快速入门、模板和相关规范，普通短任务保持轻量。框架与软件版本分别管理，见 [KPDM](../framework/kpdm/README.md) 和 [许可范围](../LICENSING.md)。原有三个 Hook 命令与告警边界不变。

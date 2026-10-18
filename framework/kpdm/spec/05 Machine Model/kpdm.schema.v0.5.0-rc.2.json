@@ -1,0 +1,1073 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kpdm.local/schema/kpdm.schema.v0.5.0-rc.2.json",
+  "title": "Knowledge Product Development Meta-Model v0.5.0-rc.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "display_name",
+    "english_name",
+    "namespace",
+    "version",
+    "status",
+    "positioning",
+    "legacy_namespaces",
+    "universal_principles",
+    "release_redlines",
+    "quality_levels",
+    "meta_objects",
+    "production_modes",
+    "confidence_dimensions",
+    "gates",
+    "profiles",
+    "protocols",
+    "validation_cases",
+    "layered_model",
+    "human_leadership",
+    "outcome_view",
+    "status_claim_policy",
+    "profile_extensions",
+    "profile_quality_policy",
+    "creative_extension",
+    "lightweight_profile",
+    "documents",
+    "status_model",
+    "escalation_triggers",
+    "return_to_human",
+    "baseline_version",
+    "acceptance",
+    "research_loop",
+    "blocking_conditions",
+    "material_record_fields"
+  ],
+  "properties": {
+    "name": {
+      "const": "KPDM"
+    },
+    "display_name": {
+      "const": "知识产品开发元模型"
+    },
+    "english_name": {
+      "const": "Knowledge Product Development Meta-Model"
+    },
+    "namespace": {
+      "const": "KPDM"
+    },
+    "version": {
+      "const": "0.5.0-rc.2"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "trial",
+        "validated",
+        "active",
+        "deprecated"
+      ]
+    },
+    "positioning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacy_namespaces": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Meta-Framework",
+          "MF"
+        ]
+      }
+    },
+    "universal_principles": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "release_redlines": {
+      "type": "array",
+      "minItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_levels": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "$ref": "#/$defs/quality"
+      }
+    },
+    "meta_objects": {
+      "type": "array",
+      "minItems": 27,
+      "maxItems": 27,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Project",
+          "Problem",
+          "Audience",
+          "Concept",
+          "Claim",
+          "Evidence",
+          "Source",
+          "Architecture",
+          "Method",
+          "Tool",
+          "PublicationUnit",
+          "Product",
+          "Validation",
+          "Decision",
+          "QualityTarget",
+          "ProvenanceRecord",
+          "RightsRecord",
+          "DataReference",
+          "AIContribution",
+          "ContextPack",
+          "WorkPacket",
+          "ClaimGraph",
+          "QualitySLO",
+          "UncertaintyItem",
+          "RegressionTest",
+          "GoldenCase",
+          "ReleaseCandidate"
+        ]
+      }
+    },
+    "production_modes": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Explore",
+          "Architect",
+          "Produce",
+          "Verify"
+        ]
+      }
+    },
+    "confidence_dimensions": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "C",
+          "E",
+          "A",
+          "R",
+          "U",
+          "P",
+          "X"
+        ]
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/gate"
+      }
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "$ref": "#/$defs/profile"
+      }
+    },
+    "protocols": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "$ref": "#/$defs/protocol"
+      }
+    },
+    "validation_cases": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    },
+    "profile_extensions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "$ref": "#/$defs/profile_extension"
+      }
+    },
+    "layered_model": {
+      "$ref": "#/$defs/layered_model"
+    },
+    "human_leadership": {
+      "$ref": "#/$defs/human_leadership"
+    },
+    "outcome_view": {
+      "$ref": "#/$defs/outcome_view"
+    },
+    "status_claim_policy": {
+      "$ref": "#/$defs/status_claim_policy"
+    },
+    "profile_quality_policy": {
+      "$ref": "#/$defs/profile_quality_policy"
+    },
+    "creative_extension": {
+      "$ref": "#/$defs/creative_extension"
+    },
+    "lightweight_profile": {
+      "$ref": "#/$defs/lightweight_profile"
+    },
+    "baseline_version": {
+      "const": "0.4.0"
+    },
+    "documents": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quick-start",
+        "constitution",
+        "object-model",
+        "quality-constraints",
+        "namespace",
+        "product-requirements",
+        "production-controls",
+        "human-ai",
+        "context-work",
+        "authority-evidence-rights",
+        "profiles",
+        "regression-release-versioning",
+        "quality-levels-verification",
+        "release-gate",
+        "lightweight-worksheet-template",
+        "knowledge-overview-template",
+        "requirements-map"
+      ],
+      "properties": {
+        "quick-start": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "constitution": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "object-model": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "quality-constraints": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "namespace": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "product-requirements": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "production-controls": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "human-ai": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "context-work": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "authority-evidence-rights": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "profiles": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "regression-release-versioning": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "quality-levels-verification": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "release-gate": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "lightweight-worksheet-template": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "knowledge-overview-template": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "requirements-map": {
+          "type": "string",
+          "pattern": "\\.md$"
+        }
+      }
+    },
+    "status_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "production",
+        "quality",
+        "release",
+        "qualifier",
+        "rule"
+      ],
+      "properties": {
+        "production": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "registered",
+              "drafted",
+              "structurally-reviewed",
+              "author-accepted"
+            ]
+          },
+          "contains": {
+            "const": "author-accepted"
+          }
+        },
+        "quality": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "criterion-ready",
+              "calibrated",
+              "field-piloted",
+              "independently-validated"
+            ]
+          }
+        },
+        "release": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "candidate",
+              "release-approved",
+              "withdrawn"
+            ]
+          }
+        },
+        "qualifier": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "self-assessed",
+              "provisional",
+              "unverified"
+            ]
+          }
+        },
+        "rule": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "escalation_triggers": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "data-or-strong-causal-or-high-impact-advice",
+          "unclear-rights-or-sensitive-material",
+          "multi-unit-or-multi-person-dependency",
+          "core-definition-or-method-change",
+          "public-release"
+        ]
+      }
+    },
+    "return_to_human": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "new-core-claim",
+          "author-intent-changed",
+          "scope-materially-expanded",
+          "unauthorized-risk",
+          "critical-check-failed",
+          "unresolvable-substantive-disagreement"
+        ]
+      }
+    },
+    "research_loop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entry",
+        "steps",
+        "stop_conditions",
+        "human_controls",
+        "deliverable_may_be_overview_only",
+        "budget_exhausted_is_not_sufficiency"
+      ],
+      "properties": {
+        "entry": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "goal-clear-fill-gaps-only",
+              "question-open-research-first"
+            ]
+          }
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "multi-angle-questions-with-reasons",
+              "find-material-keep-locator",
+              "follow-up-on-conflict-condition-gap",
+              "update-overview-and-question-status"
+            ]
+          }
+        },
+        "stop_conditions": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "coverage-target-reached",
+              "human-requests-convergence",
+              "budget-exhausted",
+              "two-rounds-no-new-relevant-information"
+            ]
+          }
+        },
+        "human_controls": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "add-material",
+              "correct",
+              "narrow-scope",
+              "pause",
+              "converge"
+            ]
+          }
+        },
+        "deliverable_may_be_overview_only": {
+          "const": true
+        },
+        "budget_exhausted_is_not_sufficiency": {
+          "const": true
+        }
+      }
+    },
+    "blocking_conditions": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "unaccepted-new-core-claim-written-as-author-position",
+          "fabricated-facts-citations-human-feedback-or-approvals",
+          "public-output-without-q3-checks-or-reader-cannot-complete-key-task",
+          "prose-template-machine-conflict-on-core-rule",
+          "lighter-records-lost-required-source-risk-responsibility-or-acceptance",
+          "expansion-after-stop-or-narrowing-or-budget-exhaustion-written-as-resolved",
+          "accessible-citation-not-supporting-claim-or-speculative-relation-as-verified"
+        ]
+      }
+    },
+    "material_record_fields": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "identifier",
+          "version-or-access-time",
+          "supporting-locator",
+          "question",
+          "verification-status",
+          "usage-restriction",
+          "rights-status"
+        ]
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "author_accepted",
+        "note"
+      ],
+      "properties": {
+        "author_accepted": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "$defs": {
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "external_use"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "Q0",
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "external_use": {
+          "type": "boolean"
+        }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "weight"
+      ],
+      "properties": {
+        "id": {
+          "pattern": "^G[0-7]$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "default_quality"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "knowledge-system",
+            "book-publication",
+            "article",
+            "content-series",
+            "report"
+          ]
+        },
+        "default_quality": {
+          "enum": [
+            "Q0",
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "report"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "default_quality": {
+                "const": "Q2"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "mandatory",
+        "document"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "KPDM-INIT-01",
+            "KPDM-HAI-01",
+            "KPDM-PRD-01",
+            "KPDM-PROD-01",
+            "KPDM-WP-01",
+            "KPDM-RC-01"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "mandatory": {
+          "const": true
+        },
+        "document": {
+          "type": "string",
+          "pattern": "\\.md$"
+        },
+        "absorbed_from": {
+          "type": "string"
+        }
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project",
+        "profile",
+        "result"
+      ],
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "result": {
+          "enum": [
+            "pass",
+            "conditional-pass",
+            "fail"
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "layered_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "core",
+        "quality_constraints",
+        "production_controls"
+      ],
+      "properties": {
+        "core": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "purpose",
+              "knowledge",
+              "grounding",
+              "enablement",
+              "expression",
+              "validation-evolution"
+            ]
+          }
+        },
+        "quality_constraints": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "truthfulness",
+              "human-understandability",
+              "concept-restraint",
+              "rights-safety-privacy",
+              "epistemic-honesty",
+              "traceability"
+            ]
+          }
+        },
+        "production_controls": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "context-work",
+              "authority-evidence",
+              "human-ai-collaboration",
+              "quality-uncertainty",
+              "validation-release",
+              "decisions-evolution"
+            ]
+          }
+        }
+      }
+    },
+    "human_leadership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "human_decides",
+        "agent_may",
+        "approval_unit",
+        "agent_proposals"
+      ],
+      "properties": {
+        "human_decides": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "purpose-audience",
+              "core-claims-values",
+              "original-contribution",
+              "acceptance-of-expression",
+              "risk-release"
+            ]
+          }
+        },
+        "agent_may": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "research",
+              "propose-alternatives",
+              "challenge",
+              "draft",
+              "verify",
+              "organize"
+            ]
+          }
+        },
+        "approval_unit": {
+          "const": "identified-version"
+        },
+        "agent_proposals": {
+          "const": "candidates-until-human-acceptance"
+        }
+      }
+    },
+    "outcome_view": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "knowledge-kernel",
+        "use-system",
+        "expression-product",
+        "evolution-system",
+        "purpose"
+      ],
+      "properties": {
+        "knowledge-kernel": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "knowledge",
+              "grounding"
+            ]
+          }
+        },
+        "use-system": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "const": "enablement"
+          }
+        },
+        "expression-product": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "const": "expression"
+          }
+        },
+        "evolution-system": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "const": "validation-evolution"
+          }
+        },
+        "purpose": {
+          "const": "cross-cutting"
+        }
+      }
+    },
+    "status_claim_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "representation",
+        "claim_type",
+        "required",
+        "no_extra_meta_object"
+      ],
+      "properties": {
+        "representation": {
+          "const": "Claim subtype"
+        },
+        "claim_type": {
+          "const": "status"
+        },
+        "required": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "subject",
+              "scope",
+              "criteria",
+              "evidence",
+              "verifier",
+              "version",
+              "limitations"
+            ]
+          }
+        },
+        "no_extra_meta_object": {
+          "const": true
+        }
+      }
+    },
+    "profile_extension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "default_quality"
+      ],
+      "properties": {
+        "id": {
+          "const": "report"
+        },
+        "default_quality": {
+          "const": "Q2"
+        }
+      }
+    },
+    "profile_quality_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report"
+      ],
+      "properties": {
+        "report": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "creative_extension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current_scope",
+        "future_scope",
+        "replaceable",
+        "retain",
+        "implemented"
+      ],
+      "properties": {
+        "current_scope": {
+          "const": "knowledge-creation"
+        },
+        "future_scope": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "literature",
+              "arts"
+            ]
+          }
+        },
+        "replaceable": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "purpose",
+              "product-structure",
+              "evaluation-method"
+            ]
+          }
+        },
+        "retain": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "truthfulness-about-real-facts",
+              "rights-safety-privacy",
+              "human-accountability"
+            ]
+          }
+        },
+        "implemented": {
+          "const": false
+        }
+      }
+    },
+    "lightweight_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "records",
+        "fields",
+        "quality",
+        "escalate_on",
+        "not_proven"
+      ],
+      "properties": {
+        "records": {
+          "const": 1
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "intent",
+              "central-idea",
+              "structure",
+              "grounding-boundaries",
+              "delegation",
+              "acceptance-tests",
+              "results-revisions",
+              "human-decision"
+            ]
+          }
+        },
+        "quality": {
+          "type": "string",
+          "minLength": 1
+        },
+        "escalate_on": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "sensitive-or-high-stakes-facts",
+              "unresolved-rights",
+              "new-core-claim",
+              "multiple-conflicting-inputs"
+            ]
+          }
+        },
+        "not_proven": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "human-usability",
+              "time-savings",
+              "external-validity"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

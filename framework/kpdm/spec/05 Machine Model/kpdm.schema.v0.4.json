@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kpdm.local/schema/kpdm.schema.v0.4.json",
+  "title": "Knowledge Product Development Meta-Model v0.4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name", "display_name", "english_name", "namespace", "version", "status",
+    "positioning", "legacy_namespaces", "universal_principles", "release_redlines",
+    "quality_levels", "meta_objects", "production_modes", "confidence_dimensions",
+    "gates", "profiles", "protocols", "validation_cases"
+  ],
+  "properties": {
+    "name": {"const": "KPDM"},
+    "display_name": {"const": "知识产品开发元模型"},
+    "english_name": {"const": "Knowledge Product Development Meta-Model"},
+    "namespace": {"const": "KPDM"},
+    "version": {"const": "0.4.0"},
+    "status": {"enum": ["draft", "trial", "validated", "active", "deprecated"]},
+    "positioning": {"type": "string", "minLength": 1},
+    "legacy_namespaces": {
+      "type": "array", "minItems": 2, "uniqueItems": true,
+      "items": {"enum": ["Meta-Framework", "MF"]}
+    },
+    "universal_principles": {
+      "type": "array", "minItems": 12, "maxItems": 12, "uniqueItems": true,
+      "items": {"type": "string"}
+    },
+    "release_redlines": {
+      "type": "array", "minItems": 7, "uniqueItems": true,
+      "items": {"type": "string"}
+    },
+    "quality_levels": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": {"$ref": "#/$defs/quality"}
+    },
+    "meta_objects": {
+      "type": "array", "minItems": 27, "maxItems": 27, "uniqueItems": true,
+      "items": {"enum": [
+        "Project", "Problem", "Audience", "Concept", "Claim", "Evidence", "Source",
+        "Architecture", "Method", "Tool", "PublicationUnit", "Product", "Validation",
+        "Decision", "QualityTarget", "ProvenanceRecord", "RightsRecord", "DataReference",
+        "AIContribution", "ContextPack", "WorkPacket", "ClaimGraph", "QualitySLO",
+        "UncertaintyItem", "RegressionTest", "GoldenCase", "ReleaseCandidate"
+      ]}
+    },
+    "production_modes": {
+      "type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true,
+      "items": {"enum": ["Explore", "Architect", "Produce", "Verify"]}
+    },
+    "confidence_dimensions": {
+      "type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true,
+      "items": {"enum": ["C", "E", "A", "R", "U", "P", "X"]}
+    },
+    "gates": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/gate"}},
+    "profiles": {"type": "array", "minItems": 4, "items": {"$ref": "#/$defs/profile"}},
+    "protocols": {"type": "array", "minItems": 6, "items": {"$ref": "#/$defs/protocol"}},
+    "validation_cases": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/case"}}
+  },
+  "$defs": {
+    "quality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "external_use"],
+      "properties": {
+        "id": {"enum": ["Q0", "Q1", "Q2", "Q3", "Q4"]},
+        "name": {"type": "string"},
+        "external_use": {"type": "boolean"}
+      }
+    },
+    "gate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "weight"],
+      "properties": {
+        "id": {"pattern": "^G[0-7]$"},
+        "name": {"type": "string"},
+        "weight": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      }
+    },
+    "profile": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "default_quality"],
+      "properties": {
+        "id": {"enum": ["knowledge-system", "book-publication", "article", "content-series"]},
+        "default_quality": {"enum": ["Q0", "Q1", "Q2", "Q3", "Q4"]}
+      }
+    },
+    "protocol": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "mandatory"],
+      "properties": {
+        "id": {"enum": ["KPDM-INIT-01", "KPDM-HAI-01", "KPDM-PRD-01", "KPDM-PROD-01", "KPDM-WP-01", "KPDM-RC-01"]},
+        "name": {"type": "string"},
+        "mandatory": {"const": true}
+      }
+    },
+    "case": {
+      "type": "object", "additionalProperties": false,
+      "required": ["project", "profile", "result"],
+      "properties": {
+        "project": {"type": "string"},
+        "profile": {"type": "string"},
+        "result": {"enum": ["pass", "conditional-pass", "fail"]},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

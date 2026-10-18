@@ -5,7 +5,14 @@ description: "Use for knowledge outputs such as articles, research overviews, re
 
 # KnowTether: knowledge with traceable grounds
 
-This is a practical adaptation of selected KPDM requirements, not the full framework or a certificate of quality. The reference is KPDM 0.5.0-rc.2 candidate; the accepted baseline remains 0.4.0 trial / conditional-pass. See [rule mapping](../../docs/rules.md) and [source identities](../../policy/source-map.json).
+This is a practical adaptation of selected KPDM requirements, not the full framework or a certificate of quality. The reference is KPDM 0.5.0-rc.2 candidate; the accepted baseline remains 0.4.0 trial / conditional-pass. The author-licensed framework snapshot is bundled at [KPDM](../../framework/kpdm/README.md). See [rule mapping](../../docs/rules.md) and [source identities](../../policy/source-map.json).
+
+## Read the bundled framework when needed
+
+- For ordinary short knowledge answers, keep the workflow light and use the guidance below.
+- When the user asks for KPDM itself, a full framework workflow, templates, complex knowledge products or publication review, start with the bundled [quick start](../../framework/kpdm/spec/00%20Start/快速入门.md) and [worksheet template](../../framework/kpdm/spec/04%20Templates/轻量工作单模板.md), then read the relevant [quality constraints](../../framework/kpdm/spec/01%20Foundations/KPDM%20质量约束.md), [human-agent protocol](../../framework/kpdm/spec/02%20Methods%20and%20Protocols/人机协作协议.md) or [index](../../framework/kpdm/spec/KPDM%20知识索引.md).
+- Resolve all paths from this installed skill; do not assume access to the author's private vault. Omitted local records are not available evidence. A user-supplied newer authoritative version takes precedence after checking its identity.
+- The framework snapshot is CC BY 4.0; software and this adaptation skill are MIT. Preserve source attribution and modification notices when redistributing framework material; see [licensing](../../LICENSING.md).
 
 ## Work at the appropriate depth
 

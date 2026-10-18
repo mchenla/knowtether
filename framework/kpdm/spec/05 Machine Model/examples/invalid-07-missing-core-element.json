@@ -1,0 +1,477 @@
+{
+  "name": "KPDM",
+  "display_name": "知识产品开发元模型",
+  "english_name": "Knowledge Product Development Meta-Model",
+  "namespace": "KPDM",
+  "version": "0.5.0-rc.2",
+  "status": "trial",
+  "positioning": "由人主导、AI Agent 主动辅助的原创知识开发框架，支持框架或知识体系、书籍、文章、报告及系列成果；人掌握问题选择、思想发展、价值取舍、核心主张和最终表达，Agent 在明确授权内研究、提议、质疑、起草和核验。",
+  "legacy_namespaces": [
+    "Meta-Framework",
+    "MF"
+  ],
+  "universal_principles": [
+    "truth-first",
+    "problem-and-audience-first",
+    "predefine-quality-height",
+    "objects-before-expression",
+    "claim-evidence-fit",
+    "originality-with-provenance",
+    "citation-and-permission-separated",
+    "human-accountability",
+    "production-validation-separation",
+    "traceability-and-reproducibility",
+    "privacy-security-confidentiality",
+    "disclose-boundaries-failures-corrections"
+  ],
+  "release_redlines": [
+    "untraceable-core-facts-or-data",
+    "unverified-or-fabricated-citations",
+    "unknown-rights-for-reproduced-or-adapted-material",
+    "unverified-ai-generated-facts-quotes-or-data",
+    "unauthorized-sensitive-information",
+    "marketing-claims-exceed-evidence",
+    "concealed-authorship-conflict-or-material-ai-use"
+  ],
+  "quality_levels": [
+    {
+      "id": "Q0",
+      "name": "Capture",
+      "external_use": false
+    },
+    {
+      "id": "Q1",
+      "name": "Working",
+      "external_use": false
+    },
+    {
+      "id": "Q2",
+      "name": "Professional",
+      "external_use": false
+    },
+    {
+      "id": "Q3",
+      "name": "Publishable",
+      "external_use": true
+    },
+    {
+      "id": "Q4",
+      "name": "Authority Candidate",
+      "external_use": true
+    }
+  ],
+  "meta_objects": [
+    "Project",
+    "Problem",
+    "Audience",
+    "Concept",
+    "Claim",
+    "Evidence",
+    "Source",
+    "Architecture",
+    "Method",
+    "Tool",
+    "PublicationUnit",
+    "Product",
+    "Validation",
+    "Decision",
+    "QualityTarget",
+    "ProvenanceRecord",
+    "RightsRecord",
+    "DataReference",
+    "AIContribution",
+    "ContextPack",
+    "WorkPacket",
+    "ClaimGraph",
+    "QualitySLO",
+    "UncertaintyItem",
+    "RegressionTest",
+    "GoldenCase",
+    "ReleaseCandidate"
+  ],
+  "production_modes": [
+    "Explore",
+    "Architect",
+    "Produce",
+    "Verify"
+  ],
+  "confidence_dimensions": [
+    "C",
+    "E",
+    "A",
+    "R",
+    "U",
+    "P",
+    "X"
+  ],
+  "gates": [
+    {
+      "id": "G0",
+      "name": "立项与定位",
+      "weight": 0.05
+    },
+    {
+      "id": "G1",
+      "name": "研究与主张",
+      "weight": 0.15
+    },
+    {
+      "id": "G2",
+      "name": "知识架构",
+      "weight": 0.15
+    },
+    {
+      "id": "G3",
+      "name": "规范冻结",
+      "weight": 0.1
+    },
+    {
+      "id": "G4",
+      "name": "内容与工具生产",
+      "weight": 0.2
+    },
+    {
+      "id": "G5",
+      "name": "验证",
+      "weight": 0.2
+    },
+    {
+      "id": "G6",
+      "name": "出版工程",
+      "weight": 0.1
+    },
+    {
+      "id": "G7",
+      "name": "发布与演进",
+      "weight": 0.05
+    }
+  ],
+  "profiles": [
+    {
+      "id": "knowledge-system",
+      "default_quality": "Q4"
+    },
+    {
+      "id": "book-publication",
+      "default_quality": "Q3"
+    },
+    {
+      "id": "article",
+      "default_quality": "Q3"
+    },
+    {
+      "id": "content-series",
+      "default_quality": "Q3"
+    },
+    {
+      "id": "report",
+      "default_quality": "Q2"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "KPDM-INIT-01",
+      "name": "实例化初始化",
+      "mandatory": true,
+      "document": "02 Methods and Protocols/上下文包与工作包协议.md",
+      "absorbed_from": "实例化初始化协议"
+    },
+    {
+      "id": "KPDM-HAI-01",
+      "name": "人机协作",
+      "mandatory": true,
+      "document": "02 Methods and Protocols/人机协作协议.md"
+    },
+    {
+      "id": "KPDM-PRD-01",
+      "name": "版权、引用、数据与来源",
+      "mandatory": true,
+      "document": "02 Methods and Protocols/权威、主张、证据与引用治理.md",
+      "absorbed_from": "版权、引用、数据与来源协议"
+    },
+    {
+      "id": "KPDM-PROD-01",
+      "name": "人机协作知识生产",
+      "mandatory": true,
+      "document": "02 Methods and Protocols/人机协作协议.md",
+      "absorbed_from": "人机协作知识生产系统"
+    },
+    {
+      "id": "KPDM-WP-01",
+      "name": "上下文包与工作包",
+      "mandatory": true,
+      "document": "02 Methods and Protocols/上下文包与工作包协议.md"
+    },
+    {
+      "id": "KPDM-RC-01",
+      "name": "回归测试与发布候选",
+      "mandatory": true,
+      "document": "02 Methods and Protocols/回归测试、Golden Case与发布候选.md"
+    }
+  ],
+  "validation_cases": [
+    {
+      "project": "CBBOK",
+      "profile": "knowledge-system",
+      "result": "conditional-pass",
+      "limitations": [
+        "single-source-project",
+        "not-yet-migrated-to-kpdm-production-objects"
+      ]
+    },
+    {
+      "project": "Meta-Framework-v0.3-self-bootstrap",
+      "profile": "knowledge-system",
+      "result": "conditional-pass",
+      "limitations": [
+        "legacy-namespace",
+        "self-referential-case",
+        "not-cross-project-validation"
+      ]
+    },
+    {
+      "project": "KPDM-v0.4-namespace-migration",
+      "profile": "knowledge-system",
+      "result": "conditional-pass",
+      "limitations": [
+        "identity-migration-only",
+        "not-external-validation"
+      ]
+    }
+  ],
+  "layered_model": {
+    "core": [
+      "purpose",
+      "knowledge",
+      "grounding",
+      "enablement",
+      "expression"
+    ],
+    "quality_constraints": [
+      "truthfulness",
+      "human-understandability",
+      "concept-restraint",
+      "rights-safety-privacy",
+      "epistemic-honesty",
+      "traceability"
+    ],
+    "production_controls": [
+      "context-work",
+      "authority-evidence",
+      "human-ai-collaboration",
+      "quality-uncertainty",
+      "validation-release",
+      "decisions-evolution"
+    ]
+  },
+  "human_leadership": {
+    "human_decides": [
+      "purpose-audience",
+      "core-claims-values",
+      "original-contribution",
+      "acceptance-of-expression",
+      "risk-release"
+    ],
+    "agent_may": [
+      "research",
+      "propose-alternatives",
+      "challenge",
+      "draft",
+      "verify",
+      "organize"
+    ],
+    "approval_unit": "identified-version",
+    "agent_proposals": "candidates-until-human-acceptance"
+  },
+  "outcome_view": {
+    "knowledge-kernel": [
+      "knowledge",
+      "grounding"
+    ],
+    "use-system": [
+      "enablement"
+    ],
+    "expression-product": [
+      "expression"
+    ],
+    "evolution-system": [
+      "validation-evolution"
+    ],
+    "purpose": "cross-cutting"
+  },
+  "status_claim_policy": {
+    "representation": "Claim subtype",
+    "claim_type": "status",
+    "required": [
+      "subject",
+      "scope",
+      "criteria",
+      "evidence",
+      "verifier",
+      "version",
+      "limitations"
+    ],
+    "no_extra_meta_object": true
+  },
+  "profile_quality_policy": {
+    "report": "内部报告默认Q2；对外发布至少Q3；高风险事实另行加严核验。"
+  },
+  "creative_extension": {
+    "current_scope": "knowledge-creation",
+    "future_scope": [
+      "literature",
+      "arts"
+    ],
+    "replaceable": [
+      "purpose",
+      "product-structure",
+      "evaluation-method"
+    ],
+    "retain": [
+      "truthfulness-about-real-facts",
+      "rights-safety-privacy",
+      "human-accountability"
+    ],
+    "implemented": false
+  },
+  "lightweight_profile": {
+    "records": 1,
+    "fields": [
+      "intent",
+      "central-idea",
+      "structure",
+      "grounding-boundaries",
+      "delegation",
+      "acceptance-tests",
+      "results-revisions",
+      "human-decision"
+    ],
+    "quality": "Q1 pilot allowed; Q3 required before public release",
+    "escalate_on": [
+      "sensitive-or-high-stakes-facts",
+      "unresolved-rights",
+      "new-core-claim",
+      "multiple-conflicting-inputs"
+    ],
+    "not_proven": [
+      "human-usability",
+      "time-savings",
+      "external-validity"
+    ]
+  },
+  "profile_extensions": [
+    {
+      "id": "report",
+      "default_quality": "Q2"
+    }
+  ],
+  "documents": {
+    "quick-start": "00 Start/快速入门.md",
+    "constitution": "01 Foundations/KPDM 三层元模型.md",
+    "object-model": "01 Foundations/KPDM 元模型.md",
+    "quality-constraints": "01 Foundations/KPDM 质量约束.md",
+    "namespace": "01 Foundations/命名空间与定位.md",
+    "product-requirements": "01 Foundations/KPDM 产品需求文档.md",
+    "production-controls": "02 Methods and Protocols/KPDM 生产控制层.md",
+    "human-ai": "02 Methods and Protocols/人机协作协议.md",
+    "context-work": "02 Methods and Protocols/上下文包与工作包协议.md",
+    "authority-evidence-rights": "02 Methods and Protocols/权威、主张、证据与引用治理.md",
+    "profiles": "02 Methods and Protocols/知识产品类型适配.md",
+    "regression-release-versioning": "02 Methods and Protocols/回归测试、Golden Case与发布候选.md",
+    "quality-levels-verification": "03 Quality and Governance/质量高度与验收等级.md",
+    "release-gate": "03 Quality and Governance/发布前合规与完整性检查.md",
+    "lightweight-worksheet-template": "04 Templates/轻量工作单模板.md",
+    "knowledge-overview-template": "04 Templates/知识概览模板.md",
+    "requirements-map": "08 Evolution/KPDM 0.5 需求映射与迁移.md"
+  },
+  "status_model": {
+    "production": [
+      "registered",
+      "drafted",
+      "structurally-reviewed",
+      "author-accepted"
+    ],
+    "quality": [
+      "criterion-ready",
+      "calibrated",
+      "field-piloted",
+      "independently-validated"
+    ],
+    "release": [
+      "candidate",
+      "release-approved",
+      "withdrawn"
+    ],
+    "qualifier": [
+      "self-assessed",
+      "provisional",
+      "unverified"
+    ],
+    "rule": "production, quality and release states are recorded separately; none of them alone permits registering a release pass"
+  },
+  "escalation_triggers": [
+    "data-or-strong-causal-or-high-impact-advice",
+    "unclear-rights-or-sensitive-material",
+    "multi-unit-or-multi-person-dependency",
+    "core-definition-or-method-change",
+    "public-release"
+  ],
+  "return_to_human": [
+    "new-core-claim",
+    "author-intent-changed",
+    "scope-materially-expanded",
+    "unauthorized-risk",
+    "critical-check-failed",
+    "unresolvable-substantive-disagreement"
+  ],
+  "research_loop": {
+    "entry": [
+      "goal-clear-fill-gaps-only",
+      "question-open-research-first"
+    ],
+    "steps": [
+      "multi-angle-questions-with-reasons",
+      "find-material-keep-locator",
+      "follow-up-on-conflict-condition-gap",
+      "update-overview-and-question-status"
+    ],
+    "stop_conditions": [
+      "coverage-target-reached",
+      "human-requests-convergence",
+      "budget-exhausted",
+      "two-rounds-no-new-relevant-information"
+    ],
+    "human_controls": [
+      "add-material",
+      "correct",
+      "narrow-scope",
+      "pause",
+      "converge"
+    ],
+    "deliverable_may_be_overview_only": true,
+    "budget_exhausted_is_not_sufficiency": true
+  },
+  "blocking_conditions": [
+    "unaccepted-new-core-claim-written-as-author-position",
+    "fabricated-facts-citations-human-feedback-or-approvals",
+    "public-output-without-q3-checks-or-reader-cannot-complete-key-task",
+    "prose-template-machine-conflict-on-core-rule",
+    "lighter-records-lost-required-source-risk-responsibility-or-acceptance",
+    "expansion-after-stop-or-narrowing-or-budget-exhaustion-written-as-resolved",
+    "accessible-citation-not-supporting-claim-or-speculative-relation-as-verified"
+  ],
+  "material_record_fields": [
+    "identifier",
+    "version-or-access-time",
+    "supporting-locator",
+    "question",
+    "verification-status",
+    "usage-restriction",
+    "rights-status"
+  ],
+  "baseline_version": "0.4.0",
+  "acceptance": {
+    "author_accepted": false,
+    "note": "0.5.0-rc.2 candidate awaiting author acceptance; last accepted baseline is 0.4.0 trial / conditional-pass"
+  }
+}

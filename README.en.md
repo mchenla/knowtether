@@ -1,10 +1,16 @@
-# KnowTether (知据)
+# KPDM + KnowTether (知据)
 
 [中文文档](README.md)
 
 A local, warning-only Hook adapter for knowledge writing in Codex and Claude Code. It reminds agents to identify the audience and purpose, distinguish facts from inference, preserve sources and limitations, and keep human acceptance separate from release approval.
 
-Version `0.2.0`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
+Version `0.3.0`; Python 3.10+; standard library only. Claude Code requires 2.1.139+ for the generated exec-form hooks. This adapter references **KPDM 0.5.0-rc.2 candidate**. The latest accepted framework baseline remains **0.4.0 trial / conditional-pass**.
+
+## Framework and implementation
+
+[KPDM](framework/kpdm/README.md) is the knowledge-product framework, with specifications, templates, machine models and schemas under **CC BY 4.0**. KnowTether implements selected requirements through advisory hooks and a skill under **MIT**. See [licensing by path](LICENSING.md).
+
+The Codex plugin bundles the framework snapshot, so agents do not need access to the author's private vault. Read the framework independently or install the plugin. The Python wheel remains a lightweight software-only package. A separate [framework ZIP](https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm-0.5.0-rc.2-public-snapshot.zip) is available.
 
 ## Codex: install in two commands
 
@@ -21,12 +27,12 @@ Open `/hooks` in Codex, review and trust the three KnowTether hooks, then start 
 
 The commands below are for the separately installed Python CLI, including the existing Claude Code integration. Codex plugin users can use the bundled skill and automatic guidance without installing this CLI.
 
-An independent [Codex plugin ZIP](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-plugin.zip) is also available. The two-command marketplace flow above is the primary Codex installation method.
+An independent [Codex plugin ZIP](https://github.com/mchenla/knowtether/releases/download/v0.3.0/knowtether-0.3.0-plugin.zip) is also available. The two-command marketplace flow above is the primary Codex installation method.
 
-Public downloads require no GitHub account: [Python wheel](https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl), [source ZIP](https://github.com/mchenla/knowtether/releases/download/v0.2.0/knowtether-0.2.0-source.zip), [SHA-256 checksums](https://github.com/mchenla/knowtether/releases/download/v0.2.0/SHA256SUMS), and [release notes](https://github.com/mchenla/knowtether/releases/latest).
+Public downloads require no GitHub account: [Python wheel](https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm_hooks-0.3.0-py3-none-any.whl), [source ZIP](https://github.com/mchenla/knowtether/releases/download/v0.3.0/knowtether-0.3.0-source.zip), [SHA-256 checksums](https://github.com/mchenla/knowtether/releases/download/v0.3.0/SHA256SUMS), and [release notes](https://github.com/mchenla/knowtether/releases/latest).
 
 ```bash
-python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.2.0/kpdm_hooks-0.2.0-py3-none-any.whl"
+python -m pip install "https://github.com/mchenla/knowtether/releases/download/v0.3.0/kpdm_hooks-0.3.0-py3-none-any.whl"
 knowtether --version
 ```
 
@@ -75,8 +81,8 @@ Uninstall removes this project's handlers while preserving unrelated configurati
 
 Core-6 describes functional coverage, not six required headings or a fixed sequence. Exploratory work may leave its central claim undecided. Missing warnings do not establish truth, adequate citations, legal permission, reader comprehension, or release readiness. Public knowledge products require the framework's Q3 checks, independent review, reader tasks, and a separate human release decision.
 
-Checks cover automated tests, an isolated real Codex CLI installation, and execution of the installed plugin's three hook commands. Full interactive lifecycle behavior, trust UI, and knowledge-quality improvements still need evaluation. Examples are fictional teaching materials, with no real research data or reader results. The example worksheet intentionally retains open issues and an unverified source record; do not invent verification to silence warnings.
+Checks cover automated tests, isolated real Codex installation, host hook discovery, native trust review and live lifecycle execution. One natural writing task without a manual marker also triggered all three hooks; it is not a controlled quality study or a real-reader validation. Examples are fictional teaching materials, with no real research data or reader results. The example worksheet intentionally retains open issues and an unverified source record; do not invent verification to silence warnings.
 
 See [rule mapping](docs/rules.md), [design](docs/design.md), [contributing](CONTRIBUTING.md), and [security](SECURITY.md).
 
-Original project code and adaptation text are [MIT licensed](LICENSE), copyright `2026 MC (mchenla)`. The upstream KPDM specification has not been relicensed as a whole. See [NOTICE](NOTICE).
+Original project code and adaptation text are [MIT licensed](LICENSE), copyright `2026 MC (mchenla)`. The bundled original KPDM material under framework/kpdm is CC BY 4.0, licensed by its author. See [LICENSING.md](LICENSING.md) and [NOTICE](NOTICE).

@@ -1,35 +1,26 @@
-KnowTether (知据) 0.2.0
-Previously named KPDM Hooks; Python distribution: kpdm-hooks.
+KPDM + KnowTether (知据) 0.3.0
 Copyright (c) 2026 MC (mchenla)
 https://github.com/mchenla/knowtether
 
-This repository contains original software, original examples, and rewritten
-adaptation guidance for selected requirements of KPDM (Knowledge Product
-Development Meta-Model / 知识产品开发元模型), developed by MC (mchenla).
+KnowTether software, skills, original examples and adaptation documentation
+outside framework/kpdm are MIT licensed. The author selected CC BY 4.0 for
+original KPDM material under framework/kpdm on 2026-10-17. Preserve both
+licenses when redistributing the combined plugin/source package.
+See LICENSING.md for scope and framework/kpdm/LICENSE for CC BY 4.0.
 
-Adaptation reference: KPDM 0.5.0-rc.2, candidate.
-Latest accepted framework baseline: 0.4.0 trial / conditional-pass.
-Installing, testing, or publishing this adapter does not change those statuses.
+KPDM: Knowledge Product Development Meta-Model / 知识产品开发元模型.
+Reference: 0.5.0-rc.2 candidate; accepted baseline: 0.4.0 trial / conditional-pass.
+The public snapshot preserves these statuses. Publication is not framework
+acceptance, independent validation or a certification of conformance.
 
-The MIT license in this repository applies to this project's original code,
-examples, and adaptation text. It does not relicense the upstream KPDM
-specification, source vault, templates, machine models, or other works as a
-whole. The upstream specification library is not bundled here. Any separately
-obtained upstream material remains subject to its own applicable rights.
+Source documents are listed with original and published hashes in
+framework/kpdm/snapshot.json. Obsidian links are converted for public reading;
+omitted local records and editorial transformations are explicitly recorded.
+Private project logs, other works and local test sessions are not included.
+Third-party works linked by the framework retain their own applicable rights.
 
-The adaptation was informed by the upstream work entry, quick start, Core-6
-meta-model, quality constraints, production controls, human-agent protocol,
-lightweight worksheet, and pre-release checklist. docs/rules.md records the
-document titles and the scope of this project's mapping. This adapter is not
-the authoritative KPDM machine model or a certification of conformance.
-
-Host protocols referenced by this project:
 Codex Hooks: https://learn.chatgpt.com/docs/hooks
 Claude Code Hooks: https://code.claude.com/docs/en/hooks
-
-The GitHub-backed Codex marketplace distribution pattern was reviewed alongside
-Ponytail (https://github.com/DietrichGebert/ponytail). KnowTether's package,
-guidance, launchers and icon are implemented in this repository.
-
-Attribution and traceability do not by themselves grant permission to copy,
-adapt, distribute, or disclose third-party material.
+The GitHub marketplace distribution pattern was reviewed alongside Ponytail:
+https://github.com/DietrichGebert/ponytail
+KnowTether's package, guidance, launchers and icon are original implementations.

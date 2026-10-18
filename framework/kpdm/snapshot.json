@@ -1,0 +1,587 @@
+{
+  "framework": "KPDM",
+  "reference_version": "0.5.0-rc.2",
+  "reference_status": "candidate",
+  "accepted_baseline": "0.4.0 trial / conditional-pass",
+  "public_snapshot_date": "2026-10-17",
+  "copyright_holder": "MC (mchenla)",
+  "license": "CC-BY-4.0",
+  "author_license_selection_date": "2026-10-17",
+  "source_authority": "Author-maintained KPDM specification; public snapshot",
+  "editorial_changes": [
+    "Convert Obsidian wiki links to relative Markdown links",
+    "Mark omitted references; omit local development paths",
+    "Clarify public snapshot versus source authority in source README",
+    "Normalize Markdown to UTF-8 LF; JSON bytes unchanged"
+  ],
+  "excluded": [
+    "private project and decision logs",
+    "other works and book manuscripts",
+    "local hook configuration, worksheets and test sessions",
+    "historical snapshots before 0.4.0"
+  ],
+  "documents": [
+    {
+      "source_path": "00 Start/快速入门.md",
+      "path": "spec/00 Start/快速入门.md",
+      "source_sha256": "cfa14c832f11f545aef7ad533c1658eb6cec66b004fef109c6dd5c84af62e676",
+      "published_sha256": "0b2562070d8498a7666f83a0746a706dd6ae6cf4fa5ab71094ae87bca331c529",
+      "wiki_links_converted": 12
+    },
+    {
+      "source_path": "01 Foundations/KPDM 三层元模型.md",
+      "path": "spec/01 Foundations/KPDM 三层元模型.md",
+      "source_sha256": "d8bb8b6c1040d80ed95710704d2f5a88f40240c58957729b47becda6bcccb4b6",
+      "published_sha256": "24fe9605302e54c409a6942843615ae6f93790b234733d75e2f1069b601cc1aa",
+      "wiki_links_converted": 8
+    },
+    {
+      "source_path": "01 Foundations/KPDM 产品需求文档.md",
+      "path": "spec/01 Foundations/KPDM 产品需求文档.md",
+      "source_sha256": "2690d624a3f27bb4d878a6600d339e827a110a94561bd0b1c3bea2974b00e607",
+      "published_sha256": "646f0bd2ae000a96570890d30cf810c3c973595a631b22ef6accfa920954ae21",
+      "wiki_links_converted": 18
+    },
+    {
+      "source_path": "01 Foundations/KPDM 元模型.md",
+      "path": "spec/01 Foundations/KPDM 元模型.md",
+      "source_sha256": "20a4579aa06a54cb1d7cd59d3d9266ec3c704aa15649eea3f9f2470d58744e7c",
+      "published_sha256": "948152c3741a09ebb41e156278ff66f036a3d4da41d6c50d38f1b237455d255d",
+      "wiki_links_converted": 10
+    },
+    {
+      "source_path": "01 Foundations/KPDM 总纲.md",
+      "path": "spec/01 Foundations/KPDM 总纲.md",
+      "source_sha256": "8f06d00cdbd616f09becd91dd27336ac9191f838a3487a04eec2dbb541e5c863",
+      "published_sha256": "64ee8090bb864d1f6a428aa61890b4ffbd4684510e058e9fe576537a2daf9511",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "01 Foundations/KPDM 质量约束.md",
+      "path": "spec/01 Foundations/KPDM 质量约束.md",
+      "source_sha256": "7237fa73bd7fd168cb67b6d4599f6648c82c45982a19cad82832300880575261",
+      "published_sha256": "895ed5456ac22c602dec7d5581b516461d4bdb037a476f5e91a62f1d89a78dff",
+      "wiki_links_converted": 4
+    },
+    {
+      "source_path": "01 Foundations/命名空间与定位.md",
+      "path": "spec/01 Foundations/命名空间与定位.md",
+      "source_sha256": "92f4b89c4244a5ca2e06aaaaaa1274c35bef4b509e827a2a4acb097c297dc60b",
+      "published_sha256": "c72bf07d62af0283188b0a794e9d0f1d89fb40adc9d91cb749739c985d131763",
+      "wiki_links_converted": 1
+    },
+    {
+      "source_path": "01 Foundations/普适原则与不可妥协底线.md",
+      "path": "spec/01 Foundations/普适原则与不可妥协底线.md",
+      "source_sha256": "759e149278516b7c901d92bb040838b1a14d93d597c2ca345cc2003b05a5b3e2",
+      "published_sha256": "7f9797cfa9bed1ed476dfd9721320a1ad5c4587c6947ba37516e318cc7383324",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "02 Methods and Protocols/KPDM 生产控制层.md",
+      "path": "spec/02 Methods and Protocols/KPDM 生产控制层.md",
+      "source_sha256": "2fb77f489ae2b6ed96332cda9d3cc6db6c32266396bfde639442871064756eba",
+      "published_sha256": "c6688777d9bc25ea0609498a0541fa879eee875c4de97e10c42704c4bb78f882",
+      "wiki_links_converted": 12
+    },
+    {
+      "source_path": "02 Methods and Protocols/上下文包与工作包协议.md",
+      "path": "spec/02 Methods and Protocols/上下文包与工作包协议.md",
+      "source_sha256": "ff81f4879e983d3f47c22a6748e1ff5af96ffc44095a2d9318b47564c60f130f",
+      "published_sha256": "29d0e94f934a2a41c4bb8ee4da820ebfa08af00e1c9d495eb06da8c46fb9860a",
+      "wiki_links_converted": 4
+    },
+    {
+      "source_path": "02 Methods and Protocols/人机协作协议.md",
+      "path": "spec/02 Methods and Protocols/人机协作协议.md",
+      "source_sha256": "aae7a07962fcf3c4726c7b5bccade3a501c81f35c019d938e6247fb1607daa6a",
+      "published_sha256": "ffa8887b73e97806f5c310640ede0574e90156ff9340021c17befb37af5c35ad",
+      "wiki_links_converted": 3
+    },
+    {
+      "source_path": "02 Methods and Protocols/人机协作知识生产系统.md",
+      "path": "spec/02 Methods and Protocols/人机协作知识生产系统.md",
+      "source_sha256": "2bd1917d0f39df8ec038569cbbf7b1664a0a26d5f0288526107c97d73effaafb",
+      "published_sha256": "014b23b9d760640439c403ad6d960ddd264e133a010f5ab97fa2763f05f7c404",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "02 Methods and Protocols/反馈学习与版本治理.md",
+      "path": "spec/02 Methods and Protocols/反馈学习与版本治理.md",
+      "source_sha256": "88680d3f1fa92377ccba2c0aa477899ca4f5d0bccb3b1c8d69bebbae4658c03a",
+      "published_sha256": "caeb72a5fff649b263179d831e914578abcd892964fcaf35b3a767321f44ca7b",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "02 Methods and Protocols/回归测试、Golden Case与发布候选.md",
+      "path": "spec/02 Methods and Protocols/回归测试、Golden Case与发布候选.md",
+      "source_sha256": "1a3639f374b8799178b7b871f2d7e2aa0c3d8482ba58ee3c93fd116b26fac761",
+      "published_sha256": "1a3639f374b8799178b7b871f2d7e2aa0c3d8482ba58ee3c93fd116b26fac761",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "02 Methods and Protocols/实例化初始化协议.md",
+      "path": "spec/02 Methods and Protocols/实例化初始化协议.md",
+      "source_sha256": "309e6bb9f17a42ef94e3d600c5d685ef3e5ed40ac3bca47c1baa55f4fb33fb6c",
+      "published_sha256": "c196a105222cf87b200f5cfa9e9d6b68cec7a55c4354636f74a5e5e60fcdb2be",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "02 Methods and Protocols/开发生命周期与阶段门.md",
+      "path": "spec/02 Methods and Protocols/开发生命周期与阶段门.md",
+      "source_sha256": "3ac5f22644e18518e69ab31ebee1d5ad9d86f87fc7deb6b690c1614122c33c9a",
+      "published_sha256": "c7a5abe0dec9c87247e6b87a8515ad21c79937c6315184f83bc67e6358b98b0d",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "02 Methods and Protocols/权威、主张、证据与引用治理.md",
+      "path": "spec/02 Methods and Protocols/权威、主张、证据与引用治理.md",
+      "source_sha256": "0a4164314d79a355e7b1e1df0fae99a38cee6d10f71aa0524c0804479bf6dc29",
+      "published_sha256": "92de2449cde00b5177fc426100c21e4078442c730df80315f3801320bd1a1121",
+      "wiki_links_converted": 3
+    },
+    {
+      "source_path": "02 Methods and Protocols/版权、引用、数据与来源协议.md",
+      "path": "spec/02 Methods and Protocols/版权、引用、数据与来源协议.md",
+      "source_sha256": "b2e775f791107c345a2827e704d5abb0009532e7992bc362af13dc02db4f6570",
+      "published_sha256": "13738723d57c8710834c7a7d27d4a8857b22c1b01019f77c194b9243489750c5",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "02 Methods and Protocols/知识产品类型适配.md",
+      "path": "spec/02 Methods and Protocols/知识产品类型适配.md",
+      "source_sha256": "063f29deb844172319b52380258758bee4057861c7132ac62271743866998d80",
+      "published_sha256": "e97e187d2ff82613988641ba3611c64f07b0cf38b0ed4b77eef81178486bbdaa",
+      "wiki_links_converted": 3
+    },
+    {
+      "source_path": "02 Methods and Protocols/质量SLO、置信向量与不确定性治理.md",
+      "path": "spec/02 Methods and Protocols/质量SLO、置信向量与不确定性治理.md",
+      "source_sha256": "4b2b198bdb0a4ce5a5bc1702e285f4135a89ce46bf244d268a40ba5b4267c5e8",
+      "published_sha256": "66da9326fa0359befa4621f13665900b3f720be14d33ac0ac218a1bde237b639",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "03 Quality and Governance/PDCA 成果校验与进度治理.md",
+      "path": "spec/03 Quality and Governance/PDCA 成果校验与进度治理.md",
+      "source_sha256": "585613ccec9b6831c2fb3539e9384cd5e7d0aecf6e8acceb7263646008136666",
+      "published_sha256": "d500e0dffc706f740db00806b1953f845517dbfcb8e821f1f5ea3dc1daf47c46",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "03 Quality and Governance/发布前合规与完整性检查.md",
+      "path": "spec/03 Quality and Governance/发布前合规与完整性检查.md",
+      "source_sha256": "df77e4791265231dd81a8390817472dc2c7a3ae8bea300eef390479027cb7031",
+      "published_sha256": "df77e4791265231dd81a8390817472dc2c7a3ae8bea300eef390479027cb7031",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "03 Quality and Governance/质量高度与验收等级.md",
+      "path": "spec/03 Quality and Governance/质量高度与验收等级.md",
+      "source_sha256": "f0418eabfab1ba8df43f5b5f429c27b3c52747e8885c362871b3488d351afe96",
+      "published_sha256": "97d7d6296678d1c700e3b66208e919842497bcc4da39b34eb3e15d484673b683",
+      "wiki_links_converted": 3
+    },
+    {
+      "source_path": "04 Templates/PDCA 循环记录模板.md",
+      "path": "spec/04 Templates/PDCA 循环记录模板.md",
+      "source_sha256": "137770427ccf3ca15ce12520efc45c5b334ae142a9871f460b724c9af4fd89f4",
+      "published_sha256": "137770427ccf3ca15ce12520efc45c5b334ae142a9871f460b724c9af4fd89f4",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/上下文包模板.md",
+      "path": "spec/04 Templates/上下文包模板.md",
+      "source_sha256": "c7f371e6b274b0a0544ca32f115071bba529f27cb5eef581099a21b511cbb7dc",
+      "published_sha256": "c7f371e6b274b0a0544ca32f115071bba529f27cb5eef581099a21b511cbb7dc",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/不确定性登记模板.md",
+      "path": "spec/04 Templates/不确定性登记模板.md",
+      "source_sha256": "97e903eb045c6c3b1a7ef6a571e615c660e03b308edf914aa086e449c5a51065",
+      "published_sha256": "97e903eb045c6c3b1a7ef6a571e615c660e03b308edf914aa086e449c5a51065",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/主张—证据台账模板.md",
+      "path": "spec/04 Templates/主张—证据台账模板.md",
+      "source_sha256": "c3b1a85c148d7781fd2ae9f7d8d219a688885d90f7f4d734b11a68a708be75bb",
+      "published_sha256": "c3b1a85c148d7781fd2ae9f7d8d219a688885d90f7f4d734b11a68a708be75bb",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/人机协作记录模板.md",
+      "path": "spec/04 Templates/人机协作记录模板.md",
+      "source_sha256": "79dfeac603414f56532fc0fec992cf3a2713197711ceb822f5c14b569dd6a44f",
+      "published_sha256": "79dfeac603414f56532fc0fec992cf3a2713197711ceb822f5c14b569dd6a44f",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/出版单元模板.md",
+      "path": "spec/04 Templates/出版单元模板.md",
+      "source_sha256": "a05b2a1acb2d8076e26d2023d44b2c0a49534f5cda37c572f001495b42d6b579",
+      "published_sha256": "a05b2a1acb2d8076e26d2023d44b2c0a49534f5cda37c572f001495b42d6b579",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/回归测试与发布候选模板.md",
+      "path": "spec/04 Templates/回归测试与发布候选模板.md",
+      "source_sha256": "9a8ba50659798de145dd8e4bcc18a6cd71da226d1dc8a35bf278b7ce73455b29",
+      "published_sha256": "9a8ba50659798de145dd8e4bcc18a6cd71da226d1dc8a35bf278b7ce73455b29",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/实例化初始化清单.md",
+      "path": "spec/04 Templates/实例化初始化清单.md",
+      "source_sha256": "b1414399ba8a30361b36c9192f2dd5fb8926b2b4b3674bd16eacda3a039dbbbd",
+      "published_sha256": "02e9a5971b20bed7bfa49b17f9dcf5bbeb3a1656d87e7064d8dd0ba0558e8da3",
+      "wiki_links_converted": 1
+    },
+    {
+      "source_path": "04 Templates/工作包模板.md",
+      "path": "spec/04 Templates/工作包模板.md",
+      "source_sha256": "4f527fa54a9ec08d9ea7434f409d4acdc44e5f5f1ef32481bb2970c3a540db20",
+      "published_sha256": "4f527fa54a9ec08d9ea7434f409d4acdc44e5f5f1ef32481bb2970c3a540db20",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/执行进度看板模板.md",
+      "path": "spec/04 Templates/执行进度看板模板.md",
+      "source_sha256": "0fcfa33de784445e2dbbb44f86e25fbafa8ec6688829d2e87e0af00dc444debe",
+      "published_sha256": "0fcfa33de784445e2dbbb44f86e25fbafa8ec6688829d2e87e0af00dc444debe",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/数据引用记录模板.md",
+      "path": "spec/04 Templates/数据引用记录模板.md",
+      "source_sha256": "78bf738ca24b2f210ff671bd1568d960e065bc6bedb14dce038465a74267921e",
+      "published_sha256": "78bf738ca24b2f210ff671bd1568d960e065bc6bedb14dce038465a74267921e",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/来源与权利台账模板.md",
+      "path": "spec/04 Templates/来源与权利台账模板.md",
+      "source_sha256": "16ea1094bd39e9a9a4a5748321b66dc0312a855322e5d4a95abece028cfaf895",
+      "published_sha256": "16ea1094bd39e9a9a4a5748321b66dc0312a855322e5d4a95abece028cfaf895",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/架构与权威矩阵模板.md",
+      "path": "spec/04 Templates/架构与权威矩阵模板.md",
+      "source_sha256": "02c29660956413d00a9ed98307d990e2966ed1865df575fc973da2f24399434f",
+      "published_sha256": "02c29660956413d00a9ed98307d990e2966ed1865df575fc973da2f24399434f",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/知识概览模板.md",
+      "path": "spec/04 Templates/知识概览模板.md",
+      "source_sha256": "ba8e40c996a6576ba301346b04311bf56f589f0e5224d33c42ff4a274ec36b74",
+      "published_sha256": "ba8e40c996a6576ba301346b04311bf56f589f0e5224d33c42ff4a274ec36b74",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "04 Templates/轻量工作单模板.md",
+      "path": "spec/04 Templates/轻量工作单模板.md",
+      "source_sha256": "b5c9fd8a746283613bfec62e1d729777e75950318e107551f3c05132f2f46631",
+      "published_sha256": "248b5df6cb7fae9c81d410a1187f1d5fe9560ff1f22fb384788067ab6219df8d",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "04 Templates/项目章程模板.md",
+      "path": "spec/04 Templates/项目章程模板.md",
+      "source_sha256": "539ee4ee647f7917e7b85b5458bc463b8ffc2d1bc7a2adb6d73bf1b0c31d5564",
+      "published_sha256": "539ee4ee647f7917e7b85b5458bc463b8ffc2d1bc7a2adb6d73bf1b0c31d5564",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/README.json",
+      "path": "spec/05 Machine Model/examples/README.json",
+      "source_sha256": "4423d11a7d6bc095ddda27d480970bb0d01432007691810ad08e2b548594a39b",
+      "published_sha256": "4423d11a7d6bc095ddda27d480970bb0d01432007691810ad08e2b548594a39b",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-01-missing-human-leadership.json",
+      "path": "spec/05 Machine Model/examples/invalid-01-missing-human-leadership.json",
+      "source_sha256": "1153a9a39104a2874c0f8746855b5ebedb86de604370dc9365e607a1b5e01bdb",
+      "published_sha256": "1153a9a39104a2874c0f8746855b5ebedb86de604370dc9365e607a1b5e01bdb",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-02-28-meta-objects.json",
+      "path": "spec/05 Machine Model/examples/invalid-02-28-meta-objects.json",
+      "source_sha256": "f2389fb8d1a6e37c907f850b6c77032c4259212a143b3f22acd6b0093e492ade",
+      "published_sha256": "f2389fb8d1a6e37c907f850b6c77032c4259212a143b3f22acd6b0093e492ade",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-03-report-profile-default-q4.json",
+      "path": "spec/05 Machine Model/examples/invalid-03-report-profile-default-q4.json",
+      "source_sha256": "0fa01a14b6212e8d03a35c0fc739eb21f110fd8ada925117c0a6a1e9b8d2ad86",
+      "published_sha256": "0fa01a14b6212e8d03a35c0fc739eb21f110fd8ada925117c0a6a1e9b8d2ad86",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-04-wrong-version.json",
+      "path": "spec/05 Machine Model/examples/invalid-04-wrong-version.json",
+      "source_sha256": "cbc0b03cbdcb15de6acaa2302908ce3aa0f5cca815b98de270767cc6a44266a7",
+      "published_sha256": "cbc0b03cbdcb15de6acaa2302908ce3aa0f5cca815b98de270767cc6a44266a7",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-05-missing-status-model.json",
+      "path": "spec/05 Machine Model/examples/invalid-05-missing-status-model.json",
+      "source_sha256": "622c92b20d508960530219c46ec2b6352d20338265251d4a83145b76294a320c",
+      "published_sha256": "622c92b20d508960530219c46ec2b6352d20338265251d4a83145b76294a320c",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-06-protocol-without-document.json",
+      "path": "spec/05 Machine Model/examples/invalid-06-protocol-without-document.json",
+      "source_sha256": "aa34f3aa885208d5adb88e4f6ef252cb95af760b74218145e0718b8bee353f4d",
+      "published_sha256": "aa34f3aa885208d5adb88e4f6ef252cb95af760b74218145e0718b8bee353f4d",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-07-missing-core-element.json",
+      "path": "spec/05 Machine Model/examples/invalid-07-missing-core-element.json",
+      "source_sha256": "633521af28d0849788cccb5716d5d3bf55e33edd9b7988c1ce4859f683dbd4cb",
+      "published_sha256": "633521af28d0849788cccb5716d5d3bf55e33edd9b7988c1ce4859f683dbd4cb",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-08-author-accepted-not-boolean.json",
+      "path": "spec/05 Machine Model/examples/invalid-08-author-accepted-not-boolean.json",
+      "source_sha256": "8dcb0e9284cab2f4df0533325d55453ea4db78dd1d29ca4d47e351eaa8ea7262",
+      "published_sha256": "8dcb0e9284cab2f4df0533325d55453ea4db78dd1d29ca4d47e351eaa8ea7262",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-09-budget-exhausted-counts-as-sufficient.json",
+      "path": "spec/05 Machine Model/examples/invalid-09-budget-exhausted-counts-as-sufficient.json",
+      "source_sha256": "5a1c9ab74d8c015b9173b093d9e0568657d6542e0ab8839abb0abec7994ddce8",
+      "published_sha256": "5a1c9ab74d8c015b9173b093d9e0568657d6542e0ab8839abb0abec7994ddce8",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-10-missing-blocking-condition.json",
+      "path": "spec/05 Machine Model/examples/invalid-10-missing-blocking-condition.json",
+      "source_sha256": "8cd8584726bc83dca8fd62185537885321041a79274f967812730ffd9b751eef",
+      "published_sha256": "8cd8584726bc83dca8fd62185537885321041a79274f967812730ffd9b751eef",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/invalid-11-material-record-without-locator.json",
+      "path": "spec/05 Machine Model/examples/invalid-11-material-record-without-locator.json",
+      "source_sha256": "c6ae9847125a0badb5191d26936e8a81441e2eeb148eeff668b55e706d35dc47",
+      "published_sha256": "c6ae9847125a0badb5191d26936e8a81441e2eeb148eeff668b55e706d35dc47",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/examples/valid.kpdm.v0.5.0-rc.2.json",
+      "path": "spec/05 Machine Model/examples/valid.kpdm.v0.5.0-rc.2.json",
+      "source_sha256": "3f212bd0e085bb632857415ebf9e30681834f3dbec83752a7b98cbf15062c9b3",
+      "published_sha256": "3f212bd0e085bb632857415ebf9e30681834f3dbec83752a7b98cbf15062c9b3",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/kpdm.schema.v0.4.json",
+      "path": "spec/05 Machine Model/kpdm.schema.v0.4.json",
+      "source_sha256": "8260c75d4ca110e374632835b9bd9658b57032b45608324025c928a68629006f",
+      "published_sha256": "8260c75d4ca110e374632835b9bd9658b57032b45608324025c928a68629006f",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/kpdm.schema.v0.5.0-rc.2.json",
+      "path": "spec/05 Machine Model/kpdm.schema.v0.5.0-rc.2.json",
+      "source_sha256": "b49457541df6003e20e6f379a1fdcf8c1d2f18d429244820a651f9b8f23107f9",
+      "published_sha256": "b49457541df6003e20e6f379a1fdcf8c1d2f18d429244820a651f9b8f23107f9",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/kpdm.v0.4.json",
+      "path": "spec/05 Machine Model/kpdm.v0.4.json",
+      "source_sha256": "f500c48601760cf49270ee32f39a802f8c04e15212fc79809148863ffe7126c6",
+      "published_sha256": "f500c48601760cf49270ee32f39a802f8c04e15212fc79809148863ffe7126c6",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "05 Machine Model/kpdm.v0.5.0-rc.2.json",
+      "path": "spec/05 Machine Model/kpdm.v0.5.0-rc.2.json",
+      "source_sha256": "3f212bd0e085bb632857415ebf9e30681834f3dbec83752a7b98cbf15062c9b3",
+      "published_sha256": "3f212bd0e085bb632857415ebf9e30681834f3dbec83752a7b98cbf15062c9b3",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "07 References/外部依据与接口登记.md",
+      "path": "spec/07 References/外部依据与接口登记.md",
+      "source_sha256": "0c68eea564c6fd45c0869deed7a2a79f8d5073d7968871020ed801f7ae68b400",
+      "published_sha256": "72d8ba45fd0e32acf9778c0cad396011802fe71316a76fff73c70bfbfb612f1d",
+      "wiki_links_converted": 1
+    },
+    {
+      "source_path": "08 Evolution/KPDM 0.5 需求映射与迁移.md",
+      "path": "spec/08 Evolution/KPDM 0.5 需求映射与迁移.md",
+      "source_sha256": "5db10555d14960ca2a64911f422692933253789839347907675b0e89417b7bd1",
+      "published_sha256": "b21590a77c72a328f3e7c13f481093fe5bb1842b6cc3fc84e7389c3468ce44d8",
+      "wiki_links_converted": 41
+    },
+    {
+      "source_path": "08 Evolution/KPDM 三层表达重构记录.md",
+      "path": "spec/08 Evolution/KPDM 三层表达重构记录.md",
+      "source_sha256": "6193b49320554cd77e6cddadc10ff51f936c2f112322e0985c9c9aaa4cc54fd5",
+      "published_sha256": "6193b49320554cd77e6cddadc10ff51f936c2f112322e0985c9c9aaa4cc54fd5",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "08 Evolution/KPDM 变更日志.md",
+      "path": "spec/08 Evolution/KPDM 变更日志.md",
+      "source_sha256": "b8159ab31aa2420a16ad386da3ec49afa570261f0d5e5b5a25cbe31fdb8bd3df",
+      "published_sha256": "58bc0e73f8683d2f765c92585cecd4b603232e26bde65465a7ce6c3a421b7f60",
+      "wiki_links_converted": 10
+    },
+    {
+      "source_path": "08 Evolution/KPDM 演进路线图.md",
+      "path": "spec/08 Evolution/KPDM 演进路线图.md",
+      "source_sha256": "e48023ff2e0828788aac3c12d2b854b35e08af8461eb690c656db30d86f05cf8",
+      "published_sha256": "232c569208ef97ad0b5bf327f2ccbb780a044486d262ec0d1421c2bea97c2de1",
+      "wiki_links_converted": 1
+    },
+    {
+      "source_path": "99 Versions/0.4.0/KPDM 总纲 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/KPDM 总纲 v0.4.0.md",
+      "source_sha256": "1fca84cd46341de16f44654128978d755ddf25f2a40bb80da4e88ef3b4f2ee87",
+      "published_sha256": "3e235ce8120758777f700e0b5912c21cb97973f3191584deda61d17cf107458c",
+      "wiki_links_converted": 1
+    },
+    {
+      "source_path": "99 Versions/0.4.0/PDCA 成果校验与进度治理 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/PDCA 成果校验与进度治理 v0.4.0.md",
+      "source_sha256": "f9fd8a4110697cdffec58335831611e493c301633d357553108d8b9ecb67df48",
+      "published_sha256": "f9fd8a4110697cdffec58335831611e493c301633d357553108d8b9ecb67df48",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "99 Versions/0.4.0/人机协作知识生产系统 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/人机协作知识生产系统 v0.4.0.md",
+      "source_sha256": "0cbf030a09b3a325ccc6e5f69b675fc3912224e9e43a0b54046a811d6073893e",
+      "published_sha256": "a8e36688e8d6f69c95ef94b8cbaddcce3eb78d68a8cfc14a9d8f4f9f83aed4e4",
+      "wiki_links_converted": 1
+    },
+    {
+      "source_path": "99 Versions/0.4.0/反馈学习与版本治理 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/反馈学习与版本治理 v0.4.0.md",
+      "source_sha256": "36284bcbfdc9ab80efc28694f7edef3502e8bc18f516d273fe4b36c9b843ebe1",
+      "published_sha256": "36284bcbfdc9ab80efc28694f7edef3502e8bc18f516d273fe4b36c9b843ebe1",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "99 Versions/0.4.0/实例化初始化协议 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/实例化初始化协议 v0.4.0.md",
+      "source_sha256": "bc4a81aac4a160eeb64b83e1ab842e61b49a864f44534807ec1b09bf3799eb85",
+      "published_sha256": "bc4a81aac4a160eeb64b83e1ab842e61b49a864f44534807ec1b09bf3799eb85",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "99 Versions/0.4.0/开发生命周期与阶段门 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/开发生命周期与阶段门 v0.4.0.md",
+      "source_sha256": "004629c829e8f9ee855cfb71c5f68da891a7d9196759f425c99cc83ae834ee92",
+      "published_sha256": "279673da02716280faddfe1c8b57606eb08930ce1625cfa558650c420470888b",
+      "wiki_links_converted": 2
+    },
+    {
+      "source_path": "99 Versions/0.4.0/普适原则与不可妥协底线 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/普适原则与不可妥协底线 v0.4.0.md",
+      "source_sha256": "1c7b125e325b3379aed3dfbbf0df7c4118680841f0cdc363d311f8002ddb2da7",
+      "published_sha256": "1c7b125e325b3379aed3dfbbf0df7c4118680841f0cdc363d311f8002ddb2da7",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "99 Versions/0.4.0/版权、引用、数据与来源协议 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/版权、引用、数据与来源协议 v0.4.0.md",
+      "source_sha256": "b535e0dc1f60d8ccd4fd1213c37100f4689de981c87dbee245c9f8275858858e",
+      "published_sha256": "b535e0dc1f60d8ccd4fd1213c37100f4689de981c87dbee245c9f8275858858e",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "99 Versions/0.4.0/质量SLO、置信向量与不确定性治理 v0.4.0.md",
+      "path": "spec/99 Versions/0.4.0/质量SLO、置信向量与不确定性治理 v0.4.0.md",
+      "source_sha256": "5311ecd17d16594711cdfc925edfa1066c2e4389c1595a55987f257315c52736",
+      "published_sha256": "5311ecd17d16594711cdfc925edfa1066c2e4389c1595a55987f257315c52736",
+      "wiki_links_converted": 0
+    },
+    {
+      "source_path": "KPDM 知识索引.md",
+      "path": "spec/KPDM 知识索引.md",
+      "source_sha256": "d78a57ddd82329159d7a9cf30ce99914eca26abe1f2d5636ccc36a33c24dbb34",
+      "published_sha256": "5d863c39b933869e77bd47dc6c03e3fe2057ef18515864f3354d92f02e49ce5e",
+      "wiki_links_converted": 50
+    },
+    {
+      "source_path": "README.md",
+      "path": "spec/README.md",
+      "source_sha256": "81241b856397821f91c4ff34e5708198e38818a04d07ba65499e2273ecaeeda1",
+      "published_sha256": "99ba291965085cc73849880c7aebff0d74ee016f22c18e9f46a66a933e5ea53a",
+      "wiki_links_converted": 17
+    }
+  ],
+  "omitted_references": [
+    {
+      "document": "01 Foundations/KPDM 三层元模型.md",
+      "label": "KPDM-D018"
+    },
+    {
+      "document": "01 Foundations/KPDM 产品需求文档.md",
+      "label": "决策台账"
+    },
+    {
+      "document": "01 Foundations/KPDM 产品需求文档.md",
+      "label": "待裁决与开放项"
+    },
+    {
+      "document": "01 Foundations/KPDM 产品需求文档.md",
+      "label": "01_框架骨架_20260907"
+    },
+    {
+      "document": "01 Foundations/KPDM 产品需求文档.md",
+      "label": "KPDM-PDCA-07 人主导骨架与轻量短文检验"
+    },
+    {
+      "document": "01 Foundations/KPDM 产品需求文档.md",
+      "label": "04_独立审阅与验证结论_20260909"
+    },
+    {
+      "document": "08 Evolution/KPDM 变更日志.md",
+      "label": "KPDM 0.5 项目索引"
+    },
+    {
+      "document": "KPDM 知识索引.md",
+      "label": "《知识产品工程》"
+    },
+    {
+      "document": "KPDM 知识索引.md",
+      "label": "KPDM 项目索引"
+    },
+    {
+      "document": "KPDM 知识索引.md",
+      "label": "KPDM 0.5 项目索引"
+    },
+    {
+      "document": "README.md",
+      "label": "《知识产品工程》"
+    },
+    {
+      "document": "README.md",
+      "label": "KPDM 项目索引"
+    },
+    {
+      "document": "README.md",
+      "label": "KPDM 0.5 项目索引"
+    },
+    {
+      "document": "README.md",
+      "label": "README"
+    }
+  ]
+}

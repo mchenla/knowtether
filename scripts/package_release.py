@@ -25,8 +25,8 @@ def main():
                     '--output=' + str(source), 'HEAD'], cwd=repo, check=True)
     plugin = output / ('knowtether-' + version + '-plugin.zip')
     files = git('ls-tree', '-r', '--name-only', 'HEAD').decode('utf-8').splitlines()
-    roots = ('.codex-plugin/', 'assets/', 'hooks/', 'kpdm_hooks/', 'skills/', 'docs/', 'policy/', 'examples/')
-    names = {'README.md', 'README.en.md', 'LICENSE', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md'}
+    roots = ('.codex-plugin/', 'assets/', 'hooks/', 'kpdm_hooks/', 'skills/', 'docs/', 'policy/', 'examples/', 'framework/')
+    names = {'README.md', 'README.en.md', 'LICENSE', 'LICENSING.md', 'NOTICE', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md'}
     included = [name for name in files if name in names or name.startswith(roots)]
     with zipfile.ZipFile(plugin, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
         for name in included:
@@ -35,18 +35,28 @@ def main():
         entries = archive.namelist()
         required = ('.codex-plugin/plugin.json', 'hooks/hooks.json',
                     'hooks/plugin_entry.py', 'kpdm_hooks/hooks.py', 'skills/knowtether/SKILL.md',
-                    'assets/knowtether.svg', 'docs/codex-plugin.md')
+                    'assets/knowtether.svg', 'docs/codex-plugin.md',
+                    'framework/kpdm/README.md', 'framework/kpdm/LICENSE', 'framework/kpdm/snapshot.json', 'LICENSING.md')
         assert all('knowtether/' + name in entries for name in required)
         assert all('/.agents/' not in name and '/.kpdm/' not in name and '/.venv/' not in name for name in entries)
         metadata = json.loads(archive.read('knowtether/.codex-plugin/plugin.json'))
         assert metadata['name'] == 'knowtether' and metadata['version'] == version
+    framework = output / 'kpdm-0.5.0-rc.2-public-snapshot.zip'
+    with zipfile.ZipFile(framework, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+        for name in files:
+            if name.startswith('framework/kpdm/'):
+                archive.writestr('kpdm/' + name.removeprefix('framework/kpdm/'), git('show', 'HEAD:' + name))
+    with zipfile.ZipFile(framework) as archive:
+        assert 'kpdm/LICENSE' in archive.namelist() and 'kpdm/spec/README.md' in archive.namelist()
+    with zipfile.ZipFile(wheel) as archive:
+        assert not any(name.startswith('framework/') for name in archive.namelist())
     sums = output / ('v' + version) / 'SHA256SUMS'
     sums.parent.mkdir(exist_ok=True)
     with sums.open('w', encoding='ascii', newline='\n') as stream:
-        for artifact in (plugin, wheel, source):
+        for artifact in (plugin, wheel, source, framework):
             stream.write(hashlib.sha256(artifact.read_bytes()).hexdigest() + '  ' + artifact.name + '\n')
     print(json.dumps({'version': version, 'plugin_files': len(included),
-                      'artifacts': [plugin.name, wheel.name, source.name, sums.name]}))
+                      'artifacts': [plugin.name, wheel.name, source.name, framework.name, sums.name]}))
 
 
 if __name__ == '__main__':

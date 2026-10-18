@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 - 2026-10-17
+
+- Publish the author-licensed KPDM framework snapshot under CC BY 4.0; retain MIT for KnowTether software and adaptation material.
+- Bundle specifications, templates, machine models/schemas and examples, selected baseline history and source fingerprints with the Codex plugin.
+- Convert Obsidian links for standalone reading and mark unavailable private references.
+- Link the knowledge-work skill to bundled framework documents and provide a separate framework ZIP.
+- Preserve KPDM candidate/baseline status, existing installation commands and all three advisory Hook definitions.
+
 ## 0.2.1 - 2026-10-17
 
 - Fix hook discovery on Codex 0.163 alpha by using the compatibility manifest alone and the standard hooks/hooks.json path.

@@ -40,7 +40,7 @@ class PluginPackageTests(unittest.TestCase):
         self.assertTrue(skill.startswith('---\nname: knowtether\n'))
         self.assertIn('0.5.0-rc.2 candidate', skill)
         self.assertIn('0.4.0 trial / conditional-pass', skill)
-        for target in ('docs/rules.md', 'docs/codex-plugin.md', 'policy/source-map.json'):
+        for target in ('docs/rules.md', 'docs/codex-plugin.md', 'policy/source-map.json', 'framework/kpdm/README.md', 'framework/kpdm/LICENSE', 'LICENSING.md'):
             self.assertTrue((REPO / target).is_file())
 
     def test_hook_manifest_is_generated_and_never_requests_continuation(self):
