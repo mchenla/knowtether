@@ -25,7 +25,7 @@ codex plugin marketplace add mchenla/knowtether
 codex plugin add knowtether@knowtether
 ```
 
-Review and trust the three hooks in `/hooks`, then start a new session; restart the desktop app after installation. No separate pip install is needed. Ask in ordinary language without a manual marker. Request detection can miss cases; automatic reading of bundled specifications is not reliably established.
+Review and trust the three hooks in `/hooks`, then start a new session; restart the desktop app after installation. No separate pip install is needed. Ask in ordinary language without a manual marker. Matched knowledge requests now receive checked source passages before writing. Request detection can still miss cases; see the reading mechanism below.
 
 To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugin add knowtether@knowtether`.
 
@@ -35,12 +35,14 @@ To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugi
 
 Text checks cover citation placeholders, a narrow pattern of absolute research claims, independent-validation wording and concentrated stock phrases. Optional worksheets add record/version consistency checks.
 
-These checks do not guarantee freedom from sycophancy, contrarianism, blind obedience, cherry-picking, factual errors, classification gaps or formulaic prose. There is no grammar correction or technical watermark detection/removal. In the latest live writing case, the agent read the skill but did not open the bundled specification. Silence is not a quality pass. See the [capability audit](docs/capabilities.md) and [validation record](docs/validation.md).
+These checks do not guarantee freedom from sycophancy, contrarianism, blind obedience, cherry-picking, factual errors, classification gaps or formulaic prose. There is no grammar correction or technical watermark detection/removal. A 0.3.0 live case exposed missing specification reads; 0.4.0 adds explicit minimum reading and collaboration guidance. Silence is not a quality pass. See the [capability audit](docs/capabilities.md) and [validation record](docs/validation.md).
 
 ## Open source
 
-Software **0.3.1**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
+Software **0.4.0**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
 
 KPDM remains **0.5.0-rc.2 candidate**, with **0.4.0 trial / conditional-pass** as the latest accepted baseline. Software release is not framework acceptance.
 
 [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+
+Version 0.4.0 adds a bounded, hash-checked minimum reading pack before matched knowledge requests and explicit collaboration rules. See [reading evidence](docs/minimum-reading.md), [collaboration policy](policy/collaboration.md), and the proposed [human–AI knowledge creation discipline](framework/kpdm/extensions/人机协作知识创作学.md). Delivery does not prove compliance; semantic, grammar and watermark guarantees are not provided.

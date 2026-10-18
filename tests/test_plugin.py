@@ -60,6 +60,7 @@ class PluginPackageTests(unittest.TestCase):
             self.assertIn("-Event '" + event + "'", script)
             self.assertNotIn('BypassHookTrust', script)
         self.assertNotIn('additionalContextLimit', actual['hooks']['Stop'][0]['hooks'][0])
+        self.assertEqual(actual['hooks']['UserPromptSubmit'][0]['hooks'][0]['additionalContextLimit'], 0)
 
 
 class PluginRuntimeTests(unittest.TestCase):

@@ -1,5 +1,13 @@
 # Validation records
 
+## 0.4.0: minimum reading and collaboration guidance
+
+Local Windows regression: 96 tests, 95 passed and one POSIX-only skip. New tests cover exact source passages/line locations, digest changes, missing or oversized material, section identity, manifest redirection, no-tag request delivery, no project writes and read-only CLI fallback. The reading pack is 5,594 characters, bounded at 18,000 characters.
+
+The isolated local-source install with the real Codex CLI discovered all three hooks and executed their cached commands; the knowledge prompt returned the minimum pack with both markers and the collaboration requirements. It did not grant trust or run a model turn. All 72 original snapshot digests remain unchanged; 239 local framework/Skill links checked.
+
+Live task checks and public-source/artifact verification are recorded separately once completed; the initial source commit does not claim they passed. Behavior rules remain guidance rather than new semantic detectors.
+
 ## 0.3.1: positioning and behavior-coverage audit
 
 This release simplifies the public introduction and explicitly separates framework requirements, model guidance and implemented detection. The Hook logic and skill guidance are unchanged. A reproducible synthetic audit calls the real Stop handler in plugin mode: four positive controls trigger the existing four text diagnostics, while nine illustrative problematic samples return no warning. This demonstrates coverage gaps, not a benchmark detection rate or a guarantee of agent behavior. See [the capability audit](capabilities.md) and `python scripts/audit_behavior.py`.

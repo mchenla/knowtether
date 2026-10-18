@@ -19,7 +19,8 @@ def definition():
                    "timeout": 10,
                    "statusMessage": "KnowTether: " + event}
         if event != "Stop":
-            handler["additionalContextLimit"] = 1600
+            # The reader enforces an 18,000-character cap without cutting sections.
+            handler["additionalContextLimit"] = 0 if event == "UserPromptSubmit" else 1600
         hooks[event] = [{"hooks": [handler]}]
     return {"description": "KnowTether advisory hooks; bundled Python 3.10+ code, no pip install, no blocking.", "hooks": hooks}
 

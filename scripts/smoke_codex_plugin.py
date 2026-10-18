@@ -133,6 +133,10 @@ def main():
             assert 'CITATION_PLACEHOLDER' in response['systemMessage'], response
         else:
             assert response['hookSpecificOutput']['hookEventName'] == event, response
+            if event == 'UserPromptSubmit':
+                context = response['hookSpecificOutput']['additionalContext']
+                assert 'MINIMUM_READING ready' in context and 'MINIMUM_READING end' in context
+                assert '## 六项约束' in context and 'MECE' in context
         records.append({'event': event, 'response': response, 'exit_code': result.returncode})
     assert list(project.iterdir()) == [], 'Hooks must not create project files'
     (home / 'results.json').write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')

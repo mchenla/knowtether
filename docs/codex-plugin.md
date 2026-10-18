@@ -20,7 +20,7 @@ codex plugin add knowtether@knowtether
 开始新的知识创作任务即可获得条件性提醒。请求开头使用 `[kpdm]` 可明确触发知识任务提醒；也可以调用插件中的 `knowtether` Skill，例如 `$knowtether:knowtether`，或直接要求按知据规范起草或审阅。
 
 - `SessionStart`：提供仅适用于知识创作的简短规范；发现旧会话工作单时提示核对当前委托。
-- `UserPromptSubmit`：对匹配的知识请求补充提醒。
+- `UserPromptSubmit`：对匹配的知识请求，先读取校验三份随包规范并提供原文选段和协作要求，见 [最小阅读](minimum-reading.md)。
 - `Stop`：对最后一条消息和当前会话绑定的工作单提供告警；不阻断、不批准、不要求自动续跑。
 
 短任务无须创建工作单或项目配置。复杂任务可在会话 `cwd` 对应的创作目录维护 `.kpdm/work.json`，字段见 [规则映射](rules.md)。插件只读取这个目录下的记录，不搜索父目录，不从完整会话推定授权。工作单记录不会写入插件缓存。
@@ -62,4 +62,4 @@ POSIX 启动脚本为 `hooks/run-posix.sh`。Windows 入口使用显式 PowerShe
 
 ## 随包规范
 
-从 0.3.0 起，插件同时包含 `framework/kpdm/` 的 CC BY 4.0 规范快照；代码与适配 Skill 继续为 MIT。Skill 按需链接到快速入门、模板和相关规范，普通短任务保持轻量。框架与软件版本分别管理，见 [KPDM](../framework/kpdm/README.md) 和 [许可范围](../LICENSING.md)。原有三个 Hook 命令与告警边界不变。
+从 0.3.0 起，插件同时包含 `framework/kpdm/` 的 CC BY 4.0 规范快照；代码与适配 Skill 继续为 MIT。Skill 按需链接到快速入门、模板和相关规范，普通短任务保持轻量。框架与软件版本分别管理，见 [KPDM](../framework/kpdm/README.md) 和 [许可范围](../LICENSING.md)。0.4.0 增加最小原文阅读包；三个入口命令与提示型 Stop 边界保留。

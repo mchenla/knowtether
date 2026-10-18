@@ -77,7 +77,10 @@ def _handler(root: Path, event: str, host: str) -> dict:
         command = "powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand " + encoded
     else:
         command = shlex.join(argv)
-    return {"type": "command", "command": command, "timeout": 10}
+    handler = {"type": "command", "command": command, "timeout": 10}
+    if event == "UserPromptSubmit":
+        handler["additionalContextLimit"] = 0  # reading.py bounds the pack.
+    return handler
 
 
 def configure(root: Path, host: str, remove: bool = False, dry_run: bool = False) -> dict:

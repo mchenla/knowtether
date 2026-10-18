@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 - 2026-10-17
+
+- Read and hash-check selected passages from three bundled KPDM specifications before matched knowledge prompts; include exact text, line locations and collaboration guidance in a bounded context pack.
+- Add read-only `prepare`, honest degradation on missing/mismatched material and Skill fallback reading instructions.
+- Specify independent judgment, useful disagreement, authorized initiative, context fidelity, calibrated claims, conditional MECE, natural expression, rights, reader tasks, traceable decisions and resource control.
+- Publish a CC BY 4.0 discipline-building proposal separately from the unchanged 72-document candidate snapshot.
+- Keep advisory Stop heuristics and semantic/grammar/watermark limitations explicit.
+
 ## 0.3.1 - 2026-10-17
 
 - Explain KPDM in full and introduce KnowTether through seven plain questions: identity, purpose, contents, environment, audience, timing and use.

@@ -34,3 +34,7 @@ KPDM 帮助人从问题、经验与材料出发，形成别人能理解、能使
 Copyright © 2026 MC (mchenla)。本目录中的 KPDM 原创正文、模板、机器模型与公开分发说明采用 **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**，许可全文见 [LICENSE](LICENSE)。允许按该许可分享、商用和改编，需适当署名、附许可链接并说明修改。第三方材料及仅被链接的外部作品仍按其各自条件使用。
 
 建议署名：MC (mchenla), *KPDM / 知识产品开发元模型*, 0.5.0-rc.2 candidate, [公开快照](https://github.com/mchenla/knowtether/tree/main/framework/kpdm), CC BY 4.0；如有修改，请另说明修改内容。源码和适配说明的 MIT 范围见 [LICENSING.md](../../LICENSING.md)。
+
+## 扩展研究
+
+[人机协作知识创作学：学科建设草案](extensions/人机协作知识创作学.md) 是新增的研究与教学方案，采用 CC BY 4.0；它与 spec/ 下 72 份原文快照分别管理，不改变原文及接受状态。

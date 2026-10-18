@@ -1,6 +1,6 @@
 {
   "name": "knowtether",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Work with AI to write articles, reports and research reviews with clearer sources and reasoning. Includes KPDM guidance and limited advisory checks.",
   "author": {
     "name": "MC",
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "知据 KnowTether",
     "shortDescription": "和 AI 一起，写得有据、讲得清",
-    "longDescription": "知据为用 AI 写文章、报告和研究综述的人提供方法、模板、任务提醒与有限检查。KPDM 全称 Knowledge Product Development Meta-Model（知识产品开发元模型）。当前不保证纠正迎合、事实错误、语法或技术水印，也未可靠实现随包规范自动读取。需要 Python 3.10+，使用前审阅并信任 Hooks。",
+    "longDescription": "知据帮助人与 AI 一起写文章、报告和研究综述。知识请求触发后先读取随包 KPDM 必要原文和协作要求，涵盖反迎合、有用异议、来源与语境、适用时的 MECE 及自然表达；提供有限检查，不保证语义正确或移除水印。需要 Python 3.10+ 并信任 Hooks。",
     "developerName": "MC",
     "category": "Productivity",
     "capabilities": [

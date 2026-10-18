@@ -24,7 +24,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="KnowTether (知据): advisory KPDM hooks for knowledge outputs")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="action", required=True)
-    for name in ("init", "bind", "close", "context", "check", "install", "uninstall", "hook"):
+    for name in ("init", "bind", "close", "context", "prepare", "check", "install", "uninstall", "hook"):
         command = sub.add_parser(name)
         command.add_argument("--root", type=Path, default=Path.cwd())
         if name in ("init", "bind"):
@@ -53,6 +53,11 @@ def main(argv: list[str] | None = None) -> int:
         if args.action == "context":
             print(context())
             return 0
+        if args.action == "prepare":
+            from .reading import prepare
+            pack = prepare()
+            emit(pack)
+            return 0 if pack["status"] == "ready" else 2
         if args.action in ("install", "uninstall"):
             emit(configure(root, args.host, args.action == "uninstall", args.dry_run))
             return 0

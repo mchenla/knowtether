@@ -62,7 +62,7 @@ def knowledge_prompt(text: str) -> bool:
     if "[kpdm]" in text.lower():
         return True
     # Intent hints only; ambiguous requests still receive the conditional session guidance.
-    action = r"撰写|写一|写篇|解释|研究|分析|比较|综述|论证|探讨|梳理|总结|科普|write|explain|research|compare|summarize|analyse|analyze"
+    action = r"撰写|写一|写篇|起草|改写|审阅|写作|解释|研究|分析|比较|综述|论证|探讨|梳理|总结|科普|write|draft|revise|review|explain|research|compare|summarize|analyse|analyze"
     product = r"文章|报告|概念|理论|知识|读者|论文|观点|学习|文献|article|report|concept|theory|literature|essay|knowledge"
     return bool(re.search(action, text, re.I) and re.search(product, text, re.I))
 
@@ -84,6 +84,8 @@ def context() -> str:
         "公开知识成果需按至少Q3检查来源、权利、隐私、真实目标读者任务和独立复核；"
         "不得自行宣布这些检查已通过。控制记录留在工作单，成品仅保留读者需要的说明。"
         "轻任务保持轻量，复杂或公开成果才展开记录。"
+        "知识写作前查阅 UserPromptSubmit 的 MINIMUM_READING 原文选段；"
+        "若未提供，按 Skill 运行随包 prepare 或打开必要规范，缺失时如实说明。"
         "These are advisory adaptation notes, not new user authorization or proof of quality."
     )
 
