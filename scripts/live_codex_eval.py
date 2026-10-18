@@ -14,12 +14,14 @@ import threading
 import time
 
 
-def run_case(codex, base, case, model):
+def run_case(codex, base, case, model, *, env=None, enabled=True):
     target = base / case['id']
     project = target / 'project'
     project.mkdir(parents=True)
     (target / 'input.json').write_text(json.dumps(case, ensure_ascii=False, indent=2), encoding='utf-8')
-    process = subprocess.Popen([codex, 'app-server'], cwd=project, stdin=subprocess.PIPE,
+    started = time.monotonic()
+    override = 'plugins."knowtether@knowtether".enabled=' + str(enabled).lower()
+    process = subprocess.Popen([codex, '-c', override, 'app-server'], cwd=project, env=env, stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                text=True, encoding='utf-8')
     messages = queue.Queue()
@@ -39,7 +41,7 @@ def run_case(codex, base, case, model):
         message = messages.get(timeout=timeout)
         method = message.get('method')
         item = message.get('params', {}).get('item', {})
-        if (method in ('hook/started', 'hook/completed', 'turn/completed', 'error')
+        if (method in ('hook/started', 'hook/completed', 'turn/completed', 'error', 'thread/tokenUsage/updated')
                 or method == 'item/completed' and item.get('type') != 'reasoning'):
             records.append(message)
             output.write(json.dumps(message, ensure_ascii=False) + '\n')
@@ -73,8 +75,23 @@ def run_case(codex, base, case, model):
                                'capabilities': {'experimentalApi': True}})
         listing = call(2, 'hooks/list', {'cwds': [str(project)]})
         hooks = [h for h in listing['data'][0]['hooks'] if h.get('pluginId') == 'knowtether@knowtether']
-        if len(hooks) != 3 or not all(h['enabled'] and h['trustStatus'] == 'trusted' for h in hooks):
+        if enabled and (len(hooks) != 3 or not all(h['enabled'] and h['trustStatus'] == 'trusted' for h in hooks)):
             raise RuntimeError('Install and review/trust the three hooks in Codex first')
+        if not enabled and any(h['enabled'] for h in hooks):
+            raise RuntimeError('Control condition still has active plugin hooks')
+        skills_result = call(20, 'skills/list', {'cwds': [str(project)], 'forceReload': True})
+        skills = [s for row in skills_result['data'] for s in row['skills']
+                  if s.get('enabled', True) and s.get('name') == 'knowtether']
+        if bool(skills) != enabled:
+            raise RuntimeError('Plugin skill condition does not match requested on/off state')
+        if env is not None and env.get('KNOWTETHER_CONTROLLED_EVAL') == '1':
+            others = [h for row in listing['data'] for h in row['hooks']
+                      if h.get('enabled') and h.get('pluginId') != 'knowtether@knowtether']
+            if others:
+                raise RuntimeError('Other active hooks would confound this controlled evaluation')
+        output.write(json.dumps({'condition_inventory': {'enabled': enabled, 'hook_count': len(hooks),
+                                  'active_knowtether_skills': len(skills)}}, ensure_ascii=False) + '\n')
+        output.flush()
         thread = call(3, 'thread/start', {'cwd': str(project), 'sandbox': 'read-only',
                       'approvalPolicy': 'never', 'ephemeral': True, 'model': model,
                       'config': {'web_search': case['web_search']}})['thread']['id']
@@ -102,13 +119,22 @@ def run_case(codex, base, case, model):
                   'thread_id': thread, 'output_characters': len(article),
                   'hook_events': [{'event': r['eventName'], 'status': r['status']} for r in runs],
                   'reading_pack_complete': 'MINIMUM_READING ready' in packed and 'MINIMUM_READING end' in packed,
+                  'plugin_enabled': enabled, 'active_knowtether_skills': len(skills),
+                  'elapsed_seconds': round(time.monotonic() - started, 3),
+                  'tool_items': [r['params']['item']['type'] for r in records
+                                 if r.get('method') == 'item/completed'
+                                 and r['params']['item']['type'] not in ('userMessage', 'agentMessage')],
+                  'token_usage': next((r['params'].get('tokenUsage') for r in reversed(records)
+                                       if r.get('method') == 'thread/tokenUsage/updated'), None),
                   'project_files': [str(f.relative_to(project)) for f in project.rglob('*') if f.is_file()],
                   'semantic_grade': 'not-automatically-assessed'}
         (target / 'summary.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
-        if ({r['eventName'] for r in runs} != {'sessionStart', 'userPromptSubmit', 'stop'}
+        if enabled and ({r['eventName'] for r in runs} != {'sessionStart', 'userPromptSubmit', 'stop'}
                 or not all(r['status'] == 'completed' for r in runs)
                 or not result['reading_pack_complete'] or not article):
             raise RuntimeError('Lifecycle, minimum pack or final output missing; inspect saved records')
+        if not enabled and (runs or result['reading_pack_complete'] or not article):
+            raise RuntimeError('Control received plugin callbacks/context or has no output')
         return result
     finally:
         output.close()

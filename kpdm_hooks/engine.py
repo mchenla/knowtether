@@ -95,6 +95,8 @@ def lint_text(text: str) -> list[dict]:
     notes = []
     # Code examples should not trigger prose-style findings.
     prose = re.sub(r"```.*?```", "", text, flags=re.S)
+    if re.search(r"\d+(?:\.\d+)?[ \t]*[—–]+[ \t]*\d+(?:\.\d+)?", prose):
+        notes.append(finding("NUMERIC_RANGE_DASH", "发现数字之间的长破折号；若表示中文正文区间，改用带空格的短横线，如1 - 2天。公式与直接引文须保持含义及原文；本提示不自动改文。"))
     if re.search(r"\[citation needed\]|\[待补来源\]|\[来源待补\]|<SOURCE_TODO>", prose, re.I):
         notes.append(finding("CITATION_PLACEHOLDER", "引用占位尚未替换；补充真实且支持相关主张的来源，或明确保留未知。"))
     if re.search(r"(?:研究证明|科学证明|studies prove|research proves)[^。\n.!?]{0,80}(?:100%|百分之百|必然|always)", prose, re.I):
