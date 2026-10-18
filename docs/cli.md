@@ -117,4 +117,3 @@ knowtether uninstall --root . --host codex
 ```
 
 Claude Code 使用 `--host claude`。卸载仅移除本项目安装的 handler，保留他人的 Hook 与配置。Python 包可另行使用 `python -m pip uninstall kpdm-hooks` 移除。
-

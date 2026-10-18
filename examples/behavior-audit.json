@@ -44,7 +44,7 @@
     {
       "id": "invisible-character",
       "concern": "不可见字符",
-      "text": "研究报告：普​通文字。这是 U+200B 演示，不是模型统计水印。"
+      "text": "研究报告：普\u200b通文字。这是 U+200B 演示，不是模型统计水印。"
     },
     {
       "id": "citation-control",
