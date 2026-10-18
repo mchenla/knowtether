@@ -1,0 +1,9 @@
+name: knowtether-review-env
+config:
+  type: cloud
+  networking:
+    # The reviewer needs no outside hosts: the repository arrives as a mounted
+    # resource and sources as uploaded files. Nothing to install.
+    type: limited
+    allow_package_managers: false
+    allowed_hosts: []
