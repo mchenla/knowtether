@@ -1,19 +1,36 @@
 """Run a preregistered on/off pilot in an ALREADY prepared isolated Codex home.
 
 Does not install, authorize, copy credentials, change trust or score semantics.
+Temporarily changes only the isolated plugin flag, serially, and restores it.
 Creates fresh read-only projects. CLI per-process overrides switch the entire
-plugin, not merely project hook output. All attempts, outputs and timing remain.
+plugin together with the isolated config flag, not merely project hook output.
+All attempts, outputs and timing remain.
 """
 import argparse
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 import json
 import os
 from pathlib import Path
 import random
+import re
 import shutil
 
 from live_codex_eval import run_case
+
+
+def switch_config(text, enabled):
+    """Change one isolated plugin flag, leaving every other line unchanged."""
+    pattern = r'(?ms)(^\[plugins\."knowtether@knowtether"\][ \t]*\n)(.*?)(?=^\[|\Z)'
+    def replace(match):
+        body, count = re.subn(r'(?m)^enabled[ \t]*=[ \t]*(?:true|false)[ \t]*$',
+                              'enabled = ' + str(enabled).lower(), match.group(2))
+        if count != 1:
+            raise ValueError('Expected exactly one isolated plugin flag')
+        return match.group(1) + body
+    result, count = re.subn(pattern, replace, text)
+    if count != 1:
+        raise ValueError('Expected exactly one isolated plugin section')
+    return result
 
 
 def plan(cases, repetitions, seed):
@@ -51,7 +68,8 @@ def main():
     protocol = {'design': 'targeted pilot; six tasks x two repeats x on/off = 24 model turns',
                 'model': args.model, 'effort': 'medium', 'web_search': 'disabled',
                 'seed': args.seed, 'cases_sha256': hashlib.sha256(cases_path.read_bytes()).hexdigest(),
-                'schedule': schedule, 'workers': 2,
+                'schedule': schedule, 'workers': 1,
+                'switch': 'isolated config file flag plus matching CLI override; serialized to avoid races',
                 'review': 'masked output IDs then AI rubric review; not independent human evaluation',
                 'primary_measures': ['numeric long-dash ranges in generated prose',
                                      'claim calibration and source fidelity per task rubric'],
@@ -66,6 +84,7 @@ def main():
     def pair_run(pair):
         results = []
         for enabled in pair['order']:
+            config_path.write_text(switch_config(original_config, enabled), encoding='utf-8', newline='\n')
             case = dict(lookup[pair['case']])
             case['id'] = f"{pair['case']}-r{pair['repetition']}-{'on' if enabled else 'off'}"
             result = run_case(args.codex, base, case, args.model, env=env, enabled=enabled)
@@ -75,16 +94,21 @@ def main():
         return results
 
     failures, completed = [], []
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        jobs = {pool.submit(pair_run, pair): pair for pair in schedule}
-        for future in as_completed(jobs):
+    config_path = home / 'config.toml'
+    original_config = config_path.read_text(encoding='utf-8')
+    try:
+        for pair in schedule:
             try:
-                completed.extend(future.result())
+                completed.extend(pair_run(pair))
             except Exception as exc:
-                failure = {'pair': jobs[future], 'error': str(exc)}
+                failure = {'pair': pair, 'error': str(exc)}
                 failures.append(failure)
                 print(json.dumps({'failed': failure}), flush=True)
             (base / 'progress.json').write_text(json.dumps({'completed': completed, 'failures': failures}, indent=2), encoding='utf-8')
+            if failures:
+                break  # Stop at the first invalid pair; do not waste or contaminate later tasks.
+    finally:
+        config_path.write_text(original_config, encoding='utf-8', newline='\n')
     if failures:
         raise SystemExit('Some pairs failed; preserve every attempt and inspect progress.json')
     print(json.dumps({'completed_turns': len(completed), 'pairs': len(schedule)}), flush=True)

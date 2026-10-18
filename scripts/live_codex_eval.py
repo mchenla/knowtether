@@ -81,7 +81,8 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
             raise RuntimeError('Control condition still has active plugin hooks')
         skills_result = call(20, 'skills/list', {'cwds': [str(project)], 'forceReload': True})
         skills = [s for row in skills_result['data'] for s in row['skills']
-                  if s.get('enabled', True) and s.get('name') == 'knowtether']
+                  if s.get('enabled', True) and (s.get('pluginId') == 'knowtether@knowtether'
+                     or s.get('name') in ('knowtether', 'knowtether:knowtether'))]
         if bool(skills) != enabled:
             raise RuntimeError('Plugin skill condition does not match requested on/off state')
         if env is not None and env.get('KNOWTETHER_CONTROLLED_EVAL') == '1':
