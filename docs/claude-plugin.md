@@ -37,7 +37,7 @@ Claude Code 只设置 `CLAUDE_PLUGIN_ROOT`，不设置 Codex 的 `PLUGIN_ROOT`�
 | `/knowtether:research <主题>` | 可随时转向与叫停的研究循环：多角度提问、每份材料七列记录（含定位与核对状态）、可编辑的知识概览 |
 | `/knowtether:draft [章节]` | 在委托范围内起草或修订；候选保持候选；遇新核心主张、原意改变、范围扩大或未授权风险即返回人 |
 | `/knowtether:check <文件>` | 由独立上下文的 `verifier` Agent 做六维检查、主张与证据匹配、状态词和模型语言检查；结论为 pass / conditional-pass / fail |
-| `/knowtether:release <文件>` | 发布门：七条红线、权利、数据、隐私、编辑、成品表达隔离 |
+| `/knowtether:release <文件>` | 先运行[发布硬门](cli.md#发布硬门)，五条规则任一不满足即判 fail 并停止；通过后再逐项过七条红线、权利、数据、隐私、编辑与成品表达隔离 |
 | `/knowtether:handoff write\|read` | 交接记录；接手时不继承旧会话授权，上游变化的部分标为需重查 |
 | `/knowtether:adopt <路径>` | 把已有草稿对照工作单八项，标「已有 / 缺失 / 需重构」，只为缺口生成修订任务 |
 | `/knowtether:knowtether` | 与 Codex 共用的完整 KPDM 工作流 Skill |

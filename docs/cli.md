@@ -111,6 +111,32 @@ knowtether check --root . --artifact article.md --strict
 
 对照 [较清楚的演示文本](../examples/good.md) 与 [有意保留问题的演示文本](../examples/problematic.md)，可以了解提醒的用途。这些都是设计示例，没有真实研究数据，也没有真实读者测试结果。[示例工作单](../examples/work.json) 故意保留开放问题和未人工核验记录，因此会出现 `OPEN_ISSUES`、`SOURCE_UNVERIFIED` 提醒；请勿为消除提示而虚填核验结果。
 
+## 发布硬门
+
+日常 Hook 和 `check` 只提醒。要对外发布时，明确运行发布硬门；任何一条不满足就返回 `1`，表示不能标为可发布：
+
+```bash
+knowtether release --root . --artifact final.md
+```
+
+未用 pip 安装时，用随插件分发的入口：`python3 -B <插件目录>/hooks/entry.py release --root . --artifact final.md`。
+
+| 规则 | 拦下的情况 |
+| --- | --- |
+| `RELEASE_SOURCE` | `fact`、`data`、`quote`、`cause` 类主张没有来源或 `support_note`；来源缺 `locator`，或 `verification` 不是 `human-verified`；一条主张都没登记，且 `publication.external_facts` 不是 `"none"` |
+| `RELEASE_PLACEHOLDER` | 成品还有 `[citation needed]`、`TODO`、`TBD`、`[待补]`、`【待核实】` 等占位（代码块除外） |
+| `RELEASE_RIGHTS` | 任一来源的 `rights_status` 为空、`unknown`、`blocked-unknown-rights`、`pending` 或「待定」 |
+| `RELEASE_ACCEPTANCE` | 没有与 `artifact_version` 同版本、带 `evidence_ref` 的 `author_acceptance` 记录 |
+| `RELEASE_WORKFLOW_LABEL` | 成品含「候选发布版」「内部草稿」「供某人审阅」、`DRAFT`、`WIP` 等工作流标签 |
+
+| 结果 | 退出码 |
+| --- | --- |
+| 五条都满足 | `0`，`verdict` 为 `pass` |
+| 任一条不满足 | `1`，`blocking` 列出每一项及行号 |
+| 路径越出项目或输入错误 | `2` |
+
+硬门检查记录和成品文本，不检查真假。它拦不住从未登记的事实、填假的记录，或来源存在却不支持主张的情况；这些仍要人逐项核对。`human-verified`、`author_acceptance` 和 `external_facts: "none"` 只能由人确认后填写，Agent 不得为通过硬门而改写。Hook 从不运行硬门。
+
 ## 卸载
 
 ```bash

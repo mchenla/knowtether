@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add an explicit release gate (`knowtether release`, also `hooks/entry.py release`). It exits 1 when a factual claim lacks a human-verified, located source, placeholders remain, rights are unknown, the released version has no author acceptance record, or workflow labels remain in the final text. Hooks stay advisory and never run it.
+- `/knowtether:release` and the shared Skill run the gate first and stop on failure; only people mark sources verified or record acceptance.
+
+## Unreleased
+
 - Add a Claude Code plugin from the same repository: `.claude-plugin` manifest and marketplace, the shared advisory hooks, and Claude-only commands under `claude/` (start, research, draft, check, release, handoff, adopt) with verifier, researcher and simulated-reader agents.
 - Resolve the hook launcher from `PLUGIN_ROOT` or `CLAUDE_PLUGIN_ROOT`; the plugin yields to an existing project install for the running host (`.codex/hooks.json` or `.claude/settings.local.json`).
 - License adapted Claude Code templates under CC BY 4.0 with attribution and change notes. Claude Code hooks on Windows are not yet run-tested.

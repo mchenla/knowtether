@@ -10,7 +10,35 @@ Target: $ARGUMENTS
 
 Read `knowtether/worksheet.md`. Public use requires at least Q3 and a `/knowtether:check` verdict of pass or conditional-pass on the version being released. Acceptance and release are two separate human decisions; record both in the `Human decisions` row with the version number.
 
-## Seven red lines (any one stops release)
+## Step 1: run the hard gate
+
+Run the gate on the final file before anything else:
+
+```
+python3 -B "${CLAUDE_PLUGIN_ROOT}/hooks/entry.py" release --root "$PWD" --artifact <final file>
+```
+
+Exit code 1 means **fail**. Report every `blocking` item with its location and stop. Do not continue to the checklist, do not describe the piece as release-ready, and do not edit records just to make the gate pass.
+
+The gate blocks on five rules, read from `.kpdm/work.json` and the final text:
+
+| Rule | Blocks when |
+|---|---|
+| `RELEASE_SOURCE` | a fact, data, quote or cause claim has no source, no support note, a source without a locator, or a source not marked `human-verified`; or no claims are registered and `publication.external_facts` is not `"none"` |
+| `RELEASE_PLACEHOLDER` | the text still has `[citation needed]`, `TODO`, `TBD`, `[待补]`, `[待核实]` or similar |
+| `RELEASE_RIGHTS` | any source has an unknown, pending or empty `rights_status` |
+| `RELEASE_ACCEPTANCE` | there is no `author_acceptance` record with the same `version` as `artifact_version` and an `evidence_ref` |
+| `RELEASE_WORKFLOW_LABEL` | the text has workflow labels such as 候选发布版, 内部草稿, 供某人审阅, DRAFT or WIP |
+
+If `.kpdm/work.json` does not exist, you may draft its `claims` and `sources` from `knowtether/knowledge-overview.md`. Three fields are the user's to give, never yours:
+
+- `verification: "human-verified"`, only for a source the user says they checked against the original in this conversation;
+- `author_acceptance`, only after the user names the exact version they accept; put their words and the date in `evidence_ref`;
+- `publication.external_facts: "none"`, only when the user states the piece contains no external facts.
+
+The gate checks records, not truth. A pass means the five rules hold; it does not show that sources support the claims or that nothing went unregistered.
+
+## Step 2: seven red lines (any one stops release)
 
 1. A core fact or number has no traceable source.
 2. A citation does not exist, does not open, or was not checked against the original.
@@ -62,4 +90,4 @@ Blocking items: location → issue → fix
 Record: accepted version vX by <user> on <date>; release decision: <pending | approved by user>
 ```
 
-Only the user approves release. Write the result into the worksheet and stop.
+Release gate `fail` makes the whole result `fail`. Only the user approves release. Write the result into the worksheet and stop.
