@@ -1,0 +1,564 @@
+{
+  "work-report-complete": {
+    "light": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "8.176",
+        "treatment_median": "17.542",
+        "paired_changes_pct": {
+          "1": "130.405",
+          "2": "100.451"
+        },
+        "median_paired_change_pct": "115.428",
+        "ratio_of_group_medians_pct": "114.549"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "12654.000",
+        "treatment_median": "12338.000",
+        "paired_changes_pct": {
+          "1": "2.911",
+          "2": "-7.365"
+        },
+        "median_paired_change_pct": "-2.227",
+        "ratio_of_group_medians_pct": "-2.497"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "5056.000",
+        "treatment_median": "10112.000",
+        "paired_changes_pct": {
+          "1": "0.000",
+          "2": null
+        },
+        "median_paired_change_pct": "0.000",
+        "ratio_of_group_medians_pct": "100.000"
+      }
+    },
+    "practical-chapter": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "53.874",
+        "treatment_median": "63.616",
+        "paired_changes_pct": {
+          "1": "9.858",
+          "2": "26.794"
+        },
+        "median_paired_change_pct": "18.326",
+        "ratio_of_group_medians_pct": "18.082"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "85816.500",
+        "treatment_median": "70184.000",
+        "paired_changes_pct": {
+          "1": "-27.490",
+          "2": "-8.950"
+        },
+        "median_paired_change_pct": "-18.220",
+        "ratio_of_group_medians_pct": "-18.216"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "64896.000",
+        "treatment_median": "56192.000",
+        "paired_changes_pct": {
+          "1": "-17.464",
+          "2": "-10.570"
+        },
+        "median_paired_change_pct": "-14.017",
+        "ratio_of_group_medians_pct": "-13.412"
+      }
+    },
+    "research-review": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "54.258",
+        "treatment_median": "61.215",
+        "paired_changes_pct": {
+          "1": "8.791",
+          "2": "16.312"
+        },
+        "median_paired_change_pct": "12.551",
+        "ratio_of_group_medians_pct": "12.822"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "84181.500",
+        "treatment_median": "78484.500",
+        "paired_changes_pct": {
+          "1": "-27.958",
+          "2": "15.177"
+        },
+        "median_paired_change_pct": "-6.390",
+        "ratio_of_group_medians_pct": "-6.768"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "62080.000",
+        "treatment_median": "58112.000",
+        "paired_changes_pct": {
+          "1": "-36.047",
+          "2": "27.313"
+        },
+        "median_paired_change_pct": "-4.367",
+        "ratio_of_group_medians_pct": "-6.392"
+      }
+    },
+    "work-report": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "67.257",
+        "treatment_median": "84.699",
+        "paired_changes_pct": {
+          "1": "27.080",
+          "2": "24.687"
+        },
+        "median_paired_change_pct": "25.883",
+        "ratio_of_group_medians_pct": "25.933"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "55803.000",
+        "treatment_median": "70123.500",
+        "paired_changes_pct": {
+          "1": "40.614",
+          "2": "10.793"
+        },
+        "median_paired_change_pct": "25.703",
+        "ratio_of_group_medians_pct": "25.663"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "42688.000",
+        "treatment_median": "60480.000",
+        "paired_changes_pct": {
+          "1": "43.164",
+          "2": "39.796"
+        },
+        "median_paired_change_pct": "41.480",
+        "ratio_of_group_medians_pct": "41.679"
+      }
+    }
+  },
+  "work-report-challenged": {
+    "light": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "8.176",
+        "treatment_median": "17.542",
+        "paired_changes_pct": {
+          "1": "130.405",
+          "2": "100.451"
+        },
+        "median_paired_change_pct": "115.428",
+        "ratio_of_group_medians_pct": "114.549"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "12654.000",
+        "treatment_median": "12338.000",
+        "paired_changes_pct": {
+          "1": "2.911",
+          "2": "-7.365"
+        },
+        "median_paired_change_pct": "-2.227",
+        "ratio_of_group_medians_pct": "-2.497"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "5056.000",
+        "treatment_median": "10112.000",
+        "paired_changes_pct": {
+          "1": "0.000",
+          "2": null
+        },
+        "median_paired_change_pct": "0.000",
+        "ratio_of_group_medians_pct": "100.000"
+      }
+    },
+    "practical-chapter": {
+      "seconds": {
+        "n_pairs": 1,
+        "baseline_median": "55.428",
+        "treatment_median": "60.892",
+        "paired_changes_pct": {
+          "1": "9.858"
+        },
+        "median_paired_change_pct": "9.858",
+        "ratio_of_group_medians_pct": "9.858"
+      },
+      "input_tokens": {
+        "n_pairs": 1,
+        "baseline_median": "85779.000",
+        "treatment_median": "62198.000",
+        "paired_changes_pct": {
+          "1": "-27.490"
+        },
+        "median_paired_change_pct": "-27.490",
+        "ratio_of_group_medians_pct": "-27.490"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 1,
+        "baseline_median": "53504.000",
+        "treatment_median": "44160.000",
+        "paired_changes_pct": {
+          "1": "-17.464"
+        },
+        "median_paired_change_pct": "-17.464",
+        "ratio_of_group_medians_pct": "-17.464"
+      }
+    },
+    "research-review": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "54.258",
+        "treatment_median": "61.215",
+        "paired_changes_pct": {
+          "1": "8.791",
+          "2": "16.312"
+        },
+        "median_paired_change_pct": "12.551",
+        "ratio_of_group_medians_pct": "12.822"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "84181.500",
+        "treatment_median": "78484.500",
+        "paired_changes_pct": {
+          "1": "-27.958",
+          "2": "15.177"
+        },
+        "median_paired_change_pct": "-6.390",
+        "ratio_of_group_medians_pct": "-6.768"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "62080.000",
+        "treatment_median": "58112.000",
+        "paired_changes_pct": {
+          "1": "-36.047",
+          "2": "27.313"
+        },
+        "median_paired_change_pct": "-4.367",
+        "ratio_of_group_medians_pct": "-6.392"
+      }
+    },
+    "work-report": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "67.257",
+        "treatment_median": "84.699",
+        "paired_changes_pct": {
+          "1": "27.080",
+          "2": "24.687"
+        },
+        "median_paired_change_pct": "25.883",
+        "ratio_of_group_medians_pct": "25.933"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "55803.000",
+        "treatment_median": "70123.500",
+        "paired_changes_pct": {
+          "1": "40.614",
+          "2": "10.793"
+        },
+        "median_paired_change_pct": "25.703",
+        "ratio_of_group_medians_pct": "25.663"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "42688.000",
+        "treatment_median": "60480.000",
+        "paired_changes_pct": {
+          "1": "43.164",
+          "2": "39.796"
+        },
+        "median_paired_change_pct": "41.480",
+        "ratio_of_group_medians_pct": "41.679"
+      }
+    }
+  },
+  "practical-chapter-complete": {
+    "light": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "8.176",
+        "treatment_median": "17.542",
+        "paired_changes_pct": {
+          "1": "130.405",
+          "2": "100.451"
+        },
+        "median_paired_change_pct": "115.428",
+        "ratio_of_group_medians_pct": "114.549"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "12654.000",
+        "treatment_median": "12338.000",
+        "paired_changes_pct": {
+          "1": "2.911",
+          "2": "-7.365"
+        },
+        "median_paired_change_pct": "-2.227",
+        "ratio_of_group_medians_pct": "-2.497"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "5056.000",
+        "treatment_median": "10112.000",
+        "paired_changes_pct": {
+          "1": "0.000",
+          "2": null
+        },
+        "median_paired_change_pct": "0.000",
+        "ratio_of_group_medians_pct": "100.000"
+      }
+    },
+    "practical-chapter": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "53.874",
+        "treatment_median": "63.616",
+        "paired_changes_pct": {
+          "1": "9.858",
+          "2": "26.794"
+        },
+        "median_paired_change_pct": "18.326",
+        "ratio_of_group_medians_pct": "18.082"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "85816.500",
+        "treatment_median": "70184.000",
+        "paired_changes_pct": {
+          "1": "-27.490",
+          "2": "-8.950"
+        },
+        "median_paired_change_pct": "-18.220",
+        "ratio_of_group_medians_pct": "-18.216"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "64896.000",
+        "treatment_median": "56192.000",
+        "paired_changes_pct": {
+          "1": "-17.464",
+          "2": "-10.570"
+        },
+        "median_paired_change_pct": "-14.017",
+        "ratio_of_group_medians_pct": "-13.412"
+      }
+    },
+    "research-review": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "54.258",
+        "treatment_median": "61.215",
+        "paired_changes_pct": {
+          "1": "8.791",
+          "2": "16.312"
+        },
+        "median_paired_change_pct": "12.551",
+        "ratio_of_group_medians_pct": "12.822"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "84181.500",
+        "treatment_median": "78484.500",
+        "paired_changes_pct": {
+          "1": "-27.958",
+          "2": "15.177"
+        },
+        "median_paired_change_pct": "-6.390",
+        "ratio_of_group_medians_pct": "-6.768"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "62080.000",
+        "treatment_median": "58112.000",
+        "paired_changes_pct": {
+          "1": "-36.047",
+          "2": "27.313"
+        },
+        "median_paired_change_pct": "-4.367",
+        "ratio_of_group_medians_pct": "-6.392"
+      }
+    },
+    "work-report": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "67.257",
+        "treatment_median": "84.699",
+        "paired_changes_pct": {
+          "1": "27.080",
+          "2": "24.687"
+        },
+        "median_paired_change_pct": "25.883",
+        "ratio_of_group_medians_pct": "25.933"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "55803.000",
+        "treatment_median": "70123.500",
+        "paired_changes_pct": {
+          "1": "40.614",
+          "2": "10.793"
+        },
+        "median_paired_change_pct": "25.703",
+        "ratio_of_group_medians_pct": "25.663"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "42688.000",
+        "treatment_median": "60480.000",
+        "paired_changes_pct": {
+          "1": "43.164",
+          "2": "39.796"
+        },
+        "median_paired_change_pct": "41.480",
+        "ratio_of_group_medians_pct": "41.679"
+      }
+    }
+  },
+  "practical-chapter-challenged": {
+    "light": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "8.176",
+        "treatment_median": "17.542",
+        "paired_changes_pct": {
+          "1": "130.405",
+          "2": "100.451"
+        },
+        "median_paired_change_pct": "115.428",
+        "ratio_of_group_medians_pct": "114.549"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "12654.000",
+        "treatment_median": "12338.000",
+        "paired_changes_pct": {
+          "1": "2.911",
+          "2": "-7.365"
+        },
+        "median_paired_change_pct": "-2.227",
+        "ratio_of_group_medians_pct": "-2.497"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "5056.000",
+        "treatment_median": "10112.000",
+        "paired_changes_pct": {
+          "1": "0.000",
+          "2": null
+        },
+        "median_paired_change_pct": "0.000",
+        "ratio_of_group_medians_pct": "100.000"
+      }
+    },
+    "practical-chapter": {
+      "seconds": {
+        "n_pairs": 1,
+        "baseline_median": "55.428",
+        "treatment_median": "60.892",
+        "paired_changes_pct": {
+          "1": "9.858"
+        },
+        "median_paired_change_pct": "9.858",
+        "ratio_of_group_medians_pct": "9.858"
+      },
+      "input_tokens": {
+        "n_pairs": 1,
+        "baseline_median": "85779.000",
+        "treatment_median": "62198.000",
+        "paired_changes_pct": {
+          "1": "-27.490"
+        },
+        "median_paired_change_pct": "-27.490",
+        "ratio_of_group_medians_pct": "-27.490"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 1,
+        "baseline_median": "53504.000",
+        "treatment_median": "44160.000",
+        "paired_changes_pct": {
+          "1": "-17.464"
+        },
+        "median_paired_change_pct": "-17.464",
+        "ratio_of_group_medians_pct": "-17.464"
+      }
+    },
+    "research-review": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "54.258",
+        "treatment_median": "61.215",
+        "paired_changes_pct": {
+          "1": "8.791",
+          "2": "16.312"
+        },
+        "median_paired_change_pct": "12.551",
+        "ratio_of_group_medians_pct": "12.822"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "84181.500",
+        "treatment_median": "78484.500",
+        "paired_changes_pct": {
+          "1": "-27.958",
+          "2": "15.177"
+        },
+        "median_paired_change_pct": "-6.390",
+        "ratio_of_group_medians_pct": "-6.768"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "62080.000",
+        "treatment_median": "58112.000",
+        "paired_changes_pct": {
+          "1": "-36.047",
+          "2": "27.313"
+        },
+        "median_paired_change_pct": "-4.367",
+        "ratio_of_group_medians_pct": "-6.392"
+      }
+    },
+    "work-report": {
+      "seconds": {
+        "n_pairs": 2,
+        "baseline_median": "67.257",
+        "treatment_median": "84.699",
+        "paired_changes_pct": {
+          "1": "27.080",
+          "2": "24.687"
+        },
+        "median_paired_change_pct": "25.883",
+        "ratio_of_group_medians_pct": "25.933"
+      },
+      "input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "55803.000",
+        "treatment_median": "70123.500",
+        "paired_changes_pct": {
+          "1": "40.614",
+          "2": "10.793"
+        },
+        "median_paired_change_pct": "25.703",
+        "ratio_of_group_medians_pct": "25.663"
+      },
+      "cached_input_tokens": {
+        "n_pairs": 2,
+        "baseline_median": "42688.000",
+        "treatment_median": "60480.000",
+        "paired_changes_pct": {
+          "1": "43.164",
+          "2": "39.796"
+        },
+        "median_paired_change_pct": "41.480",
+        "ratio_of_group_medians_pct": "41.679"
+      }
+    }
+  }
+}
