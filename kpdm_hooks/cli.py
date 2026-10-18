@@ -24,7 +24,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="KnowTether (知据): advisory KPDM hooks for knowledge outputs")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="action", required=True)
-    for name in ("init", "bind", "close", "context", "prepare", "inspect", "check", "install", "uninstall", "hook"):
+    for name in ("init", "bind", "close", "context", "prepare", "inspect", "check", "release", "install", "uninstall", "hook"):
         command = sub.add_parser(name)
         command.add_argument("--root", type=Path, default=Path.cwd())
         if name in ("init", "bind"):
@@ -32,6 +32,8 @@ def main(argv: list[str] | None = None) -> int:
         if name in ("check", "inspect"):
             command.add_argument("--artifact", help="UTF-8 text file inside the project")
             command.add_argument("--strict", action="store_true")
+        if name == "release":
+            command.add_argument("--artifact", required=True, help="Final UTF-8 text file inside the project")
         if name in ("install", "uninstall"):
             command.add_argument("--host", required=True, choices=("codex", "claude"))
             command.add_argument("--dry-run", action="store_true")
@@ -68,6 +70,12 @@ def main(argv: list[str] | None = None) -> int:
         if args.action in ("install", "uninstall"):
             emit(configure(root, args.host, args.action == "uninstall", args.dry_run))
             return 0
+        if args.action == "release":
+            # Explicit gate: exit 1 blocks release. Hooks never run it.
+            from .release import release_gate
+            result = release_gate(root, args.artifact)
+            emit(result)
+            return 0 if result["verdict"] == "pass" else 1
         if args.action == "check":
             notes = check_project(root, args.artifact)
             emit({"tool_version": __version__, "policy_version": POLICY_VERSION,

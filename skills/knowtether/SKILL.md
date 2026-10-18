@@ -25,6 +25,7 @@ Automatic Hook routing handles simple and focused tasks without loading this fil
 - An exploration may deliver a sourced overview with an undecided central claim. Preserve unknowns, conflicts and alternatives; do not invent answers to complete a template.
 - Use a familiar structure and language. Explain necessary terms and include examples, counterexamples or reader tasks where useful. Do not invent terminology to suggest originality.
 - Short answers can remain short. Add records for complex work, data, strong causal claims, high-impact advice, unclear rights, sensitive material or public publication when those records support a real decision.
+- Before public release, run the explicit release gate: `python -B <plugin-root>/hooks/entry.py release --root <project> --artifact <final file>`. Exit code 1 blocks release; report each blocking item and do not edit records only to pass. Only people mark sources `human-verified` or record `author_acceptance`. Hooks stay advisory and never run this gate.
 
 ## Ground the result
 

@@ -51,6 +51,8 @@ For corrupted packets, arithmetic reduced median paired wall time versus guidanc
 
 Runtime remains the released 0.6.0. Optional `.kpdm/task.json` enables [paired-data arithmetic and source receipts](docs/project-evidence.md), not general fact checking. Ordinary writing needs no manifest. Earlier [startup measurements](docs/evaluation-0.6.0.md) are separate from this study and must not be mixed into a new effect estimate.
 
+An explicit release gate blocks five issues: fact sources not verified by a person, leftover citation placeholders, materials with unknown rights, no acceptance record for the released version, and workflow labels in the final text. It checks records and text, not truth, and hooks never run it. See [release gate](docs/cli.md) (Chinese).
+
 Text hints cover citation placeholders, narrow absolute research claims, independent-validation wording, concentrated stock phrases, numeric long-dash ranges, a few inflated praise phrases and selected invisible characters. Optional worksheets add record/version consistency checks.
 
 Guidance asks for independent judgment, useful disagreement, conditional MECE, concrete language and genre-appropriate formatting. These checks do not guarantee freedom from sycophancy, contrarianism, blind obedience, cherry-picking, factual errors, classification gaps or formulaic prose. Invisible characters are not proof of watermarks. There is no statistical watermark removal, grammar guarantee or promise to bypass AI detectors. Silence is not a quality pass. See the [capability audit](docs/capabilities.md) and [validation record](docs/validation.md).
