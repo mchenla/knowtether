@@ -1,5 +1,11 @@
 # Validation records
 
+## 0.6.0 supplemental: route-fixed source-quality comparison
+
+All 24 frozen outputs completed without failed attempts, using the exact released 4b6b880 runtime. 16 enabled outputs had 3 completed callbacks with exact focused contexts; 8 controls had no active KnowTether hook/Skill. Materials remained byte-identical; no project files added. All six planted issues were handled in every condition. One guidance-only clean chapter made a false source correction and misdirected the follow-up; another guidance-only plan left extension unbounded. No added semantic-quality or real-reader effect is established.
+
+Neutral run paths and exact-prefix removal preceded review; 24 per-draft judgments were frozen before mapping reveal (SHA-256 fa33e1137c32cfcd9be907e993fe549989c05de8045cb3c1c064d79356dce857). The reviewer also designed the fixtures, so this is not independent or strict blind review. Full texts, per-issue results, timing, input/cache and limits are [public](evaluation-0.6.0-source-quality.md). Final Windows regression: 121 tests, 120 passed and one POSIX-only skip. Added harness checks cover balanced neutral IDs and redaction preserving math; runtime behavior and framework acceptance are unchanged.
+
 ## 0.6.0: runtime costs and optional paired-data arithmetic
 
 Windows final regression:119 tests,118 passed and one POSIX-only skip. Tests cover paired rather than ratio aggregation, zero baselines, unmatched/duplicate/invalid records, bounded declared paths/receipts, advisory slide constraints, source-path routing without full-workflow escalation, ordinary code outside slide checks and unknown historical format values omitted rather than imputed. Framework remains72 unchanged documents and239 checked file links. Hook manifest generation and existing behavior coverage checks remain consistent.

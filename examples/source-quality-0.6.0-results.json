@@ -1,0 +1,4182 @@
+{
+  "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+  "runtime_version": "0.6.0",
+  "protocol": {
+    "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+    "version": "0.6.0",
+    "tasks_sha256": "d93233f0aa4f6374b5a4f25a49ed38d194e90197a15966fb946036fc9874df02",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "web_search": "disabled",
+    "seed": 610018,
+    "design": "2 genres x complete/challenged packet x3 arms x2 reversed-order repetitions=24 outputs; serial fresh readonly projects",
+    "arms": {
+      "off": "whole plugin disabled",
+      "lean": "route-fixed0.6.0, evidence:false",
+      "full": "same0.6.0, explicit manifest arithmetic enabled"
+    },
+    "scope": "actual public historical data plus deliberate evaluation perturbations; not observations of new company defects",
+    "review": "neutral directories, randomized IDs and path-sanitized full text; development AI, no independent human or strict blind claim",
+    "primary": "specific issues identified, corrected/scoped and reflected in decision/exercise; clean false findings; six frozen content criteria, no total quality score",
+    "secondary": "wall/host/hook/tool durations, actual injected characters, cumulative/last input and cache, source reads and delivered product",
+    "schedule": [
+      {
+        "task": "practical-chapter-challenged",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S019"
+          },
+          {
+            "arm": "lean",
+            "id": "S006"
+          },
+          {
+            "arm": "off",
+            "id": "S008"
+          }
+        ]
+      },
+      {
+        "task": "practical-chapter-challenged",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "off",
+            "id": "S013"
+          },
+          {
+            "arm": "lean",
+            "id": "S001"
+          },
+          {
+            "arm": "full",
+            "id": "S014"
+          }
+        ]
+      },
+      {
+        "task": "practical-chapter-complete",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "lean",
+            "id": "S024"
+          },
+          {
+            "arm": "full",
+            "id": "S010"
+          },
+          {
+            "arm": "off",
+            "id": "S004"
+          }
+        ]
+      },
+      {
+        "task": "work-report-complete",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "lean",
+            "id": "S002"
+          },
+          {
+            "arm": "off",
+            "id": "S012"
+          },
+          {
+            "arm": "full",
+            "id": "S023"
+          }
+        ]
+      },
+      {
+        "task": "work-report-challenged",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "lean",
+            "id": "S020"
+          },
+          {
+            "arm": "off",
+            "id": "S005"
+          },
+          {
+            "arm": "full",
+            "id": "S016"
+          }
+        ]
+      },
+      {
+        "task": "practical-chapter-complete",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "off",
+            "id": "S009"
+          },
+          {
+            "arm": "full",
+            "id": "S011"
+          },
+          {
+            "arm": "lean",
+            "id": "S018"
+          }
+        ]
+      },
+      {
+        "task": "work-report-challenged",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S022"
+          },
+          {
+            "arm": "off",
+            "id": "S015"
+          },
+          {
+            "arm": "lean",
+            "id": "S007"
+          }
+        ]
+      },
+      {
+        "task": "work-report-complete",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S021"
+          },
+          {
+            "arm": "off",
+            "id": "S017"
+          },
+          {
+            "arm": "lean",
+            "id": "S003"
+          }
+        ]
+      }
+    ],
+    "planned_outputs": 24
+  },
+  "frozen_cases": "source-quality-cases.json",
+  "review": {
+    "reviewer": "development AI that also designed the material; not independent or real readers",
+    "masking": "All24 outputs completed before reading. Neutral S directories and exact path removal preceded initial review; R IDs randomized. Mapping file not opened before freeze. Condition might still be inferred from prose; no strict blind claim.",
+    "packet_sha256": "2b547fc632877feff7e25ebab1d1f7eb346f741f527596b946f0b923eba1e7ea",
+    "product_checks": {
+      "reports": 12,
+      "independent_max_body_characters": 157,
+      "independent_max_notes_characters": 111,
+      "page_count": 6
+    }
+  },
+  "review_frozen_sha256": "fa33e1137c32cfcd9be907e993fe549989c05de8045cb3c1c064d79356dce857",
+  "read_counts_scope": "Command mentions of each filename, not proof of full reading or comprehension.",
+  "group_medians": [
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 70.399,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 3029.5,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 93050.5,
+      "cached_input_tokens_median": 81408.0,
+      "first_observed_input_tokens_median": 12086.0,
+      "tool_count_median": 5.0,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "n": 2,
+      "wall_seconds_median": 91.03999999999999,
+      "hook_milliseconds_median": 2514.0,
+      "tool_milliseconds_median": 3405.0,
+      "injected_characters_median": 1949.0,
+      "input_tokens_median": 92258.0,
+      "cached_input_tokens_median": 75520.0,
+      "first_observed_input_tokens_median": 13279.0,
+      "tool_count_median": 5.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 75.7585,
+      "hook_milliseconds_median": 2547.5,
+      "tool_milliseconds_median": 2661.5,
+      "injected_characters_median": 6333.0,
+      "input_tokens_median": 72779.0,
+      "cached_input_tokens_median": 53184.0,
+      "first_observed_input_tokens_median": 14484.0,
+      "tool_count_median": 4.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-complete",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 67.34049999999999,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 2054.0,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 69925.5,
+      "cached_input_tokens_median": 36672.0,
+      "first_observed_input_tokens_median": 12086.0,
+      "tool_count_median": 3.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-complete",
+      "arm": "lean",
+      "n": 2,
+      "wall_seconds_median": 90.8385,
+      "hook_milliseconds_median": 2111.0,
+      "tool_milliseconds_median": 3279.0,
+      "injected_characters_median": 1949.0,
+      "input_tokens_median": 91740.0,
+      "cached_input_tokens_median": 75456.0,
+      "first_observed_input_tokens_median": 13279.0,
+      "tool_count_median": 5.5,
+      "outputs_with_false_findings": 1
+    },
+    {
+      "task": "practical-chapter-complete",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 75.54400000000001,
+      "hook_milliseconds_median": 2146.0,
+      "tool_milliseconds_median": 2448.0,
+      "injected_characters_median": 6310.0,
+      "input_tokens_median": 83993.5,
+      "cached_input_tokens_median": 70336.0,
+      "first_observed_input_tokens_median": 14481.0,
+      "tool_count_median": 4.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 64.009,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 3279.5,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 71279.0,
+      "cached_input_tokens_median": 55488.0,
+      "first_observed_input_tokens_median": 12104.0,
+      "tool_count_median": 5.0,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "n": 2,
+      "wall_seconds_median": 74.784,
+      "hook_milliseconds_median": 2530.0,
+      "tool_milliseconds_median": 4724.0,
+      "injected_characters_median": 1995.0,
+      "input_tokens_median": 84297.0,
+      "cached_input_tokens_median": 70272.0,
+      "first_observed_input_tokens_median": 13329.0,
+      "tool_count_median": 7.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 69.0835,
+      "hook_milliseconds_median": 2983.0,
+      "tool_milliseconds_median": 1652.0,
+      "injected_characters_median": 6409.0,
+      "input_tokens_median": 74175.0,
+      "cached_input_tokens_median": 64064.0,
+      "first_observed_input_tokens_median": 14550.0,
+      "tool_count_median": 3.0,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-complete",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 72.052,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 2748.5,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 69487.5,
+      "cached_input_tokens_median": 57152.0,
+      "first_observed_input_tokens_median": 12104.0,
+      "tool_count_median": 5.0,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-complete",
+      "arm": "lean",
+      "n": 2,
+      "wall_seconds_median": 83.80099999999999,
+      "hook_milliseconds_median": 2542.0,
+      "tool_milliseconds_median": 4289.5,
+      "injected_characters_median": 1995.0,
+      "input_tokens_median": 100095.5,
+      "cached_input_tokens_median": 92160.0,
+      "first_observed_input_tokens_median": 13329.0,
+      "tool_count_median": 7.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-complete",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 64.26400000000001,
+      "hook_milliseconds_median": 2123.0,
+      "tool_milliseconds_median": 1002.5,
+      "injected_characters_median": 6386.0,
+      "input_tokens_median": 56575.0,
+      "cached_input_tokens_median": 48896.0,
+      "first_observed_input_tokens_median": 14547.0,
+      "tool_count_median": 2.0,
+      "outputs_with_false_findings": 0
+    }
+  ],
+  "paired_performance_contrasts": [
+    {
+      "task": "practical-chapter-challenged",
+      "baseline": "off",
+      "treatment": "lean",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        29.66534064861508,
+        29.00091558823126
+      ],
+      "median_paired_wall_change_pct": 29.33312811842317,
+      "input_paired_changes_pct": [
+        -8.714773108249352,
+        8.564478609467807
+      ],
+      "median_paired_input_change_pct": -0.07514724939077233
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        7.323168838082839,
+        7.880891536958323
+      ],
+      "median_paired_wall_change_pct": 7.602030187520581,
+      "input_paired_changes_pct": [
+        -36.002918729169544,
+        -4.759880501139491
+      ],
+      "median_paired_input_change_pct": -20.381399615154518
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "baseline": "lean",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -17.230642898689574,
+        -16.37199546605367
+      ],
+      "median_paired_wall_change_pct": -16.80131918237162,
+      "input_paired_changes_pct": [
+        -29.893276875216035,
+        -12.273221666304114
+      ],
+      "median_paired_input_change_pct": -21.083249270760074
+    },
+    {
+      "task": "practical-chapter-complete",
+      "baseline": "off",
+      "treatment": "lean",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        31.37067685126247,
+        38.278577562992176
+      ],
+      "median_paired_wall_change_pct": 34.82462720712732,
+      "input_paired_changes_pct": [
+        32.25992696410272,
+        30.153039535213267
+      ],
+      "median_paired_input_change_pct": 31.206483249657992
+    },
+    {
+      "task": "practical-chapter-complete",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        0.6774574884059303,
+        23.231779210759985
+      ],
+      "median_paired_wall_change_pct": 11.954618349582958,
+      "input_paired_changes_pct": [
+        -3.7802572133774026,
+        43.580841717443676
+      ],
+      "median_paired_input_change_pct": 19.900292252033136
+    },
+    {
+      "task": "practical-chapter-complete",
+      "baseline": "lean",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -23.363828289936663,
+        -10.881510800454741
+      ],
+      "median_paired_wall_change_pct": -17.122669545195702,
+      "input_paired_changes_pct": [
+        -27.24951162816077,
+        10.316933227362291
+      ],
+      "median_paired_input_change_pct": -8.46628920039924
+    },
+    {
+      "task": "work-report-challenged",
+      "baseline": "off",
+      "treatment": "lean",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        19.72906642554979,
+        14.119907995884029
+      ],
+      "median_paired_wall_change_pct": 16.924487210716908,
+      "input_paired_changes_pct": [
+        26.625477671473607,
+        9.801569380151287
+      ],
+      "median_paired_input_change_pct": 18.213523525812448
+    },
+    {
+      "task": "work-report-challenged",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        14.670455646333203,
+        1.6085588039465026
+      ],
+      "median_paired_wall_change_pct": 8.139507225139852,
+      "input_paired_changes_pct": [
+        15.920058017907458,
+        -7.935813480862597
+      ],
+      "median_paired_input_change_pct": 3.9921222685224302
+    },
+    {
+      "task": "work-report-challenged",
+      "baseline": "lean",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -4.225048211131055,
+        -10.963336206325003
+      ],
+      "median_paired_wall_change_pct": -7.594192208728029,
+      "input_paired_changes_pct": [
+        -8.454396264029162,
+        -16.15403400984563
+      ],
+      "median_paired_input_change_pct": -12.304215136937398
+    },
+    {
+      "task": "work-report-complete",
+      "baseline": "off",
+      "treatment": "lean",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        50.98771695183628,
+        -12.23072544431093
+      ],
+      "median_paired_wall_change_pct": 19.378495753762678,
+      "input_paired_changes_pct": [
+        55.43872576805351,
+        32.29786425365826
+      ],
+      "median_paired_input_change_pct": 43.86829501085589
+    },
+    {
+      "task": "work-report-complete",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -19.007209949422744,
+        -4.062994118019104
+      ],
+      "median_paired_wall_change_pct": -11.535102033720925,
+      "input_paired_changes_pct": [
+        -32.482144881532705,
+        -4.243717748183662
+      ],
+      "median_paired_input_change_pct": -18.362931314858184
+    },
+    {
+      "task": "work-report-complete",
+      "baseline": "lean",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -46.35802720534332,
+        9.305911855417538
+      ],
+      "median_paired_wall_change_pct": -18.526057674962892,
+      "input_paired_changes_pct": [
+        -56.563041298204034,
+        -27.620689274151665
+      ],
+      "median_paired_input_change_pct": -42.09186528617785
+    }
+  ],
+  "issue_counts": [
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "lean",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "lean",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    }
+  ],
+  "limitations": [
+    "own-project historical data plus deliberate evaluation perturbations; two repeats per task",
+    "development AI authored fixtures and review; randomized IDs do not establish independent or strict blind evaluation",
+    "no real readers, actual bills, human revision time or population effect established",
+    "multiple co-occurring problems do not identify an independent causal effect for each issue",
+    "wall time includes host/tools/hooks/model; input includes cache and multiple requests; not a bill"
+  ],
+  "records": [
+    {
+      "case": "S019",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 78.944,
+      "timing": {
+        "initialized_seconds": 0.182,
+        "inventory_seconds": 0.256,
+        "thread_started_seconds": 0.78,
+        "turn_complete_seconds": 78.942,
+        "hook_milliseconds": 3000,
+        "tool_milliseconds": 3570
+      },
+      "context_characters": 6333,
+      "output_characters": 2552,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "c462d28d082df8e302dffe3dfe88a2db951e770e5cf694e05088f34d16b920f6",
+      "token_usage": {
+        "total": {
+          "totalTokens": 82984,
+          "inputTokens": 80656,
+          "cachedInputTokens": 55808,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2328,
+          "reasoningOutputTokens": 59
+        },
+        "last": {
+          "totalTokens": 19426,
+          "inputTokens": 17729,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1697,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14591,
+        "inputTokens": 14484,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 107,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 2,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "d2da5252233f46b23f122645b1e3cd33f6f2dbfe71ab57c8486ee8df1b5c8ffa"
+      ],
+      "tool_count": 6,
+      "review_id": "R04",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "资料也不齐全。来源清单预期16条记录，CSV实际只有15条，缺少实用章节第二轮的`new`记录。简报还声称经过四名读者独立验证，但列出的`reader-checks.csv`在本地不存在。因此，读者收益尚不能确认；这也不等于已经证明没有收益。[1][2][3]"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "资料也不齐全。来源清单预期16条记录，CSV实际只有15条，缺少实用章节第二轮的`new`记录。简报还声称经过四名读者独立验证，但列出的`reader-checks.csv`在本地不存在。因此，读者收益尚不能确认；这也不等于已经证明没有收益。[1][2][3]"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "um，关闭联网，四类任务各安排两轮，并反转执行顺序。[1] `off`表示关闭插件，`new`表示当时的新版条件；`new`不能据此理解为当前版本。运行背景注明历史版本为0.5.0，编辑简报却写成0.6.0，应以前者为准。[2][3]"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "第一轮耗时为`(89.046－70.071)÷70.071`，答案约为 **+27.080%**；第二轮约为 **+24.687%**。两个数的中位数为 **+25.883%**。同法计算输入量，两轮约为+40.614%和+10.793%，中位数为 **+25.703%**。[1]"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "实用章节第一轮多等5.464秒，输入量减少27.490%，两组六项标准均达标。第二轮评分中，启用组全部达标，关闭组在“可执行的比较和停止规则”上仅部分达标。这是值得复测的具体收益线索；但启用组运行记录缺失，无法判断该轮为此付出了多少等待和输入成本。[1][2]"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "不过，耗时包含宿主、工具、钩子和模型的总等待，不能全部归因于模型。输入token也不等于账单；缓存输入是其子集，不能重复相加。缺少适用价格和完整计费数据，无法证明简报所称的“节省25%费用”。[2][3]"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1498
+    },
+    {
+      "case": "S006",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "lean",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 94.399,
+      "timing": {
+        "initialized_seconds": 0.183,
+        "inventory_seconds": 0.259,
+        "thread_started_seconds": 0.347,
+        "turn_complete_seconds": 94.397,
+        "hook_milliseconds": 2157,
+        "tool_milliseconds": 2452
+      },
+      "context_characters": 1949,
+      "output_characters": 2399,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "46e150322d888be564bf85b0102549feeb0a0f45edbf8f4c0d80ded008fcd92c",
+      "token_usage": {
+        "total": {
+          "totalTokens": 94722,
+          "inputTokens": 91940,
+          "cachedInputTokens": 80384,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2782,
+          "reasoningOutputTokens": 202
+        },
+        "last": {
+          "totalTokens": 19221,
+          "inputTokens": 17509,
+          "cachedInputTokens": 16512,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1712,
+          "reasoningOutputTokens": 121
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13377,
+        "inputTokens": 13279,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 98,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "bfd7a48251ab458eb4d84a0019bac6060f7dbee73303e764e8c8ad954c42dcd1"
+      ],
+      "tool_count": 4,
+      "review_id": "R01",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": ".5.0的实际Codex运行，固定使用gpt-6.1-sol、medium推理强度、关闭联网，每项任务安排两轮、交换条件顺序。[2] 清单预期有16条观测，CSV实际只有15条：工具书正文第二轮缺少启用记录；清单列出的reader-checks.csv也未提供。[1] 因而不能照搬编辑简报所称的“0.6.0”“独立读者验证”和“稳定质量提升”。[3] 文件缺失不证明验证从未发生，但本资料包无法支撑这些说法。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": ".1-sol、medium推理强度、关闭联网，每项任务安排两轮、交换条件顺序。[2] 清单预期有16条观测，CSV实际只有15条：工具书正文第二轮缺少启用记录；清单列出的reader-checks.csv也未提供。[1] 因而不能照搬编辑简报所称的“0.6.0”“独立读者验证”和“稳定质量提升”。[3] 文件缺失不证明验证从未发生，但本资料包无法支撑这些说法。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "先核对证据。资料说明，这些是历史插件0.5.0的实际Codex运行，固定使用gpt-6.1-sol、medium推理强度、关闭联网，每项任务安排两轮、交换条件顺序。[2] 清单预期有16条观测，CSV实际只有15条：工具书正文第二轮缺少启用记录；清单列出的reader-checks.csv也未提"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "| 工作报告1 | 70.071→89.046 | +27.1% | 55,651→78,253 |"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "工具书正文第一轮双方六项全满足；第二轮评审记载，启用全部满足，关闭在“可执行比较与停止规则”上仅部分满足。[2] 这是具体的潜在收益，但该轮启用的运行行缺失，无法把收益与成本配齐。第一轮虽减少输入，也不能补作第二轮证据。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "输入量还不是账单。cached_input_tokens是input_tokens的子集，不能相加重复计算；缓存与非缓存的计价、输出费用及实际账单均未提供，所以“实际省钱25%”没有依据。[2][3] 同样，运行秒数没有包含人工核查、返工、培训和规则维护。批量写作可"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1484
+    },
+    {
+      "case": "S008",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 73.177,
+      "timing": {
+        "initialized_seconds": 0.208,
+        "inventory_seconds": 0.273,
+        "thread_started_seconds": 0.362,
+        "turn_complete_seconds": 73.176,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 3017
+      },
+      "context_characters": 0,
+      "output_characters": 2398,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "d88af7f4c7da1efe2bc64077005e06d0c5a89d93fa7a2826653551221296c9f4",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87010,
+          "inputTokens": 84687,
+          "cachedInputTokens": 72832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2323,
+          "reasoningOutputTokens": 40
+        },
+        "last": {
+          "totalTokens": 17482,
+          "inputTokens": 15893,
+          "cachedInputTokens": 11904,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1589,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12194,
+        "inputTokens": 12086,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 108,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 5,
+      "review_id": "R12",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "先检查资料能否支持结论。sources.json 预期有16条记录，records.csv 实有15条，缺少工具书章节第二轮的启用组。清单中的 reader-checks.csv 未提供。context.json 标明历史插件版本为0.5.0，brief.json 却写成0.6.0，并宣称内容全面改善、已获独立读者验证、实际省钱25%。这些说法不能由"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "先检查资料能否支持结论。sources.json 预期有16条记录，records.csv 实有15条，缺少工具书章节第二轮的启用组。清单中的 reader-checks.csv 未提供。context.json 标明历史插件版本为0.5.0，brief.json 却写成0.6.0，并宣称内容全面改善、已获独立读者验证、实际省钱25%。这些说法不能由现有底层资料支持。[1–3] 因而，本批记录足以帮助筛选试用方向，尚不足以批"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "记录，records.csv 实有15条，缺少工具书章节第二轮的启用组。清单中的 reader-checks.csv 未提供。context.json 标明历史插件版本为0.5.0，brief.json 却写成0.6.0，并宣称内容全面改善、已获独立读者验证、实际省钱25%。这些说法不能由现有底层资料支持。[1–3] 因而，本批记录足以帮助筛选试用方向，尚不足以批准全团队默认启用。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "| 工作报告，第1轮 | 70.071→89.046 | +27.08% | +40.61% | 同为五项满足、一项部分满足 |"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "工具书章节出现了一个值得追查的信号：第二轮中，“可执行比较和停止规则”从部分满足变为满足。然而该轮启用组运行数据缺失，无法判断这项改善付出了多少成本；第一轮则是内容标准相同、时间增加、累计输入减少。合理决定是补齐试验，核查改善是否能减少编辑返工。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "-checks.csv 未提供。context.json 标明历史插件版本为0.5.0，brief.json 却写成0.6.0，并宣称内容全面改善、已获独立读者验证、实际省钱25%。这些说法不能由现有底层资料支持。[1–3] 因而，本批记录足以帮助筛选试用方向，尚不足以批准全团队默认启用。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1511
+    },
+    {
+      "case": "S013",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 67.621,
+      "timing": {
+        "initialized_seconds": 0.186,
+        "inventory_seconds": 0.246,
+        "thread_started_seconds": 0.343,
+        "turn_complete_seconds": 67.62,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 3042
+      },
+      "context_characters": 0,
+      "output_characters": 2113,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "49d4e59e2d69399e9e1ce3c423d315eb95e225c51320279c348ee0a90b3c4b74",
+      "token_usage": {
+        "total": {
+          "totalTokens": 103706,
+          "inputTokens": 101414,
+          "cachedInputTokens": 89984,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2292,
+          "reasoningOutputTokens": 46
+        },
+        "last": {
+          "totalTokens": 18091,
+          "inputTokens": 16687,
+          "cachedInputTokens": 16256,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1404,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12185,
+        "inputTokens": 12086,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 99,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 5,
+      "review_id": "R21",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "ontext.json说明，模型固定为gpt-6.1-sol、medium推理、禁用联网，每项任务做两轮相反顺序的比较。[1][2] 但清单预期16条观测，CSV实际只有15条，缺少实用章节第二轮的new组，故只能形成七个完整配对。brief.json写成0.6.0，并声称质量全面改善、读者独立验证及实际费用节省25%；这些结论无法由现有材料支持，所列reader-checks.csv也未提供。[3] 负责人不能直接把简报"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "用章节第二轮的new组，故只能形成七个完整配对。brief.json写成0.6.0，并声称质量全面改善、读者独立验证及实际费用节省25%；这些结论无法由现有材料支持，所列reader-checks.csv也未提供。[3] 负责人不能直接把简报当作采用依据。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "先核实证据。sources.json指向0.5.0版公开历史运行；context.json说明，模型固定为gpt-6.1-sol、medium推理、禁用联网，每项任务做两轮相反顺序的比较。[1][2] 但清单预期16条观测，CSV实际只有15条，缺少实用章节第二轮的new组，故只能形成七个完整配对。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "|工作报告1|70.071→89.046|+27.08%|+40.61%|"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "实用章节第一轮两组均为六个M，启用后输入减少，但多等5.464秒。第二轮评审表把启用组记为全达标，关闭组在“可执行比较与停止规则”上仅部分达标；然而启用组运行记录缺失，无法核对其时间和输入代价。这是一条待复测的收益线索，不能当作完整的第二个成功配对。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "能合并成统一“质量分”。同样，seconds包含宿主、工具、钩子和模型的完整墙钟时间；累计输入包含缓存，cached_input_tokens是其中的子集。没有计价及其他账单信息，不能把输入减少直接写成费用节省。[2]"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1252
+    },
+    {
+      "case": "S001",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "lean",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 87.681,
+      "timing": {
+        "initialized_seconds": 0.203,
+        "inventory_seconds": 0.286,
+        "thread_started_seconds": 0.399,
+        "turn_complete_seconds": 87.68,
+        "hook_milliseconds": 2871,
+        "tool_milliseconds": 4358
+      },
+      "context_characters": 1949,
+      "output_characters": 2618,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "d5925f9e49b3509b5634004f3221649a9d14d4d9f9e15eb07eb276df2a86dbf4",
+      "token_usage": {
+        "total": {
+          "totalTokens": 95193,
+          "inputTokens": 92576,
+          "cachedInputTokens": 70656,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2617,
+          "reasoningOutputTokens": 128
+        },
+        "last": {
+          "totalTokens": 19171,
+          "inputTokens": 17386,
+          "cachedInputTokens": 16768,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1785,
+          "reasoningOutputTokens": 65
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13376,
+        "inputTokens": 13279,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 97,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "bfd7a48251ab458eb4d84a0019bac6060f7dbee73303e764e8c8ad954c42dcd1"
+      ],
+      "tool_count": 7,
+      "review_id": "R06",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "Roles and severe-error/cost stop conditions are usable, but retest has no fixed batch/time ceiling and expressly extends the trial when records are insufficient. 停止规则应事先写明：出现严重来源失真，暂停该类使用；连续复测仍无内容改善、成本却超过预设上限，撤回该类默认；记录不足时延长试用。就本组材料而言，较稳妥的决定是继续按任务试用，优先复测工具书中的具体收益线索，暂不全局默认开启。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "核对后会发现，清单预期16条记录，CSV实际只有15条：工具书任务第二轮只有关闭组，缺少启用组。[2] 虽然质量评审列出了该启用案例，也不能据此补出运行时间。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "版本同样需要核对。编辑简报称测量对象为0.6.0，运行背景却明确标为历史0.5.0；本章依运行背景限定结论。简报还宣称已有独立读者验证，但所列`reader-checks.csv`未随本地资料提供，运行背景则说明没有真实目标读者验证。[1][3] 这意味着简报中的采用建议需要重审，而不是意味着插件已被证明无效。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "版本同样需要核对。编辑简报称测量对象为0.6.0，运行背景却明确标为历史0.5.0；本章依运行背景限定结论。简报还宣称已有独立读者验证，但所列`reader-checks.csv`未随本地资料提供，运行背景则说明没有真实目标读者验证。[1][3] 这意味着简报中的采用建议需要重审，而不是意味着插件"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "| 工作报告1 | 70.071→89.046 | +27.08% | +40.61% |"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "工具书第一轮两组六项标准均达标，启用少用输入，但多等5.464秒。第二轮评审中，关闭组在“可执行的比较与停止规则”上部分达标，启用组达标。这提供了一个值得复测的内容收益线索；由于该轮启用耗时缺失，尚不能判断获得这项收益要付出多少等待。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "还要区分输入量与账单。`input_tokens`包含缓存输入，`cached_input_tokens`是其中一部分，不能再次相加。缺少输出量、适用单价及完整计费记录，无法据此证明实际省钱25%。缓存状态也不一致，例如轻任务第二轮关闭组缓存为零，可能影响比较，值得复测"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1587
+    },
+    {
+      "case": "S014",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 72.573,
+      "timing": {
+        "initialized_seconds": 0.185,
+        "inventory_seconds": 0.26,
+        "thread_started_seconds": 0.341,
+        "turn_complete_seconds": 72.572,
+        "hook_milliseconds": 2095,
+        "tool_milliseconds": 1753
+      },
+      "context_characters": 6333,
+      "output_characters": 2353,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "ede66882b965c68ba2c8b93311a328491a7bc8f6624e27c537be4ce213370355",
+      "token_usage": {
+        "total": {
+          "totalTokens": 66878,
+          "inputTokens": 64902,
+          "cachedInputTokens": 50560,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1976,
+          "reasoningOutputTokens": 68
+        },
+        "last": {
+          "totalTokens": 18897,
+          "inputTokens": 17373,
+          "cachedInputTokens": 16000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1524,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14579,
+        "inputTokens": 14484,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 95,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "d2da5252233f46b23f122645b1e3cd33f6f2dbfe71ab57c8486ee8df1b5c8ffa"
+      ],
+      "tool_count": 3,
+      "review_id": "R05",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "资料本身需要核对。来源清单预期16条记录，CSV实际只有15条：工具书第二轮有关闭组，缺少启用组，不能组成配对。工作简报把版本写成0.6.0，还声称已有四名读者独立验证，但所列`reader-checks.csv`并不存在；这些说法不能据此采信。[1][3]"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "需要核对。来源清单预期16条记录，CSV实际只有15条：工具书第二轮有关闭组，缺少启用组，不能组成配对。工作简报把版本写成0.6.0，还声称已有四名读者独立验证，但所列`reader-checks.csv`并不存在；这些说法不能据此采信。[1][3]"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "这批资料摘自KnowTether 0.5.0的历史公开运行，固定使用gpt-6.1-sol、medium推理强度，关闭联网，各任务安排两轮、交换运行顺序。它们不是本团队的新试验，也不能代表当前版本。[1][2]"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "工作报告两轮都是前五项达标，“八页及适宜密度”部分达标。插件没有消除共同短板，却分别增加27.080%、24.687%的耗时，以及40.614%、10.793%的输入。简报将增长写成下降，纠正符号就会改变采用建议。[1][3]"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "工具书第一轮双方六项均达标，启用后慢9.858%，输入少27.490%。第二轮评审记载：启用组全部达标，关闭组在“可执行比较与停止规则”上仅部分达标。这是值得追查的内容收益，但启用组运行行缺失，不能把该轮收益与耗时、输入成本配对，也不能用第一轮成本替代。[1][2]"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "下，记录显示等待和输入增加。若团队仍要启用，就需要找到并验证额外收益，例如减少编辑返工。缓存输入是输入量的子集，不能重复相加；缺少计价和完整用量，也不能推导出简报所称的“省钱25%”。[2][3]"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1359
+    },
+    {
+      "case": "S024",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "lean",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 94.996,
+      "timing": {
+        "initialized_seconds": 0.201,
+        "inventory_seconds": 0.274,
+        "thread_started_seconds": 0.367,
+        "turn_complete_seconds": 94.995,
+        "hook_milliseconds": 2109,
+        "tool_milliseconds": 4205
+      },
+      "context_characters": 1949,
+      "output_characters": 2297,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "3b3cf4f196a081ccf97c42b24029ede5ef51d2b6b599847ddf029ed3e7ccbd50",
+      "token_usage": {
+        "total": {
+          "totalTokens": 94298,
+          "inputTokens": 91849,
+          "cachedInputTokens": 67328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2449,
+          "reasoningOutputTokens": 176
+        },
+        "last": {
+          "totalTokens": 18950,
+          "inputTokens": 17304,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1646,
+          "reasoningOutputTokens": 111
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13353,
+        "inputTokens": 13279,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 74,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "bfd7a48251ab458eb4d84a0019bac6060f7dbee73303e764e8c8ad954c42dcd1"
+      ],
+      "tool_count": 7,
+      "review_id": "R11",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Factual false correction: MMPMMM has P in position3, not4. The draft wrongly attributes improvement to checkable practice, accuses the correct brief of error and misdirects follow-up. Numeric exercise itself remains correct."
+        },
+        {
+          "criterion": 2,
+          "grade": "partial",
+          "reason": "Factual false correction: MMPMMM has P in position3, not4. The draft wrongly attributes improvement to checkable practice, accuses the correct brief of error and misdirects follow-up. Numeric exercise itself remains correct."
+        },
+        {
+          "criterion": 3,
+          "grade": "partial",
+          "reason": "Factual false correction: MMPMMM has P in position3, not4. The draft wrongly attributes improvement to checkable practice, accuses the correct brief of error and misdirects follow-up. Numeric exercise itself remains correct."
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "Factual false correction: MMPMMM has P in position3, not4. The draft wrongly attributes improvement to checkable practice, accuses the correct brief of error and misdirects follow-up. Numeric exercise itself remains correct."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "partial",
+          "reason": "Factual false correction: MMPMMM has P in position3, not4. The draft wrongly attributes improvement to checkable practice, accuses the correct brief of error and misdirects follow-up. Numeric exercise itself remains correct."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [
+        {
+          "claim": "The draft claims MMPMMM places P in the fourth criterion and declares the correct brief wrong.",
+          "correction": "P is third (1-based). context criterion3 is executable comparison and stop rules; criterion4 checkable practice already met.",
+          "evidence": "工具书第一轮六项均达标；第二轮启用仍全部达标，关闭有一项仅部分达标。需要纠正编辑简报的一处解释：简报称改善的是“停止规则完整性”，但评审字符串为MMPMMM，按指标顺序，差异落在第四项“可核对的练习示例”，第三项“可执行比较与停止规则”两边都达标。[2][4] 因而值得复测的是：插件能否稳定帮助作者提供可核对的练习。不能把这一次差异扩写成整体写作能力提升。",
+          "consequence": "Reorients follow-up from stopping rules toward checkable practice without source support."
+        }
+      ],
+      "chinese_characters": 1478
+    },
+    {
+      "case": "S010",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 84.659,
+      "timing": {
+        "initialized_seconds": 0.197,
+        "inventory_seconds": 0.271,
+        "thread_started_seconds": 0.367,
+        "turn_complete_seconds": 84.658,
+        "hook_milliseconds": 2217,
+        "tool_milliseconds": 2863
+      },
+      "context_characters": 6310,
+      "output_characters": 2844,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "968c2a5f6e88458819a317f9207b6b696a6cc64982e26fef50175c9c1f7b135e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 103894,
+          "inputTokens": 101325,
+          "cachedInputTokens": 92032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2569,
+          "reasoningOutputTokens": 156
+        },
+        "last": {
+          "totalTokens": 20248,
+          "inputTokens": 18550,
+          "cachedInputTokens": 17920,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1698,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14576,
+        "inputTokens": 14481,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 95,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 4,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "6f607a8822c5257bd58b3685d7079a4dced2c23ad7733c27645460c79539b8b5"
+      ],
+      "tool_count": 5,
+      "review_id": "R23",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1540
+    },
+    {
+      "case": "S004",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 68.699,
+      "timing": {
+        "initialized_seconds": 0.214,
+        "inventory_seconds": 0.276,
+        "thread_started_seconds": 0.384,
+        "turn_complete_seconds": 68.696,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 2332
+      },
+      "context_characters": 0,
+      "output_characters": 2573,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "579a6c0f5360e3e3853ca322ed5dae9141f6d054f7aa433460a65b7cd867e6df",
+      "token_usage": {
+        "total": {
+          "totalTokens": 72905,
+          "inputTokens": 70570,
+          "cachedInputTokens": 24320,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2335,
+          "reasoningOutputTokens": 272
+        },
+        "last": {
+          "totalTokens": 17661,
+          "inputTokens": 15941,
+          "cachedInputTokens": 12288,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1720,
+          "reasoningOutputTokens": 204
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12164,
+        "inputTokens": 12086,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 78,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 4,
+      "review_id": "R03",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries. Minor rounding: light rep2 input is printed -7.36%, rather than nearest two-decimal -7.37%; approximately0.01pp, without changing the decision."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1323
+    },
+    {
+      "case": "S002",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "lean",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 69.386,
+      "timing": {
+        "initialized_seconds": 0.191,
+        "inventory_seconds": 0.264,
+        "thread_started_seconds": 0.359,
+        "turn_complete_seconds": 69.385,
+        "hook_milliseconds": 2948,
+        "tool_milliseconds": 4066
+      },
+      "context_characters": 1995,
+      "output_characters": 1427,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "b4f1cc6c115b3e25b2b9e19b8a54467325ed7d484cf1a0a52ba0182225115276",
+      "token_usage": {
+        "total": {
+          "totalTokens": 92604,
+          "inputTokens": 90501,
+          "cachedInputTokens": 82432,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2103,
+          "reasoningOutputTokens": 470
+        },
+        "last": {
+          "totalTokens": 18585,
+          "inputTokens": 17316,
+          "cachedInputTokens": 16640,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1269,
+          "reasoningOutputTokens": 275
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13416,
+        "inputTokens": 13329,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 87,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "9a720203d0e3d5a498e4e5cb9949a77267e29ee411ca72214d2bb808f0e1b473"
+      ],
+      "tool_count": 7,
+      "review_id": "R09",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 910
+    },
+    {
+      "case": "S012",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 79.055,
+      "timing": {
+        "initialized_seconds": 0.199,
+        "inventory_seconds": 0.254,
+        "thread_started_seconds": 0.349,
+        "turn_complete_seconds": 79.052,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 1490
+      },
+      "context_characters": 0,
+      "output_characters": 1407,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "2908b295ab0fa5b917ea2dfa483f357bccfee7436343283de13b194150faf751",
+      "token_usage": {
+        "total": {
+          "totalTokens": 71307,
+          "inputTokens": 68407,
+          "cachedInputTokens": 61824,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2900,
+          "reasoningOutputTokens": 772
+        },
+        "last": {
+          "totalTokens": 16904,
+          "inputTokens": 15942,
+          "cachedInputTokens": 13952,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 962,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12210,
+        "inputTokens": 12104,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 106,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 3,
+      "review_id": "R17",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 780
+    },
+    {
+      "case": "S023",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 75.843,
+      "timing": {
+        "initialized_seconds": 0.204,
+        "inventory_seconds": 0.283,
+        "thread_started_seconds": 0.377,
+        "turn_complete_seconds": 75.842,
+        "hook_milliseconds": 2104,
+        "tool_milliseconds": 979
+      },
+      "context_characters": 6386,
+      "output_characters": 1452,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "aaa1d5a43f6b68dc01997f35db69141b7f675a3cb3fb7a7c316758570cf56d2d",
+      "token_usage": {
+        "total": {
+          "totalTokens": 67852,
+          "inputTokens": 65504,
+          "cachedInputTokens": 57088,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2348,
+          "reasoningOutputTokens": 585
+        },
+        "last": {
+          "totalTokens": 19153,
+          "inputTokens": 17866,
+          "cachedInputTokens": 16640,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1287,
+          "reasoningOutputTokens": 239
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14631,
+        "inputTokens": 14547,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 84,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "9395e38aa4458fdf2e51e7e0338b7ac14410eecfb8e160350620ebffc5ea2005"
+      ],
+      "tool_count": 2,
+      "review_id": "R13",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 907
+    },
+    {
+      "case": "S020",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "lean",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 75.415,
+      "timing": {
+        "initialized_seconds": 0.205,
+        "inventory_seconds": 0.275,
+        "thread_started_seconds": 0.364,
+        "turn_complete_seconds": 75.414,
+        "hook_milliseconds": 2107,
+        "tool_milliseconds": 4505
+      },
+      "context_characters": 1995,
+      "output_characters": 1442,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "3cfbe4d35cf0deadd87b20aa69b69118e4c169f95c9ebdd2e6a2ce87f8a9964e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 80420,
+          "inputTokens": 77801,
+          "cachedInputTokens": 67328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2619,
+          "reasoningOutputTokens": 851
+        },
+        "last": {
+          "totalTokens": 19243,
+          "inputTokens": 17716,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1527,
+          "reasoningOutputTokens": 516
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13403,
+        "inputTokens": 13329,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 74,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "9a720203d0e3d5a498e4e5cb9949a77267e29ee411ca72214d2bb808f0e1b473"
+      ],
+      "tool_count": 7,
+      "review_id": "R15",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "依据records.csv、context.json。应有16条记录，实际15条，仅7对完整。brief.json的版本、收益及读者验证结论存在冲突，不宜作为默认启用依据。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "据context.json，各项顺序按任务标准解释。评价来自隐藏条件标签的开发AI评审；reader-checks.csv缺失，无法核实brief.json所称4名独立读者验证。章节次轮只能比较已有评语。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "现有证据未证明普遍质量收益，7个完整配对均更慢。仅在复杂任务中自愿试用，轻任务保持关闭。原始资料属于0.5.0，不能据此判断0.6.0表现。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "汇报第1轮：+27.1%／+40.6%／+43.2%"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "章节第1轮：双方6项达标；第2轮仅new的“比较与停止规则”由部分达标变达标，但缺运行记录。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "缺少输出计费与价格，不能认定省钱。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 837
+    },
+    {
+      "case": "S005",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 66.084,
+      "timing": {
+        "initialized_seconds": 0.197,
+        "inventory_seconds": 0.253,
+        "thread_started_seconds": 0.346,
+        "turn_complete_seconds": 66.082,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 1984
+      },
+      "context_characters": 0,
+      "output_characters": 1398,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "65db6ed8d39cc3152d542ba42e23a3d3aa302a72b51236fddc3d18c5cf539ce7",
+      "token_usage": {
+        "total": {
+          "totalTokens": 72922,
+          "inputTokens": 70856,
+          "cachedInputTokens": 63104,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2066,
+          "reasoningOutputTokens": 464
+        },
+        "last": {
+          "totalTokens": 17456,
+          "inputTokens": 16148,
+          "cachedInputTokens": 15872,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1308,
+          "reasoningOutputTokens": 329
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12181,
+        "inputTokens": 12104,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 77,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 3,
+      "review_id": "R22",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "正文：现有证据不足以支持全面默认启用。优先复测实用章节，轻量写作、综述和汇报维持关闭。sources.json预期16条观测，records.csv仅15条；读者验证文件缺失。brief.json的版本、部分数值及质量结论与原始资料冲突，不采信其上线建议。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "正文：现有证据不足以支持全面默认启用。优先复测实用章节，轻量写作、综述和汇报维持关闭。sources.json预期16条观测，records.csv仅15条；读者验证文件缺失。brief.json的版本、部分数值及质量结论与原始资料冲突，不采信其上线建议。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "默认启用。优先复测实用章节，轻量写作、综述和汇报维持关闭。sources.json预期16条观测，records.csv仅15条；读者验证文件缺失。brief.json的版本、部分数值及质量结论与原始资料冲突，不采信其上线建议。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "讲述提示：brief.json所称耗时下降方向错误。现有质量评审是隐藏条件标签的开发AI评审，并非独立人评；四任务标准不同，不能相加成总分，或宣称两轮全面提升。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "1轮关闭→启用：55.428→60.892秒，累计输入减27.5%；六项标准均满足。第2轮关闭组52.321秒，启用组记录缺失，不能计算耗时或投入变化。质量评审记载：仅“可执行比较与停止规则”由部分满足变为满足，其余五项相同。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "讲述提示：复测保留原章节标准，两轮分别比较；记录实际账单后才谈费用。20%是拟议容忍线，需会中确认。缺项无法补核则保留未知；结果不一致或无净收益，到期关闭试用。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 933
+    },
+    {
+      "case": "S016",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 67.147,
+      "timing": {
+        "initialized_seconds": 0.205,
+        "inventory_seconds": 0.277,
+        "thread_started_seconds": 0.359,
+        "turn_complete_seconds": 67.146,
+        "hook_milliseconds": 3836,
+        "tool_milliseconds": 1626
+      },
+      "context_characters": 6409,
+      "output_characters": 1413,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "de98a2134d758b2bf8a496585df8483a2f73f3ad627cc96958a754c4d9e9ffd4",
+      "token_usage": {
+        "total": {
+          "totalTokens": 67174,
+          "inputTokens": 65233,
+          "cachedInputTokens": 57856,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1941,
+          "reasoningOutputTokens": 580
+        },
+        "last": {
+          "totalTokens": 18946,
+          "inputTokens": 17512,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1434,
+          "reasoningOutputTokens": 445
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14633,
+        "inputTokens": 14550,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 83,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "94efa260d443759e7fb1156f1d36478725b6840e7393b984bfaf25dc3e03866f"
+      ],
+      "tool_count": 3,
+      "review_id": "R07",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "现有证据不足以支持全量默认：所有完整配对均更慢，质量收益仅见章节一项局部改善，且该轮性能数据缺失。用两个人日复测当前版本，优先验证章节与报告；简单任务继续按需启用。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "读者验证文件缺失；现有质量评价仅为隐藏条件标签的开发AI评审。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "这是证据不足时的范围选择，不是认定工具无效。records.csv与context.json记录的是历史0.5.0实验，不能直接代表当前0.6.0。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "报告：首轮+27.1%／+40.6%；次轮+24.7%／+10.8%；两轮双方均有页面与密度部分达标，其余达标。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "现有证据不足以支持全量默认：所有完整配对均更慢，质量收益仅见章节一项局部改善，且该轮性能数据缺失。用两个人日复测当前版本，优先验证章节与报告；简单任务继续按需启用。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "**用户多等多久可见，省钱与读者收益尚未证实**"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 936
+    },
+    {
+      "case": "S009",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 65.982,
+      "timing": {
+        "initialized_seconds": 0.198,
+        "inventory_seconds": 0.255,
+        "thread_started_seconds": 0.353,
+        "turn_complete_seconds": 65.979,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 1776
+      },
+      "context_characters": 0,
+      "output_characters": 2268,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "c2b351c10935f504aa3f245b45383410ff2e548b856ac678b4cc1358b9e8bd88",
+      "token_usage": {
+        "total": {
+          "totalTokens": 71630,
+          "inputTokens": 69281,
+          "cachedInputTokens": 49024,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2349,
+          "reasoningOutputTokens": 129
+        },
+        "last": {
+          "totalTokens": 17390,
+          "inputTokens": 15671,
+          "cachedInputTokens": 14976,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1719,
+          "reasoningOutputTokens": 115
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12162,
+        "inputTokens": 12086,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 76,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 3,
+      "review_id": "R02",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1418
+    },
+    {
+      "case": "S011",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 66.429,
+      "timing": {
+        "initialized_seconds": 0.213,
+        "inventory_seconds": 0.285,
+        "thread_started_seconds": 0.372,
+        "turn_complete_seconds": 66.427,
+        "hook_milliseconds": 2075,
+        "tool_milliseconds": 2033
+      },
+      "context_characters": 6310,
+      "output_characters": 2523,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "1690a43d72056c113fbe29ff54b30645e5c38b1081a8e2474e69d60ba5d3203c",
+      "token_usage": {
+        "total": {
+          "totalTokens": 68966,
+          "inputTokens": 66662,
+          "cachedInputTokens": 48640,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2304,
+          "reasoningOutputTokens": 34
+        },
+        "last": {
+          "totalTokens": 19874,
+          "inputTokens": 18225,
+          "cachedInputTokens": 17792,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1649,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14608,
+        "inputTokens": 14481,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 127,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "6f607a8822c5257bd58b3685d7079a4dced2c23ad7733c27645460c79539b8b5"
+      ],
+      "tool_count": 4,
+      "review_id": "R10",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1605
+    },
+    {
+      "case": "S018",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "lean",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 86.681,
+      "timing": {
+        "initialized_seconds": 0.215,
+        "inventory_seconds": 0.285,
+        "thread_started_seconds": 0.37,
+        "turn_complete_seconds": 86.68,
+        "hook_milliseconds": 2113,
+        "tool_milliseconds": 2353
+      },
+      "context_characters": 1949,
+      "output_characters": 2787,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "25c990d1e316abebea12ec75fd1850caf4d9d8a1e95ee4813e8b6d90019f0b79",
+      "token_usage": {
+        "total": {
+          "totalTokens": 94299,
+          "inputTokens": 91631,
+          "cachedInputTokens": 83584,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2668,
+          "reasoningOutputTokens": 180
+        },
+        "last": {
+          "totalTokens": 19016,
+          "inputTokens": 17194,
+          "cachedInputTokens": 16512,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1822,
+          "reasoningOutputTokens": 166
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13384,
+        "inputTokens": 13279,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 105,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "bfd7a48251ab458eb4d84a0019bac6060f7dbee73303e764e8c8ad954c42dcd1"
+      ],
+      "tool_count": 4,
+      "review_id": "R14",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Assigns leader/operator/editor/reader responsibilities, retest conditions and predeclared stopping rules; proposals are not historical findings."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "A coherent complete chapter with a named task/repeat CSV exercise, correct checkable answers and adoption interpretation; full result tables could still be compressed editorially."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1456
+    },
+    {
+      "case": "S022",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 71.02,
+      "timing": {
+        "initialized_seconds": 0.206,
+        "inventory_seconds": 0.276,
+        "thread_started_seconds": 0.372,
+        "turn_complete_seconds": 71.019,
+        "hook_milliseconds": 2130,
+        "tool_milliseconds": 1678
+      },
+      "context_characters": 6409,
+      "output_characters": 1499,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "6c33b984323e64a83d446ee7baf72484fc361fabdfa13791169a8a280d4f8daf",
+      "token_usage": {
+        "total": {
+          "totalTokens": 85307,
+          "inputTokens": 83117,
+          "cachedInputTokens": 70272,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2190,
+          "reasoningOutputTokens": 499
+        },
+        "last": {
+          "totalTokens": 19290,
+          "inputTokens": 17883,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1407,
+          "reasoningOutputTokens": 350
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14641,
+        "inputTokens": 14550,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 91,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "94efa260d443759e7fb1156f1d36478725b6840e7393b984bfaf25dc3e03866f"
+      ],
+      "tool_count": 3,
+      "review_id": "R20",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "两个人日用于核验与小范围复测，优先检验实用章节，保留轻任务对照。现有15条运行记录，少于清单预期16条；资料属于历史0.5.0，不能证明当前0.6.0普遍受益。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "据context.json。brief声称省钱25%、四名读者独立验证，但reader-checks.csv缺失，无法核验；缺证不等于证伪。章节应仅用完整第一轮：耗时+9.9%、输入−27.5%；工作汇报汇总方向应为增加。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "两个人日用于核验与小范围复测，优先检验实用章节，保留轻任务对照。现有15条运行记录，少于清单预期16条；资料属于历史0.5.0，不能证明当前0.6.0普遍受益。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "工作汇报第1轮：+27.1%／+40.6%；第2轮：+24.7%／+10.8%；各轮双方篇幅与密度均仅部分满足。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "据records.csv、context.json逐轮配对。轻任务每次多等约9 - 10秒，未见判据改善。章节第2轮另有质量记录：启用满足全部判据，关闭的“可执行比较与停止规则”部分满足；不能据此补造耗时。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "**结论标题：等待增加可以确认，省钱和读者收益尚未确认**"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 941
+    },
+    {
+      "case": "S015",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 61.934,
+      "timing": {
+        "initialized_seconds": 0.228,
+        "inventory_seconds": 0.285,
+        "thread_started_seconds": 0.381,
+        "turn_complete_seconds": 61.931,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 4575
+      },
+      "context_characters": 0,
+      "output_characters": 1397,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "c8a5c5bc922940013b0abb08d46d0bf954b64dd46f159047bf7c4da4a9d31fc7",
+      "token_usage": {
+        "total": {
+          "totalTokens": 73627,
+          "inputTokens": 71702,
+          "cachedInputTokens": 47872,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1925,
+          "reasoningOutputTokens": 272
+        },
+        "last": {
+          "totalTokens": 17414,
+          "inputTokens": 16280,
+          "cachedInputTokens": 15744,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1134,
+          "reasoningOutputTokens": 142
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12182,
+        "inputTokens": 12104,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 78,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 7,
+      "review_id": "R16",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "完整配对均更慢，质量收益尚未稳定出现。两个人日优先复测实用章节。资料应有16条运行记录，实际15条；读者验证文件缺失。以records.csv、context.json为据，撤回brief.json的全量默认建议。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "完整配对均更慢，质量收益尚未稳定出现。两个人日优先复测实用章节。资料应有16条运行记录，实际15条；读者验证文件缺失。以records.csv、context.json为据，撤回brief.json的全量默认建议。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "实测对应历史0.5.0，非简报所称0.6.0，更不能代表当前版本。耗时含宿主、工具等全流程；输入含缓存，不能直接换算费用。现有证据不足以承诺用户省时省钱。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "原始记录与简报所称“提速、节省输入”方向相反。质量来自隐藏条件标签的开发AI评审，非独立人工验证；reader-checks.csv缺失，不能采信“四名读者已验证”，也未测组织回报。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "质量评审中，启用六项满足；关闭的“可执行比较与停止规则”仅部分满足。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "实测对应历史0.5.0，非简报所称0.6.0，更不能代表当前版本。耗时含宿主、工具等全流程；输入含缓存，不能直接换算费用。现有证据不足以承诺用户省时省钱。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 897
+    },
+    {
+      "case": "S007",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "lean",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 74.153,
+      "timing": {
+        "initialized_seconds": 0.215,
+        "inventory_seconds": 0.285,
+        "thread_started_seconds": 0.375,
+        "turn_complete_seconds": 74.152,
+        "hook_milliseconds": 2953,
+        "tool_milliseconds": 4943
+      },
+      "context_characters": 1995,
+      "output_characters": 1451,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "bb640999d58b5a4a93a7403d764e6d2771dd1e9094b2b325ec507ac00a16f69d",
+      "token_usage": {
+        "total": {
+          "totalTokens": 92997,
+          "inputTokens": 90793,
+          "cachedInputTokens": 73216,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2204,
+          "reasoningOutputTokens": 455
+        },
+        "last": {
+          "totalTokens": 18742,
+          "inputTokens": 17379,
+          "cachedInputTokens": 17024,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1363,
+          "reasoningOutputTokens": 329
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13408,
+        "inputTokens": 13329,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 79,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "9a720203d0e3d5a498e4e5cb9949a77267e29ee411ca72214d2bb808f0e1b473"
+      ],
+      "tool_count": 8,
+      "review_id": "R24",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Names the incomplete chapter pair and absent reader evidence."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Corrects numeric direction and source contradictions with CSV values and explicit gaps; final decision does not reuse the brief as established evidence."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "Locates the chapter second-round enabled record missing, scopes to usable pairs and does not reconstruct the absent run or keep the unsupported two-pair summary.",
+          "excerpt": "讲述提示：依据records.csv、context.json。应有16条记录，实际15条；reader-checks.csv缺失。brief.json中的版本、提速及独立读者验证说法均不能据此采信。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "Names absent reader-verification evidence, retracts reliance on independent validation and does not assert absence of reader benefit.",
+          "excerpt": "讲述提示：依据records.csv、context.json。应有16条记录，实际15条；reader-checks.csv缺失。brief.json中的版本、提速及独立读者验证说法均不能据此采信。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "Distinguishes historical0.5.0 observations from the conflicting brief/current version and does not treat this packet as current-version measurements.",
+          "excerpt": "正文：现有资料不足以支持全面默认启用：7个完整配对均更慢，质量优势仅见于一项历史AI评审。下一阶段用两个人日复测实用章节。实测属于0.5.0，不能直接代表当前0.6.0。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "Presents positive work-report time/input changes from actual pairs and rejects the negative-saving direction; per-pair values or medians are correct.",
+          "excerpt": "汇报第1轮：耗时+27.1%，输入+40.6%；第2轮：+24.7%、+10.8%。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "Restricts evidence to the single chapter comparison/stopping-rule signal and ties elsewhere; no stable all-content or independent-reader benefit claimed.",
+          "excerpt": "正文：现有资料不足以支持全面默认启用：7个完整配对均更慢，质量优势仅见于一项历史AI评审。下一阶段用两个人日复测实用章节。实测属于0.5.0，不能直接代表当前0.6.0。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "Rejects monetary saving from cached-input counts; cache is a subset, actual bills missing, and later measurement is proposed.",
+          "excerpt": "用户分别多等4.4、9.5、19.0、15.9秒；输入减少也不等于账单下降。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 930
+    },
+    {
+      "case": "S021",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 52.685,
+      "timing": {
+        "initialized_seconds": 0.221,
+        "inventory_seconds": 0.301,
+        "thread_started_seconds": 0.392,
+        "turn_complete_seconds": 52.684,
+        "hook_milliseconds": 2142,
+        "tool_milliseconds": 1026
+      },
+      "context_characters": 6386,
+      "output_characters": 1357,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "6608e96f7565d99321c62f70d415b8d01571e816a6880731075c66c40d521601",
+      "token_usage": {
+        "total": {
+          "totalTokens": 49285,
+          "inputTokens": 47646,
+          "cachedInputTokens": 40704,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1639,
+          "reasoningOutputTokens": 516
+        },
+        "last": {
+          "totalTokens": 18366,
+          "inputTokens": 16856,
+          "cachedInputTokens": 16128,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1510,
+          "reasoningOutputTokens": 516
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14636,
+        "inputTokens": 14547,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 89,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "9395e38aa4458fdf2e51e7e0338b7ac14410eecfb8e160350620ebffc5ea2005"
+      ],
+      "tool_count": 2,
+      "review_id": "R18",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 886
+    },
+    {
+      "case": "S017",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 65.049,
+      "timing": {
+        "initialized_seconds": 0.214,
+        "inventory_seconds": 0.271,
+        "thread_started_seconds": 0.357,
+        "turn_complete_seconds": 65.047,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 4007
+      },
+      "context_characters": 0,
+      "output_characters": 1409,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "4c51c6e97b0326cfbea6559081653d46b61fc5d85de1b2472d50a85fa62c398e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 72643,
+          "inputTokens": 70568,
+          "cachedInputTokens": 52480,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2075,
+          "reasoningOutputTokens": 315
+        },
+        "last": {
+          "totalTokens": 17356,
+          "inputTokens": 16342,
+          "cachedInputTokens": 15872,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1014,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12215,
+        "inputTokens": 12104,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 111,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 7,
+      "review_id": "R19",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 965
+    },
+    {
+      "case": "S003",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "lean",
+      "repetition": 1,
+      "runtime_commit": "4b6b8809392ae44c61bdfa44e7e53dff5690ed0c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 98.216,
+      "timing": {
+        "initialized_seconds": 0.21,
+        "inventory_seconds": 0.279,
+        "thread_started_seconds": 0.376,
+        "turn_complete_seconds": 98.215,
+        "hook_milliseconds": 2136,
+        "tool_milliseconds": 4513
+      },
+      "context_characters": 1995,
+      "output_characters": 1578,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "416d732ccd72caf8c46d5aff1be6f7c146b67fc816c67fbc4e9fab6aa8609e37",
+      "token_usage": {
+        "total": {
+          "totalTokens": 113233,
+          "inputTokens": 109690,
+          "cachedInputTokens": 101888,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 3543,
+          "reasoningOutputTokens": 640
+        },
+        "last": {
+          "totalTokens": 20250,
+          "inputTokens": 19150,
+          "cachedInputTokens": 18816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1100,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 13421,
+        "inputTokens": 13329,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 92,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "cc578cbf8993f8881c470c35a1d149fb64649403d4e251db3b68dfb864ca9758",
+        "9a720203d0e3d5a498e4e5cb9949a77267e29ee411ca72214d2bb808f0e1b473"
+      ],
+      "tool_count": 8,
+      "review_id": "R08",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Uses actual task/rep pairs, correct sample/version scope and source values; no missing measurements filled. Keeps all16 rows/eight pairs and correct historical boundaries."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Uses the correct brief/CSV without inventing corruption; preserves differences between repeats."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Separates one criterion-level chapter change from overall quality, developer-AI from independent readers, cache from actual bills and unknown from disproven."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days with responsible roles, explicit retest scope, proposed continuation/stop gates and a budget end."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six decision pages, independently counted bodies<=160 and notes<=120 characters; notes add explanation."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "Concrete reader-facing prose with usable actions; no inflated praise, source repair or fabricated defects."
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 945
+    }
+  ]
+}

@@ -61,3 +61,5 @@ python -B "<plugin-root>/hooks/entry.py" inspect --root "<project>" --artifact r
 只关闭资料计算及对应产品提示：在`.kpdm/config.json`中设`{"schema_version":1,"evidence":false}`。`enabled:false`仍会停用该项目全部知据Hook。
 
 清单列出的内容会随正常任务进入模型上下文；不要列入本次委托无权使用的资料。Hook自身不联网，不读取完整对话，不从数据或清单推定新的授权。
+
+追加[路由修复后24稿对照](evaluation-0.6.0-source-quality.md)：带核算减少部分工具工作，但停用组同样处理了预设六类问题，未证明新增语义找错优势。ready仅表示声明的配对资料已计算，不表示附件齐全或简报真实。

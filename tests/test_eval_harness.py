@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 try:
     paired = importlib.import_module('paired_codex_eval')
     source_quality = importlib.import_module('source_quality_eval')
+    source_summary = importlib.import_module('summarize_source_quality_eval')
 finally:
     sys.path.pop(0)
 
@@ -42,3 +43,10 @@ class EvaluationHarnessTests(unittest.TestCase):
             orders=[[r['arm'] for r in b['runs']] for b in repeats]
             self.assertEqual(orders[0],list(reversed(orders[1])))
             self.assertEqual(set(orders[0]),{'off','lean','full'})
+
+    def test_review_redaction_preserves_math_and_only_removes_project_prefix(self):
+        project=Path(__file__).resolve().parent/'neutral-project'
+        prefix=str(project.resolve())
+        text='[CSV]('+prefix.replace('\\','/')+'/records.csv) '+r'\(x\) and C:\other\file'
+        self.assertEqual(source_summary.sanitize_answer(text,project),
+                         '[CSV](records.csv) '+r'\(x\) and C:\other\file')

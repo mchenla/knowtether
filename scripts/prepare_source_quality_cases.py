@@ -83,5 +83,5 @@ def build():
 
 if __name__=='__main__':
     tasks=build()
-    (ROOT/'examples/source-quality-cases.json').write_text(json.dumps(tasks,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (ROOT/'examples/source-quality-cases.json').write_text(json.dumps(tasks,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'tasks':len(tasks),'model_inputs_exclude':['gold_issues','criteria','variant'],'provenance':'actual0.5.0 records with declared deliberate perturbations in evaluation fixtures'}))
