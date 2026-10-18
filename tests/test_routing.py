@@ -1,4 +1,7 @@
 from pathlib import Path
+import hashlib
+import shutil
+import tempfile
 from unittest.mock import patch
 import unittest
 from kpdm_hooks.routing import route, prompt_context
@@ -27,6 +30,27 @@ class RoutingTests(unittest.TestCase):
         text = prompt_context('为工具书改写一个1500字章节，调整文风。')
         self.assertIn('模型语言指纹与文字温度', text)
         self.assertIn('Profile B｜书籍', text)
+
+    def test_focused_receipts_match_source_and_missing_type_degrades(self):
+        from kpdm_hooks.reading import prepare
+        repo = Path(__file__).resolve().parents[1]
+        profile = route('为管理者写一份决策报告')
+        pack = prepare(repo, profile=profile)
+        self.assertEqual(pack['status'], 'ready')
+        for doc in pack['documents']:
+            raw = (repo/doc['path']).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), doc['sha256'])
+            lines = raw.decode('utf-8').splitlines(keepends=True)
+            for section in doc['sections']:
+                self.assertEqual(section['text'], ''.join(lines[section['first_line']-1:section['last_line']]))
+        self.assertEqual(hashlib.sha256(pack['adaptation']['text'].encode()).hexdigest(), pack['adaptation']['sha256'])
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name in ['framework/kpdm/snapshot.json', 'policy/collaboration.md', pack['documents'][0]['path']]:
+                target = root/name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(repo/name, target)
+            self.assertEqual(prepare(root, profile=profile)['code'], 'READING_UNAVAILABLE')
 
     def test_invisible_characters_are_hints_not_watermark_verdicts(self):
         notes = lint_text('知识说明中有\u200b不可见字符。')

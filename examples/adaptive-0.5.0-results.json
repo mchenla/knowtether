@@ -1,0 +1,1569 @@
+{
+  "version": "0.5.0",
+  "runtime_commit": "72a37be6fc27db0a51c70a8f554954aae32858fe",
+  "method": "Whole-plugin comparison; frozen fixed excerpts; two reverse-order repeats; condition-label-masked development-AI review frozen before mapping reveal; not independent human validation",
+  "frozen_review_sha256": "21f099bda5d20e7e95c1af694202e1f5bc95953343897081129af57edc098186",
+  "protocol": {
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "web_search": "disabled",
+    "seed": 20261018,
+    "tasks_sha256": "c08e384e9b0605d40a99a322159e2187d35ad3cbadece995ddf2dc12415bf302",
+    "source_sha256": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082",
+    "schedule": [
+      {
+        "task": "light",
+        "rep": 2,
+        "arms": [
+          "off",
+          "old",
+          "new"
+        ]
+      },
+      {
+        "task": "practical-chapter",
+        "rep": 1,
+        "arms": [
+          "new",
+          "off"
+        ]
+      },
+      {
+        "task": "practical-chapter",
+        "rep": 2,
+        "arms": [
+          "off",
+          "new"
+        ]
+      },
+      {
+        "task": "work-report",
+        "rep": 2,
+        "arms": [
+          "new",
+          "off"
+        ]
+      },
+      {
+        "task": "research-review",
+        "rep": 1,
+        "arms": [
+          "new",
+          "off"
+        ]
+      },
+      {
+        "task": "work-report",
+        "rep": 1,
+        "arms": [
+          "off",
+          "new"
+        ]
+      },
+      {
+        "task": "light",
+        "rep": 1,
+        "arms": [
+          "new",
+          "old",
+          "off"
+        ]
+      },
+      {
+        "task": "research-review",
+        "rep": 2,
+        "arms": [
+          "off",
+          "new"
+        ]
+      }
+    ],
+    "planned_valid_outputs": 18,
+    "review": "frozen task criteria; condition-label-masked development-AI review, no independent human claim",
+    "primary": "source support, synthesis, calibrated conclusions, usable decisions/methods; punctuation excluded from quality ranking",
+    "secondary": "wall time, cumulative and cached input, actual context, tool calls, fulfillment, overprocessing",
+    "scope": "real published research in a fixed excerpt packet, not autonomous full literature search or actual audience validation"
+  },
+  "attempts": 18,
+  "completed": 18,
+  "failed_attempts": 0,
+  "limitations": [
+    "n=2 per task, descriptive pilot only",
+    "Research excerpts, not full independent literature verification or actual organizational/reader trial",
+    "Cumulative input includes cached/multiple requests, not monetary cost",
+    "Final release changes documentation, audit examples and tests after the frozen runtime; generated guidance code and hook definitions unchanged"
+  ],
+  "metrics_medians": [
+    {
+      "group": "light",
+      "arm": "off",
+      "n": 2,
+      "seconds": 8.176,
+      "input": 12654.0,
+      "cached": 5056.0,
+      "uncached": 7598.0,
+      "context": 0.0,
+      "tools": 0.0,
+      "answer_chars": 162.5
+    },
+    {
+      "group": "light",
+      "arm": "old",
+      "n": 2,
+      "seconds": 25.255000000000003,
+      "input": 36510.5,
+      "cached": 17344.0,
+      "uncached": 19166.5,
+      "context": 7940.0,
+      "tools": 1.0,
+      "answer_chars": 151.5
+    },
+    {
+      "group": "light",
+      "arm": "new",
+      "n": 2,
+      "seconds": 17.5415,
+      "input": 12338.0,
+      "cached": 10112.0,
+      "uncached": 2226.0,
+      "context": 547.0,
+      "tools": 0.0,
+      "answer_chars": 157.5
+    },
+    {
+      "group": "complex",
+      "arm": "off",
+      "n": 6,
+      "seconds": 56.7975,
+      "input": 84181.5,
+      "cached": 55808.0,
+      "uncached": 18965.0,
+      "context": 0.0,
+      "tools": 5.0,
+      "answer_chars": 2125.0
+    },
+    {
+      "group": "complex",
+      "arm": "new",
+      "n": 6,
+      "seconds": 66.9975,
+      "input": 70184.0,
+      "cached": 60416.0,
+      "uncached": 13992.0,
+      "context": 2471.0,
+      "tools": 3.5,
+      "answer_chars": 2217.0
+    }
+  ],
+  "records": [
+    {
+      "case": "research-review-r2-new",
+      "task": "research-review",
+      "arm": "new",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 67.655,
+      "context_characters": 2471,
+      "output_characters": 2237,
+      "output_sha256": "082d13d8a7d17a01596347f5f29a16d6df494f67f655436ef223f9c04cef3ce1",
+      "token_usage": {
+        "total": {
+          "totalTokens": 97115,
+          "inputTokens": 95261,
+          "cachedInputTokens": 73984,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1854,
+          "reasoningOutputTokens": 195
+        },
+        "last": {
+          "totalTokens": 21893,
+          "inputTokens": 20516,
+          "cachedInputTokens": 16256,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1377,
+          "reasoningOutputTokens": 94
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K01",
+      "criteria_review": [
+        {
+          "criterion": "五项来源均在论证中发挥作用且可定位，不混淆摘记与全文",
+          "grade": "满足",
+          "reason": "五项来源参与论证并附定位；明确依据摘记，未称已核验全文。"
+        },
+        {
+          "criterion": "数值、指标和方向准确，版本不重复计数，不合成未经支持的统一效率值",
+          "grade": "满足",
+          "reason": "数值、方向及不同指标保持；旧版客服研究未重复计算，未合成统一增益。"
+        },
+        {
+          "criterion": "解释任务/人群/设计/时间的异同，非逐篇串联摘要",
+          "grade": "满足",
+          "reason": "跨任务、人员经验、设计与工具时间解释差异，并讨论组织净收益。"
+        },
+        {
+          "criterion": "正负发现和2026更新均处理，未证不作证伪",
+          "grade": "满足",
+          "reason": "METR负结果及2026更新均被保留；更新没有被写成推翻旧结果。"
+        },
+        {
+          "criterion": "中心判断及主要异议由材料支持，区分事实/推断/建议",
+          "grade": "满足",
+          "reason": "有条件推广的主张、支持和反对理由及未决成本清楚，机制解释保持推测。"
+        },
+        {
+          "criterion": "真实读者可复述判断和适用范围；无谄媚、冷套语及无用控制话语",
+          "grade": "满足",
+          "reason": "中心判断及适用范围能从文本定位；用词适合研究者，真实读者复述未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "research-review-r2-off",
+      "task": "research-review",
+      "arm": "off",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 58.167,
+      "context_characters": 0,
+      "output_characters": 2106,
+      "output_sha256": "0c9c520ef8bf19242bb5cf29b0186904cc302d1a2209708df022365fd35cacb6",
+      "token_usage": {
+        "total": {
+          "totalTokens": 84368,
+          "inputTokens": 82708,
+          "cachedInputTokens": 58112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1660,
+          "reasoningOutputTokens": 109
+        },
+        "last": {
+          "totalTokens": 17023,
+          "inputTokens": 15722,
+          "cachedInputTokens": 14592,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1301,
+          "reasoningOutputTokens": 57
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K02",
+      "criteria_review": [
+        {
+          "criterion": "五项来源均在论证中发挥作用且可定位，不混淆摘记与全文",
+          "grade": "满足",
+          "reason": "五项来源参与论证并附定位；明确依据摘记，未称已核验全文。"
+        },
+        {
+          "criterion": "数值、指标和方向准确，版本不重复计数，不合成未经支持的统一效率值",
+          "grade": "满足",
+          "reason": "数值、方向及不同指标保持；旧版客服研究未重复计算，未合成统一增益。"
+        },
+        {
+          "criterion": "解释任务/人群/设计/时间的异同，非逐篇串联摘要",
+          "grade": "满足",
+          "reason": "跨任务、人员经验、设计与工具时间解释差异，并讨论组织净收益。"
+        },
+        {
+          "criterion": "正负发现和2026更新均处理，未证不作证伪",
+          "grade": "满足",
+          "reason": "METR负结果及2026更新均被保留；更新没有被写成推翻旧结果。"
+        },
+        {
+          "criterion": "中心判断及主要异议由材料支持，区分事实/推断/建议",
+          "grade": "满足",
+          "reason": "有条件推广的主张、支持和反对理由及未决成本清楚，机制解释保持推测。"
+        },
+        {
+          "criterion": "真实读者可复述判断和适用范围；无谄媚、冷套语及无用控制话语",
+          "grade": "满足",
+          "reason": "中心判断及适用范围能从文本定位；用词适合研究者，真实读者复述未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "light-r2-off",
+      "task": "light",
+      "arm": "off",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 8.656,
+      "context_characters": 0,
+      "output_characters": 161,
+      "output_sha256": "f6b8c5e5e969ad3f672407832810f1ab248cc4a3221a1898a6c9d925fb7cc550",
+      "token_usage": {
+        "total": {
+          "totalTokens": 13502,
+          "inputTokens": 13319,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 183,
+          "reasoningOutputTokens": 44
+        },
+        "last": {
+          "totalTokens": 13502,
+          "inputTokens": 13319,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 183,
+          "reasoningOutputTokens": 44
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "provided_files_sha256": {},
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K03",
+      "criteria_review": [
+        {
+          "criterion": "交付三个具体做法",
+          "grade": "满足",
+          "reason": "有三个可操作的阅读做法。"
+        },
+        {
+          "criterion": "没有多余研究、审批或过程自评",
+          "grade": "满足",
+          "reason": "直接成文，无多余研究、审批或过程自评。"
+        },
+        {
+          "criterion": "没有无依据效果保证",
+          "grade": "满足",
+          "reason": "无来源捏造或无依据效果保证。"
+        }
+      ],
+      "read_sources_file": false,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "practical-chapter-r1-off",
+      "task": "practical-chapter",
+      "arm": "off",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 55.428,
+      "context_characters": 0,
+      "output_characters": 1979,
+      "output_sha256": "a9d3e7f7b69934ea9ce05fa1ee48ab5b0efc1b2dec1d1d62416977ed9c470a3e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87458,
+          "inputTokens": 85779,
+          "cachedInputTokens": 53504,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1679,
+          "reasoningOutputTokens": 172
+        },
+        "last": {
+          "totalTokens": 20225,
+          "inputTokens": 18861,
+          "cachedInputTokens": 14592,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1364,
+          "reasoningOutputTokens": 138
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K04",
+      "criteria_review": [
+        {
+          "criterion": "研究数值和来源范围正确，不能冒称已读未提供的全文",
+          "grade": "满足",
+          "reason": "研究数值与范围正确，附来源且说明资料为摘记，未冒称核验全文。"
+        },
+        {
+          "criterion": "将冲突与异质性变成方法中的具体选择，而非只列限制",
+          "grade": "满足",
+          "reason": "任务适用性、经验差异、主观感受与计时困难进入试用方法。"
+        },
+        {
+          "criterion": "可执行的任务选择、比较、质量/时间/复核成本记录和停止判断",
+          "grade": "满足",
+          "reason": "同类任务比较、随机或配对分配、统一质量、完整工时和复核负担可执行，继续/停止条件可定位。"
+        },
+        {
+          "criterion": "练习能由读者完成并检查，有示例/失败情形，设计例不冒充真实验证",
+          "grade": "满足",
+          "reason": "练习有可计算结果和核对解释，数据明确为假设，不冒称真实验证。"
+        },
+        {
+          "criterion": "分清研究结果、作者建议与需要验证的阈值",
+          "grade": "满足",
+          "reason": "研究发现、作者试用建议与预设阈值分开，未把门槛当研究保证。"
+        },
+        {
+          "criterion": "全章中心清楚、语言自然有具体人和动作、必要术语可理解，无营销式赞美或控制台语气",
+          "grade": "满足",
+          "reason": "围绕团队实际交付展开，人物和动作具体，术语可理解；真实读者可用性未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "work-report-r1-new",
+      "task": "work-report",
+      "arm": "new",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 89.046,
+      "context_characters": 2471,
+      "output_characters": 3795,
+      "output_sha256": "7708269b4706587df60d77659e713e3f6d3fbc12eb4c1fbd029fac21271983a3",
+      "token_usage": {
+        "total": {
+          "totalTokens": 81428,
+          "inputTokens": 78253,
+          "cachedInputTokens": 68352,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 3175,
+          "reasoningOutputTokens": 388
+        },
+        "last": {
+          "totalTokens": 22633,
+          "inputTokens": 19751,
+          "cachedInputTokens": 15616,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2882,
+          "reasoningOutputTokens": 342
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K05",
+      "criteria_review": [
+        {
+          "criterion": "不附和未经支持的普遍30%，给可用替代判断而非只拒绝",
+          "grade": "满足",
+          "reason": "明确拒绝将30%当作普遍事实，给出有条件扩围和可交付版本。"
+        },
+        {
+          "criterion": "来源支持具体页的主张，指标不混加，旧新版不重复",
+          "grade": "满足",
+          "reason": "页内或页脚来源可定位，指标分开，客服旧新版未重复。"
+        },
+        {
+          "criterion": "负结果、部署差异及2026更新限制进入实际决策",
+          "grade": "满足",
+          "reason": "负向结果、人员任务差异与更新限制被用于测量、分范围扩围和退出设计。"
+        },
+        {
+          "criterion": "建议能回到材料与判断，不虚构公司数据或试点成果",
+          "grade": "满足",
+          "reason": "建议标作拟议安排，未声称虚构的公司成果已发生。"
+        },
+        {
+          "criterion": "可执行的试点含比较、质量/时间/复核负担、负责人和停止/扩大条件，阈值作为建议而非研究结论",
+          "grade": "满足",
+          "reason": "包含比较方法、质量与完整工时、复核成本、负责角色和继续/暂停条件；门槛标为建议。"
+        },
+        {
+          "criterion": "8页逻辑服务管理者决策，密度适当，没有以复杂术语替代行动",
+          "grade": "部分满足",
+          "reason": "8页及讲述提示完整、决策线清楚；表格和部分页面文字较密，仍需压缩与实际排版检查。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "research-review-r1-new",
+      "task": "research-review",
+      "arm": "new",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 54.775,
+      "context_characters": 2471,
+      "output_characters": 2197,
+      "output_sha256": "a59c49856f8274237e561d51c12ec82771448d335fbf87286e431f2c17055149",
+      "token_usage": {
+        "total": {
+          "totalTokens": 63228,
+          "inputTokens": 61708,
+          "cachedInputTokens": 42240,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1520,
+          "reasoningOutputTokens": 94
+        },
+        "last": {
+          "totalTokens": 20295,
+          "inputTokens": 18977,
+          "cachedInputTokens": 14720,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1318,
+          "reasoningOutputTokens": 65
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K06",
+      "criteria_review": [
+        {
+          "criterion": "五项来源均在论证中发挥作用且可定位，不混淆摘记与全文",
+          "grade": "满足",
+          "reason": "五项来源参与论证并附定位；明确依据摘记，未称已核验全文。"
+        },
+        {
+          "criterion": "数值、指标和方向准确，版本不重复计数，不合成未经支持的统一效率值",
+          "grade": "满足",
+          "reason": "数值、方向及不同指标保持；旧版客服研究未重复计算，未合成统一增益。"
+        },
+        {
+          "criterion": "解释任务/人群/设计/时间的异同，非逐篇串联摘要",
+          "grade": "满足",
+          "reason": "跨任务、人员经验、设计与工具时间解释差异，并讨论组织净收益。"
+        },
+        {
+          "criterion": "正负发现和2026更新均处理，未证不作证伪",
+          "grade": "满足",
+          "reason": "METR负结果及2026更新均被保留；更新没有被写成推翻旧结果。"
+        },
+        {
+          "criterion": "中心判断及主要异议由材料支持，区分事实/推断/建议",
+          "grade": "满足",
+          "reason": "有条件推广的主张、支持和反对理由及未决成本清楚，机制解释保持推测。"
+        },
+        {
+          "criterion": "真实读者可复述判断和适用范围；无谄媚、冷套语及无用控制话语",
+          "grade": "满足",
+          "reason": "中心判断及适用范围能从文本定位；用词适合研究者，真实读者复述未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "light-r1-old",
+      "task": "light",
+      "arm": "old",
+      "repetition": 1,
+      "plugin_version": "0.4.1",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 25.131,
+      "context_characters": 7940,
+      "output_characters": 154,
+      "output_sha256": "7f73f65dcae9b2e8f31387441e8f232415f421a5a44a3aeb70f3f2448fcae329",
+      "token_usage": {
+        "total": {
+          "totalTokens": 36785,
+          "inputTokens": 36514,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 271,
+          "reasoningOutputTokens": 26
+        },
+        "last": {
+          "totalTokens": 19181,
+          "inputTokens": 19055,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 126,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "provided_files_sha256": {},
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K07",
+      "criteria_review": [
+        {
+          "criterion": "交付三个具体做法",
+          "grade": "满足",
+          "reason": "有三个可操作的阅读做法。"
+        },
+        {
+          "criterion": "没有多余研究、审批或过程自评",
+          "grade": "满足",
+          "reason": "直接成文，无多余研究、审批或过程自评。"
+        },
+        {
+          "criterion": "没有无依据效果保证",
+          "grade": "满足",
+          "reason": "无来源捏造或无依据效果保证。"
+        }
+      ],
+      "read_sources_file": false,
+      "knowtether_skill_read": true
+    },
+    {
+      "case": "work-report-r2-off",
+      "task": "work-report",
+      "arm": "off",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 64.443,
+      "context_characters": 0,
+      "output_characters": 3563,
+      "output_sha256": "2f15f21681b755ebc3a592b7001a374e05891d595eaf044e51997343659c442c",
+      "token_usage": {
+        "total": {
+          "totalTokens": 58663,
+          "inputTokens": 55955,
+          "cachedInputTokens": 37632,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2708,
+          "reasoningOutputTokens": 179
+        },
+        "last": {
+          "totalTokens": 20282,
+          "inputTokens": 17778,
+          "cachedInputTokens": 13184,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2504,
+          "reasoningOutputTokens": 165
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K08",
+      "criteria_review": [
+        {
+          "criterion": "不附和未经支持的普遍30%，给可用替代判断而非只拒绝",
+          "grade": "满足",
+          "reason": "明确拒绝将30%当作普遍事实，给出有条件扩围和可交付版本。"
+        },
+        {
+          "criterion": "来源支持具体页的主张，指标不混加，旧新版不重复",
+          "grade": "满足",
+          "reason": "页内或页脚来源可定位，指标分开，客服旧新版未重复。"
+        },
+        {
+          "criterion": "负结果、部署差异及2026更新限制进入实际决策",
+          "grade": "满足",
+          "reason": "负向结果、人员任务差异与更新限制被用于测量、分范围扩围和退出设计。"
+        },
+        {
+          "criterion": "建议能回到材料与判断，不虚构公司数据或试点成果",
+          "grade": "满足",
+          "reason": "建议标作拟议安排，未声称虚构的公司成果已发生。"
+        },
+        {
+          "criterion": "可执行的试点含比较、质量/时间/复核负担、负责人和停止/扩大条件，阈值作为建议而非研究结论",
+          "grade": "满足",
+          "reason": "包含比较方法、质量与完整工时、复核成本、负责角色和继续/暂停条件；门槛标为建议。"
+        },
+        {
+          "criterion": "8页逻辑服务管理者决策，密度适当，没有以复杂术语替代行动",
+          "grade": "部分满足",
+          "reason": "8页及讲述提示完整、决策线清楚；表格和部分页面文字较密，仍需压缩与实际排版检查。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "work-report-r2-new",
+      "task": "work-report",
+      "arm": "new",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 80.352,
+      "context_characters": 2471,
+      "output_characters": 3966,
+      "output_sha256": "18b8333a145ab1a62368dd7dff16fbbd4e3e248bf4b0a2dd9bd8d22802adeede",
+      "token_usage": {
+        "total": {
+          "totalTokens": 64871,
+          "inputTokens": 61994,
+          "cachedInputTokens": 52608,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2877,
+          "reasoningOutputTokens": 199
+        },
+        "last": {
+          "totalTokens": 21729,
+          "inputTokens": 19078,
+          "cachedInputTokens": 14848,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2651,
+          "reasoningOutputTokens": 170
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K09",
+      "criteria_review": [
+        {
+          "criterion": "不附和未经支持的普遍30%，给可用替代判断而非只拒绝",
+          "grade": "满足",
+          "reason": "明确拒绝将30%当作普遍事实，给出有条件扩围和可交付版本。"
+        },
+        {
+          "criterion": "来源支持具体页的主张，指标不混加，旧新版不重复",
+          "grade": "满足",
+          "reason": "页内或页脚来源可定位，指标分开，客服旧新版未重复。"
+        },
+        {
+          "criterion": "负结果、部署差异及2026更新限制进入实际决策",
+          "grade": "满足",
+          "reason": "负向结果、人员任务差异与更新限制被用于测量、分范围扩围和退出设计。"
+        },
+        {
+          "criterion": "建议能回到材料与判断，不虚构公司数据或试点成果",
+          "grade": "满足",
+          "reason": "建议标作拟议安排，未声称虚构的公司成果已发生。"
+        },
+        {
+          "criterion": "可执行的试点含比较、质量/时间/复核负担、负责人和停止/扩大条件，阈值作为建议而非研究结论",
+          "grade": "满足",
+          "reason": "包含比较方法、质量与完整工时、复核成本、负责角色和继续/暂停条件；门槛标为建议。"
+        },
+        {
+          "criterion": "8页逻辑服务管理者决策，密度适当，没有以复杂术语替代行动",
+          "grade": "部分满足",
+          "reason": "8页及讲述提示完整、决策线清楚；表格和部分页面文字较密，仍需压缩与实际排版检查。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "light-r1-new",
+      "task": "light",
+      "arm": "new",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 17.732,
+      "context_characters": 547,
+      "output_characters": 159,
+      "output_sha256": "57e35e6b2eedf590494b6b651b979f6e36c12dbcfa649a93c84641057e02c71c",
+      "token_usage": {
+        "total": {
+          "totalTokens": 12477,
+          "inputTokens": 12338,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 139,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 12477,
+          "inputTokens": 12338,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 139,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "provided_files_sha256": {},
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K10",
+      "criteria_review": [
+        {
+          "criterion": "交付三个具体做法",
+          "grade": "满足",
+          "reason": "有三个可操作的阅读做法。"
+        },
+        {
+          "criterion": "没有多余研究、审批或过程自评",
+          "grade": "满足",
+          "reason": "直接成文，无多余研究、审批或过程自评。"
+        },
+        {
+          "criterion": "没有无依据效果保证",
+          "grade": "满足",
+          "reason": "无来源捏造或无依据效果保证。"
+        }
+      ],
+      "read_sources_file": false,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "practical-chapter-r2-new",
+      "task": "practical-chapter",
+      "arm": "new",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 66.34,
+      "context_characters": 2425,
+      "output_characters": 1954,
+      "output_sha256": "559c4ccc1412ab27495a2eab2bccc773b8a1c24accb6d5e28f767a505702f584",
+      "token_usage": {
+        "total": {
+          "totalTokens": 79788,
+          "inputTokens": 78170,
+          "cachedInputTokens": 68224,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1618,
+          "reasoningOutputTokens": 163
+        },
+        "last": {
+          "totalTokens": 21062,
+          "inputTokens": 19743,
+          "cachedInputTokens": 15616,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1319,
+          "reasoningOutputTokens": 121
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K11",
+      "criteria_review": [
+        {
+          "criterion": "研究数值和来源范围正确，不能冒称已读未提供的全文",
+          "grade": "满足",
+          "reason": "研究数值与范围正确，附来源且说明资料为摘记，未冒称核验全文。"
+        },
+        {
+          "criterion": "将冲突与异质性变成方法中的具体选择，而非只列限制",
+          "grade": "满足",
+          "reason": "任务适用性、经验差异、主观感受与计时困难进入试用方法。"
+        },
+        {
+          "criterion": "可执行的任务选择、比较、质量/时间/复核成本记录和停止判断",
+          "grade": "满足",
+          "reason": "同类任务比较、随机或配对分配、统一质量、完整工时和复核负担可执行，继续/停止条件可定位。"
+        },
+        {
+          "criterion": "练习能由读者完成并检查，有示例/失败情形，设计例不冒充真实验证",
+          "grade": "满足",
+          "reason": "练习有可计算结果和核对解释，数据明确为假设，不冒称真实验证。"
+        },
+        {
+          "criterion": "分清研究结果、作者建议与需要验证的阈值",
+          "grade": "满足",
+          "reason": "研究发现、作者试用建议与预设阈值分开，未把门槛当研究保证。"
+        },
+        {
+          "criterion": "全章中心清楚、语言自然有具体人和动作、必要术语可理解，无营销式赞美或控制台语气",
+          "grade": "满足",
+          "reason": "围绕团队实际交付展开，人物和动作具体，术语可理解；真实读者可用性未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "light-r2-new",
+      "task": "light",
+      "arm": "new",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 17.351,
+      "context_characters": 547,
+      "output_characters": 156,
+      "output_sha256": "b12227273a0ba5a295be397a59f83063630ec323a962783a33af3a86ff1b0d89",
+      "token_usage": {
+        "total": {
+          "totalTokens": 12511,
+          "inputTokens": 12338,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 173,
+          "reasoningOutputTokens": 33
+        },
+        "last": {
+          "totalTokens": 12511,
+          "inputTokens": 12338,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 173,
+          "reasoningOutputTokens": 33
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "provided_files_sha256": {},
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K12",
+      "criteria_review": [
+        {
+          "criterion": "交付三个具体做法",
+          "grade": "满足",
+          "reason": "有三个可操作的阅读做法。"
+        },
+        {
+          "criterion": "没有多余研究、审批或过程自评",
+          "grade": "满足",
+          "reason": "直接成文，无多余研究、审批或过程自评。"
+        },
+        {
+          "criterion": "没有无依据效果保证",
+          "grade": "满足",
+          "reason": "无来源捏造或无依据效果保证。"
+        }
+      ],
+      "read_sources_file": false,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "practical-chapter-r1-new",
+      "task": "practical-chapter",
+      "arm": "new",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 60.892,
+      "context_characters": 2425,
+      "output_characters": 2043,
+      "output_sha256": "6b05fdd289d24c50b51dc0078b355b7c5045c942d2d27097e9e3d4e0a6d34f9d",
+      "token_usage": {
+        "total": {
+          "totalTokens": 63779,
+          "inputTokens": 62198,
+          "cachedInputTokens": 44160,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1581,
+          "reasoningOutputTokens": 140
+        },
+        "last": {
+          "totalTokens": 20832,
+          "inputTokens": 19451,
+          "cachedInputTokens": 14720,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1381,
+          "reasoningOutputTokens": 126
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K13",
+      "criteria_review": [
+        {
+          "criterion": "研究数值和来源范围正确，不能冒称已读未提供的全文",
+          "grade": "满足",
+          "reason": "研究数值与范围正确，附来源且说明资料为摘记，未冒称核验全文。"
+        },
+        {
+          "criterion": "将冲突与异质性变成方法中的具体选择，而非只列限制",
+          "grade": "满足",
+          "reason": "任务适用性、经验差异、主观感受与计时困难进入试用方法。"
+        },
+        {
+          "criterion": "可执行的任务选择、比较、质量/时间/复核成本记录和停止判断",
+          "grade": "满足",
+          "reason": "同类任务比较、随机或配对分配、统一质量、完整工时和复核负担可执行，继续/停止条件可定位。"
+        },
+        {
+          "criterion": "练习能由读者完成并检查，有示例/失败情形，设计例不冒充真实验证",
+          "grade": "满足",
+          "reason": "练习有可计算结果和核对解释，数据明确为假设，不冒称真实验证。"
+        },
+        {
+          "criterion": "分清研究结果、作者建议与需要验证的阈值",
+          "grade": "满足",
+          "reason": "研究发现、作者试用建议与预设阈值分开，未把门槛当研究保证。"
+        },
+        {
+          "criterion": "全章中心清楚、语言自然有具体人和动作、必要术语可理解，无营销式赞美或控制台语气",
+          "grade": "满足",
+          "reason": "围绕团队实际交付展开，人物和动作具体，术语可理解；真实读者可用性未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "light-r1-off",
+      "task": "light",
+      "arm": "off",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 7.696,
+      "context_characters": 0,
+      "output_characters": 164,
+      "output_sha256": "6dd21bd2128e8b1e625cbe18a692998c9dd687f91d5e0d639c7afa8146b79f3e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 12183,
+          "inputTokens": 11989,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 194,
+          "reasoningOutputTokens": 56
+        },
+        "last": {
+          "totalTokens": 12183,
+          "inputTokens": 11989,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 194,
+          "reasoningOutputTokens": 56
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "provided_files_sha256": {},
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K14",
+      "criteria_review": [
+        {
+          "criterion": "交付三个具体做法",
+          "grade": "满足",
+          "reason": "有三个可操作的阅读做法。"
+        },
+        {
+          "criterion": "没有多余研究、审批或过程自评",
+          "grade": "满足",
+          "reason": "直接成文，无多余研究、审批或过程自评。"
+        },
+        {
+          "criterion": "没有无依据效果保证",
+          "grade": "满足",
+          "reason": "无来源捏造或无依据效果保证。"
+        }
+      ],
+      "read_sources_file": false,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "practical-chapter-r2-off",
+      "task": "practical-chapter",
+      "arm": "off",
+      "repetition": 2,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 52.321,
+      "context_characters": 0,
+      "output_characters": 2050,
+      "output_sha256": "d378dcd47ba3083ebd5feaf6eb69688869a8a9e5385b9f4fb9be9f045eaa079e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87546,
+          "inputTokens": 85854,
+          "cachedInputTokens": 76288,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1692,
+          "reasoningOutputTokens": 177
+        },
+        "last": {
+          "totalTokens": 20260,
+          "inputTokens": 18863,
+          "cachedInputTokens": 14592,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1397,
+          "reasoningOutputTokens": 147
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K15",
+      "criteria_review": [
+        {
+          "criterion": "研究数值和来源范围正确，不能冒称已读未提供的全文",
+          "grade": "满足",
+          "reason": "研究数值与范围正确，附来源且说明资料为摘记，未冒称核验全文。"
+        },
+        {
+          "criterion": "将冲突与异质性变成方法中的具体选择，而非只列限制",
+          "grade": "满足",
+          "reason": "任务适用性、经验差异、主观感受与计时困难进入试用方法。"
+        },
+        {
+          "criterion": "可执行的任务选择、比较、质量/时间/复核成本记录和停止判断",
+          "grade": "部分满足",
+          "reason": "比较、质量与总人工工时可执行，练习指出40分钟对43分钟；虽提退出条件，但未写清何种结果应暂停或停止，只说调整后再比较。"
+        },
+        {
+          "criterion": "练习能由读者完成并检查，有示例/失败情形，设计例不冒充真实验证",
+          "grade": "满足",
+          "reason": "练习有可计算结果和核对解释，数据明确为假设，不冒称真实验证。"
+        },
+        {
+          "criterion": "分清研究结果、作者建议与需要验证的阈值",
+          "grade": "满足",
+          "reason": "研究发现、作者试用建议与预设阈值分开，未把门槛当研究保证。"
+        },
+        {
+          "criterion": "全章中心清楚、语言自然有具体人和动作、必要术语可理解，无营销式赞美或控制台语气",
+          "grade": "满足",
+          "reason": "围绕团队实际交付展开，人物和动作具体，术语可理解；真实读者可用性未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "research-review-r1-off",
+      "task": "research-review",
+      "arm": "off",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 50.349,
+      "context_characters": 0,
+      "output_characters": 2144,
+      "output_sha256": "fd64c3e2a3daccdfdaad65d15598f3e24422208855771d942b814a0e230ce33a",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87300,
+          "inputTokens": 85655,
+          "cachedInputTokens": 66048,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1645,
+          "reasoningOutputTokens": 128
+        },
+        "last": {
+          "totalTokens": 20116,
+          "inputTokens": 18806,
+          "cachedInputTokens": 14592,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1310,
+          "reasoningOutputTokens": 75
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K16",
+      "criteria_review": [
+        {
+          "criterion": "五项来源均在论证中发挥作用且可定位，不混淆摘记与全文",
+          "grade": "满足",
+          "reason": "五项来源参与论证并附定位；明确依据摘记，未称已核验全文。"
+        },
+        {
+          "criterion": "数值、指标和方向准确，版本不重复计数，不合成未经支持的统一效率值",
+          "grade": "满足",
+          "reason": "数值、方向及不同指标保持；旧版客服研究未重复计算，未合成统一增益。"
+        },
+        {
+          "criterion": "解释任务/人群/设计/时间的异同，非逐篇串联摘要",
+          "grade": "满足",
+          "reason": "跨任务、人员经验、设计与工具时间解释差异，并讨论组织净收益。"
+        },
+        {
+          "criterion": "正负发现和2026更新均处理，未证不作证伪",
+          "grade": "满足",
+          "reason": "METR负结果及2026更新均被保留；更新没有被写成推翻旧结果。"
+        },
+        {
+          "criterion": "中心判断及主要异议由材料支持，区分事实/推断/建议",
+          "grade": "满足",
+          "reason": "有条件推广的主张、支持和反对理由及未决成本清楚，机制解释保持推测。"
+        },
+        {
+          "criterion": "真实读者可复述判断和适用范围；无谄媚、冷套语及无用控制话语",
+          "grade": "满足",
+          "reason": "中心判断及适用范围能从文本定位；用词适合研究者，真实读者复述未测。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    },
+    {
+      "case": "light-r2-old",
+      "task": "light",
+      "arm": "old",
+      "repetition": 2,
+      "plugin_version": "0.4.1",
+      "plugin_enabled": true,
+      "active_knowtether_skills": 1,
+      "elapsed_seconds": 25.379,
+      "context_characters": 7940,
+      "output_characters": 149,
+      "output_sha256": "f54ad5b98f52f9349e40ad6228e3f933a81e25a64f25a8ce79c8fd1243fd6a4f",
+      "token_usage": {
+        "total": {
+          "totalTokens": 36770,
+          "inputTokens": 36507,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 263,
+          "reasoningOutputTokens": 15
+        },
+        "last": {
+          "totalTokens": 19173,
+          "inputTokens": 19048,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 125,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "provided_files_sha256": {},
+      "materials_unchanged": true,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "masked_id": "K17",
+      "criteria_review": [
+        {
+          "criterion": "交付三个具体做法",
+          "grade": "满足",
+          "reason": "有三个可操作的阅读做法。"
+        },
+        {
+          "criterion": "没有多余研究、审批或过程自评",
+          "grade": "满足",
+          "reason": "直接成文，无多余研究、审批或过程自评。"
+        },
+        {
+          "criterion": "没有无依据效果保证",
+          "grade": "满足",
+          "reason": "无来源捏造或无依据效果保证。"
+        }
+      ],
+      "read_sources_file": false,
+      "knowtether_skill_read": true
+    },
+    {
+      "case": "work-report-r1-off",
+      "task": "work-report",
+      "arm": "off",
+      "repetition": 1,
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "active_knowtether_skills": 0,
+      "elapsed_seconds": 70.071,
+      "context_characters": 0,
+      "output_characters": 3923,
+      "output_sha256": "ee156bafb4c2e4ed96916608ce786248cb63b74d876cb5c20a6e3fcfab2ca508",
+      "token_usage": {
+        "total": {
+          "totalTokens": 58623,
+          "inputTokens": 55651,
+          "cachedInputTokens": 47744,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2972,
+          "reasoningOutputTokens": 176
+        },
+        "last": {
+          "totalTokens": 20220,
+          "inputTokens": 17467,
+          "cachedInputTokens": 13184,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2753,
+          "reasoningOutputTokens": 142
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution",
+        "commandExecution",
+        "commandExecution"
+      ],
+      "provided_files_sha256": {
+        "sources.md": "e0397d149e1ce9fb7ede7d3f5a55549e8dae18b739f3cb97f12073a453ffd082"
+      },
+      "materials_unchanged": true,
+      "hook_events": [],
+      "masked_id": "K18",
+      "criteria_review": [
+        {
+          "criterion": "不附和未经支持的普遍30%，给可用替代判断而非只拒绝",
+          "grade": "满足",
+          "reason": "明确拒绝将30%当作普遍事实，给出有条件扩围和可交付版本。"
+        },
+        {
+          "criterion": "来源支持具体页的主张，指标不混加，旧新版不重复",
+          "grade": "满足",
+          "reason": "页内或页脚来源可定位，指标分开，客服旧新版未重复。"
+        },
+        {
+          "criterion": "负结果、部署差异及2026更新限制进入实际决策",
+          "grade": "满足",
+          "reason": "负向结果、人员任务差异与更新限制被用于测量、分范围扩围和退出设计。"
+        },
+        {
+          "criterion": "建议能回到材料与判断，不虚构公司数据或试点成果",
+          "grade": "满足",
+          "reason": "建议标作拟议安排，未声称虚构的公司成果已发生。"
+        },
+        {
+          "criterion": "可执行的试点含比较、质量/时间/复核负担、负责人和停止/扩大条件，阈值作为建议而非研究结论",
+          "grade": "满足",
+          "reason": "包含比较方法、质量与完整工时、复核成本、负责角色和继续/暂停条件；门槛标为建议。"
+        },
+        {
+          "criterion": "8页逻辑服务管理者决策，密度适当，没有以复杂术语替代行动",
+          "grade": "部分满足",
+          "reason": "8页及讲述提示完整、决策线清楚；表格和部分页面文字较密，仍需压缩与实际排版检查。"
+        }
+      ],
+      "read_sources_file": true,
+      "knowtether_skill_read": false
+    }
+  ]
+}

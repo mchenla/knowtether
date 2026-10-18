@@ -1,5 +1,13 @@
 # Validation records
 
+## 0.5.0: adaptive guidance and complex writing
+
+Windows regression: 110 tests, 109 passed and one POSIX-only skip. Focused receipts match exact source bytes and lines; missing type passages degrade honestly. Seven advisory signals have positive synthetic controls in a 15-case coverage demonstration; broader semantic misses remain. The 72-document snapshot and 239 framework/Skill file links remain intact.
+
+The preregistered 18-output live comparison completed without a failed attempt. All active runs received exact expected guidance and three completed hooks; controls had no plugin callbacks or active Skill. All complex turns read the immutable source packet; no project files were added. Eight new-version active turns did not read the Skill. Short-task guidance fell from 7,940 to 547 characters relative to 0.4.1, with median time 25.255s to 17.5415s; disabled was 8.176s. Complex tasks remained slower than disabled.
+
+Masked-label development-AI review found one stopping-rule completeness improvement in one of six complex pairs; other prespecified content criteria tied, with slide density still needing editing in both conditions. This is not a general quality, independent review or real reader claim. [Protocol, metrics, item-level review and limitations](evaluation-0.5.0.md). KPDM status remains unchanged.
+
 ## 0.4.1: expression repair and whole-plugin on/off pilot
 
 Windows regression: 104 tests, 103 passed and one POSIX-only skip. The minimum reading pack includes the full expression-conventions section and is 7,104 characters. NUMERIC_RANGE_DASH adds a narrow advisory hint; insufficient support is explicitly distinguished from falsification. The fixed six-task, two-repeat pilot completed 12 pairs/24 valid outputs, plus one retained quota failure later resumed with the same model and order. All enabled runs received the exact expected reading pack; disabled runs had no active KnowTether Hook or Skill and no callbacks/context.

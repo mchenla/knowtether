@@ -22,7 +22,9 @@ def audit():
             records.append({'id':case['id'],'concern':case['concern'],'response':response})
         assert not list(root.iterdir()), 'Advisory checker must not write project files'
     expected={'citation-control':'CITATION_PLACEHOLDER','absolute-control':'ABSOLUTE_CLAIM',
-              'status-control':'STATUS_LANGUAGE','style-control':'LANGUAGE_PATTERN'}
+              'status-control':'STATUS_LANGUAGE','style-control':'LANGUAGE_PATTERN',
+              'praise-control':'EVALUATIVE_PRAISE','range-control':'NUMERIC_RANGE_DASH',
+              'invisible-character':'INVISIBLE_CHARACTERS'}
     for record in records:
         if record['id'] in expected:
             assert expected[record['id']] in record['response']['systemMessage'], record

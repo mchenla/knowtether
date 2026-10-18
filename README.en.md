@@ -1,6 +1,6 @@
 # KnowTether (知据)
 
-**Work with AI to turn sources and ideas into clearer, better-grounded articles and reports.**
+**Work with AI to turn sources and ideas into grounded, useful articles, presentations and books.**
 
 [中文](README.md) · [KPDM framework](framework/kpdm/README.md) · [Capability audit](docs/capabilities.md) · [Downloads](https://github.com/mchenla/knowtether/releases/latest)
 
@@ -25,7 +25,7 @@ codex plugin marketplace add mchenla/knowtether
 codex plugin add knowtether@knowtether
 ```
 
-Review and trust the three hooks in `/hooks`, then start a new session; restart the desktop app after installation. No separate pip install is needed. Ask in ordinary language without a manual marker. Matched knowledge requests now receive checked source passages before writing. Request detection can still miss cases; see the reading mechanism below.
+Review and trust the three hooks in `/hooks`, then start a new session; restart the desktop app after installation. No separate pip install is needed. Ask normally without a marker. Short requests receive compact guidance; complex writing receives relevant, hash-checked KPDM passages. Sufficient guidance avoids another Skill read; explicitly request “完整KPDM” for the full selected pack. Detection is heuristic and can miss cases. See [tiered reading](docs/minimum-reading.md).
 
 To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugin add knowtether@knowtether`.
 
@@ -33,18 +33,22 @@ To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugi
 
 ## What is actually checked
 
-Text checks cover citation placeholders, a narrow pattern of absolute research claims, independent-validation wording, concentrated stock phrases and numeric long-dash ranges. Optional worksheets add record/version consistency checks.
+Use it for management slide content, project documents, academic reports and reviews, explanatory articles, practical books, textbooks and publication drafts. Guidance connects claims to evidence, decisions to trade-offs and chapters to executable reader exercises. PPTX/Word creation requires host tools; the plugin itself does not render document files.
 
-These checks do not guarantee freedom from sycophancy, contrarianism, blind obedience, cherry-picking, factual errors, classification gaps or formulaic prose. There is no grammar correction or technical watermark detection/removal. A 0.3.0 live case exposed missing specification reads; 0.4.0 adds explicit minimum reading and collaboration guidance. Silence is not a quality pass. See the [capability audit](docs/capabilities.md) and [validation record](docs/validation.md).
+An actual Before / After example appears in the [Chinese homepage](README.md): in the second practical-book pair, the disabled chapter suggested adjusting and retesting; the enabled chapter also specified when to expand, retry or pause for serious errors. The other repeat did not show this gap. Only one of six complex pairs improved a declared content criterion; the others tied, so this is not evidence of a general quality improvement. See [the comparison](docs/evaluation-0.5.0.md).
+
+In the two-repeat short-task pilot, injected guidance fell from 7,940 to 547 characters, with median wall time falling from 25.3s (0.4.1) to 17.5s (0.5.0); disabled was 8.2s. Complex writing remained slower than disabled. These are small, local descriptive observations.
+
+Text hints cover citation placeholders, narrow absolute research claims, independent-validation wording, concentrated stock phrases, numeric long-dash ranges, a few inflated praise phrases and selected invisible characters. Optional worksheets add record/version consistency checks.
+
+Guidance asks for independent judgment, useful disagreement, conditional MECE, concrete language and genre-appropriate formatting. These checks do not guarantee freedom from sycophancy, contrarianism, blind obedience, cherry-picking, factual errors, classification gaps or formulaic prose. Invisible characters are not proof of watermarks. There is no statistical watermark removal, grammar guarantee or promise to bypass AI detectors. Silence is not a quality pass. See the [capability audit](docs/capabilities.md) and [validation record](docs/validation.md).
 
 ## Open source
 
-Software **0.4.1**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
+Software **0.5.0**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
 
 KPDM remains **0.5.0-rc.2 candidate**, with **0.4.0 trial / conditional-pass** as the latest accepted baseline. Software release is not framework acceptance.
 
 [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
 
-Version 0.4.0 adds a bounded, hash-checked minimum reading pack before matched knowledge requests and explicit collaboration rules. See [reading evidence](docs/minimum-reading.md), [collaboration policy](policy/collaboration.md), and the proposed [human–AI knowledge creation discipline](framework/kpdm/extensions/人机协作知识创作学.md). Delivery does not prove compliance; semantic, grammar and watermark guarantees are not provided.
-
-The 0.4.1 on/off pilot produced 24 valid outputs: specified numeric-range formatting improved; the tested semantic tasks showed no clear added benefit, and time/input increased. See [full comparison and outputs](docs/evaluation-0.4.1.md).
+See the [collaboration policy](policy/collaboration.md) and proposed [human–AI knowledge creation discipline](framework/kpdm/extensions/人机协作知识创作学.md). Framework acceptance and independent reader validation remain separate from software publication.

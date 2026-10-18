@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 - 2026-10-17
+
+- Route short knowledge tasks to a compact summary without specification I/O; read checked quality/type passages for complex writing and preserve explicit full reading.
+- Stop implicit Skill expansion; avoid rereading guidance already supplied. Keep heuristic routing and repeated-injection limitations visible.
+- Extend independent-judgment and genre guidance for presentations, research and practical books; add narrow praise and invisible-character hints without watermark or grammar guarantees.
+- Complete 18 frozen live outputs: lower short-task resource overhead versus 0.4.1; one stopping-rule completeness improvement in six complex pairs, otherwise tied declared content criteria, with slide density still needing work and no general quality claim.
+- Add concrete use cases, an actual scoped Before/After excerpt, reproducible evaluation scripts, metrics and item-level masked-label development-AI review.
+
 ## 0.4.1 - 2026-10-17
 
 - Include the full bundled expression-conventions section in the minimum reading pack; specify numeric ranges and distinguish insufficient support from falsification.

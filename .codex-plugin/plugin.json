@@ -1,7 +1,7 @@
 {
   "name": "knowtether",
   "version": "0.5.0",
-  "description": "Work with AI to write articles, reports and research reviews with clearer sources and reasoning. Includes KPDM guidance and limited advisory checks.",
+  "description": "Work with AI on grounded articles, presentations, research reports and books. Short tasks stay light; complex writing receives selected KPDM passages and limited checks.",
   "author": {
     "name": "MC",
     "url": "https://github.com/mchenla"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "知据 KnowTether",
     "shortDescription": "和 AI 一起，写得有据、讲得清",
-    "longDescription": "知据帮助人与 AI 一起写文章、报告和研究综述。知识请求触发后先读取随包 KPDM 必要原文和协作要求，涵盖反迎合、有用异议、来源与语境、适用时的 MECE 及自然表达；提供有限检查，不保证语义正确或移除水印。需要 Python 3.10+ 并信任 Hooks。",
+    "longDescription": "和 AI 一起写工作汇报PPT内容、文档、学术报告、知识文章及工具书。短任务只给轻量指导，复杂写作按需读取随包KPDM选段；关注来源、独立判断、适用时的MECE与自然表达。提供有限告警，不保证语义正确、移除统计水印或生成排版文件。需要Python 3.10+并信任Hooks。",
     "developerName": "MC",
     "category": "Productivity",
     "capabilities": [
