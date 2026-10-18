@@ -1,6 +1,9 @@
 """Narrow advisory range coverage; legitimate punctuation is not a style ban."""
 import unittest
+from pathlib import Path
+import tempfile
 from kpdm_hooks.engine import lint_text
+from kpdm_hooks.hooks import handle
 from kpdm_hooks.reading import reading_context
 
 
@@ -26,3 +29,12 @@ class ExpressionTests(unittest.TestCase):
         self.assertIn('现有材料不足以支持该结论', pack)
         self.assertIn('第1 - 2天', pack)
         self.assertIn('MINIMUM_READING end', pack)
+
+    def test_actual_stop_handler_returns_only_advisory_for_numeric_ranges(self):
+        with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as project:
+            result = handle({'hook_event_name': 'Stop',
+                             'last_assistant_message': '研究报告的练习：第1—2天阅读文献。'},
+                            Path(project), 'Stop', plugin=True)
+            self.assertEqual(set(result), {'systemMessage'})
+            self.assertIn('NUMERIC_RANGE_DASH', result['systemMessage'])
+            self.assertEqual(list(Path(project).iterdir()), [])

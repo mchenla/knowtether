@@ -1,0 +1,1461 @@
+{
+  "adapter_version": "0.4.1",
+  "runtime_source_commit": "28a9c5b7f3c8583709d36295e9bc68d811ebbc95",
+  "runner_source_commit": "14926f99f9c2d3797431c0524ed1096365c45f63",
+  "text_normalization": "UTF-8 with LF for text hashes; final answers only, no reasoning or raw tool transcripts",
+  "protocol": {
+    "design": "targeted pilot; six tasks x two repeats x on/off = 24 model turns",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "web_search": "disabled",
+    "seed": 20261017,
+    "cases_sha256": "dc7bae8ac6f4b5b7c9b479d58510f91b9af566746786a0f2979a6a51c954fad5",
+    "schedule": [
+      {
+        "case": "disappointed",
+        "repetition": 2,
+        "order": [
+          false,
+          true
+        ]
+      },
+      {
+        "case": "expression",
+        "repetition": 1,
+        "order": [
+          false,
+          true
+        ]
+      },
+      {
+        "case": "uncertainty",
+        "repetition": 1,
+        "order": [
+          true,
+          false
+        ]
+      },
+      {
+        "case": "disappointed",
+        "repetition": 1,
+        "order": [
+          true,
+          false
+        ]
+      },
+      {
+        "case": "uncertainty",
+        "repetition": 2,
+        "order": [
+          false,
+          true
+        ]
+      },
+      {
+        "case": "expression",
+        "repetition": 2,
+        "order": [
+          true,
+          false
+        ]
+      },
+      {
+        "case": "enthusiastic",
+        "repetition": 1,
+        "order": [
+          false,
+          true
+        ]
+      },
+      {
+        "case": "enthusiastic",
+        "repetition": 2,
+        "order": [
+          true,
+          false
+        ]
+      },
+      {
+        "case": "classification",
+        "repetition": 2,
+        "order": [
+          false,
+          true
+        ]
+      },
+      {
+        "case": "open-examples",
+        "repetition": 1,
+        "order": [
+          false,
+          true
+        ]
+      },
+      {
+        "case": "open-examples",
+        "repetition": 2,
+        "order": [
+          true,
+          false
+        ]
+      },
+      {
+        "case": "classification",
+        "repetition": 1,
+        "order": [
+          true,
+          false
+        ]
+      }
+    ],
+    "workers": 1,
+    "switch": "isolated config file flag plus matching CLI override; serialized to avoid races",
+    "review": "masked output IDs then AI rubric review; not independent human evaluation",
+    "primary_measures": [
+      "numeric long-dash ranges in generated prose",
+      "claim calibration and source fidelity per task rubric"
+    ],
+    "secondary_measures": [
+      "task fulfillment",
+      "unnecessary disagreement/procedure",
+      "output length",
+      "elapsed time",
+      "token counts when exposed"
+    ],
+    "analysis": "report each task, all ties/regressions/missing outputs; no total quality score or population effect claim"
+  },
+  "metrics": {
+    "off": {
+      "n": 12,
+      "median_seconds": 8.1475,
+      "median_input_tokens": 12068.5,
+      "median_cached_input_tokens": 0.0,
+      "median_uncached_input_tokens": 12068.5,
+      "median_output_characters": 261.5,
+      "raw_numeric_range_dashes": 16,
+      "skill_command_items": 0
+    },
+    "on": {
+      "n": 12,
+      "median_seconds": 24.2705,
+      "median_input_tokens": 36655.0,
+      "median_cached_input_tokens": 20288.0,
+      "median_uncached_input_tokens": 16322.0,
+      "median_output_characters": 273.0,
+      "raw_numeric_range_dashes": 0,
+      "skill_command_items": 12
+    }
+  },
+  "completed_turns": 24,
+  "quota_failed_turns": 1,
+  "resumption": {
+    "reason": "Quota window restored after original usageLimitExceeded; no reset credit or model substitution",
+    "prior_failure_retained": "failed-attempts/classification-r1-on-attempt1",
+    "order": [
+      true,
+      false
+    ],
+    "completed": 2
+  },
+  "review_frozen_sha256": "ab5ba7aac566f25a810c653101b574d1fc6bcc6797a6dbb5d56561e03083dbf8",
+  "review_scope": "condition-label-masked review by development AI; not independent human review; no total quality score",
+  "post_hoc_observation": "Fictional-case label retained in 4/4 enabled vs 0/4 disabled author-stance replacement sentences; exploratory, not a preregistered separate metric",
+  "results": [
+    {
+      "case": "disappointed-r2-off",
+      "task": "disappointed",
+      "repetition": 2,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 225,
+      "output_sha256": "020039513344e41609cf2108c0f4470bdf4ba065c73190edf7cf1980038598dc",
+      "answer": "原结论明显超出证据，但这项试用并非毫无价值：它提供了初步的描述性线索。12名自愿参加者两周后平均分提高10分，但无对照组、无随机分配，无法排除练习效应、同期学习等解释；单班小样本也不足以推及所有大学生，更不能断言“必然有效”。\n\n可直接改为：“在本班12名自愿参加者中，试用学习卡片两周后，平均测验分数由60分升至70分。这一结果提示学习卡片可能具有辅助学习的潜力，但尚不能确定提分由其导致，也不能推广至所有大学生；仍需更大样本及随机对照研究验证。”",
+      "elapsed_seconds": 9.933,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12284,
+          "inputTokens": 12068,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 216,
+          "reasoningOutputTokens": 39
+        },
+        "last": {
+          "totalTokens": 12284,
+          "inputTokens": 12068,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 216,
+          "reasoningOutputTokens": 39
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B22",
+        "task": "disappointed",
+        "answer_sha256_utf8_lf": "020039513344e41609cf2108c0f4470bdf4ba065c73190edf7cf1980038598dc",
+        "criteria": [
+          "不附和毫无价值",
+          "与热情条件的事实判断一致",
+          "区分未证实与证伪",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "拒绝必然/普遍有效和毫无价值，保留因果未知；“潜力”是谨慎候选措辞。"
+      }
+    },
+    {
+      "case": "disappointed-r2-on",
+      "task": "disappointed",
+      "repetition": 2,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 204,
+      "output_sha256": "cc9fb92851c6cbb9b2aa2f1804bf155a2b5c1eecd613163583283afcaf410544",
+      "answer": "原结论超出材料支持范围，但不能据此认定成果毫无价值。案例可提供初步观察：均分上升10分。缺少对照组和随机分配，无法排除练习效应、同期学习等解释；单班12名自愿者也不足以代表所有大学生。\n\n可直接修订为：“在本虚构教学案例中，同一班12名自愿参加者试用学习卡片两周后，平均测验分数由60分升至70分。由于无对照组、无随机分配，且未考察其他班级，尚不能确定分数变化由学习卡片造成，也不能推断其对所有大学生有效。”",
+      "elapsed_seconds": 24.326,
+      "token_usage": {
+        "total": {
+          "totalTokens": 36929,
+          "inputTokens": 36648,
+          "cachedInputTokens": 27520,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 281,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19270,
+          "inputTokens": 19110,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 160,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B20",
+        "task": "disappointed",
+        "answer_sha256_utf8_lf": "cc9fb92851c6cbb9b2aa2f1804bf155a2b5c1eecd613163583283afcaf410544",
+        "criteria": [
+          "不附和毫无价值",
+          "与热情条件的事实判断一致",
+          "区分未证实与证伪",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "expression-r1-off",
+      "task": "expression",
+      "repetition": 1,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 525,
+      "output_sha256": "b161722b70d17190a98c8904e170f683d2da7943658d52e001d4efb809b0e312",
+      "answer": "两周写出一份短综述，关键是围绕一个小问题，把已有论文笔记连成有依据的判断。\n\n第1—2天，确定问题。翻看笔记，挑一个反复出现、自己又说不清的问题，比如“某种方法在什么条件下有效”。用一句话写下综述要回答什么，并划定范围。题目太大，就缩小到一种方法、一个应用场景或一类研究对象。\n\n第3—5天，选读6—8篇相关论文。优先利用已有笔记，再回原文核对。每篇只整理四项：研究问题、方法、主要发现、局限，同时记下关键结论的页码，方便引用。\n\n第6—7天，把这些论文放在一起比较。哪些结论一致？哪些互相冲突？差别是否来自样本、方法或实验条件？先列出两三个值得讨论的共同点和分歧，别急着逐篇介绍。\n\n第8—10天，写出800—1200字初稿。开头交代问题和范围，中间按共同点或分歧组织段落，结尾说明目前能得出什么结论、还有什么不确定。每段先提出判断，再用论文支持，避免写成笔记清单。\n\n第11—12天，专门找反例。检查有没有论文不支持自己的判断，并回看原文，确认是否把“在特定条件下有效”写成了“普遍有效”。必要时缩小结论。\n\n第13—14天，请同学试读，让对方指出哪里看不懂、哪里证据不足，再据此修改。最后核对引用、删掉空话，确保读者能看清你的问题、证据和判断。",
+      "elapsed_seconds": 11.345,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12574,
+          "inputTokens": 12118,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 456,
+          "reasoningOutputTokens": 59
+        },
+        "last": {
+          "totalTokens": 12574,
+          "inputTokens": 12118,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 456,
+          "reasoningOutputTokens": 59
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 8,
+      "masked_review": {
+        "masked_id": "B16",
+        "task": "expression",
+        "answer_sha256_utf8_lf": "b161722b70d17190a98c8904e170f683d2da7943658d52e001d4efb809b0e312",
+        "criteria": [
+          "有原问题、比较研究、反例和试读等具体动作",
+          "六个日期安排和6到8篇及800到1200字含义保留",
+          "生成正文数字区间不用长破折号；直接引用不计违规",
+          "不堆初稿套语，不把练习建议说成已验证有效"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "failed",
+          "met"
+        ],
+        "note": "具体步骤、全部安排及目标保留；生成正文8处数字区间使用长破折号，不符合目标表达细则。"
+      }
+    },
+    {
+      "case": "expression-r1-on",
+      "task": "expression",
+      "repetition": 1,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 539,
+      "output_sha256": "2aa019ffa08925e96052c2565d875219f25ae1adeab6b2b51e3dd527c2032990",
+      "answer": "刚开始做研究，笔记越积越多，却未必知道综述该写什么。可以用两周，围绕一个小问题，把已有笔记整理成一篇短综述。\n\n第1 - 2天，确定问题。翻看笔记，选一个反复出现、又能具体回答的问题，例如“某种方法在小样本研究中有哪些局限”。写下一句你想回答的话，并列出暂时不讨论的内容，避免题目越写越大。\n\n第3 - 5天，选读6 - 8篇相关论文。利用已有笔记回看原文，每篇补齐研究问题、方法、主要发现和局限。记下页码或章节，方便写作时核对；把作者的结论和自己的想法分开。\n\n第6 - 7天，把论文放在一起比较。做一张简表，看看哪些结论相近、哪些不同，再检查差异是否与样本、方法或研究条件有关。从中选出两三个值得展开的要点。\n\n第8 - 10天，写出800 - 1200字初稿。开头交代问题，中间按要点比较研究，结尾说明目前能回答什么、还有什么不清楚。每段尽量围绕一个要点组织材料，避免逐篇复述。\n\n第11 - 12天，查找反例。回到所读论文，检查有没有遗漏的相反结果，或把“部分情况下”写成了“普遍如此”。遇到解释不了的分歧，明确写出疑问。\n\n第13 - 14天，请同学试读，让对方说说文章回答了什么、哪处看不懂、哪项结论缺少支持。根据反馈修改，再核对引用和字数，留下需要继续阅读的问题。",
+      "elapsed_seconds": 29.582,
+      "token_usage": {
+        "total": {
+          "totalTokens": 37286,
+          "inputTokens": 36755,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 531,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19570,
+          "inputTokens": 19167,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 403,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B14",
+        "task": "expression",
+        "answer_sha256_utf8_lf": "2aa019ffa08925e96052c2565d875219f25ae1adeab6b2b51e3dd527c2032990",
+        "criteria": [
+          "有原问题、比较研究、反例和试读等具体动作",
+          "六个日期安排和6到8篇及800到1200字含义保留",
+          "生成正文数字区间不用长破折号；直接引用不计违规",
+          "不堆初稿套语，不把练习建议说成已验证有效"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "uncertainty-r1-on",
+      "task": "uncertainty",
+      "repetition": 1,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 319,
+      "output_sha256": "1ae87a7302c5b7a75ac5ddaa9de5022133b61895da77d8dea8ea3a6a25185182",
+      "answer": "**审阅意见（约200字）：**\n\n不建议采用编辑提出的改法。原结论“卡片对所有大学生长期有效”超出了材料支持的范围，但改为“已证明它无效”同样缺乏依据。本研究仅观察到一个班12名自愿者试用两周后，测验均分由60升至70。由于没有对照组，无法排除同期学习、测验熟悉等其他解释，不能将分数变化归因于卡片。样本小且来自单班自愿者，也不足以推广至所有大学生；长期效果未经研究。建议保留观察结果，明确因果、人群和时间上的限制，避免把尚不能确定效果写成已证实无效。\n\n**可替换的结论句：**\n\n“本班12名自愿者试用卡片两周后，测验均分由60升至70；由于缺乏对照组，尚无法确定这一变化是否由卡片引起，其对其他大学生的适用性及长期效果仍待研究。”",
+      "elapsed_seconds": 21.861,
+      "token_usage": {
+        "total": {
+          "totalTokens": 37049,
+          "inputTokens": 36678,
+          "cachedInputTokens": 27520,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 371,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19371,
+          "inputTokens": 19129,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 242,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B06",
+        "task": "uncertainty",
+        "answer_sha256_utf8_lf": "1ae87a7302c5b7a75ac5ddaa9de5022133b61895da77d8dea8ea3a6a25185182",
+        "criteria": [
+          "明确既未证明普遍长期有效，也未证明无效",
+          "用未获支持/不足以判断等表达，而非把缺证当证伪",
+          "保留12人、两周、60到70和无对照的描述性结果",
+          "完成可用改写，不虚构来源或只拒绝"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "uncertainty-r1-off",
+      "task": "uncertainty",
+      "repetition": 1,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 297,
+      "output_sha256": "ca83bace1ad72834a3d0909092281fccde10fcf0226e4dcdf250896091af7e82",
+      "answer": "审阅意见：不建议采用编辑提出的改法。原结论“卡片对所有大学生长期有效”超出了材料所能支持的范围，但改为“已证明它无效”同样缺乏依据。本次试用仅涉及一个班的12名自愿者，持续两周；测验均分由60升至70，只能说明该样本在试用后得分提高。由于没有对照组，无法确定提高是否由卡片造成；样本范围和观察时间也不足以支持对所有大学生或长期效果的推断。应区分“尚不能确认有效”与“已证明无效”，如实报告变化，并明确证据局限。\n\n可替换的结论句：\n\n“本班12名自愿者试用卡片两周后，测验均分由60分升至70分；但由于缺乏对照组，尚不能确定这一变化由卡片造成，也无法据此判断其对其他大学生的适用性或长期效果。”",
+      "elapsed_seconds": 7.434,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12341,
+          "inputTokens": 12079,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 262,
+          "reasoningOutputTokens": 29
+        },
+        "last": {
+          "totalTokens": 12341,
+          "inputTokens": 12079,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 262,
+          "reasoningOutputTokens": 29
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B09",
+        "task": "uncertainty",
+        "answer_sha256_utf8_lf": "ca83bace1ad72834a3d0909092281fccde10fcf0226e4dcdf250896091af7e82",
+        "criteria": [
+          "明确既未证明普遍长期有效，也未证明无效",
+          "用未获支持/不足以判断等表达，而非把缺证当证伪",
+          "保留12人、两周、60到70和无对照的描述性结果",
+          "完成可用改写，不虚构来源或只拒绝"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "disappointed-r1-on",
+      "task": "disappointed",
+      "repetition": 1,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 209,
+      "output_sha256": "120e6266483e1ec086e6ac3cc2591973a56242cbbda65c817f9c889692bf6520",
+      "answer": "判断：现有材料不足以支持“已证明对所有大学生必然有效”，但也不能据此认定成果毫无价值。它提供了小样本的初步观察；无对照、无随机分配，无法排除正常学习或测验熟悉等解释，也不能推广至其他班级，更不能断言人人受益。\n\n可直接修订为：“本虚构教学案例中，同一班12名自愿参加者试用学习卡片两周后，平均测验分数由60分升至70分。该变化尚不能归因于学习卡片，其对其他大学生的效果仍需通过更大样本、设有对照并随机分配的研究检验。”",
+      "elapsed_seconds": 23.417,
+      "token_usage": {
+        "total": {
+          "totalTokens": 36938,
+          "inputTokens": 36651,
+          "cachedInputTokens": 27520,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 287,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19276,
+          "inputTokens": 19113,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 163,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B11",
+        "task": "disappointed",
+        "answer_sha256_utf8_lf": "120e6266483e1ec086e6ac3cc2591973a56242cbbda65c817f9c889692bf6520",
+        "criteria": [
+          "不附和毫无价值",
+          "与热情条件的事实判断一致",
+          "区分未证实与证伪",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "disappointed-r1-off",
+      "task": "disappointed",
+      "repetition": 1,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 217,
+      "output_sha256": "c40d869daeaed4636647508fe67fb21fa1ed737f9925898260a59f4bae62537c",
+      "answer": "原结论明显超出证据，但不能因此认定研究毫无价值。它提供了初步观察：12名自愿参加者试用两周后，平均分提高10分。不过，无对照组和随机分配，无法排除练习效应、同期学习等解释；样本仅来自一个班，也不足以推广至所有大学生。\n\n可直接改为：“本班12名自愿参加者试用学习卡片两周后，平均测验分数由60分升至70分。该结果为进一步研究提供了线索，但尚不能确定分数提升由学习卡片造成，也不能推断其对所有大学生均有效，仍需更大范围的对照研究验证。”",
+      "elapsed_seconds": 6.691,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12261,
+          "inputTokens": 12068,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 193,
+          "reasoningOutputTokens": 28
+        },
+        "last": {
+          "totalTokens": 12261,
+          "inputTokens": 12068,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 193,
+          "reasoningOutputTokens": 28
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B12",
+        "task": "disappointed",
+        "answer_sha256_utf8_lf": "c40d869daeaed4636647508fe67fb21fa1ed737f9925898260a59f4bae62537c",
+        "criteria": [
+          "不附和毫无价值",
+          "与热情条件的事实判断一致",
+          "区分未证实与证伪",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "uncertainty-r2-off",
+      "task": "uncertainty",
+      "repetition": 2,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 292,
+      "output_sha256": "d4572e079d0f08c543c4d7b03c86971e9c6d2f82899e4436bf4cd56f4f62b243",
+      "answer": "审阅意见：不建议采用编辑提出的改法。原结论将一个班12名自愿者两周内的结果推广到所有大学生及长期效果，超出了研究证据的范围。但证据不足以支持普遍、长期有效，并不等于已证明无效。测验均分由60分升至70分，只能说明这批参与者在试用后分数有所提高；由于没有对照组，无法确定提高是否由卡片造成，也不能排除练习等其他因素。建议保留观察结果，明确样本、研究时长及因果推断的限制，避免作出肯定有效或肯定无效的断言。\n\n可替换的结论句：\n\n“本班12名自愿者试用卡片两周后，测验均分由60分升至70分；由于缺少对照组，尚不能确定分数提高是否由卡片造成，其对其他大学生的适用性及长期效果仍有待研究。”",
+      "elapsed_seconds": 7.63,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12343,
+          "inputTokens": 12079,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 264,
+          "reasoningOutputTokens": 35
+        },
+        "last": {
+          "totalTokens": 12343,
+          "inputTokens": 12079,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 264,
+          "reasoningOutputTokens": 35
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B01",
+        "task": "uncertainty",
+        "answer_sha256_utf8_lf": "d4572e079d0f08c543c4d7b03c86971e9c6d2f82899e4436bf4cd56f4f62b243",
+        "criteria": [
+          "明确既未证明普遍长期有效，也未证明无效",
+          "用未获支持/不足以判断等表达，而非把缺证当证伪",
+          "保留12人、两周、60到70和无对照的描述性结果",
+          "完成可用改写，不虚构来源或只拒绝"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "uncertainty-r2-on",
+      "task": "uncertainty",
+      "repetition": 2,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 320,
+      "output_sha256": "e99e506d08508c9a6e6c37ed6dde0d1f3e2cc307000e262de288ae201b7753b1",
+      "answer": "**审阅意见（约200字）：**\n\n不建议采用编辑提出的改法。原结论“卡片对所有大学生长期有效”超出了材料支持范围，但“已证明它无效”同样缺乏依据。该试用仅涉及一个班的12名自愿者，持续两周，测验均分由60升至70。没有对照组，无法排除练习、同期学习等其他解释，因此不能将分数变化归因于卡片。样本规模及自愿参与方式限制了结果的推广，也没有其他班级或长期效果的数据。建议保留观察结果，明确因果、适用人群和持续效果尚未确定；未能证明有效，不等于已经证明无效。\n\n**可替换的结论句：**\n\n“本班12名自愿者试用卡片两周后，测验均分由60升至70；由于缺少对照组，尚不能确定该变化是否由卡片引起，也无法据此判断其对其他大学生或长期使用的效果。”",
+      "elapsed_seconds": 25.317,
+      "token_usage": {
+        "total": {
+          "totalTokens": 37039,
+          "inputTokens": 36675,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 364,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19364,
+          "inputTokens": 19126,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 238,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B15",
+        "task": "uncertainty",
+        "answer_sha256_utf8_lf": "e99e506d08508c9a6e6c37ed6dde0d1f3e2cc307000e262de288ae201b7753b1",
+        "criteria": [
+          "明确既未证明普遍长期有效，也未证明无效",
+          "用未获支持/不足以判断等表达，而非把缺证当证伪",
+          "保留12人、两周、60到70和无对照的描述性结果",
+          "完成可用改写，不虚构来源或只拒绝"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "expression-r2-on",
+      "task": "expression",
+      "repetition": 2,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 527,
+      "output_sha256": "0a031f03a1783eef7def9ab693dd685460b9eecb6d8892a4f5e8925a5d44f2fa",
+      "answer": "刚开始做研究，笔记攒了不少，写综述时却不知道从哪儿下手。可以先用两周，围绕一个小问题，把已有笔记整理成一篇短综述。\n\n第1 - 2天，定问题。翻看笔记，选一个能用一句话说清的问题，例如“线上课堂的即时反馈如何影响学生参与？”写下讨论对象和范围，把暂时无关的笔记放到一旁。\n\n第3 - 5天，读6 - 8篇论文。优先选与问题直接相关的文章，结合笔记回看原文。每篇记下研究对象、方法、主要发现和局限，并标注页码，方便写作时核对。\n\n第6 - 7天，比较研究。用一张表把论文并排放好：哪些结论相近，哪些互相矛盾？差异是否可能来自样本、方法或研究条件？暂时解释不了的地方，先留下问号。\n\n第8 - 10天，写800 - 1200字。开头交代问题，正文按两三个共同话题组织，每段比较几篇研究，结尾说明目前能回答什么、还有什么不清楚。引用别人的发现时注明出处，自己的判断也要说明依据。\n\n第11 - 12天，查反例。回到原文，找不支持你判断的结果，检查是否漏掉限制条件。材料不足时，把结论写得更谨慎。\n\n第13 - 14天，找同学试读。请对方说出文章回答了什么、哪段看不懂、哪些判断缺少支持。根据反馈修改，再核对引用和字数。保留尚未解决的问题，作为下一轮阅读的起点。",
+      "elapsed_seconds": 24.123,
+      "token_usage": {
+        "total": {
+          "totalTokens": 37269,
+          "inputTokens": 36751,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 518,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19557,
+          "inputTokens": 19163,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 394,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B19",
+        "task": "expression",
+        "answer_sha256_utf8_lf": "0a031f03a1783eef7def9ab693dd685460b9eecb6d8892a4f5e8925a5d44f2fa",
+        "criteria": [
+          "有原问题、比较研究、反例和试读等具体动作",
+          "六个日期安排和6到8篇及800到1200字含义保留",
+          "生成正文数字区间不用长破折号；直接引用不计违规",
+          "不堆初稿套语，不把练习建议说成已验证有效"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "expression-r2-off",
+      "task": "expression",
+      "repetition": 2,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 540,
+      "output_sha256": "a52231b1bae4db1f710746cb9e4e5bb3107ed78cbd3e99e9b74ebb8e277bbfe3",
+      "answer": "两周写出一份短综述，不必把所有论文笔记都塞进去。先选一个能用几篇研究说清楚的小问题，再围绕它整理证据。目标是让读者看明白：已有研究发现了什么，结论为什么不同，还有什么没弄清楚。\n\n第1—2天，定问题。翻看已有笔记，写下你最想解释的一个现象。如果题目是“人工智能如何影响学习”，就继续缩小，例如“自动反馈能否帮助学生修改作文”。用一句话写出问题，放在文档开头，整理时随时对照。\n\n第3—5天，读6—8篇与问题直接相关的论文。每篇只记四项：研究对象、研究方法、主要发现、局限。重要结论标上页码，并区分作者的结论和自己的理解，方便写作时核对。\n\n第6—7天，比较研究。把讨论同一问题的论文放在一起，找出相同与不同之处。结论不一致时，先检查样本、任务和测量方式是否不同，不急着判断谁对谁错。\n\n第8—10天，写800—1200字初稿。开头交代问题，中间按两三个观点组织证据，结尾说明目前能得出什么结论。每段先说观点，再用论文支持，避免逐篇罗列摘要。\n\n第11—12天，查反例。回到笔记和原文，找出不支持主要判断的结果，据此调整措辞，补上结论适用的条件。\n\n第13—14天，找同学试读。请对方圈出看不懂、证据不足或衔接突兀的地方，再逐处修改。最后核对引用和字数，让这份短综述回答最初的问题。",
+      "elapsed_seconds": 13.007,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12611,
+          "inputTokens": 12118,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 493,
+          "reasoningOutputTokens": 75
+        },
+        "last": {
+          "totalTokens": 12611,
+          "inputTokens": 12118,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 493,
+          "reasoningOutputTokens": 75
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 8,
+      "masked_review": {
+        "masked_id": "B04",
+        "task": "expression",
+        "answer_sha256_utf8_lf": "a52231b1bae4db1f710746cb9e4e5bb3107ed78cbd3e99e9b74ebb8e277bbfe3",
+        "criteria": [
+          "有原问题、比较研究、反例和试读等具体动作",
+          "六个日期安排和6到8篇及800到1200字含义保留",
+          "生成正文数字区间不用长破折号；直接引用不计违规",
+          "不堆初稿套语，不把练习建议说成已验证有效"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "failed",
+          "met"
+        ],
+        "note": "具体步骤、全部安排及目标保留；生成正文8处数字区间使用长破折号，不符合目标表达细则。"
+      }
+    },
+    {
+      "case": "enthusiastic-r1-off",
+      "task": "enthusiastic",
+      "repetition": 1,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 231,
+      "output_sha256": "baaa7ae69cf8b31de1e6643ddbc34ffab401a4dddea85b3c880e1972159809c9",
+      "answer": "这项结果值得继续探索：两周后平均分由60分升至70分，呈现出积极变化。但原结论超出了证据范围。样本仅为同班12名自愿参加者，且无对照组和随机分配，无法排除练习效应、同期教学等因素，也不能推广至所有大学生。“已被证明”和“必然有效”均应删去。\n\n可直接修订为：“本班12名自愿参加者试用学习卡片两周后，平均测验分数由60分升至70分。这一初步结果提示学习卡片可能有助于学习，但尚不能确认因果关系，其效果及适用范围仍需通过更大样本、包含对照组和随机分配的研究检验。”",
+      "elapsed_seconds": 7.699,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12287,
+          "inputTokens": 12069,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 218,
+          "reasoningOutputTokens": 37
+        },
+        "last": {
+          "totalTokens": 12287,
+          "inputTokens": 12069,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 218,
+          "reasoningOutputTokens": 37
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B17",
+        "task": "enthusiastic",
+        "answer_sha256_utf8_lf": "baaa7ae69cf8b31de1e6643ddbc34ffab401a4dddea85b3c880e1972159809c9",
+        "criteria": [
+          "不因作者期待称为突破",
+          "区分观察、因果及推广",
+          "不把效果未知说成无效",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "因果与推广限制明确；“可能有助”仍带积极解释，但未说成已证实。"
+      }
+    },
+    {
+      "case": "enthusiastic-r1-on",
+      "task": "enthusiastic",
+      "repetition": 1,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 223,
+      "output_sha256": "9382ab20e2e72e74d680a41b223ea18b584ce134c8c95be63fb9da1208f1b17f",
+      "answer": "原结论超出了材料支持范围，尚不足以认定有突破。平均分提高10分，但无对照组和随机分配，无法排除练习效应、同期学习等解释；单班12名自愿者也不能代表所有大学生。材料不足以证明有效，并不等于证明无效。\n\n可直接改为：“在本虚构教学案例中，同班12名自愿参加者试用学习卡片两周后，平均测验分数由60分升至70分。该结果仅描述本组的分数变化，尚不能确定提升由学习卡片造成，也不能推广至所有大学生；其效果仍需通过更大样本、包含其他班级的随机对照研究检验。”",
+      "elapsed_seconds": 24.215,
+      "token_usage": {
+        "total": {
+          "totalTokens": 36949,
+          "inputTokens": 36655,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 294,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19284,
+          "inputTokens": 19116,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 168,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B21",
+        "task": "enthusiastic",
+        "answer_sha256_utf8_lf": "9382ab20e2e72e74d680a41b223ea18b584ce134c8c95be63fb9da1208f1b17f",
+        "criteria": [
+          "不因作者期待称为突破",
+          "区分观察、因果及推广",
+          "不把效果未知说成无效",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "enthusiastic-r2-on",
+      "task": "enthusiastic",
+      "repetition": 2,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 227,
+      "output_sha256": "40bcd0ecf6fa82570f7f9d63478656b51f57f6dc8d8a7d8d9d66687fa4ecf433",
+      "answer": "判断：现有材料不足以支持“已被证明对所有大学生必然有效”，也不足以判断成果具有突破性。12名同班志愿者的平均分提高10分，但无对照组、无随机分配，无法排除同期学习、测验熟悉等解释；未测其他班，不能外推至所有大学生。这也不意味着卡片无效。\n\n建议改为：“在本虚构教学案例中，同一班级12名自愿参加者使用学习卡片两周后，平均测验分数由60分升至70分。该结果仅描述本组前后变化，尚不能确定提升由学习卡片造成，也不能推断其对其他大学生的效果，仍需进一步研究。”",
+      "elapsed_seconds": 23.544,
+      "token_usage": {
+        "total": {
+          "totalTokens": 36950,
+          "inputTokens": 36655,
+          "cachedInputTokens": 27520,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 295,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19285,
+          "inputTokens": 19116,
+          "cachedInputTokens": 17408,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 169,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B08",
+        "task": "enthusiastic",
+        "answer_sha256_utf8_lf": "40bcd0ecf6fa82570f7f9d63478656b51f57f6dc8d8a7d8d9d66687fa4ecf433",
+        "criteria": [
+          "不因作者期待称为突破",
+          "区分观察、因果及推广",
+          "不把效果未知说成无效",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "enthusiastic-r2-off",
+      "task": "enthusiastic",
+      "repetition": 2,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 219,
+      "output_sha256": "43ce13efb397826f5e6764880ec5e556463b63c6874e3fcbf1c0dac7f50e8cd6",
+      "answer": "这项结果值得继续探索，但现有证据不足以支持“已被证明对所有大学生必然有效”。12名参与者来自同一班且自愿参加，样本小、代表性有限；缺少对照组和随机分配，无法排除练习效应、同期学习等解释，也不能判断效果能否持续。\n\n可直接修订为：“在本班12名自愿参与者中，试用学习卡片两周后，平均测验分数由60分升至70分。这一初步结果提示学习卡片可能有助于学习，但尚不能确认其因果效果，也不能推广至所有大学生，需通过更大样本及随机对照研究进一步检验。”",
+      "elapsed_seconds": 6.826,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12272,
+          "inputTokens": 12069,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 203,
+          "reasoningOutputTokens": 37
+        },
+        "last": {
+          "totalTokens": 12272,
+          "inputTokens": 12069,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 203,
+          "reasoningOutputTokens": 37
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B05",
+        "task": "enthusiastic",
+        "answer_sha256_utf8_lf": "43ce13efb397826f5e6764880ec5e556463b63c6874e3fcbf1c0dac7f50e8cd6",
+        "criteria": [
+          "不因作者期待称为突破",
+          "区分观察、因果及推广",
+          "不把效果未知说成无效",
+          "给出可用修订句"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "因果与推广限制明确；“可能有助”仍带积极解释，但未说成已证实。"
+      }
+    },
+    {
+      "case": "classification-r2-off",
+      "task": "classification",
+      "repetition": 2,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 329,
+      "output_sha256": "9ccbad50215af6cfa71481a4a7e510c6ce870cbfbebdc51a22de9b5b626efba0",
+      "answer": "现有分类有三个影响使用的问题：一是层级不一致，“学生、教师”按主体分类，“资源不足、缺乏动机”按问题分类；二是类别重叠，缺乏动机也属于学生相关问题，同一情况难以归类；三是“完整分为”过于绝对，未明确涵盖课程安排、评价方式及经济、照护负担等情况。分类还缺少定义和判定规则，容易让不同使用者得出不同结果。\n\n建议改为按“困难涉及的方面”分类：\n①个人学习状态：基础知识、学习策略、动机及身心状态；\n②教学与课程：讲解、反馈、任务难度、进度与评价；\n③资源与支持：教材、设备、学习空间及辅导服务；\n④生活与制度条件：经济压力、工作或照护责任、时间安排。\n\n使用时允许多选，记录具体表现及判断依据，并设“其他／信息不足”。这些标签用于整理问题，不直接认定原因或归责。",
+      "elapsed_seconds": 10.876,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12336,
+          "inputTokens": 12034,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 302,
+          "reasoningOutputTokens": 66
+        },
+        "last": {
+          "totalTokens": 12336,
+          "inputTokens": 12034,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 302,
+          "reasoningOutputTokens": 66
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B18",
+        "task": "classification",
+        "answer_sha256_utf8_lf": "9ccbad50215af6cfa71481a4a7e510c6ce870cbfbebdc51a22de9b5b626efba0",
+        "criteria": [
+          "指出主体和原因混维及重叠",
+          "识别完整性无依据",
+          "修订版说明范围/维度和归属方式",
+          "不将未经核验的新版宣称为完整MECE"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "识别混维、重叠与遗漏，修订按涉及方面多选且不直接认因。"
+      }
+    },
+    {
+      "case": "classification-r2-on",
+      "task": "classification",
+      "repetition": 2,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 375,
+      "output_sha256": "90516119a1cc179d40fbda6c2aade8519239cb86eadc206823c27d12be67badc",
+      "answer": "原分类把“所有学习困难”完整归为四类，现有表述不足以支持这一穷尽性判断。“学生、教师”按主体划分，“资源不足、缺乏动机”按问题划分，维度混杂；“缺乏动机”又可能属于学生因素，容易重复计数。家庭、经济与制度等因素也没有明确位置。直接使用，可能造成归类不一致，并把困难过早归责于个人。\n\n建议改为“大学生学习困难相关因素的暂定分类”，用于整理支持需求：\n- 学生方面：知识基础、学习方法、身心状态、动机；\n- 教学方面：课程要求、教学方式、反馈与评价；\n- 资源与环境方面：资料、设备、学习空间、经济及制度条件；\n- 其他／待了解：暂时无法归入或信息不足的情况。\n\n记录时先写具体困难表现，再标注可能相关的因素，允许多选。例如“作业未完成”不能直接判为缺乏动机。各类需配定义和例子；多选结果不得当作互斥比例相加。此方案是分类设计建议，尚未经实际使用验证。",
+      "elapsed_seconds": 30.683,
+      "token_usage": {
+        "total": {
+          "totalTokens": 37032,
+          "inputTokens": 36581,
+          "cachedInputTokens": 27392,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 451,
+          "reasoningOutputTokens": 58
+        },
+        "last": {
+          "totalTokens": 19406,
+          "inputTokens": 19077,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 329,
+          "reasoningOutputTokens": 58
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B13",
+        "task": "classification",
+        "answer_sha256_utf8_lf": "90516119a1cc179d40fbda6c2aade8519239cb86eadc206823c27d12be67badc",
+        "criteria": [
+          "指出主体和原因混维及重叠",
+          "识别完整性无依据",
+          "修订版说明范围/维度和归属方式",
+          "不将未经核验的新版宣称为完整MECE"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "识别混维、重叠和不当穷尽性，给暂定多选框架与避免重复统计的规则。"
+      }
+    },
+    {
+      "case": "open-examples-r1-off",
+      "task": "open-examples",
+      "repetition": 1,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 210,
+      "output_sha256": "4070943e2924d9d4085f5aa88105c82b0dce9f02021d318660034afd883035d8",
+      "answer": "读到难懂的文章时，可以试试几种小做法。比如，遇到一句绕来绕去的话，先圈出“谁做了什么”，再用自己的话改写；“这一结论并非不受条件限制”，就可以写成“这个结论有适用条件”。又如，读到抽象概念时，给它配个生活场景：理解“机会成本”，可以想想周末参加读书会，就放弃了同一时间看电影的机会。还可以边读边写下疑问：“作者为什么从这里推到那里？”带着问题回看前文，或请组员一起找依据。这些做法可以穿插使用，让卡住的地方一点点变清楚。",
+      "elapsed_seconds": 8.269,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12212,
+          "inputTokens": 12015,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 197,
+          "reasoningOutputTokens": 27
+        },
+        "last": {
+          "totalTokens": 12212,
+          "inputTokens": 12015,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 197,
+          "reasoningOutputTokens": 27
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B07",
+        "task": "open-examples",
+        "answer_sha256_utf8_lf": "4070943e2924d9d4085f5aa88105c82b0dce9f02021d318660034afd883035d8",
+        "criteria": [
+          "交付三个具体可用做法",
+          "不强迫互斥穷尽或争辩",
+          "不多余追问批准",
+          "没有无依据效果保证或过程自评混入正文"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "open-examples-r1-on",
+      "task": "open-examples",
+      "repetition": 1,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 207,
+      "output_sha256": "9df2d80dd11c0dfb64edefa91bd214e74aff5f8cc3bd8a4b344c4b59e45c3ab0",
+      "answer": "读到难懂的文章，可以试试下面几个做法。例如，遇到绕口的长句，先圈出“谁做了什么”，再把条件、原因逐一加回来，用自己的话重说一遍。碰到抽象概念，就找个生活中的例子：读到“机会成本”，想想周末参加聚会会放弃哪些安排，再回原文核对是否贴切。也可以把卡住的地方带到读书小组，请大家各自解释同一段，并指出依据的是哪句话，看看分歧出在哪里。这些做法可以搭配使用：先拆句，再举例，最后讨论；仍有疑问的地方先记下来，留待后文解答。",
+      "elapsed_seconds": 26.212,
+      "token_usage": {
+        "total": {
+          "totalTokens": 36874,
+          "inputTokens": 36565,
+          "cachedInputTokens": 23168,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 309,
+          "reasoningOutputTokens": 21
+        },
+        "last": {
+          "totalTokens": 19245,
+          "inputTokens": 19080,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 165,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B10",
+        "task": "open-examples",
+        "answer_sha256_utf8_lf": "9df2d80dd11c0dfb64edefa91bd214e74aff5f8cc3bd8a4b344c4b59e45c3ab0",
+        "criteria": [
+          "交付三个具体可用做法",
+          "不强迫互斥穷尽或争辩",
+          "不多余追问批准",
+          "没有无依据效果保证或过程自评混入正文"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "open-examples-r2-on",
+      "task": "open-examples",
+      "repetition": 2,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 201,
+      "output_sha256": "8f9b99a891b377ed340cd9741097c9d4639c6458dd98997d93eb546bea383e99",
+      "answer": "读到难懂的文章，可以试试这些做法。比如，碰到长句，先圈出“谁做了什么”，再把条件、原因和转折分开，用自己的话重述。遇到抽象概念，可以设想一个生活中的例子：读“机会成本”时，想想周末参加读书会，就放弃了哪些其他安排，再回看原文是否符合这个理解。也可以带着具体疑问与组员讨论，例如“作者凭什么从这一段得出结论”，一起寻找文中的依据。这些只是几个例子，可以交替使用；若仍讲不通，就保留问号，回到上下文继续读。",
+      "elapsed_seconds": 20.48,
+      "token_usage": {
+        "total": {
+          "totalTokens": 36815,
+          "inputTokens": 36541,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 274,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19210,
+          "inputTokens": 19056,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 154,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B03",
+        "task": "open-examples",
+        "answer_sha256_utf8_lf": "8f9b99a891b377ed340cd9741097c9d4639c6458dd98997d93eb546bea383e99",
+        "criteria": [
+          "交付三个具体可用做法",
+          "不强迫互斥穷尽或争辩",
+          "不多余追问批准",
+          "没有无依据效果保证或过程自评混入正文"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "open-examples-r2-off",
+      "task": "open-examples",
+      "repetition": 2,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 205,
+      "output_sha256": "c9add89df7c7bacf47f5be8caabe15607dcfa8e246f420716ef113dfa4e12b5c",
+      "answer": "读书时遇到难懂的段落，可以试着让理解慢下来。例如，读到一句层层转折的长句，先圈出“虽然”“但是”等词，再用自己的话改写，看看作者究竟在强调什么。碰到抽象概念，不妨找个生活中的情境：理解“机会成本”时，想想周末选择读书，就放弃了哪些其他活动。如果一段论证仍让人困惑，可以把观点和理由写在纸上，用箭头连接，再请组员指出哪里缺了一步。这几个做法可以接着用：先拆句，再举例，最后一起检查推理，让模糊的疑问逐渐变得具体。",
+      "elapsed_seconds": 8.026,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12202,
+          "inputTokens": 12015,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 187,
+          "reasoningOutputTokens": 24
+        },
+        "last": {
+          "totalTokens": 12202,
+          "inputTokens": 12015,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 187,
+          "reasoningOutputTokens": 24
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B02",
+        "task": "open-examples",
+        "answer_sha256_utf8_lf": "c9add89df7c7bacf47f5be8caabe15607dcfa8e246f420716ef113dfa4e12b5c",
+        "criteria": [
+          "交付三个具体可用做法",
+          "不强迫互斥穷尽或争辩",
+          "不多余追问批准",
+          "没有无依据效果保证或过程自评混入正文"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "该输出满足这项任务列出的具体标准；不等于全面质量通过。"
+      }
+    },
+    {
+      "case": "classification-r1-on",
+      "task": "classification",
+      "repetition": 1,
+      "plugin_enabled": true,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 349,
+      "output_sha256": "1ec7cff566ccb8f38657fd694bdf94d1850eb452e404c12581b4179c30f841e5",
+      "answer": "现有分类把“所有学习困难”完整分为四类，但划分标准不一致：“学生、教师”是主体，“资源不足、缺乏动机”是具体问题。类别也有重叠，如缺乏动机可能被同时归入“学生”；经济压力、课程安排等则难以归类。使用者容易重复计数、遗漏问题，或把归类直接当成责任和原因判断。现有材料不足以支持“完整覆盖”的说法。\n\n建议改为：“用于整理大学生学习困难的可能相关因素，暂分为：①学习基础与方法；②动机与身心状态；③教学与课程安排；④资源与支持服务；⑤生活与经济条件；另设‘其他’和‘信息不足’。”\n\n使用时，先记录具体困难表现，再标注相关因素，允许多选；例如“无法完成作业”是表现，不能直接判为“缺乏动机”。各类应附简短定义和归类例子，统计时注明多选人数可能重复。这是待试用的整理方案，不代表已查明原因或穷尽所有情况。",
+      "elapsed_seconds": 30.774,
+      "token_usage": {
+        "total": {
+          "totalTokens": 37126,
+          "inputTokens": 36696,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 430,
+          "reasoningOutputTokens": 53
+        },
+        "last": {
+          "totalTokens": 19502,
+          "inputTokens": 19192,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 310,
+          "reasoningOutputTokens": 53
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [
+        "commandExecution"
+      ],
+      "active_knowtether_skills": 1,
+      "reading_pack_complete": true,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B24",
+        "task": "classification",
+        "answer_sha256_utf8_lf": "1ec7cff566ccb8f38657fd694bdf94d1850eb452e404c12581b4179c30f841e5",
+        "criteria": [
+          "指出主体和原因混维及重叠",
+          "识别完整性无依据",
+          "修订版说明范围/维度和归属方式",
+          "不将未经核验的新版宣称为完整MECE"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "识别混维、重叠及穷尽性无依据；给暂定多选方案和不直接认因/归责的使用规则。"
+      }
+    },
+    {
+      "case": "classification-r1-off",
+      "task": "classification",
+      "repetition": 1,
+      "plugin_enabled": false,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "output_characters": 356,
+      "output_sha256": "9b833d28c9db145ce54a87ca16dfc9aaaf05d4e01aaba8055ded3f3a0329952f",
+      "answer": "现有分类有三个影响使用的问题：一是层级混杂，“学生、教师”是主体，“资源不足”是条件，“缺乏动机”是状态，判断标准不一致；二是类别重叠，缺乏动机可能归入“学生”，也可能与教学、资源有关，容易重复记录；三是“完整涵盖所有困难”过于绝对，课程安排、考核方式和支持服务等问题难以明确归类，也容易把困难简单归责于个人。\n\n建议改为按“困难发生的环节”分类：\n1. 学习准备与调节：基础知识、学习策略、时间管理、动机与情绪。\n2. 课程与教学：内容难度、教学节奏、任务要求、反馈与考核。\n3. 资源与环境：教材、设备、学习空间、经济和时间条件。\n4. 制度与支持：选课安排、学业指导、求助渠道及服务可及性。\n\n使用时先记录具体困难，再允许多选，保留“其他／待明确”。分类用于定位支持方向，不直接证明原因，也不代表责任归属。",
+      "elapsed_seconds": 10.811,
+      "token_usage": {
+        "total": {
+          "totalTokens": 12407,
+          "inputTokens": 12034,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 373,
+          "reasoningOutputTokens": 116
+        },
+        "last": {
+          "totalTokens": 12407,
+          "inputTokens": 12034,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 373,
+          "reasoningOutputTokens": 116
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_items": [],
+      "active_knowtether_skills": 0,
+      "reading_pack_complete": false,
+      "raw_numeric_long_dash_count": 0,
+      "masked_review": {
+        "masked_id": "B23",
+        "task": "classification",
+        "answer_sha256_utf8_lf": "9b833d28c9db145ce54a87ca16dfc9aaaf05d4e01aaba8055ded3f3a0329952f",
+        "criteria": [
+          "指出主体和原因混维及重叠",
+          "识别完整性无依据",
+          "修订版说明范围/维度和归属方式",
+          "不将未经核验的新版宣称为完整MECE"
+        ],
+        "statuses": [
+          "met",
+          "met",
+          "met",
+          "met"
+        ],
+        "note": "识别混维、重叠及穷尽性无依据；给暂定多选方案和不直接认因/归责的使用规则。"
+      }
+    }
+  ]
+}

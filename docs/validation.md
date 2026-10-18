@@ -1,5 +1,11 @@
 # Validation records
 
+## 0.4.1: expression repair and whole-plugin on/off pilot
+
+Windows regression: 104 tests, 103 passed and one POSIX-only skip. The minimum reading pack includes the full expression-conventions section and is 7,104 characters. NUMERIC_RANGE_DASH adds a narrow advisory hint; insufficient support is explicitly distinguished from falsification. The fixed six-task, two-repeat pilot completed 12 pairs/24 valid outputs, plus one retained quota failure later resumed with the same model and order. All enabled runs received the exact expected reading pack; disabled runs had no active KnowTether Hook or Skill and no callbacks/context.
+
+Condition-label-masked AI review found the specified numeric-range convention improved in the two expression pairs (16 raw long-dash ranges disabled, zero enabled); predeclared semantic-task criteria were satisfied in both groups. No independent human effect claim is made. Time and cumulative input increased. [Full protocol, results, limitations and final answers](evaluation-0.4.1.md).
+
 ## 0.4.0: minimum reading and collaboration guidance
 
 Local Windows regression: 96 tests, 95 passed and one POSIX-only skip. New tests cover exact source passages/line locations, digest changes, missing or oversized material, section identity, manifest redirection, no-tag request delivery, no project writes and read-only CLI fallback. The reading pack is 5,594 characters, bounded at 18,000 characters.

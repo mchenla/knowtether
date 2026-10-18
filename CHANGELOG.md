@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1 - 2026-10-17
+
+- Include the full bundled expression-conventions section in the minimum reading pack; specify numeric ranges and distinguish insufficient support from falsification.
+- Add a narrow advisory NUMERIC_RANGE_DASH check, preserving code and warning that quotations/formulas need interpretation.
+- Preregister a whole-plugin on/off pilot with six fixed tasks, two balanced repeats, masked-label review and explicit isolation checks.
+- Correct namespaced Skill identity checks and serialize isolated config switching after the host ignored CLI-only discovery overrides.
+- Publish all 24 final answers and scoped paired results: numeric-range convention improved in two pairs, predeclared semantic criteria tied, while time and input increased. Retain and disclose one quota failure resumed after the ordinary window recovered.
+
 ## 0.4.0 - 2026-10-17
 
 - Read and hash-check selected passages from three bundled KPDM specifications before matched knowledge prompts; include exact text, line locations and collaboration guidance in a bounded context pack.

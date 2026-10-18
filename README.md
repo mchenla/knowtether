@@ -35,13 +35,13 @@ codex plugin add knowtether@knowtether
 
 ## 实际能做到什么
 
-Hook 在会话开始、知识请求提交和回答结束时提供提醒或检查。当前自动文本检查只覆盖引用占位、部分强断言、独立验证措辞和集中套语；有工作单时还检查记录与版本一致性。
+Hook 在会话开始、知识请求提交和回答结束时提供提醒或检查。当前自动文本检查只覆盖引用占位、部分强断言、独立验证措辞、集中套语和数字区间长破折号；有工作单时还检查记录与版本一致性。
 
-它不保证消除谄媚、抬杠、盲从、断章取义、事实错误、分类遗漏或 AI 文风，也不提供语法纠正、技术水印检测与移除。0.4.0 已补上写作前的最小原文阅读包和明确协作要求；六项实际任务已观察到完整阅读包送达及部分要求的采用，仍有表达细则未满足。[实测结果](docs/evaluation-0.4.0.md)没有告警不表示质量通过。[逐项支持与证据](docs/capabilities.md) · [验证记录](docs/validation.md)
+它不保证消除谄媚、抬杠、盲从、断章取义、事实错误、分类遗漏或 AI 文风，也不提供语法纠正、技术水印检测与移除。0.4.0 已补上写作前的最小原文阅读包和明确协作要求；启停对照的24份输出中，区间表达细则有所改善，其他已测语义任务两组表现相近；启用后的耗时和输入量增加。[对照结果与原文](docs/evaluation-0.4.1.md)没有告警不表示质量通过。[逐项支持与证据](docs/capabilities.md) · [验证记录](docs/validation.md)
 
 ## 开源与版本
 
-- 当前软件：**0.4.0**。[插件、独立规范、源码及校验文件下载](https://github.com/mchenla/knowtether/releases/latest)
+- 当前软件：**0.4.1**。[插件、独立规范、源码及校验文件下载](https://github.com/mchenla/knowtether/releases/latest)
 - [KPDM 正文、模板和机器模型](framework/kpdm/README.md)：**CC BY 4.0**；KnowTether 代码和适配说明：**MIT**。[许可范围](LICENSING.md)
 - KPDM 正文：**0.5.0-rc.2 candidate**；最近接受基线：**0.4.0 trial / conditional-pass**。发布软件不改变框架状态。
 
