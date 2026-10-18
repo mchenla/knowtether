@@ -31,6 +31,14 @@ class RoutingTests(unittest.TestCase):
         self.assertIn('模型语言指纹与文字温度', text)
         self.assertIn('Profile B｜书籍', text)
 
+    def test_source_path_and_complete_draft_are_not_full_workflow_requests(self):
+        for prompt in ['依据 .kpdm/task.json 写完整工作汇报PPT稿',
+                       '依据 .kpdm/task.json 写完整工具书章节',
+                       r'根据 .kpdm\task.json 写完整报告',
+                       'Write a full chapter using KPDM sources']:
+            self.assertEqual(route(prompt)['tier'], 'focused')
+            self.assertLess(len(prompt_context(prompt, compact=True)), 4000)
+
     def test_explicit_full_request_reaches_hook_without_product_keywords(self):
         from kpdm_hooks.hooks import handle
         with tempfile.TemporaryDirectory() as folder:

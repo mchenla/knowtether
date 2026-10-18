@@ -17,19 +17,21 @@ def main():
     for name in ['old-home','new-home','old-market','new-market','output']:
         parser.add_argument('--'+name,type=Path,required=True)
     parser.add_argument('--codex',required=True)
+    parser.add_argument('--resume',action='store_true',help='Retain validated completed outputs; run only missing cases')
+    parser.add_argument('--cases',type=Path,help='Frozen task packet; use mechanism-pilot-0.6.0.json to reproduce the historical pilot with its documented erratum')
     args=parser.parse_args()
     base=args.output.resolve()
     homes={'old':args.old_home.resolve(strict=True),'new':args.new_home.resolve(strict=True)}
-    if base.exists() or any(p==(Path.home()/'.codex').resolve() for p in homes.values()) or homes['old']==homes['new']:
+    if base.exists() != args.resume or any(p==(Path.home()/'.codex').resolve() for p in homes.values()) or homes['old']==homes['new']:
         parser.error('Use a new output directory and two distinct isolated homes')
     repo=Path(__file__).resolve().parents[1]
-    raw=(repo/'examples/mechanism-cases.json').read_bytes();tasks=json.loads(raw)
+    raw=(args.cases or repo/'examples/mechanism-cases.json').read_bytes();tasks=json.loads(raw)
     rng=random.Random(606018);schedule=[]
     for task in tasks:
         first=['off','old','lean','new'];rng.shuffle(first)
         schedule.extend([{'task':task['id'],'rep':1,'arms':first},{'task':task['id'],'rep':2,'arms':list(reversed(first))}])
     rng.shuffle(schedule)
-    base.mkdir(parents=True)
+    base.mkdir(parents=True,exist_ok=args.resume)
     protocol={'tasks_sha256':hashlib.sha256(raw).hexdigest(),'model':'gpt-6.1-sol','effort':'medium','web_search':'disabled',
               'arms':{'off':'whole plugin disabled','old':'0.5.0','lean':'0.6.0 fast launcher and compact normative reading, evidence compiler off','new':'0.6.0 including opt-in evidence compiler and product hints'},
               'design':'two task genres x two reversed-order repeats x four arms = 16 valid outputs; serial fresh readonly projects',
@@ -38,8 +40,12 @@ def main():
               'review':'condition-label-masked development AI against frozen six criteria per task; not independent or real reader testing',
               'secondary':'full wall time incl synchronous hooks, hook/tool durations, input/cache, fulfillment and product budget',
               'schedule':schedule,'planned_valid_outputs':16,'seed':606018}
-    (base/'protocol.json').write_text(json.dumps(protocol,indent=2),encoding='utf-8')
-    (base/'frozen-cases.json').write_bytes(raw)
+    if args.resume:
+        assert json.loads((base/'protocol.json').read_text())==protocol
+        assert (base/'frozen-cases.json').read_bytes()==raw
+    else:
+        (base/'protocol.json').write_text(json.dumps(protocol,indent=2),encoding='utf-8')
+        (base/'frozen-cases.json').write_bytes(raw)
     original={k:(v/'config.toml').read_text(encoding='utf-8') for k,v in homes.items()}
     results=[]
     try:
@@ -56,7 +62,22 @@ def main():
                 config.write_text(switch_config(config.read_text(encoding='utf-8'),arm!='off'),encoding='utf-8',newline='\n')
                 case=dict(task,id=f"{task['id']}-r{block['rep']}-{arm}",web_search='disabled',materials=dict(task['materials']))
                 case['materials']['.kpdm/config.json']=json.dumps({'schema_version':1,'evidence':arm!='lean'})
-                result=run_case(args.codex,base,case,'gpt-6.1-sol',env=env,enabled=arm!='off')
+                saved=base/case['id']/'summary.json'
+                if saved.exists():
+                    assert args.resume
+                    result=json.loads(saved.read_text(encoding='utf-8'))
+                    incoming=json.loads((saved.parent/'input.json').read_text(encoding='utf-8'))
+                    assert incoming['prompt']==case['prompt'] and incoming['materials']==case['materials']
+                    assert result['model']=='gpt-6.1-sol' and result['effort']=='medium' and result['plugin_enabled']==(arm!='off')
+                    assert result['materials_unchanged'] and (saved.parent/'output.md').read_text(encoding='utf-8')
+                    for name, digest in result['provided_files_sha256'].items():
+                        assert hashlib.sha256((saved.parent/'project'/name).read_bytes()).hexdigest()==digest
+                    result['project_files']=[n.replace('\\','/') for n in result['project_files'] if n.replace('\\','/') not in result['provided_files_sha256']]
+                    assert not result['project_files']
+                    if arm=='off': assert not result['hook_events'] and not result['active_knowtether_skills']
+                    else: assert len(result['hook_events'])==3 and result['reading_pack_complete']
+                else:
+                    result=run_case(args.codex,base,case,'gpt-6.1-sol',env=env,enabled=arm!='off')
                 result.update(arm=arm,task=task['id'],repetition=block['rep'],plugin_version=version)
                 assert result['materials_unchanged'] and not result['project_files']
                 (base/case['id']/'summary.json').write_text(json.dumps(result,indent=2),encoding='utf-8')

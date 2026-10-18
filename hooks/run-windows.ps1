@@ -6,7 +6,7 @@ try {
     if (-not $pluginRoot) { $pluginRoot = $env:CLAUDE_PLUGIN_ROOT }
     if (-not $pluginRoot) { throw 'Plugin root is unavailable' }
     $entry = Join-Path $pluginRoot 'hooks\plugin_entry.py'
-    # Get-Command's application discovery was the dominant local startup cost.
+    # Legacy fallback; the generated host command uses run-windows.cmd.
     # Check exact executable names in PATH order; no command text is constructed.
     $searchDirectories = $env:PATH -split [IO.Path]::PathSeparator
     foreach ($candidate in @('python.exe', 'python3.exe', 'py.exe')) {

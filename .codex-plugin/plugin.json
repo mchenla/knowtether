@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "知据 KnowTether",
     "shortDescription": "和 AI 一起，写得有据、讲得清",
-    "longDescription": "和 AI 一起写工作汇报PPT内容、文档、学术报告、知识文章及工具书。短任务只给轻量指导，复杂写作按需读取随包KPDM选段；关注来源、独立判断、适用时的MECE与自然表达。提供有限告警，不保证语义正确、移除统计水印或生成排版文件。需要Python 3.10+并信任Hooks。",
+    "longDescription": "和 AI 一起写工作汇报PPT内容、文档、学术报告、知识文章及工具书。短任务只给轻量指导，复杂写作按需读取随包KPDM选段；关注来源、独立判断、适用时的MECE与自然表达。可用显式清单实验性核算配对数据。提供有限告警，不保证语义正确、移除统计水印或生成排版文件。需要Python 3.10+并信任Hooks。",
     "developerName": "MC",
     "category": "Productivity",
     "capabilities": [

@@ -73,7 +73,7 @@
     "F": "failed"
   },
   "quality_scope": "Condition-label-masked development AI review, not independent human or reader validation. Different task rubrics are not a common quality scale. All numbers refer to that historical plugin version, not the current runtime.",
-  "measurement": "seconds = full wall time including host/tools/hooks/model; input_tokens = cumulative input including cache; cached_input_tokens is a subset, not monetary cost. Long-dash counts describe one narrow formatting convention, not content quality.",
+  "measurement": "seconds = full wall time including host/tools/hooks/model; input_tokens = cumulative input including cache; cached_input_tokens is a subset, not monetary cost. Long-dash counts were not measured in this version and are not supplied; unknown must not be treated as zero.",
   "selection": "0.5.0 old-version arm excluded, retaining off/new pairs.",
   "constraints": "No real target readers, organizational ROI, generic factual accuracy rate or stable treatment effect was measured.",
   "criterion_order": {

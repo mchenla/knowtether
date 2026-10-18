@@ -11,6 +11,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def metric_fields(kind):
+    # Unknown is not a measured zero: 0.5.0 never recorded this format count.
+    return ['task','rep','arm','seconds','input_tokens','cached_input_tokens'] + (
+        ['long_dash_ranges'] if kind == 'practical-chapter' else [])
+
+
 def main():
     output = ROOT/'examples/mechanism-work'
     output.mkdir(exist_ok=True)
@@ -20,14 +26,17 @@ def main():
         data=json.loads((ROOT/'examples'/filename).read_text(encoding='utf-8'))
         rows=[r for r in data[list_key] if r.get('arm')!='old']
         stream=io.StringIO(newline='')
-        fields=['task','rep','arm','seconds','input_tokens','cached_input_tokens','long_dash_ranges']
+        fields=metric_fields(kind)
         writer=csv.DictWriter(stream,fieldnames=fields,lineterminator='\n');writer.writeheader()
         quality=[]
         for r in sorted(rows,key=lambda r:r['case']):
             usage=r['token_usage']['total']
-            writer.writerow(dict(task=r['task'],rep=r['repetition'],arm='new' if r['plugin_enabled'] else 'off',
+            values=dict(task=r['task'],rep=r['repetition'],arm='new' if r['plugin_enabled'] else 'off',
                                  seconds=r['elapsed_seconds'],input_tokens=usage['inputTokens'],
-                                 cached_input_tokens=usage['cachedInputTokens'],long_dash_ranges=r.get('raw_numeric_long_dash_count',0)))
+                                 cached_input_tokens=usage['cachedInputTokens'])
+            if kind == 'practical-chapter':
+                values['long_dash_ranges']=r['raw_numeric_long_dash_count']
+            writer.writerow(values)
             statuses=[c['grade'] for c in r['criteria_review']] if 'criteria_review' in r else r['masked_review']['statuses']
             codes={'met':'M','满足':'M','部分满足':'P','partial':'P','failed':'F'}
             quality.append({'case':r['case'],'criteria':''.join(codes[s] for s in statuses)})
@@ -36,7 +45,7 @@ def main():
                  'observations':'Actual previously published Codex runs; fixed gpt-6.1-sol medium, web disabled; two opposite-order repeats per task; all valid completed runs retained.',
                  'quality_review':quality, 'grade_codes':{'M':'met','P':'partially met','F':'failed'},
                  'quality_scope':'Condition-label-masked development AI review, not independent human or reader validation. Different task rubrics are not a common quality scale. All numbers refer to that historical plugin version, not the current runtime.',
-                 'measurement':'seconds = full wall time including host/tools/hooks/model; input_tokens = cumulative input including cache; cached_input_tokens is a subset, not monetary cost. Long-dash counts describe one narrow formatting convention, not content quality.',
+                 'measurement':'seconds = full wall time including host/tools/hooks/model; input_tokens = cumulative input including cache; cached_input_tokens is a subset, not monetary cost. '+('Long-dash counts describe one narrow formatting convention, not content quality.' if kind=='practical-chapter' else 'Long-dash counts were not measured in this version and are not supplied; unknown must not be treated as zero.'),
                  'selection':'0.5.0 old-version arm excluded, retaining off/new pairs.' if kind=='work-report' else 'One quota failure retained in original report; only missing final pair resumed with same model/order after ordinary window recovery. CSV contains the 24 valid final runs, not the failed attempt.',
                  'constraints':'No real target readers, organizational ROI, generic factual accuracy rate or stable treatment effect was measured.'}
         context['criterion_order'] = {

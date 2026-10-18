@@ -1,5 +1,13 @@
 # Validation records
 
+## 0.6.0: runtime costs and optional paired-data arithmetic
+
+Windows final regression:119 tests,118 passed and one POSIX-only skip. Tests cover paired rather than ratio aggregation, zero baselines, unmatched/duplicate/invalid records, bounded declared paths/receipts, advisory slide constraints, source-path routing without full-workflow escalation, ordinary code outside slide checks and unknown historical format values omitted rather than imputed. Framework remains72 unchanged documents and239 checked file links. Hook manifest generation and existing behavior coverage checks remain consistent.
+
+All16 scheduled four-arm drafts completed; existing outputs retained, exact per-condition context and three callbacks verified for enabled runs, no active plugin in controls, immutable materials and no added project files. See [full methods, metrics, per-draft review, all answers and limitations](evaluation-0.6.0.md). Three-hook overhead median fell10.523s to2.3905s. Optional arithmetic did not show a stable extra content-quality advantage; latency differed by genre. Source erratum, initial timing overlap and citation-label leakage are disclosed; this is not strict blind, independent or real-reader validation.
+
+The final routing/Stop fixes were made after the pilot. Original prompts now select focused reading, with normative prompt lengths1718/1672 instead of7460/7458 characters; these are deterministic context checks, not a new writing effect estimate. Final public-source install, wheel, CI and artifact checks are recorded in the release notes after execution.
+
 ## 0.5.0: adaptive guidance and complex writing
 
 Windows regression: 111 tests, 110 passed and one POSIX-only skip. Focused receipts match exact source bytes and lines; missing type passages degrade honestly. Explicit full-workflow requests reach the Hook even without product keywords. Seven advisory signals have positive synthetic controls in a 15-case coverage demonstration; broader semantic misses remain. The 72-document snapshot and 239 framework/Skill file links remain intact.

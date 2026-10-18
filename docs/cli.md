@@ -91,6 +91,8 @@ knowtether close --root .
 
 ## 检查一份成果
 
+0.6.0的`inspect`可对[明确声明的项目资料](project-evidence.md)做配对计算，并核对汇报正文预算；`check`仍是原有记录与文本提示。两者都不作语义批准。
+
 ```bash
 knowtether check --root . --artifact article.md
 knowtether check --root . --artifact article.md --strict

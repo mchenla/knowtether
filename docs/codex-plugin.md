@@ -54,7 +54,7 @@ codex plugin add knowtether@knowtether
 
 仓库使用 `.codex-plugin/plugin.json` 描述插件，以兼容已实测的 Codex 0.163 alpha。该版本遇到根 `plugin.json` 会漏载 Hook，因此暂不同时提供根清单，市场清单为 `.agents/plugins/marketplace.json`。Skill 位于 `skills/knowtether/`，Hooks 位于 `hooks/hooks.json`，代码直接从安装后的插件包导入。
 
-POSIX 启动脚本为 `hooks/run-posix.sh`。Windows 入口使用显式 PowerShell 启动器，避免依赖 Codex 当前选用 cmd 还是 PowerShell；编码的命令只加载可审阅的 `hooks/run-windows.ps1`。Windows 的 `ExecutionPolicy Bypass` 仅作用于这个子进程，不修改持久策略，也不替代 Codex 的 Hook 信任。重新生成配置：`python scripts/build_plugin_hooks.py`；只校验：增加 `--check`。
+POSIX启动脚本为`hooks/run-posix.sh`。0.6.0的Windows插件入口改为固定cmd启动器`hooks/run-windows.cmd`，省去嵌套PowerShell与单独的Python版本探测；版本不足时在读取stdin前返回专用状态，再尝试下一个Python。启动器在内层展开插件路径，进入批处理后关闭延迟展开，不使用CALL，不把路径拼成代码。双Shell及空格、中文、百分号、感叹号等路径有回归覆盖。它不修改持久执行策略，也不替代Hook信任；旧版升级后需在原生`/hooks`审阅新命令。重新生成配置：`python scripts/build_plugin_hooks.py`；只校验：增加`--check`。
 
 安装流程、打包检查和事件 fixture 不证明事实可靠、读者理解、独立核验或真实知识质量改善。完整评估范围见 [验证记录](validation.md)。
 
@@ -63,3 +63,5 @@ POSIX 启动脚本为 `hooks/run-posix.sh`。Windows 入口使用显式 PowerShe
 ## 随包规范
 
 从 0.3.0 起，插件同时包含 `framework/kpdm/` 的 CC BY 4.0 规范快照；代码与适配 Skill 继续为 MIT。Skill 按需链接到快速入门、模板和相关规范，普通短任务保持轻量。框架与软件版本分别管理，见 [KPDM](../framework/kpdm/README.md) 和 [许可范围](../LICENSING.md)。0.4.0 增加最小原文阅读包；三个入口命令与提示型 Stop 边界保留。
+
+0.6.0增加[显式项目资料核对](project-evidence.md)：有`.kpdm/task.json`时，计算声明的配对CSV、提供出处与产品预算；没有清单时不搜索资料。Stop仍只提示，不触发新一轮模型审阅。计算覆盖与语义质量分别验证。

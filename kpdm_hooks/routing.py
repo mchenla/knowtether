@@ -14,11 +14,14 @@ LIGHT_GUIDANCE = (
 def route(prompt):
     text = prompt if isinstance(prompt, str) else ''
     complex_cues = (r'研究综述|文献综述|学术报告|论文|出版|书籍|工具书|章节|专著|'
-                    r'汇报|决策|政策|PPT|幻灯|演示文稿|研究报告|论证|系统性|因果|'
+                    r'汇报|决策|政策|PPT|幻灯|演示文稿|研究报告|完整报告|论证|系统性|因果|'
                     r'research review|literature|publication|chapter|book|decision|slide|causal')
     long_request = bool(re.search(r'(?:[1-9]\d{3,}|[2-9]\d{2})\s*(?:字|words)', text, re.I))
     tier = 'focused' if len(text) > 1600 or long_request or re.search(complex_cues, text, re.I) else 'light'
-    if re.search(r'完整.*KPDM|KPDM.*完整|full.*KPDM', text, re.I):
+    # A source path such as .kpdm/task.json followed by "完整稿" is not a
+    # request for the full framework. Require an adjacent workflow request.
+    intent = re.sub(r'\.?kpdm[/\\][\w./\\-]+', '', text, flags=re.I)
+    if re.search(r'完整(?:的)?\s*KPDM|KPDM\s*(?:完整(?:流程|规范|工作流|框架|处理)|全套)|(?:full|complete)\s+KPDM', intent, re.I):
         tier = 'full'
     modules = ['grounds', 'judgment']
     if re.search(r'文风|表达|改写|润色|冷|术语|语言|style|rewrite', text, re.I):

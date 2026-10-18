@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 - 2026-10-18
+
+- Remove nested PowerShell and repeated Python probes from Windows plugin startup; preserve three advisory events and normal host trust review.
+- Add optional, bounded manifest-declared paired CSV arithmetic, source receipts and explicit slide budget hints, with no project scan or semantic certification.
+- Complete and retain all 16 four-arm report/chapter drafts: hook overhead down about 77%; full-writing median reductions versus 0.5.0 vary by genre; no stable added content-quality advantage from data computation.
+- Publish per-draft development reviews, independent Decimal references, sanitized full answers and explicit input/masking/setup limitations. Preserve the historical packet; stop imputing unknown format data as zero in future examples.
+- Fix accidental full-framework routing from `.kpdm/task.json` plus a complete-draft request; limit slide Stop hints to writing. These final fixes have regression/context checks, not a new writing effect estimate.
+
 ## 0.5.0 - 2026-10-17
 
 - Route short knowledge tasks to a compact summary without specification I/O; read checked quality/type passages for complex writing and preserve explicit full reading.

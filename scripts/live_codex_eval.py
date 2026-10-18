@@ -150,8 +150,8 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
                                        if r.get('method') == 'thread/tokenUsage/updated'), None),
                   'provided_files_sha256': provided,
                   'materials_unchanged': all(hashlib.sha256((project/n).read_bytes()).hexdigest()==h for n,h in provided.items()),
-                  'project_files': [str(f.relative_to(project)) for f in project.rglob('*')
-                                    if f.is_file() and str(f.relative_to(project)) not in provided],
+                  'project_files': [f.relative_to(project).as_posix() for f in project.rglob('*')
+                                    if f.is_file() and f.relative_to(project).as_posix() not in provided],
                   'semantic_grade': 'not-automatically-assessed'}
         (target / 'summary.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
         if enabled and ({r['eventName'] for r in runs} != {'sessionStart', 'userPromptSubmit', 'stop'}

@@ -35,9 +35,11 @@ To upgrade, run `codex plugin marketplace upgrade knowtether`, then `codex plugi
 
 Use it for management slide content, project documents, academic reports and reviews, explanatory articles, practical books, textbooks and publication drafts. Guidance connects claims to evidence, decisions to trade-offs and chapters to executable reader exercises. PPTX/Word creation requires host tools; the plugin itself does not render document files.
 
-An actual Before / After example appears in the [Chinese homepage](README.md): in the second practical-book pair, the disabled chapter suggested adjusting and retesting; the enabled chapter also specified when to expand, retry or pause for serious errors. The other repeat did not show this gap. Only one of six complex pairs improved a declared content criterion; the others tied, so this is not evidence of a general quality improvement. See [the comparison](docs/evaluation-0.5.0.md).
+The 16-output four-arm pilot retained all completed drafts. Three-hook median overhead fell from 10.52s to 2.39s. Full-writing medians fell from 86.2s to 76.2s for reports and 82.7s to 67.2s for chapters versus 0.5.0. There were only two repeats per genre, with substantial variation. Optional paired-data computation showed no stable content-quality advantage over the runtime-only condition, and latency varied by genre. See [all drafts, metrics, input erratum and review limitations](docs/evaluation-0.6.0.md).
 
-In the two-repeat short-task pilot, injected guidance fell from 7,940 to 547 characters, with median wall time falling from 25.3s (0.4.1) to 17.5s (0.5.0); disabled was 8.2s. Complex writing remained slower than disabled. These are small, local descriptive observations.
+A typical example on the [Chinese homepage](README.md) contrasts actual old/new chapter excerpts: the old draft explains extra seconds and fixed formatting issues; the new one explains paired percentage changes. Both, as well as disabled drafts, have correct calculations and usable exercises. This is not a general quality improvement claim.
+
+0.6.0 also fixes a source-path routing bug that accidentally requested the full framework. The pilot predates that fix; its deterministic context reduction is reported separately, without claiming measured writing-time gains. Explicit `.kpdm/task.json` files can opt into [experimental paired-data arithmetic and source receipts](docs/project-evidence.md). Ordinary writing needs no table or manifest. This is not general fact checking.
 
 Text hints cover citation placeholders, narrow absolute research claims, independent-validation wording, concentrated stock phrases, numeric long-dash ranges, a few inflated praise phrases and selected invisible characters. Optional worksheets add record/version consistency checks.
 
@@ -45,7 +47,7 @@ Guidance asks for independent judgment, useful disagreement, conditional MECE, c
 
 ## Open source
 
-Software **0.5.0**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
+Software **0.6.0**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
 
 KPDM remains **0.5.0-rc.2 candidate**, with **0.4.0 trial / conditional-pass** as the latest accepted baseline. Software release is not framework acceptance.
 

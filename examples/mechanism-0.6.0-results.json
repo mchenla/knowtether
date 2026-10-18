@@ -1,0 +1,2127 @@
+{
+  "software_runtime_commit": "0ec2d108c34396badaccc3cfb79fea84fb0b7470",
+  "runtime_scope": "pre-release pilot before the final source-path routing and ordinary-code Stop fixes; not an effect test of those fixes",
+  "protocol": {
+    "tasks_sha256": "81486724e27d24889368e972c35eb02f195bfaad80038bd6363e79f266191549",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "web_search": "disabled",
+    "arms": {
+      "off": "whole plugin disabled",
+      "old": "0.5.0",
+      "lean": "0.6.0 fast launcher and compact normative reading, evidence compiler off",
+      "new": "0.6.0 including opt-in evidence compiler and product hints"
+    },
+    "design": "two task genres x two reversed-order repeats x four arms = 16 valid outputs; serial fresh readonly projects",
+    "source_scope": "real previously published plugin measurements, not invented company observations; ASCII source packets identical in all arms",
+    "primary": "source/number fidelity, argument, concrete decision/reader exercise usability; no overall quality score",
+    "review": "condition-label-masked development AI against frozen six criteria per task; not independent or real reader testing",
+    "secondary": "full wall time incl synchronous hooks, hook/tool durations, input/cache, fulfillment and product budget",
+    "schedule": [
+      {
+        "task": "work-report",
+        "rep": 1,
+        "arms": [
+          "off",
+          "old",
+          "new",
+          "lean"
+        ]
+      },
+      {
+        "task": "work-report",
+        "rep": 2,
+        "arms": [
+          "lean",
+          "new",
+          "old",
+          "off"
+        ]
+      },
+      {
+        "task": "practical-chapter",
+        "rep": 1,
+        "arms": [
+          "old",
+          "off",
+          "lean",
+          "new"
+        ]
+      },
+      {
+        "task": "practical-chapter",
+        "rep": 2,
+        "arms": [
+          "new",
+          "lean",
+          "off",
+          "old"
+        ]
+      }
+    ],
+    "planned_valid_outputs": 16,
+    "seed": 606018
+  },
+  "frozen_cases": "mechanism-pilot-0.6.0.json",
+  "review": {
+    "reviewer": "development AI, not independent or real reader",
+    "masking": "IDs randomized before review; source citation paths leaked several condition labels on initial read. Subsequent excerpts sanitized. Not a strict blind review. Mapping file not opened before freeze.",
+    "packet_sha256": "6ea371dbc793d7c13f6532fbca630eeca6a22538eac46e05307823ea6abf26cc",
+    "source_erratum_recorded_before_reading": true
+  },
+  "review_frozen_sha256": "a3eddc013b10e78ffd85e32d8d6b6db80ef34eed1ae22bdbc0e03c1e7a13737f",
+  "independent_decimal_reference": {
+    "work-report": {
+      "light": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "8.176",
+          "treatment_median": "17.542",
+          "paired_changes_pct": {
+            "1": "130.405",
+            "2": "100.451"
+          },
+          "median_paired_change_pct": "115.428",
+          "ratio_of_group_medians_pct": "114.549"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12654.000",
+          "treatment_median": "12338.000",
+          "paired_changes_pct": {
+            "1": "2.911",
+            "2": "-7.365"
+          },
+          "median_paired_change_pct": "-2.227",
+          "ratio_of_group_medians_pct": "-2.497"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "5056.000",
+          "treatment_median": "10112.000",
+          "paired_changes_pct": {
+            "1": "0.000",
+            "2": null
+          },
+          "median_paired_change_pct": "0.000",
+          "ratio_of_group_medians_pct": "100.000"
+        }
+      },
+      "practical-chapter": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "53.874",
+          "treatment_median": "63.616",
+          "paired_changes_pct": {
+            "1": "9.858",
+            "2": "26.794"
+          },
+          "median_paired_change_pct": "18.326",
+          "ratio_of_group_medians_pct": "18.082"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "85816.500",
+          "treatment_median": "70184.000",
+          "paired_changes_pct": {
+            "1": "-27.490",
+            "2": "-8.950"
+          },
+          "median_paired_change_pct": "-18.220",
+          "ratio_of_group_medians_pct": "-18.216"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "64896.000",
+          "treatment_median": "56192.000",
+          "paired_changes_pct": {
+            "1": "-17.464",
+            "2": "-10.570"
+          },
+          "median_paired_change_pct": "-14.017",
+          "ratio_of_group_medians_pct": "-13.412"
+        }
+      },
+      "research-review": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "54.258",
+          "treatment_median": "61.215",
+          "paired_changes_pct": {
+            "1": "8.791",
+            "2": "16.312"
+          },
+          "median_paired_change_pct": "12.551",
+          "ratio_of_group_medians_pct": "12.822"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "84181.500",
+          "treatment_median": "78484.500",
+          "paired_changes_pct": {
+            "1": "-27.958",
+            "2": "15.177"
+          },
+          "median_paired_change_pct": "-6.390",
+          "ratio_of_group_medians_pct": "-6.768"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "62080.000",
+          "treatment_median": "58112.000",
+          "paired_changes_pct": {
+            "1": "-36.047",
+            "2": "27.313"
+          },
+          "median_paired_change_pct": "-4.367",
+          "ratio_of_group_medians_pct": "-6.392"
+        }
+      },
+      "work-report": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "67.257",
+          "treatment_median": "84.699",
+          "paired_changes_pct": {
+            "1": "27.080",
+            "2": "24.687"
+          },
+          "median_paired_change_pct": "25.883",
+          "ratio_of_group_medians_pct": "25.933"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "55803.000",
+          "treatment_median": "70123.500",
+          "paired_changes_pct": {
+            "1": "40.614",
+            "2": "10.793"
+          },
+          "median_paired_change_pct": "25.703",
+          "ratio_of_group_medians_pct": "25.663"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "42688.000",
+          "treatment_median": "60480.000",
+          "paired_changes_pct": {
+            "1": "43.164",
+            "2": "39.796"
+          },
+          "median_paired_change_pct": "41.480",
+          "ratio_of_group_medians_pct": "41.679"
+        }
+      }
+    },
+    "practical-chapter": {
+      "classification": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "10.844",
+          "treatment_median": "30.728",
+          "paired_changes_pct": {
+            "1": "184.655",
+            "2": "182.117"
+          },
+          "median_paired_change_pct": "183.386",
+          "ratio_of_group_medians_pct": "183.382"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12034.000",
+          "treatment_median": "36638.500",
+          "paired_changes_pct": {
+            "1": "204.936",
+            "2": "203.980"
+          },
+          "median_paired_change_pct": "204.458",
+          "ratio_of_group_medians_pct": "204.458"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "5056.000",
+          "treatment_median": "13696.000",
+          "paired_changes_pct": {
+            "1": "-100.000",
+            "2": null
+          },
+          "median_paired_change_pct": "-100.000",
+          "ratio_of_group_medians_pct": "170.886"
+        },
+        "long_dash_ranges": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "0.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        }
+      },
+      "disappointed": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "8.312",
+          "treatment_median": "23.872",
+          "paired_changes_pct": {
+            "1": "249.978",
+            "2": "144.901"
+          },
+          "median_paired_change_pct": "197.439",
+          "ratio_of_group_medians_pct": "187.193"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12068.000",
+          "treatment_median": "36649.500",
+          "paired_changes_pct": {
+            "1": "203.704",
+            "2": "203.679"
+          },
+          "median_paired_change_pct": "203.692",
+          "ratio_of_group_medians_pct": "203.692"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "27520.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        },
+        "long_dash_ranges": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "0.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        }
+      },
+      "enthusiastic": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "7.262",
+          "treatment_median": "23.880",
+          "paired_changes_pct": {
+            "1": "214.521",
+            "2": "244.916"
+          },
+          "median_paired_change_pct": "229.719",
+          "ratio_of_group_medians_pct": "228.806"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12069.000",
+          "treatment_median": "36655.000",
+          "paired_changes_pct": {
+            "1": "203.712",
+            "2": "203.712"
+          },
+          "median_paired_change_pct": "203.712",
+          "ratio_of_group_medians_pct": "203.712"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "22464.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        },
+        "long_dash_ranges": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "0.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        }
+      },
+      "expression": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "12.176",
+          "treatment_median": "26.852",
+          "paired_changes_pct": {
+            "1": "160.749",
+            "2": "85.462"
+          },
+          "median_paired_change_pct": "123.105",
+          "ratio_of_group_medians_pct": "120.536"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12118.000",
+          "treatment_median": "36753.000",
+          "paired_changes_pct": {
+            "1": "203.309",
+            "2": "203.276"
+          },
+          "median_paired_change_pct": "203.293",
+          "ratio_of_group_medians_pct": "203.293"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "17408.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        },
+        "long_dash_ranges": {
+          "n_pairs": 2,
+          "baseline_median": "8.000",
+          "treatment_median": "0.000",
+          "paired_changes_pct": {
+            "1": "-100.000",
+            "2": "-100.000"
+          },
+          "median_paired_change_pct": "-100.000",
+          "ratio_of_group_medians_pct": "-100.000"
+        }
+      },
+      "open-examples": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "8.148",
+          "treatment_median": "23.346",
+          "paired_changes_pct": {
+            "1": "216.991",
+            "2": "155.171"
+          },
+          "median_paired_change_pct": "186.081",
+          "ratio_of_group_medians_pct": "186.542"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12015.000",
+          "treatment_median": "36553.000",
+          "paired_changes_pct": {
+            "1": "204.328",
+            "2": "204.128"
+          },
+          "median_paired_change_pct": "204.228",
+          "ratio_of_group_medians_pct": "204.228"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "5056.000",
+          "treatment_median": "20224.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": "70.886"
+          },
+          "median_paired_change_pct": "70.886",
+          "ratio_of_group_medians_pct": "300.000"
+        },
+        "long_dash_ranges": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "0.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        }
+      },
+      "uncertainty": {
+        "seconds": {
+          "n_pairs": 2,
+          "baseline_median": "7.532",
+          "treatment_median": "23.589",
+          "paired_changes_pct": {
+            "1": "194.068",
+            "2": "231.809"
+          },
+          "median_paired_change_pct": "212.938",
+          "ratio_of_group_medians_pct": "213.184"
+        },
+        "input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "12079.000",
+          "treatment_median": "36676.500",
+          "paired_changes_pct": {
+            "1": "203.651",
+            "2": "203.626"
+          },
+          "median_paired_change_pct": "203.639",
+          "ratio_of_group_medians_pct": "203.639"
+        },
+        "cached_input_tokens": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "22464.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        },
+        "long_dash_ranges": {
+          "n_pairs": 2,
+          "baseline_median": "0.000",
+          "treatment_median": "0.000",
+          "paired_changes_pct": {
+            "1": null,
+            "2": null
+          },
+          "median_paired_change_pct": null,
+          "ratio_of_group_medians_pct": null
+        }
+      }
+    }
+  },
+  "incidents": [
+    "Initial off answer retained byte-for-byte; Windows provided-path accounting repaired without regenerating text.",
+    "One resume process failed before model initialization/output; subsequent normal resume completed the frozen schedule.",
+    "A normally reviewed hook setup CLI turn may have overlapped first off timing; report the timing sensitivity separately.",
+    "Before reading answers, generator found to impute unmeasured work-report long_dash_ranges as zero. Six report drafts repeat it. Do not credit these as observed formatting evidence. Time/input and compiler-declared metrics unaffected. Corrected future examples omit the column.",
+    "Citation paths leaked condition names during initial development review; not a strict blind or independent review.",
+    "Both task prompts contained a .kpdm source path and a complete-draft phrase; old broad route regex selected full reading. Normative context is the same across old/lean here. Fixed after pilot, without rewriting results."
+  ],
+  "group_medians": [
+    {
+      "task": "work-report",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 56.388,
+      "hook_milliseconds_median": 0.0,
+      "context_characters_median": 0.0,
+      "input_tokens_median": 60248.0,
+      "cached_input_tokens_median": 32768.0
+    },
+    {
+      "task": "work-report",
+      "arm": "old",
+      "n": 2,
+      "wall_seconds_median": 86.1545,
+      "hook_milliseconds_median": 10523.0,
+      "context_characters_median": 7737.0,
+      "input_tokens_median": 103745.0,
+      "cached_input_tokens_median": 83136.0
+    },
+    {
+      "task": "work-report",
+      "arm": "lean",
+      "n": 2,
+      "wall_seconds_median": 64.684,
+      "hook_milliseconds_median": 2328.5,
+      "context_characters_median": 7737.0,
+      "input_tokens_median": 78041.5,
+      "cached_input_tokens_median": 52224.0
+    },
+    {
+      "task": "work-report",
+      "arm": "new",
+      "n": 2,
+      "wall_seconds_median": 76.23349999999999,
+      "hook_milliseconds_median": 2591.5,
+      "context_characters_median": 11906.0,
+      "input_tokens_median": 85914.5,
+      "cached_input_tokens_median": 61568.0
+    },
+    {
+      "task": "practical-chapter",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 68.3335,
+      "hook_milliseconds_median": 0.0,
+      "context_characters_median": 0.0,
+      "input_tokens_median": 56785.0,
+      "cached_input_tokens_median": 45248.0
+    },
+    {
+      "task": "practical-chapter",
+      "arm": "old",
+      "n": 2,
+      "wall_seconds_median": 82.6875,
+      "hook_milliseconds_median": 10705.0,
+      "context_characters_median": 7735.0,
+      "input_tokens_median": 109650.5,
+      "cached_input_tokens_median": 86208.0
+    },
+    {
+      "task": "practical-chapter",
+      "arm": "lean",
+      "n": 2,
+      "wall_seconds_median": 78.679,
+      "hook_milliseconds_median": 2585.5,
+      "context_characters_median": 7735.0,
+      "input_tokens_median": 103702.0,
+      "cached_input_tokens_median": 91328.0
+    },
+    {
+      "task": "practical-chapter",
+      "arm": "new",
+      "n": 2,
+      "wall_seconds_median": 67.182,
+      "hook_milliseconds_median": 2299.0,
+      "context_characters_median": 13352.0,
+      "input_tokens_median": 85822.5,
+      "cached_input_tokens_median": 72192.0
+    }
+  ],
+  "records": [
+    {
+      "case": "work-report-r1-off",
+      "task": "work-report",
+      "arm": "off",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "elapsed_seconds": 54.924,
+      "timing": {
+        "initialized_seconds": 0.194,
+        "inventory_seconds": 0.255,
+        "thread_started_seconds": 1.898,
+        "turn_complete_seconds": 54.921,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 1853
+      },
+      "context_characters": 0,
+      "output_characters": 1392,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "2de24dfc727233c7ab2bba9f2c3ffb5633268c81f2be07a27451affbade7f74a",
+      "token_usage": {
+        "total": {
+          "totalTokens": 64897,
+          "inputTokens": 62817,
+          "cachedInputTokens": 39936,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2080,
+          "reasoningOutputTokens": 428
+        },
+        "last": {
+          "totalTokens": 18798,
+          "inputTokens": 17440,
+          "cachedInputTokens": 16512,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1358,
+          "reasoningOutputTokens": 314
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M16",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Primary paired time/input percentages match independent Decimal values. However this draft repeats the unmeasured zero dash column as observed evidence; the pre-review input erratum prevents credit for that claim."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 885,
+      "timing_possible_setup_overlap": true
+    },
+    {
+      "case": "work-report-r1-old",
+      "task": "work-report",
+      "arm": "old",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 76.961,
+      "timing": {
+        "initialized_seconds": 0.34,
+        "inventory_seconds": 0.443,
+        "thread_started_seconds": 1.702,
+        "turn_complete_seconds": 76.958,
+        "hook_milliseconds": 11725,
+        "tool_milliseconds": 2142
+      },
+      "context_characters": 7737,
+      "output_characters": 1385,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "3c1278a764b0ccf9e1e7a90e8cc4caa06ff349accbbcdc9a7c2d35d27aa8ec88",
+      "token_usage": {
+        "total": {
+          "totalTokens": 86151,
+          "inputTokens": 83986,
+          "cachedInputTokens": 61312,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2165,
+          "reasoningOutputTokens": 488
+        },
+        "last": {
+          "totalTokens": 24194,
+          "inputTokens": 22745,
+          "cachedInputTokens": 22016,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1449,
+          "reasoningOutputTokens": 471
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M11",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Primary paired time/input percentages match independent Decimal values. However this draft repeats the unmeasured zero dash column as observed evidence; the pre-review input erratum prevents credit for that claim."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 923
+    },
+    {
+      "case": "work-report-r1-new",
+      "task": "work-report",
+      "arm": "new",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 80.723,
+      "timing": {
+        "initialized_seconds": 0.191,
+        "inventory_seconds": 0.274,
+        "thread_started_seconds": 1.409,
+        "turn_complete_seconds": 80.721,
+        "hook_milliseconds": 2442,
+        "tool_milliseconds": 1896
+      },
+      "context_characters": 11906,
+      "output_characters": 1320,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "e8f039b7728e87011d6b9cf9990ac335cc07c5bd6be02b2115cb2e24037460f9",
+      "token_usage": {
+        "total": {
+          "totalTokens": 92847,
+          "inputTokens": 90078,
+          "cachedInputTokens": 53760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2769,
+          "reasoningOutputTokens": 1281
+        },
+        "last": {
+          "totalTokens": 26692,
+          "inputTokens": 24546,
+          "cachedInputTokens": 23808,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2146,
+          "reasoningOutputTokens": 1230
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M05",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "All four task-level paired time/input changes match the independent Decimal reference; historical version, cache subset and small sample are distinguished."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 803
+    },
+    {
+      "case": "work-report-r1-lean",
+      "task": "work-report",
+      "arm": "lean",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 59.911,
+      "timing": {
+        "initialized_seconds": 0.178,
+        "inventory_seconds": 0.266,
+        "thread_started_seconds": 0.355,
+        "turn_complete_seconds": 59.909,
+        "hook_milliseconds": 2320,
+        "tool_milliseconds": 1383
+      },
+      "context_characters": 7737,
+      "output_characters": 1291,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "40c8b1ef4cde700eec43476a4ae3fd83a84472a05162f50502d953180ce53e77",
+      "token_usage": {
+        "total": {
+          "totalTokens": 80215,
+          "inputTokens": 78136,
+          "cachedInputTokens": 46848,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2079,
+          "reasoningOutputTokens": 470
+        },
+        "last": {
+          "totalTokens": 22497,
+          "inputTokens": 21179,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1318,
+          "reasoningOutputTokens": 408
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 2,
+      "review_id": "M15",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Primary paired time/input percentages match independent Decimal values. However this draft repeats the unmeasured zero dash column as observed evidence; the pre-review input erratum prevents credit for that claim."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 880
+    },
+    {
+      "case": "work-report-r2-lean",
+      "task": "work-report",
+      "arm": "lean",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 69.457,
+      "timing": {
+        "initialized_seconds": 0.182,
+        "inventory_seconds": 0.257,
+        "thread_started_seconds": 0.351,
+        "turn_complete_seconds": 69.455,
+        "hook_milliseconds": 2337,
+        "tool_milliseconds": 1874
+      },
+      "context_characters": 7737,
+      "output_characters": 1266,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "48abb2c3b30f9b20c5d318c090538c9b1d53a18760cf04d202e8d48495c6b1d1",
+      "token_usage": {
+        "total": {
+          "totalTokens": 79878,
+          "inputTokens": 77947,
+          "cachedInputTokens": 57600,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1931,
+          "reasoningOutputTokens": 381
+        },
+        "last": {
+          "totalTokens": 22338,
+          "inputTokens": 21048,
+          "cachedInputTokens": 20096,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1290,
+          "reasoningOutputTokens": 366
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M06",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Primary paired time/input percentages match independent Decimal values. However this draft repeats the unmeasured zero dash column as observed evidence; the pre-review input erratum prevents credit for that claim."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 854
+    },
+    {
+      "case": "work-report-r2-new",
+      "task": "work-report",
+      "arm": "new",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 71.744,
+      "timing": {
+        "initialized_seconds": 0.186,
+        "inventory_seconds": 0.268,
+        "thread_started_seconds": 0.366,
+        "turn_complete_seconds": 71.741,
+        "hook_milliseconds": 2741,
+        "tool_milliseconds": 1935
+      },
+      "context_characters": 11906,
+      "output_characters": 1281,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "739a0aeaaa3cfa327946e50799ace74c3623fd2ee66875cfb1ae937e9be4aa40",
+      "token_usage": {
+        "total": {
+          "totalTokens": 83689,
+          "inputTokens": 81751,
+          "cachedInputTokens": 69376,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1938,
+          "reasoningOutputTokens": 361
+        },
+        "last": {
+          "totalTokens": 23157,
+          "inputTokens": 21899,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1258,
+          "reasoningOutputTokens": 340
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M07",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "All four task-level paired time/input changes match the independent Decimal reference; historical version, cache subset and small sample are distinguished."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 938
+    },
+    {
+      "case": "work-report-r2-old",
+      "task": "work-report",
+      "arm": "old",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 95.348,
+      "timing": {
+        "initialized_seconds": 0.303,
+        "inventory_seconds": 0.374,
+        "thread_started_seconds": 1.2,
+        "turn_complete_seconds": 95.344,
+        "hook_milliseconds": 9321,
+        "tool_milliseconds": 2278
+      },
+      "context_characters": 7737,
+      "output_characters": 1391,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "cd8df45dbf5b45e433205c63e67d5584cbacd792745fd4ebd3ca1d4503f5eb28",
+      "token_usage": {
+        "total": {
+          "totalTokens": 126512,
+          "inputTokens": 123504,
+          "cachedInputTokens": 104960,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 3008,
+          "reasoningOutputTokens": 572
+        },
+        "last": {
+          "totalTokens": 28933,
+          "inputTokens": 27940,
+          "cachedInputTokens": 26496,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 993,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 4,
+      "review_id": "M08",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Primary paired time/input percentages match independent Decimal values. However this draft repeats the unmeasured zero dash column as observed evidence; the pre-review input erratum prevents credit for that claim."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 922
+    },
+    {
+      "case": "work-report-r2-off",
+      "task": "work-report",
+      "arm": "off",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "elapsed_seconds": 57.852,
+      "timing": {
+        "initialized_seconds": 0.265,
+        "inventory_seconds": 0.324,
+        "thread_started_seconds": 0.377,
+        "turn_complete_seconds": 57.851,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 1224
+      },
+      "context_characters": 0,
+      "output_characters": 1338,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "provided_files_sha256": {
+        "records.csv": "e217c7163037e93b4fd5bc3db9933ff3f1f3d56a2544205770fe8ad5bd48f812",
+        "context.json": "18933d3df4081bfd458f00fad1ed06ba82f2ff1c7603f2a852431fef902ae653",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "e76d068369e300913834161c0ba9df21403d8be7e9fba1cfa0613ad692def4a9",
+      "token_usage": {
+        "total": {
+          "totalTokens": 59766,
+          "inputTokens": 57679,
+          "cachedInputTokens": 25600,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2087,
+          "reasoningOutputTokens": 452
+        },
+        "last": {
+          "totalTokens": 17566,
+          "inputTokens": 16289,
+          "cachedInputTokens": 13696,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1277,
+          "reasoningOutputTokens": 301
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 2,
+      "review_id": "M04",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "partial",
+          "reason": "Primary paired time/input percentages match independent Decimal values. However this draft repeats the unmeasured zero dash column as observed evidence; the pre-review input erratum prevents credit for that claim."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Separates the single chapter stopping-rule signal and shared historical slide-density gap from broad quality or real-reader benefit; does not combine rubrics."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Recommends limiting default use while optimizing; compares default, disabled and targeted trial, linked to actual waiting and uncertain benefits."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Allocations sum to two person-days, assign responsible roles, fix retest conditions and proposed continuation/stop gates; thresholds are proposals."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Six pages, independently counted bodies below 160 characters and notes below 100; titles communicate decisions and notes explain method/limits."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "The opening states the current decision; wording is concrete and readable without inflated praise. Reader comprehension itself was not tested."
+        }
+      ],
+      "chinese_characters": 871
+    },
+    {
+      "case": "practical-chapter-r1-old",
+      "task": "practical-chapter",
+      "arm": "old",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 85.053,
+      "timing": {
+        "initialized_seconds": 0.212,
+        "inventory_seconds": 0.291,
+        "thread_started_seconds": 0.344,
+        "turn_complete_seconds": 85.051,
+        "hook_milliseconds": 9201,
+        "tool_milliseconds": 3857
+      },
+      "context_characters": 7735,
+      "output_characters": 2475,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "caef4c58c5ddd1bb4b080d50d94663ec12d90348f7e27712daefc1167159e497",
+      "token_usage": {
+        "total": {
+          "totalTokens": 123805,
+          "inputTokens": 121157,
+          "cachedInputTokens": 85888,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2648,
+          "reasoningOutputTokens": 94
+        },
+        "last": {
+          "totalTokens": 24347,
+          "inputTokens": 22759,
+          "cachedInputTokens": 17280,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1588,
+          "reasoningOutputTokens": 37
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 6,
+      "review_id": "M09",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1169
+    },
+    {
+      "case": "practical-chapter-r1-off",
+      "task": "practical-chapter",
+      "arm": "off",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "elapsed_seconds": 56.159,
+      "timing": {
+        "initialized_seconds": 0.212,
+        "inventory_seconds": 0.289,
+        "thread_started_seconds": 0.349,
+        "turn_complete_seconds": 56.158,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 1405
+      },
+      "context_characters": 0,
+      "output_characters": 2523,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "d6329a20b917f1cce6bbbca9ef5440f30cf9fabe46c39d08c845b1b51fd1a28b",
+      "token_usage": {
+        "total": {
+          "totalTokens": 44012,
+          "inputTokens": 41779,
+          "cachedInputTokens": 26112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2233,
+          "reasoningOutputTokens": 221
+        },
+        "last": {
+          "totalTokens": 17064,
+          "inputTokens": 15317,
+          "cachedInputTokens": 14208,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1747,
+          "reasoningOutputTokens": 162
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 2,
+      "review_id": "M02",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1159
+    },
+    {
+      "case": "practical-chapter-r1-lean",
+      "task": "practical-chapter",
+      "arm": "lean",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 79.701,
+      "timing": {
+        "initialized_seconds": 0.177,
+        "inventory_seconds": 0.253,
+        "thread_started_seconds": 1.239,
+        "turn_complete_seconds": 79.697,
+        "hook_milliseconds": 2950,
+        "tool_milliseconds": 1998
+      },
+      "context_characters": 7735,
+      "output_characters": 2639,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "0f6192051537a4a6cd67f58c2322b8df32919c5212942a561e59e71d02f28ef9",
+      "token_usage": {
+        "total": {
+          "totalTokens": 111834,
+          "inputTokens": 109085,
+          "cachedInputTokens": 96000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2749,
+          "reasoningOutputTokens": 360
+        },
+        "last": {
+          "totalTokens": 25245,
+          "inputTokens": 23768,
+          "cachedInputTokens": 23552,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1477,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M13",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1133
+    },
+    {
+      "case": "practical-chapter-r1-new",
+      "task": "practical-chapter",
+      "arm": "new",
+      "repetition": 1,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 62.681,
+      "timing": {
+        "initialized_seconds": 0.18,
+        "inventory_seconds": 0.263,
+        "thread_started_seconds": 0.347,
+        "turn_complete_seconds": 62.679,
+        "hook_milliseconds": 2339,
+        "tool_milliseconds": 1799
+      },
+      "context_characters": 13352,
+      "output_characters": 2679,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "a15453d9c8c9698a7359358427f19034f0f97ba46ade2e0ea512928fd83d0c1e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87712,
+          "inputTokens": 85518,
+          "cachedInputTokens": 71936,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2194,
+          "reasoningOutputTokens": 83
+        },
+        "last": {
+          "totalTokens": 24546,
+          "inputTokens": 23003,
+          "cachedInputTokens": 22144,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1543,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M01",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1168
+    },
+    {
+      "case": "practical-chapter-r2-new",
+      "task": "practical-chapter",
+      "arm": "new",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 71.683,
+      "timing": {
+        "initialized_seconds": 0.184,
+        "inventory_seconds": 0.263,
+        "thread_started_seconds": 0.352,
+        "turn_complete_seconds": 71.682,
+        "hook_milliseconds": 2259,
+        "tool_milliseconds": 1315
+      },
+      "context_characters": 13352,
+      "output_characters": 2490,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "7c8e60408b5ccea9e7fd608fa6c438b3fdd07230f8e265be9f624f6a91654d26",
+      "token_usage": {
+        "total": {
+          "totalTokens": 88474,
+          "inputTokens": 86127,
+          "cachedInputTokens": 72448,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2347,
+          "reasoningOutputTokens": 79
+        },
+        "last": {
+          "totalTokens": 24815,
+          "inputTokens": 23282,
+          "cachedInputTokens": 22400,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1533,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 2,
+      "review_id": "M10",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1281
+    },
+    {
+      "case": "practical-chapter-r2-lean",
+      "task": "practical-chapter",
+      "arm": "lean",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.6.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 77.657,
+      "timing": {
+        "initialized_seconds": 0.195,
+        "inventory_seconds": 0.28,
+        "thread_started_seconds": 0.376,
+        "turn_complete_seconds": 77.656,
+        "hook_milliseconds": 2221,
+        "tool_milliseconds": 3196
+      },
+      "context_characters": 7735,
+      "output_characters": 2573,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "1e8783e06c996616e13e597926b3740598349cbdb8bd00d4ccd808b1406727e2",
+      "token_usage": {
+        "total": {
+          "totalTokens": 101029,
+          "inputTokens": 98319,
+          "cachedInputTokens": 86656,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2710,
+          "reasoningOutputTokens": 299
+        },
+        "last": {
+          "totalTokens": 23829,
+          "inputTokens": 21987,
+          "cachedInputTokens": 21504,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1842,
+          "reasoningOutputTokens": 235
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 5,
+      "review_id": "M12",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1241
+    },
+    {
+      "case": "practical-chapter-r2-off",
+      "task": "practical-chapter",
+      "arm": "off",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": false,
+      "elapsed_seconds": 80.508,
+      "timing": {
+        "initialized_seconds": 0.223,
+        "inventory_seconds": 0.286,
+        "thread_started_seconds": 0.801,
+        "turn_complete_seconds": 80.506,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 2060
+      },
+      "context_characters": 0,
+      "output_characters": 2481,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "966238f14d7cd5b02e9392ca669b7dd1a18544230056feb74c86275eedc84186",
+      "token_usage": {
+        "total": {
+          "totalTokens": 74667,
+          "inputTokens": 71791,
+          "cachedInputTokens": 64384,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2876,
+          "reasoningOutputTokens": 262
+        },
+        "last": {
+          "totalTokens": 18595,
+          "inputTokens": 16841,
+          "cachedInputTokens": 15872,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1754,
+          "reasoningOutputTokens": 200
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 3,
+      "review_id": "M14",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1197
+    },
+    {
+      "case": "practical-chapter-r2-old",
+      "task": "practical-chapter",
+      "arm": "old",
+      "repetition": 2,
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "plugin_version": "0.5.0",
+      "plugin_enabled": true,
+      "elapsed_seconds": 80.322,
+      "timing": {
+        "initialized_seconds": 0.219,
+        "inventory_seconds": 0.308,
+        "thread_started_seconds": 0.372,
+        "turn_complete_seconds": 80.321,
+        "hook_milliseconds": 12209,
+        "tool_milliseconds": 3199
+      },
+      "context_characters": 7735,
+      "output_characters": 2480,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "provided_files_sha256": {
+        "records.csv": "d0225903cf1988db3c56ad90d8c31c3b6c8b5019c4b5fdc77b3cae1dd0ddb617",
+        "context.json": "03551a32d02e57e735cf83b920db5d281b8c64a8556b19b7b988d655b3f2c761",
+        ".kpdm/task.json": "ee9ae55135e104a412cb9194334411c86ff008ad56a91a671ea5b8ab26210673",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "materials_unchanged": true,
+      "project_files": [],
+      "output_sha256": "2dbb1d1c0f66d84d53892ff6b115bafb06e38ee73ba11e07bd7c4ad8caee150d",
+      "token_usage": {
+        "total": {
+          "totalTokens": 100492,
+          "inputTokens": 98144,
+          "cachedInputTokens": 86528,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2348,
+          "reasoningOutputTokens": 97
+        },
+        "last": {
+          "totalTokens": 23438,
+          "inputTokens": 21970,
+          "cachedInputTokens": 21376,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1468,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "tool_count": 5,
+      "review_id": "M03",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "Pair identities, 24 valid runs/12 pairs, actual differences and/or percentages and expression exercise match the CSV and independent arithmetic. Sources distinguish historical runs from the current runtime."
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "Identifies expression MMFM to MMMM, two 8-to-0 range changes and ties on other declared criteria; distinguishes developer-AI review from independent/reader validation."
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "Uses narrow benefits and increased waiting/input to recommend task-specific trials; cache is a subset, not a bill, and missing human work is acknowledged."
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "Names expression and repeat(s), asks for calculable differences, supplies correct numbers and relates the answer to a limited adoption decision."
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "Proposes matched team trials, hidden-label editorial review, human revision effort and cost tracking, responsible reviewer/leader roles and predeclared stop conditions; suggestions are not observations."
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "A complete coherent chapter with concrete actions and a connected exercise. Repeated full result tables make it longer than approximately 1400 Chinese characters; editorial compression is still needed across conditions."
+        }
+      ],
+      "chinese_characters": 1211
+    }
+  ],
+  "limitations": [
+    "two repeats per genre; local own-project materials",
+    "no real readers, independent domain review or general quality effect established",
+    "manual source/manifest preparation and human review time excluded",
+    "cumulative input includes cache and repeated tool turns; not monetary cost",
+    "no model semantic checker or automatic second revision pass"
+  ]
+}

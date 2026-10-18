@@ -68,3 +68,13 @@ class EvidenceTests(unittest.TestCase):
             text=handle(event,root,'UserPromptSubmit',plugin=True)['hookSpecificOutput']['additionalContext']
             self.assertNotIn('PROJECT_EVIDENCE',text)
 
+    def test_slide_manifest_does_not_audit_ordinary_code_answer(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);self.bundle(root)
+            result=handle({'hook_event_name':'Stop','last_assistant_message':
+                           'Fixed the import and ran the unit tests.'},root,'Stop',plugin=True)
+            self.assertEqual(result,{})
+            result=handle({'hook_event_name':'Stop','last_assistant_message':
+                           '### 第1页\n决定'},root,'Stop',plugin=True)
+            self.assertIn('SLIDE_COUNT',result['systemMessage'])
+

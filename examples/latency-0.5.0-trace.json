@@ -1,0 +1,94 @@
+{
+  "scope": "Historical actual 0.5.0 callbacks; durations are host-reported synchronous hook time, not only Python CPU",
+  "rows": [
+    {
+      "case": "light-r2-new",
+      "wall_seconds": 17.351,
+      "hook_milliseconds": 10274,
+      "per_event_ms": {
+        "sessionStart": 3424,
+        "userPromptSubmit": 3517,
+        "stop": 3333
+      },
+      "tools": 0
+    },
+    {
+      "case": "practical-chapter-r1-new",
+      "wall_seconds": 60.892,
+      "hook_milliseconds": 10831,
+      "per_event_ms": {
+        "sessionStart": 3562,
+        "userPromptSubmit": 3618,
+        "stop": 3651
+      },
+      "tools": 3
+    },
+    {
+      "case": "practical-chapter-r2-new",
+      "wall_seconds": 66.34,
+      "hook_milliseconds": 11938,
+      "per_event_ms": {
+        "sessionStart": 3949,
+        "userPromptSubmit": 3849,
+        "stop": 4140
+      },
+      "tools": 5
+    },
+    {
+      "case": "work-report-r2-new",
+      "wall_seconds": 80.352,
+      "hook_milliseconds": 11217,
+      "per_event_ms": {
+        "sessionStart": 3608,
+        "userPromptSubmit": 3774,
+        "stop": 3835
+      },
+      "tools": 3
+    },
+    {
+      "case": "research-review-r1-new",
+      "wall_seconds": 54.775,
+      "hook_milliseconds": 10681,
+      "per_event_ms": {
+        "sessionStart": 3507,
+        "userPromptSubmit": 3577,
+        "stop": 3597
+      },
+      "tools": 3
+    },
+    {
+      "case": "work-report-r1-new",
+      "wall_seconds": 89.046,
+      "hook_milliseconds": 11520,
+      "per_event_ms": {
+        "sessionStart": 3767,
+        "userPromptSubmit": 3856,
+        "stop": 3897
+      },
+      "tools": 4
+    },
+    {
+      "case": "light-r1-new",
+      "wall_seconds": 17.732,
+      "hook_milliseconds": 10780,
+      "per_event_ms": {
+        "sessionStart": 3649,
+        "userPromptSubmit": 3598,
+        "stop": 3533
+      },
+      "tools": 0
+    },
+    {
+      "case": "research-review-r2-new",
+      "wall_seconds": 67.655,
+      "hook_milliseconds": 10745,
+      "per_event_ms": {
+        "sessionStart": 3598,
+        "userPromptSubmit": 3618,
+        "stop": 3529
+      },
+      "tools": 6
+    }
+  ],
+  "median_hook_milliseconds": 10805.5
+}

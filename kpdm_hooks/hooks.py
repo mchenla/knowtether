@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 from .engine import (check_work, context, knowledge_prompt, lint_text, load_work,
                      read_object, safe_path)
@@ -66,7 +67,9 @@ def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False
     text = event.get("last_assistant_message")
     if isinstance(text, str) and (bound or knowledge_prompt(text)):
         notes.extend(lint_text(text))
-    if isinstance(text, str) and config.get('evidence') is not False:
+    writing = isinstance(text, str) and (bound or knowledge_prompt(text)
+        or re.search(r'(?m)^#{1,6}\s*第\s*\d+\s*页', text))
+    if writing and config.get('evidence') is not False:
         pack = compile_task(root)
         if pack and pack.get('status') == 'ready':
             notes.extend(audit_product(text, pack['product']))
