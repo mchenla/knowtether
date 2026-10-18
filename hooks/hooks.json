@@ -7,7 +7,7 @@
           {
             "type": "command",
             "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" SessionStart",
-            "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand JABwAD0AJABlAG4AdgA6AFAATABVAEcASQBOAF8AUgBPAE8AVAA7ACAAaQBmACAAKAAtAG4AbwB0ACAAJABwACkAIAB7ACAAJABwAD0AJABlAG4AdgA6AEMATABBAFUARABFAF8AUABMAFUARwBJAE4AXwBSAE8ATwBUACAAfQA7ACAAJgAgACgASgBvAGkAbgAtAFAAYQB0AGgAIAAkAHAAIAAnAGgAbwBvAGsAcwAvAHIAdQBuAC0AdwBpAG4AZABvAHcAcwAuAHAAcwAxACcAKQAgAC0ARQB2AGUAbgB0ACAAJwBTAGUAcwBzAGkAbwBuAFMAdABhAHIAdAAnADsAIABlAHgAaQB0ACAAMAA=",
+            "commandWindows": "cmd.exe /d /v:on /c \"!PLUGIN_ROOT!\\hooks\\run-windows.cmd\" SessionStart",
             "timeout": 10,
             "statusMessage": "KnowTether: SessionStart",
             "additionalContextLimit": 1600
@@ -21,7 +21,7 @@
           {
             "type": "command",
             "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" UserPromptSubmit",
-            "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand JABwAD0AJABlAG4AdgA6AFAATABVAEcASQBOAF8AUgBPAE8AVAA7ACAAaQBmACAAKAAtAG4AbwB0ACAAJABwACkAIAB7ACAAJABwAD0AJABlAG4AdgA6AEMATABBAFUARABFAF8AUABMAFUARwBJAE4AXwBSAE8ATwBUACAAfQA7ACAAJgAgACgASgBvAGkAbgAtAFAAYQB0AGgAIAAkAHAAIAAnAGgAbwBvAGsAcwAvAHIAdQBuAC0AdwBpAG4AZABvAHcAcwAuAHAAcwAxACcAKQAgAC0ARQB2AGUAbgB0ACAAJwBVAHMAZQByAFAAcgBvAG0AcAB0AFMAdQBiAG0AaQB0ACcAOwAgAGUAeABpAHQAIAAwAA==",
+            "commandWindows": "cmd.exe /d /v:on /c \"!PLUGIN_ROOT!\\hooks\\run-windows.cmd\" UserPromptSubmit",
             "timeout": 10,
             "statusMessage": "KnowTether: UserPromptSubmit",
             "additionalContextLimit": 0
@@ -35,7 +35,7 @@
           {
             "type": "command",
             "command": "sh \"$PLUGIN_ROOT/hooks/run-posix.sh\" Stop",
-            "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand JABwAD0AJABlAG4AdgA6AFAATABVAEcASQBOAF8AUgBPAE8AVAA7ACAAaQBmACAAKAAtAG4AbwB0ACAAJABwACkAIAB7ACAAJABwAD0AJABlAG4AdgA6AEMATABBAFUARABFAF8AUABMAFUARwBJAE4AXwBSAE8ATwBUACAAfQA7ACAAJgAgACgASgBvAGkAbgAtAFAAYQB0AGgAIAAkAHAAIAAnAGgAbwBvAGsAcwAvAHIAdQBuAC0AdwBpAG4AZABvAHcAcwAuAHAAcwAxACcAKQAgAC0ARQB2AGUAbgB0ACAAJwBTAHQAbwBwACcAOwAgAGUAeABpAHQAIAAwAA==",
+            "commandWindows": "cmd.exe /d /v:on /c \"!PLUGIN_ROOT!\\hooks\\run-windows.cmd\" Stop",
             "timeout": 10,
             "statusMessage": "KnowTether: Stop"
           }

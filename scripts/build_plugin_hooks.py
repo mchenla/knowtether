@@ -1,6 +1,5 @@
 """Reproducibly generate the three cross-platform plugin hook handlers."""
 import argparse
-import base64
 import json
 from pathlib import Path
 
@@ -8,14 +7,11 @@ from pathlib import Path
 def definition():
     hooks = {}
     for event in ("SessionStart", "UserPromptSubmit", "Stop"):
-        # Only a fixed, reviewable bootstrap is encoded. Real code is in the
-        # bundled run-windows.ps1; paths stay in env/argument values, not code.
-        script = ("$p=$env:PLUGIN_ROOT; if (-not $p) { $p=$env:CLAUDE_PLUGIN_ROOT }; "
-                  "& (Join-Path $p 'hooks/run-windows.ps1') -Event '" + event + "'; exit 0")
-        encoded = base64.b64encode(script.encode("utf-16le")).decode("ascii")
+        # Delayed expansion occurs only in the inner cmd; percent signs in the
+        # resulting path are not expanded again. The batch disables it on entry.
         handler = {"type": "command",
                    "command": 'sh "$PLUGIN_ROOT/hooks/run-posix.sh" ' + event,
-                   "commandWindows": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand " + encoded,
+                   "commandWindows": 'cmd.exe /d /v:on /c "!PLUGIN_ROOT!\\hooks\\run-windows.cmd" ' + event,
                    "timeout": 10,
                    "statusMessage": "KnowTether: " + event}
         if event != "Stop":

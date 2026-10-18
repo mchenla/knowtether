@@ -121,7 +121,7 @@ def main():
         handler = hooks['hooks'][event][0]['hooks'][0]
         hook_env = dict(env, PLUGIN_ROOT=str(installed))
         if os.name == 'nt':
-            argv = [os.environ.get('COMSPEC', 'cmd.exe'), '/d', '/s', '/c', handler['commandWindows']]
+            argv = subprocess.list2cmdline([os.environ.get('COMSPEC', 'cmd.exe'), '/d', '/s', '/c']) + ' ' + handler['commandWindows']
         else:
             argv = ['/bin/sh', '-c', handler['command']]
         result = subprocess.run(argv, input=json.dumps(payload), text=True, encoding='utf-8',

@@ -1,0 +1,17 @@
+task,rep,arm,seconds,input_tokens,cached_input_tokens,long_dash_ranges
+light,1,new,17.732,12338,10112,0
+light,1,off,7.696,11989,10112,0
+light,2,new,17.351,12338,10112,0
+light,2,off,8.656,13319,0,0
+practical-chapter,1,new,60.892,62198,44160,0
+practical-chapter,1,off,55.428,85779,53504,0
+practical-chapter,2,new,66.34,78170,68224,0
+practical-chapter,2,off,52.321,85854,76288,0
+research-review,1,new,54.775,61708,42240,0
+research-review,1,off,50.349,85655,66048,0
+research-review,2,new,67.655,95261,73984,0
+research-review,2,off,58.167,82708,58112,0
+work-report,1,new,89.046,78253,68352,0
+work-report,1,off,70.071,55651,47744,0
+work-report,2,new,80.352,61994,52608,0
+work-report,2,off,64.443,55955,37632,0

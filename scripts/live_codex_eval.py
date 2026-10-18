@@ -35,6 +35,7 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
                                text=True, encoding='utf-8')
     messages = queue.Queue()
     records, finals = [], []
+    milestones = {}
     output = (target / 'events.jsonl').open('w', encoding='utf-8')
 
     def reader():
@@ -82,6 +83,7 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
     try:
         call(1, 'initialize', {'clientInfo': {'name': 'knowtether-live-eval', 'version': '1'},
                                'capabilities': {'experimentalApi': True}})
+        milestones['initialized_seconds'] = round(time.monotonic()-started, 3)
         listing = call(2, 'hooks/list', {'cwds': [str(project)]})
         hooks = [h for h in listing['data'][0]['hooks'] if h.get('pluginId') == 'knowtether@knowtether']
         if enabled and (len(hooks) != 3 or not all(h['enabled'] and h['trustStatus'] == 'trusted' for h in hooks)):
@@ -102,9 +104,11 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
         output.write(json.dumps({'condition_inventory': {'enabled': enabled, 'hook_count': len(hooks),
                                   'active_knowtether_skills': len(skills)}}, ensure_ascii=False) + '\n')
         output.flush()
+        milestones['inventory_seconds'] = round(time.monotonic()-started, 3)
         thread = call(3, 'thread/start', {'cwd': str(project), 'sandbox': 'read-only',
                       'approvalPolicy': 'never', 'ephemeral': True, 'model': model,
                       'config': {'web_search': case['web_search']}})['thread']['id']
+        milestones['thread_started_seconds'] = round(time.monotonic()-started, 3)
         call(4, 'turn/start', {'threadId': thread, 'effort': 'medium',
                              'input': [{'type': 'text', 'text': case['prompt']}]})
         deadline = time.monotonic() + 900
@@ -121,6 +125,7 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
         else:
             raise TimeoutError('Model turn exceeded 15 minutes')
         article = '\n\n'.join(finals)
+        milestones['turn_complete_seconds'] = round(time.monotonic()-started, 3)
         (target / 'output.md').write_text(article, encoding='utf-8')
         runs = [r['params']['run'] for r in records if r.get('method') == 'hook/completed'
                 and r['params']['run'].get('statusMessage', '').startswith('KnowTether:')]
@@ -135,6 +140,9 @@ def run_case(codex, base, case, model, *, env=None, enabled=True):
                   'context_characters': sum(len(t) for t in contexts),
                   'plugin_enabled': enabled, 'active_knowtether_skills': len(skills),
                   'elapsed_seconds': round(time.monotonic() - started, 3),
+                  'timing': dict(milestones,
+                      hook_milliseconds=sum(r.get('durationMs',0) for r in runs),
+                      tool_milliseconds=sum(r['params']['item'].get('durationMs',0) or 0 for r in records if r.get('method')=='item/completed' and r['params']['item']['type']=='commandExecution')),
                   'tool_items': [r['params']['item']['type'] for r in records
                                  if r.get('method') == 'item/completed'
                                  and r['params']['item']['type'] not in ('userMessage', 'agentMessage')],

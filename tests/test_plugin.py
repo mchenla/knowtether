@@ -54,11 +54,9 @@ class PluginPackageTests(unittest.TestCase):
             handler = groups[0]['hooks'][0]
             self.assertEqual(handler['type'], 'command')
             self.assertIn('$PLUGIN_ROOT/hooks/run-posix.sh', handler['command'])
-            encoded = handler['commandWindows'].split('-EncodedCommand ')[1]
-            script = base64.b64decode(encoded).decode('utf-16le')
-            self.assertIn("hooks/run-windows.ps1", script)
-            self.assertIn("-Event '" + event + "'", script)
-            self.assertNotIn('BypassHookTrust', script)
+            self.assertIn('!PLUGIN_ROOT!\\hooks\\run-windows.cmd', handler['commandWindows'])
+            self.assertTrue(handler['commandWindows'].endswith(' ' + event))
+            self.assertNotIn('BypassHookTrust', handler['commandWindows'])
         self.assertNotIn('additionalContextLimit', actual['hooks']['Stop'][0]['hooks'][0])
         self.assertEqual(actual['hooks']['UserPromptSubmit'][0]['hooks'][0]['additionalContextLimit'], 0)
 
@@ -130,7 +128,7 @@ class PluginRuntimeTests(unittest.TestCase):
 
     @unittest.skipUnless(os.name == 'nt', 'Windows command override')
     def test_windows_override_with_real_environment_and_hostile_path_characters(self):
-        bundle = self.root / "bundle space 文稿 O'Neil & $x %x%"
+        bundle = self.root / "bundle space 文稿 O'Neil & $x %x% !bang!"
         bundle.mkdir()
         for name in ('hooks', 'kpdm_hooks'):
             shutil.copytree(REPO / name, bundle / name, ignore=shutil.ignore_patterns('__pycache__'))
@@ -140,7 +138,7 @@ class PluginRuntimeTests(unittest.TestCase):
         event = json.dumps({'hook_event_name': 'SessionStart', 'cwd': str(self.root)})
         for shell in ('cmd', 'powershell'):
             if shell == 'cmd':
-                argv = [os.environ.get('COMSPEC', 'cmd.exe'), '/d', '/s', '/c', command]
+                argv = subprocess.list2cmdline([os.environ.get('COMSPEC', 'cmd.exe'), '/d', '/s', '/c']) + ' ' + command
             else:
                 argv = [shutil.which('powershell'), '-NoProfile', '-Command', command]
             result = subprocess.run(argv, input=event, text=True, encoding='utf-8', capture_output=True, env=env, timeout=20)

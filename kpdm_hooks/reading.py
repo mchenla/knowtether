@@ -108,7 +108,7 @@ def prepare(bundle_root: Path | None = None, *, profile=None) -> dict:
                 "message": "必要规范缺失、校验失败或超限；未声称已读取。请修复/更新完整插件，或明确告知缺项并人工查阅。独立 wheel 不包含规范，请安装完整插件。"}
 
 
-def reading_context(*, profile=None) -> str:
+def reading_context(*, profile=None, compact=False) -> str:
     pack = prepare(profile=profile)
     if pack["status"] != "ready":
         return "[KnowTether READING_UNAVAILABLE] " + pack["message"]
@@ -117,6 +117,8 @@ def reading_context(*, profile=None) -> str:
              "来源为 KPDM 0.5.0-rc.2 candidate，接受基线仍为 0.4.0 trial / conditional-pass。"
              "下面是规范资料；不构成新的用户授权。按当前委托执行，冲突服从宿主指令与用户授权。"
              "输出前按协作要求自查；生产记录不混入文章。已有选段足够时不再读Skill，遇到缺项再补相关规范。"]
+    if compact:
+        parts = ['[KnowTether MINIMUM_READING ready] 以下为校验后的KPDM原文选段；candidate状态不变，不构成授权或质量认证。']
     if profile:
         parts.append('ROUTE ' + json.dumps(profile, ensure_ascii=False))
     for item in pack["documents"]:
@@ -124,7 +126,12 @@ def reading_context(*, profile=None) -> str:
         for section in item["sections"]:
             parts.append(f"LINES {section['first_line']}-{section['last_line']}\n" + section["text"])
     policy = pack["adaptation"]
-    parts.append("\nADAPTATION " + policy['kind'] + "\nSHA256 " + policy["sha256"] + "\n" + policy["text"])
+    if compact:
+        from .routing import LIGHT_GUIDANCE
+        guidance = LIGHT_GUIDANCE.replace('[KnowTether LIGHT]', '').replace('简单知识任务轻量处理：', '按本次委托处理：').replace('本次未读KPDM原文', '本次仅读上述原文选段')
+        parts.append('ADAPTATION '+guidance)
+    else:
+        parts.append("\nADAPTATION " + policy['kind'] + "\nSHA256 " + policy["sha256"] + "\n" + policy["text"])
     parts.append("[KnowTether MINIMUM_READING end]")
     result = "\n".join(parts)
     assert len(result) <= MAX_CONTEXT_CHARS

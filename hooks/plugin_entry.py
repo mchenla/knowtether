@@ -1,7 +1,13 @@
 """Bundled plugin entry: use event.cwd, never the installed plugin cache as a project."""
+import sys
+
+# The launcher needs no separate interpreter probe. Reject before reading stdin
+# or importing implementation modules that require modern Python syntax.
+if sys.version_info < (3, 10):
+    raise SystemExit(3)
+
 from pathlib import Path
 import json
-import sys
 
 # Keep the installed bundle read-only, including Python bytecode caches.
 sys.dont_write_bytecode = True

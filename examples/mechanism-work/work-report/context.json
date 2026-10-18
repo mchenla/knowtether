@@ -1,0 +1,110 @@
+{
+  "source": "https://github.com/mchenla/knowtether/blob/v0.5.0/examples/adaptive-0.5.0-results.json",
+  "observations": "Actual previously published Codex runs; fixed gpt-6.1-sol medium, web disabled; two opposite-order repeats per task; all valid completed runs retained.",
+  "quality_review": [
+    {
+      "case": "light-r1-new",
+      "criteria": "MMM"
+    },
+    {
+      "case": "light-r1-off",
+      "criteria": "MMM"
+    },
+    {
+      "case": "light-r2-new",
+      "criteria": "MMM"
+    },
+    {
+      "case": "light-r2-off",
+      "criteria": "MMM"
+    },
+    {
+      "case": "practical-chapter-r1-new",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "practical-chapter-r1-off",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "practical-chapter-r2-new",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "practical-chapter-r2-off",
+      "criteria": "MMPMMM"
+    },
+    {
+      "case": "research-review-r1-new",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "research-review-r1-off",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "research-review-r2-new",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "research-review-r2-off",
+      "criteria": "MMMMMM"
+    },
+    {
+      "case": "work-report-r1-new",
+      "criteria": "MMMMMP"
+    },
+    {
+      "case": "work-report-r1-off",
+      "criteria": "MMMMMP"
+    },
+    {
+      "case": "work-report-r2-new",
+      "criteria": "MMMMMP"
+    },
+    {
+      "case": "work-report-r2-off",
+      "criteria": "MMMMMP"
+    }
+  ],
+  "grade_codes": {
+    "M": "met",
+    "P": "partially met",
+    "F": "failed"
+  },
+  "quality_scope": "Condition-label-masked development AI review, not independent human or reader validation. Different task rubrics are not a common quality scale. All numbers refer to that historical plugin version, not the current runtime.",
+  "measurement": "seconds = full wall time including host/tools/hooks/model; input_tokens = cumulative input including cache; cached_input_tokens is a subset, not monetary cost. Long-dash counts describe one narrow formatting convention, not content quality.",
+  "selection": "0.5.0 old-version arm excluded, retaining off/new pairs.",
+  "constraints": "No real target readers, organizational ROI, generic factual accuracy rate or stable treatment effect was measured.",
+  "criterion_order": {
+    "light": [
+      "three concrete actions",
+      "no overprocessing",
+      "no unsupported guarantee"
+    ],
+    "research-review": [
+      "source fidelity",
+      "numbers/versions/units",
+      "cross-study synthesis",
+      "negative and updated evidence",
+      "calibrated argument",
+      "reader-facing prose"
+    ],
+    "work-report": [
+      "reject universal 30% with alternative",
+      "source and units",
+      "negative evidence used in decision",
+      "no invented company results",
+      "executable pilot and gates",
+      "eight pages and suitable density"
+    ],
+    "practical-chapter": [
+      "source fidelity",
+      "heterogeneity informs method",
+      "executable comparison and stop rules",
+      "checkable practice example",
+      "advice versus evidence",
+      "coherent natural chapter"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "knowtether",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Work with AI on grounded articles, presentations, research reports and books. Short tasks stay light; complex writing receives selected KPDM passages and limited checks.",
   "author": {
     "name": "MC",

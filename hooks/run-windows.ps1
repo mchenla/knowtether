@@ -6,15 +6,20 @@ try {
     if (-not $pluginRoot) { $pluginRoot = $env:CLAUDE_PLUGIN_ROOT }
     if (-not $pluginRoot) { throw 'Plugin root is unavailable' }
     $entry = Join-Path $pluginRoot 'hooks\plugin_entry.py'
-    foreach ($candidate in @('python', 'python3', 'py')) {
-        $executable = Get-Command $candidate -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
-        if (-not $executable) { continue }
-        $prefix = @()
-        if ($candidate -eq 'py') { $prefix = @('-3') }
-        & $executable.Source @prefix -c 'import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)' *> $null
-        if ($LASTEXITCODE -ne 0) { continue }
-        & $executable.Source @prefix -B $entry $Event
-        exit 0
+    # Get-Command's application discovery was the dominant local startup cost.
+    # Check exact executable names in PATH order; no command text is constructed.
+    $searchDirectories = $env:PATH -split [IO.Path]::PathSeparator
+    foreach ($candidate in @('python.exe', 'python3.exe', 'py.exe')) {
+        foreach ($directory in $searchDirectories) {
+            if (-not $directory) { continue }
+            $executable = [IO.Path]::Combine($directory.Trim('"'), $candidate)
+            if (-not [IO.File]::Exists($executable)) { continue }
+            $prefix = @()
+            if ($candidate -eq 'py.exe') { $prefix = @('-3') }
+            & $executable @prefix -B $entry $Event
+            if ($LASTEXITCODE -eq 3) { continue } # Version rejected before stdin reads.
+            exit 0
+        }
     }
     [Console]::Out.WriteLine('{"systemMessage":"[KnowTether PYTHON_REQUIRED] Install Python 3.10+ on PATH, then start a new session. Hook skipped."}')
 } catch {

@@ -30,9 +30,9 @@ def route(prompt):
     return {'tier': tier, 'modules': modules}
 
 
-def prompt_context(prompt):
+def prompt_context(prompt, *, compact=False):
     plan = route(prompt)
     if plan['tier'] == 'light':
         return LIGHT_GUIDANCE
     from .reading import reading_context
-    return reading_context(profile=plan)
+    return reading_context(profile=plan, compact=compact and plan['tier']=='focused')

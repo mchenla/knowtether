@@ -6,6 +6,7 @@ from pathlib import Path
 from .engine import (check_work, context, knowledge_prompt, lint_text, load_work,
                      read_object, safe_path)
 from .routing import prompt_context
+from .evidence import compile_task, evidence_context, audit_product
 
 EVENTS = ("SessionStart", "UserPromptSubmit", "Stop")
 
@@ -47,7 +48,12 @@ def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False
     if expected_event == "UserPromptSubmit":
         if not knowledge_prompt(event.get("prompt", "")):
             return {}
-        return {"hookSpecificOutput": {"hookEventName": expected_event, "additionalContext": prompt_context(event.get('prompt', ''))}}
+        note = prompt_context(event.get('prompt', ''), compact=True)
+        if config.get('evidence') is not False:
+            pack = compile_task(root)
+            if pack is not None:
+                note += '\n' + evidence_context(pack)
+        return {"hookSpecificOutput": {"hookEventName": expected_event, "additionalContext": note}}
     if event.get("stop_hook_active") is True:
         return {}
     notes = []
@@ -60,6 +66,10 @@ def handle(event: dict, root: Path, expected_event: str, *, plugin: bool = False
     text = event.get("last_assistant_message")
     if isinstance(text, str) and (bound or knowledge_prompt(text)):
         notes.extend(lint_text(text))
+    if isinstance(text, str) and config.get('evidence') is not False:
+        pack = compile_task(root)
+        if pack and pack.get('status') == 'ready':
+            notes.extend(audit_product(text, pack['product']))
     if not notes:
         return {}
     return {"systemMessage": "[KPDM advisory] " + "\n".join(

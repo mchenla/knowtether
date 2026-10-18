@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "product": {
+    "kind": "slides",
+    "pages": 6,
+    "max_body_chars": 160
+  },
+  "table": {
+    "path": "records.csv",
+    "group": "task",
+    "pair": "rep",
+    "condition": "arm",
+    "baseline": "off",
+    "treatment": "new",
+    "metrics": [
+      "seconds",
+      "input_tokens",
+      "cached_input_tokens"
+    ]
+  },
+  "context": "context.json"
+}
