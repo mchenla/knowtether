@@ -186,12 +186,48 @@
     "python_syntax": "pass",
     "cloud_session": "not-run",
     "reasons": [
-      "ant unavailable and no authenticated Claude account",
+      "ant unavailable on PATH and Claude CLI not authenticated",
       "cloud schema, repository mount, Python availability and actual costs not verified"
     ],
     "review_findings": [
       "README network restriction does not prevent the initial manuscript upload to cloud",
       "downloaded filenames and selected artifact path need containment validation before deployment"
+    ]
+  },
+  "release_regression_comparison": {
+    "baseline_commit": "eab3c324b0b644966655f11365e01ef1bcc4348b",
+    "fixtures": "explicitly synthetic records; pure functions, not a semantic-quality test",
+    "records": [
+      {
+        "case": "null-claim",
+        "before": "pass",
+        "after": "fail"
+      },
+      {
+        "case": "null-source",
+        "before": "pass",
+        "after": "fail"
+      },
+      {
+        "case": "duplicate-source",
+        "before": "pass",
+        "after": "fail"
+      },
+      {
+        "case": "untyped-extra-claim",
+        "before": "pass",
+        "after": "fail"
+      },
+      {
+        "case": "rights-denied",
+        "before": "pass",
+        "after": "fail"
+      },
+      {
+        "case": "empty-text",
+        "before": "pass",
+        "after": "input-error"
+      }
     ]
   }
 }

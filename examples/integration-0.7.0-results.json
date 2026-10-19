@@ -1,0 +1,2658 @@
+{
+  "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+  "runtime_version": "0.7.0",
+  "protocol": {
+    "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+    "version": "0.7.0",
+    "export_prefix": "integration-0.7.0",
+    "tasks_sha256": "d93233f0aa4f6374b5a4f25a49ed38d194e90197a15966fb946036fc9874df02",
+    "model": "gpt-6.1-sol",
+    "effort": "medium",
+    "web_search": "disabled",
+    "seed": 700019,
+    "design": "2 genres x complete/challenged sources x off/on x 2 reversed-order repeats =16 drafts; serial fresh readonly projects",
+    "arms": {
+      "off": "whole plugin disabled",
+      "full": "0.7.0 automatic hooks; explicit packet arithmetic enabled"
+    },
+    "scope": "Same public historical data and deliberate faults as the0.6.0 source-quality pilot; new model runs, no old output reuse",
+    "review": "neutral directories and path-sanitized masked IDs; development AI, not independent or strict blind review",
+    "primary": "six frozen content criteria; six fault handling statuses; false findings in clean packets; no total quality score",
+    "secondary": "wall/hook/tool durations, actual injected characters, first and cumulative input/cache tokens, source-read tool counts",
+    "release_gate": "Separate mechanical CLI checks; no human-verified or acceptance records invented; not automatically invoked by writing hooks",
+    "schedule": [
+      {
+        "task": "practical-chapter-complete",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "off",
+            "id": "S010"
+          },
+          {
+            "arm": "full",
+            "id": "S006"
+          }
+        ]
+      },
+      {
+        "task": "practical-chapter-challenged",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "off",
+            "id": "S014"
+          },
+          {
+            "arm": "full",
+            "id": "S007"
+          }
+        ]
+      },
+      {
+        "task": "work-report-complete",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S003"
+          },
+          {
+            "arm": "off",
+            "id": "S009"
+          }
+        ]
+      },
+      {
+        "task": "work-report-challenged",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S015"
+          },
+          {
+            "arm": "off",
+            "id": "S002"
+          }
+        ]
+      },
+      {
+        "task": "work-report-complete",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "off",
+            "id": "S016"
+          },
+          {
+            "arm": "full",
+            "id": "S013"
+          }
+        ]
+      },
+      {
+        "task": "work-report-challenged",
+        "rep": 2,
+        "runs": [
+          {
+            "arm": "off",
+            "id": "S008"
+          },
+          {
+            "arm": "full",
+            "id": "S012"
+          }
+        ]
+      },
+      {
+        "task": "practical-chapter-complete",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S001"
+          },
+          {
+            "arm": "off",
+            "id": "S011"
+          }
+        ]
+      },
+      {
+        "task": "practical-chapter-challenged",
+        "rep": 1,
+        "runs": [
+          {
+            "arm": "full",
+            "id": "S004"
+          },
+          {
+            "arm": "off",
+            "id": "S005"
+          }
+        ]
+      }
+    ],
+    "planned_outputs": 16
+  },
+  "frozen_cases": "source-quality-cases.json",
+  "review": {
+    "packet_sha256": "e3d5fd997691c542e642143b1ba6fd6402e280bb2a2baa77a03133a04a5005b4",
+    "reviewer": "development AI, all16 masked full outputs read before private mapping; same AI designed the study; not independent or strict blind",
+    "criteria_interpretation": "criterion4 requires a finite initial trial or overall budget; explicit supplemental retries also need an upper bound. Outcome-only stop rules without a finite new-trial batch are partial. Criterion5 delivery audit counts non-whitespace characters; a1-2character overrun is a minor editorial limit, not a factual failure."
+  },
+  "review_frozen_sha256": "f9bc4ab650673f9c22e718624ad85ca426a8b289cf1f3c4e33438a073309da15",
+  "read_counts_scope": "Command mentions of each filename, not proof of full reading or comprehension.",
+  "group_medians": [
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 71.227,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 3496.5,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 85247.0,
+      "cached_input_tokens_median": 64576.0,
+      "first_observed_input_tokens_median": 12090.0,
+      "tool_count_median": 6.0,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 69.662,
+      "hook_milliseconds_median": 2132.0,
+      "tool_milliseconds_median": 1923.0,
+      "injected_characters_median": 6333.0,
+      "input_tokens_median": 91915.0,
+      "cached_input_tokens_median": 81088.0,
+      "first_observed_input_tokens_median": 14488.0,
+      "tool_count_median": 3.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-complete",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 66.3735,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 3247.5,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 78801.0,
+      "cached_input_tokens_median": 64064.0,
+      "first_observed_input_tokens_median": 12090.0,
+      "tool_count_median": 5.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "practical-chapter-complete",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 58.811,
+      "hook_milliseconds_median": 2123.5,
+      "tool_milliseconds_median": 1332.0,
+      "injected_characters_median": 6310.0,
+      "input_tokens_median": 65184.5,
+      "cached_input_tokens_median": 52480.0,
+      "first_observed_input_tokens_median": 14485.0,
+      "tool_count_median": 2.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 61.659000000000006,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 3174.0,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 77135.0,
+      "cached_input_tokens_median": 59648.0,
+      "first_observed_input_tokens_median": 12108.0,
+      "tool_count_median": 5.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 59.980999999999995,
+      "hook_milliseconds_median": 2140.0,
+      "tool_milliseconds_median": 1143.0,
+      "injected_characters_median": 6409.0,
+      "input_tokens_median": 47742.0,
+      "cached_input_tokens_median": 35392.0,
+      "first_observed_input_tokens_median": 14554.0,
+      "tool_count_median": 2.0,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-complete",
+      "arm": "off",
+      "n": 2,
+      "wall_seconds_median": 65.955,
+      "hook_milliseconds_median": 0.0,
+      "tool_milliseconds_median": 2992.5,
+      "injected_characters_median": 0.0,
+      "input_tokens_median": 77161.5,
+      "cached_input_tokens_median": 53312.0,
+      "first_observed_input_tokens_median": 12108.0,
+      "tool_count_median": 5.5,
+      "outputs_with_false_findings": 0
+    },
+    {
+      "task": "work-report-complete",
+      "arm": "full",
+      "n": 2,
+      "wall_seconds_median": 58.9315,
+      "hook_milliseconds_median": 2146.0,
+      "tool_milliseconds_median": 1000.0,
+      "injected_characters_median": 6386.0,
+      "input_tokens_median": 47662.5,
+      "cached_input_tokens_median": 40576.0,
+      "first_observed_input_tokens_median": 14551.0,
+      "tool_count_median": 2.0,
+      "outputs_with_false_findings": 0
+    }
+  ],
+  "paired_performance_contrasts": [
+    {
+      "task": "practical-chapter-challenged",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -0.5610770423627232,
+        -3.8199639256701
+      ],
+      "median_paired_wall_change_pct": -2.1905204840164116,
+      "input_paired_changes_pct": [
+        19.117733463377952,
+        -3.434627320100714
+      ],
+      "median_paired_input_change_pct": 7.84155307163862
+    },
+    {
+      "task": "practical-chapter-complete",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -16.893575639700963,
+        -5.986404720997996
+      ],
+      "median_paired_wall_change_pct": -11.43999018034948,
+      "input_paired_changes_pct": [
+        -32.70491105626011,
+        -4.796344767415162
+      ],
+      "median_paired_input_change_pct": -18.750627911837636
+    },
+    {
+      "task": "work-report-challenged",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -7.826265109608698,
+        3.622872108249675
+      ],
+      "median_paired_wall_change_pct": -2.1016965006795116,
+      "input_paired_changes_pct": [
+        -44.46460768917583,
+        -30.103213527560214
+      ],
+      "median_paired_input_change_pct": -37.28391060836802
+    },
+    {
+      "task": "work-report-complete",
+      "baseline": "off",
+      "treatment": "full",
+      "n_pairs": 2,
+      "wall_paired_changes_pct": [
+        -5.88183452603378,
+        -14.246568053634146
+      ],
+      "median_paired_wall_change_pct": -10.064201289833964,
+      "input_paired_changes_pct": [
+        -31.934981645741377,
+        -43.45763355157036
+      ],
+      "median_paired_input_change_pct": -37.69630759865587
+    }
+  ],
+  "issue_counts": [
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "off",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "arm": "full",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "off",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "bill_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "missing_attachment",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "missing_pair",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "numeric_direction",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "quality_overclaim",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    },
+    {
+      "task": "work-report-challenged",
+      "arm": "full",
+      "issue": "version_conflict",
+      "n": 2,
+      "unaddressed": 0,
+      "located": 0,
+      "handled": 2
+    }
+  ],
+  "limitations": [
+    "own-project historical data plus deliberate evaluation perturbations; two repeats per task",
+    "development AI authored fixtures and review; randomized IDs do not establish independent or strict blind evaluation",
+    "no real readers, actual bills, human revision time or population effect established",
+    "multiple co-occurring problems do not identify an independent causal effect for each issue",
+    "wall time includes host/tools/hooks/model; input includes cache and multiple requests; not a bill"
+  ],
+  "records": [
+    {
+      "case": "S010",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 66.935,
+      "timing": {
+        "initialized_seconds": 0.314,
+        "inventory_seconds": 0.383,
+        "thread_started_seconds": 0.999,
+        "turn_complete_seconds": 66.933,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 2423
+      },
+      "context_characters": 0,
+      "output_characters": 2319,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "266a46601a3ee416b708809c9dfde8e60ca1a2e1370561b8f38819ec79afa14e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 89420,
+          "inputTokens": 87108,
+          "cachedInputTokens": 79488,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2312,
+          "reasoningOutputTokens": 49
+        },
+        "last": {
+          "totalTokens": 18270,
+          "inputTokens": 16727,
+          "cachedInputTokens": 16000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1543,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12168,
+        "inputTokens": 12090,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 78,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 4,
+      "review_id": "R01",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "开篇限定0.5.0、四类各两轮16条；new/off被解释为条件而非版本。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "练习复算章节第2轮+26.794%和−8.950%，两轮时间中位数18.326%；没有凭空修正正确简报。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "说明开发AI非独立读者、缓存属输入子集、账单与人工返工未测，局部停止规则改善没有扩大成整体收益。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "分负责人、执行者、编辑/读者；每类先两轮，明确等待/返工门槛、严重事实错误暂停及连续两轮未获益的停止规则。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "章节有逐对表、CSV筛选步骤、公式、可核对答案及对采用决定的解释。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "围绕团队实际等待、编辑返工和读者任务展开；建议与观察分开，未虚构资料错误。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1419
+    },
+    {
+      "case": "S006",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 62.928,
+      "timing": {
+        "initialized_seconds": 0.312,
+        "inventory_seconds": 0.383,
+        "thread_started_seconds": 0.479,
+        "turn_complete_seconds": 62.927,
+        "hook_milliseconds": 2118,
+        "tool_milliseconds": 1678
+      },
+      "context_characters": 6310,
+      "output_characters": 2397,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "67be59b02bdec14cd25285b68303fd7e2500b291282a2035470c9a2cb57e70bf",
+      "token_usage": {
+        "total": {
+          "totalTokens": 84935,
+          "inputTokens": 82930,
+          "cachedInputTokens": 74624,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2005,
+          "reasoningOutputTokens": 90
+        },
+        "last": {
+          "totalTokens": 19369,
+          "inputTokens": 17801,
+          "cachedInputTokens": 17536,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1568,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14577,
+        "inputTokens": 14485,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 92,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "6f607a8822c5257bd58b3685d7079a4dced2c23ad7733c27645460c79539b8b5"
+      ],
+      "tool_count": 3,
+      "review_id": "R14",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "四类两轮16次0.5.0身份与CSV八对清楚，未把旧版当当前测量。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "复算9.858%/26.794%及18.326%，输入−18.22%不换成费用；正确资料未被捏造为矛盾。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "M不可跨任务加总，开发AI非独立人，人工返工/读者/账单保留未知。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "初始每类六对及角色明确，但“结果矛盾…补测出现反向结果的任务”无追加次数/总投入封顶。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "章节有具体CSV练习、公式、数值答案与采用解释，迁移步骤可用。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "具体解释等待、协作和退出，无虚构读者或收益；轻微固定句式不构成内容质量失败。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1519
+    },
+    {
+      "case": "S014",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 71.519,
+      "timing": {
+        "initialized_seconds": 0.275,
+        "inventory_seconds": 0.331,
+        "thread_started_seconds": 0.43,
+        "turn_complete_seconds": 71.516,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 4768
+      },
+      "context_characters": 0,
+      "output_characters": 2301,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "4ebb0a58bb7d40c64258bbad6a3f9e0d60ba9a99339bdd26ce69564a3bcf4804",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87874,
+          "inputTokens": 85395,
+          "cachedInputTokens": 76416,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2479,
+          "reasoningOutputTokens": 209
+        },
+        "last": {
+          "totalTokens": 18072,
+          "inputTokens": 16307,
+          "cachedInputTokens": 15488,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1765,
+          "reasoningOutputTokens": 189
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12168,
+        "inputTokens": 12090,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 78,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 8,
+      "review_id": "R02",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "指明15/16、章节第2轮启用行缺失以及历史0.5.0与brief0.6.0不符。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "表内章节第2轮标不可算；工作报告两对时间/输入均正增长，并指出−25.883%的方向错误。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "独立读者及25%账单结论被限制为资料不支持；开发AI评级不可相加，缺失不被写成读者没有收益。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "有角色、预算阈值及连续两轮失败停止线，但“先补齐…再用新材料复测候选任务”没有给新试用总批次或预算上限。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "work-report第1轮练习给出18.975秒、+27.08%、+40.61%及采用含义，结构完整。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "缺失成本保留未知，不补零；文章具体说明为何按任务采用，没有编造读者结果。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "第2轮new缺失，表内不可算，第二轮收益成本未知。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "reader-checks.csv未提供，独立验证不能由本地资料支持。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "brief0.6与历史0.5明确冲突并按历史范围写作。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "汇报两对+27.08/+24.69时间、+40.61/+10.79输入，负号被推翻。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "只有一次章节第三项变化；开发AI非独立读者，不可加总。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "明确缺账单，25%实际费用节省无支持。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1332
+    },
+    {
+      "case": "S007",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 68.787,
+      "timing": {
+        "initialized_seconds": 0.279,
+        "inventory_seconds": 0.357,
+        "thread_started_seconds": 0.44,
+        "turn_complete_seconds": 68.786,
+        "hook_milliseconds": 2154,
+        "tool_milliseconds": 1606
+      },
+      "context_characters": 6333,
+      "output_characters": 2467,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "8d8c53d4e1844f33370a99be518aaf31de4e9589403fbefdc486401f46f3dc6a",
+      "token_usage": {
+        "total": {
+          "totalTokens": 84719,
+          "inputTokens": 82462,
+          "cachedInputTokens": 74240,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2257,
+          "reasoningOutputTokens": 58
+        },
+        "last": {
+          "totalTokens": 19261,
+          "inputTokens": 17639,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1622,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14577,
+        "inputTokens": 14488,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 89,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "d2da5252233f46b23f122645b1e3cd33f6f2dbfe71ab57c8486ee8df1b5c8ffa"
+      ],
+      "tool_count": 3,
+      "review_id": "R10",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "16预期/15实际、第二轮章节仅off，历史0.5.0与brief0.6及四人附件缺失均明确。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "不补章节缺失成本，中位数拒算；汇报负25.883/25.703被重算为正增长。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI非真实读者、不统一打分；缓存为输入子集、25%账单结论无资料支持。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "初始两轮、责任角色和停止线清楚，但“方向反转、评审分歧或缺失…就补测”没有追加轮数/截止时间。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "work-report练习完整给出两轮时间与输入变化、中位数和判断意义。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "把证据缺失留作待核实，不当作读者无收益；材料与方法建议区分清楚。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "仅15条、第二轮只有off，拒算第二轮成本和两轮中位数。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "四位读者主张因reader-checks.csv未提供而待核实。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "明确0.6简报与0.5背景冲突，按后者限定。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "−25.883/−25.703与CSV相反，两轮及中位数均算为正。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "只有章节第三项的线索；开发AI非真实读者，非统一质量分。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "账单/输出量/价格缺失，实际节省25%不受支持。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1478
+    },
+    {
+      "case": "S003",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 53.397,
+      "timing": {
+        "initialized_seconds": 0.238,
+        "inventory_seconds": 0.311,
+        "thread_started_seconds": 0.4,
+        "turn_complete_seconds": 53.396,
+        "hook_milliseconds": 2157,
+        "tool_milliseconds": 989
+      },
+      "context_characters": 6386,
+      "output_characters": 1525,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "db92219a917c7fe1c5cf68c0d6f3f1ce7956f8b2e41511e3f7dbff7510135c43",
+      "token_usage": {
+        "total": {
+          "totalTokens": 49318,
+          "inputTokens": 47653,
+          "cachedInputTokens": 40576,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1665,
+          "reasoningOutputTokens": 504
+        },
+        "last": {
+          "totalTokens": 18397,
+          "inputTokens": 16857,
+          "cachedInputTokens": 16128,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1540,
+          "reasoningOutputTokens": 504
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14636,
+        "inputTokens": 14551,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 85,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "9395e38aa4458fdf2e51e7e0338b7ac14410eecfb8e160350620ebffc5ea2005"
+      ],
+      "tool_count": 2,
+      "review_id": "R03",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "首尾明确历史0.5.0、每类两轮和当前版本待测；按各轮关闭→启用给原始数。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "逐任务保留输入反向结果；章节第2轮改善准确落在比较与停止规则，汇报密度短板未被掩盖。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "明确开发AI非独立读者、累计输入非费用，未测组织回报；不合成总分。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "两个人日按1+1分工，当前版本两文种各两轮；20%标为拟议门槛，满预算或不过线收口。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页、决定与行动齐全；独立字符审计正文最高115、提示最高107，均在预算内。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "决策、数字、用户等待含义相连，未对正确资料凭空报错。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 915
+    },
+    {
+      "case": "S009",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 56.734,
+      "timing": {
+        "initialized_seconds": 0.236,
+        "inventory_seconds": 0.296,
+        "thread_started_seconds": 0.393,
+        "turn_complete_seconds": 56.733,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 3973
+      },
+      "context_characters": 0,
+      "output_characters": 1482,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "dbd928c5464aba587eb13db9f58736b718d715bf372e6e12097aebd1ef4a2777",
+      "token_usage": {
+        "total": {
+          "totalTokens": 71860,
+          "inputTokens": 70011,
+          "cachedInputTokens": 44288,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1849,
+          "reasoningOutputTokens": 225
+        },
+        "last": {
+          "totalTokens": 16975,
+          "inputTokens": 15794,
+          "cachedInputTokens": 10112,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1181,
+          "reasoningOutputTokens": 161
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12220,
+        "inputTokens": 12108,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 112,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 7,
+      "review_id": "R08",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "历史0.5.0、16次8对与各任务两轮正确；没有把历史八页要求套到当前六页。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "章节第三项变化准确；综述输入一降一升、汇报两项增加均与原行相符。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "明确开发AI、无读者实测、未知金额和破折号不能补零；不合成共同质量分。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "有两个人日和当前版本两对上限，但提示又允许“沿用旧稿作对照”且只要求材料一致；没有约束旧稿模型/提示/版本，复测归因可能混杂。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页用途明确；正文最高118、提示102，均满足预算。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "等待与读者执行、修改工时连在一起；没有捏造已有收益或资料错误。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 930
+    },
+    {
+      "case": "S015",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 62.986,
+      "timing": {
+        "initialized_seconds": 0.226,
+        "inventory_seconds": 0.302,
+        "thread_started_seconds": 0.389,
+        "turn_complete_seconds": 62.985,
+        "hook_milliseconds": 2153,
+        "tool_milliseconds": 1141
+      },
+      "context_characters": 6409,
+      "output_characters": 1659,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "6d5ccd29de6ed7386b231007e09f0d9c06487d1fe6f5c62af5b78e2ff2f66ec4",
+      "token_usage": {
+        "total": {
+          "totalTokens": 49749,
+          "inputTokens": 47741,
+          "cachedInputTokens": 30336,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2008,
+          "reasoningOutputTokens": 801
+        },
+        "last": {
+          "totalTokens": 18825,
+          "inputTokens": 16950,
+          "cachedInputTokens": 16000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1875,
+          "reasoningOutputTokens": 801
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14639,
+        "inputTokens": 14554,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 85,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "94efa260d443759e7fb1156f1d36478725b6840e7393b984bfaf25dc3e03866f"
+      ],
+      "tool_count": 2,
+      "review_id": "R15",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "15/16条、章节第二轮启用缺失、0.5历史/brief0.6和缺读者附件明确。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "直接指出章节18.33%/−18.22%不再有完整配对支持；汇报+25.88%/+25.70%纠正负号。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI非独立读者、一次章节局部差异不稳定；缓存非账单、省钱25%没有依据。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "两角色各1人日、两文种各两轮；20%标提案，缺对可补但总预算耗尽即停扩围。"
+        },
+        {
+          "criterion": 5,
+          "grade": "partial",
+          "reason": "六页有用且正文最高117；提示第3/5页按去空白字符分别121/122，略超120，需编辑压缩，非事实错误。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "实际观测与提案明确区分，无虚构人工核验或普遍收益。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "章节第2轮new缺失，明确18.33%/−18.22%汇总无当前完整对支持。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "读者验证文件缺失，开发AI不能替独立读者，未造四人结果。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "0.5历史与brief0.6明确区分，不外推当前。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "汇报+25.88%/+25.70%纠正负方向，并进入不扩围决定。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "仅一次局部质量信号，其他持平、汇报密度仍不足，不宣布稳定收益。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "缓存属输入子集，无计价/账单不认定节费25%。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 864
+    },
+    {
+      "case": "S002",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 68.334,
+      "timing": {
+        "initialized_seconds": 0.233,
+        "inventory_seconds": 0.291,
+        "thread_started_seconds": 0.38,
+        "turn_complete_seconds": 68.331,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 4202
+      },
+      "context_characters": 0,
+      "output_characters": 1438,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "d05bae99100e3448d12282b1db3b227c64ce0157dd7745e34ef8fe94363a95f5",
+      "token_usage": {
+        "total": {
+          "totalTokens": 88545,
+          "inputTokens": 85965,
+          "cachedInputTokens": 62080,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2580,
+          "reasoningOutputTokens": 746
+        },
+        "last": {
+          "totalTokens": 18006,
+          "inputTokens": 16528,
+          "cachedInputTokens": 15744,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1478,
+          "reasoningOutputTokens": 465
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12206,
+        "inputTokens": 12108,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 98,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 7,
+      "review_id": "R16",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "15条7对、章节第二轮缺new及历史0.5来源清楚，不补缺失测量。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "汇报两轮正增长与brief下降被对照；brief0.6与历史身份冲突被拒采信。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI非独立读者，缺附件/账单保留未知；不合成总分，不把破折号未知记零。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "0.5+1+0.5人日、四类两轮；明确新复测独立成组，不与历史off拼接；错误、超线及预算耗尽停止条件清楚。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页可直接支持定向采用决定；正文最高117、提示94，均满足预算。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "观察、未知与20%拟议容忍线分开，没有谄媚或凭空制造资料问题。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "15条7对、章节第2轮启用缺，保留历史缺测，新测不与历史off拼接。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "reader-checks.csv缺失，无法核验独立读者验证，未写成读者无收益。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "明确历史0.5，拒采brief0.6版本与外推。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "两轮汇报均正增长，明确brief下降方向不采信。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "一次章节第三项信号而非全面质量提升；开发AI非独立读者且不合总分。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "缺账单不证明省钱25%，缓存不能直接算费用。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 911
+    },
+    {
+      "case": "S016",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 75.176,
+      "timing": {
+        "initialized_seconds": 0.229,
+        "inventory_seconds": 0.285,
+        "thread_started_seconds": 0.383,
+        "turn_complete_seconds": 75.174,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 2012
+      },
+      "context_characters": 0,
+      "output_characters": 1335,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "c4ee61d75ea0170b3dcfb0d9e3f00e191ea249cd443cc040d46428537c414bd9",
+      "token_usage": {
+        "total": {
+          "totalTokens": 86966,
+          "inputTokens": 84312,
+          "cachedInputTokens": 62336,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2654,
+          "reasoningOutputTokens": 645
+        },
+        "last": {
+          "totalTokens": 17153,
+          "inputTokens": 16169,
+          "cachedInputTokens": 12160,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 984,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12214,
+        "inputTokens": 12108,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 106,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 2,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 4,
+      "review_id": "R05",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "开篇16次8对、历史0.5.0，按任务和轮次列成本/质量，来源口径正确。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "章节停止规则是唯一局部变化；工作汇报八页要求只指历史任务，没有对当前六页稿错套。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI非真实读者；输入、缓存与账单分开，未测返工不算已兑现收益。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "1+1人日、章节四次运行、先定20%等门槛；两个人日到期即收口，不追加追求过关。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页会议稿有分工和决定；正文最高115、提示89，信息预算满足。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "用实际等待和停止规则说明价值；没有凭空纠正正确数据或自称质量通过。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 904
+    },
+    {
+      "case": "S013",
+      "task": "work-report-complete",
+      "genre": "work-report",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 64.466,
+      "timing": {
+        "initialized_seconds": 0.238,
+        "inventory_seconds": 0.31,
+        "thread_started_seconds": 0.403,
+        "turn_complete_seconds": 64.465,
+        "hook_milliseconds": 2135,
+        "tool_milliseconds": 1011
+      },
+      "context_characters": 6386,
+      "output_characters": 1504,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "b6ece7a6a0380a45606ec575da87b7fa401f3c93892607cba50f87da78f1cf63",
+      "token_usage": {
+        "total": {
+          "totalTokens": 49789,
+          "inputTokens": 47672,
+          "cachedInputTokens": 40576,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2117,
+          "reasoningOutputTokens": 961
+        },
+        "last": {
+          "totalTokens": 18848,
+          "inputTokens": 16867,
+          "cachedInputTokens": 16128,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1981,
+          "reasoningOutputTokens": 961
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14647,
+        "inputTokens": 14551,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 96,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "9395e38aa4458fdf2e51e7e0338b7ac14410eecfb8e160350620ebffc5ea2005"
+      ],
+      "tool_count": 2,
+      "review_id": "R12",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "历史0.5.0不代表当前0.7.0的范围清楚，八对时间/输入/缓存原数准确。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "章节唯一局部改善、综述输入反转及汇报密度部分达标都正确；未虚报干净资料有错。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "质评为开发AI、无真实读者；缓存子集不直接计费，组织回报未知。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "0.5+1+0.5人日包含目标读者，章节/汇报各两轮；25%标拟议门槛，未达标或无读者不扩围。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页、各任务与决定齐全；正文最高127、提示85，满足预算。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "有具体数字与行动，未将历史数据当作当前版本已验证收益。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 857
+    },
+    {
+      "case": "S008",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 54.984,
+      "timing": {
+        "initialized_seconds": 0.231,
+        "inventory_seconds": 0.294,
+        "thread_started_seconds": 0.386,
+        "turn_complete_seconds": 54.982,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 2146
+      },
+      "context_characters": 0,
+      "output_characters": 1511,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "049d77d283ca69d0515eb835fe840673dd4c7a76e4b7abf795b3ff8a129b0c4e",
+      "token_usage": {
+        "total": {
+          "totalTokens": 70576,
+          "inputTokens": 68305,
+          "cachedInputTokens": 57216,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2271,
+          "reasoningOutputTokens": 684
+        },
+        "last": {
+          "totalTokens": 16830,
+          "inputTokens": 15223,
+          "cachedInputTokens": 14336,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1607,
+          "reasoningOutputTokens": 516
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12175,
+        "inputTokens": 12108,
+        "cachedInputTokens": 4864,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 67,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 4,
+      "review_id": "R11",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "15条仅7完整对，章节第二轮new缺行、历史0.5/brief0.6冲突及缺附件均定位。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "汇报两轮时间/输入正增长，与brief约26%下降对照；章节第2轮成本不补齐。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI、独立读者与账单分开；所有内容改善的概括被多数持平事实否定，不合并质量分。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "0.5+1+0.5人日，先核缺件再当前版本两轮配对；准入与退出阈值明确标建议，缺件不下结论。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页决策稿、分工和门槛齐全；正文最高131、提示88。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "能直接支持是否扩围的讨论，不编造来源或读者结果，没有无谓反对。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "15条7对，章节第2轮缺启用记录，不补测量值。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "缺reader附件，不能宣称四人独立验证。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "0.5背景与0.6简报冲突，不能外推当前版本。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "汇报+27.1/+24.7时间及+40.6/+10.8输入，推翻约26%下降。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "明确多数持平、密度仍部分达标，否定全面改善且评审非独立读者。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "缺账单与人工工时不证明实际省钱25%。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1026
+    },
+    {
+      "case": "S012",
+      "task": "work-report-challenged",
+      "genre": "work-report",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 2,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 56.976,
+      "timing": {
+        "initialized_seconds": 0.243,
+        "inventory_seconds": 0.317,
+        "thread_started_seconds": 0.415,
+        "turn_complete_seconds": 56.975,
+        "hook_milliseconds": 2127,
+        "tool_milliseconds": 1145
+      },
+      "context_characters": 6409,
+      "output_characters": 1597,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "4b140a0a580d1fdcca12743a03d50f83ee782d5090d6fc014ddfad81d8b4a1b7",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "f7082dfcf6bc1f2fa1b542a5dcd11dae842c27ad7757436c58d734b2f3b262c2",
+      "token_usage": {
+        "total": {
+          "totalTokens": 49522,
+          "inputTokens": 47743,
+          "cachedInputTokens": 40448,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1779,
+          "reasoningOutputTokens": 506
+        },
+        "last": {
+          "totalTokens": 18594,
+          "inputTokens": 16951,
+          "cachedInputTokens": 16000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1643,
+          "reasoningOutputTokens": 506
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14642,
+        "inputTokens": 14554,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 88,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "94efa260d443759e7fb1156f1d36478725b6840e7393b984bfaf25dc3e03866f"
+      ],
+      "tool_count": 2,
+      "review_id": "R13",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "0.5历史与brief0.6、15/16条及章节第二轮new缺失明确，不能外推当前0.7。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "综述与汇报逐对方向正确；汇报成本双增与brief下降直接相反；缺章节测量保留缺失。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI而非独立人/真实读者；四人附件缺失不当成读者无收益，未测账单不称省钱。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "0.5+1+0.5人日和16次上限清楚；20%是提案，冲突或缺证不追加预算追求通过。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "六页能支持会议决定；正文最高129、提示114，满足预算。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "分观察、建议门槛及未安排读者，未偷换已有证据状态。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "15/16条且章节第2轮new缺，成本不可比，不跨轮配对。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "reader附件缺失，四人独立验证无法核验。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "0.5历史对brief0.6，不能代表当前0.7。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "汇报两轮成本均正增长，brief误写下降。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "逐项多数持平及一次章节改善，开发AI不作独立人/读者验证。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "无账单不能算实际费用，明确brief节费25%不受支持。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1042
+    },
+    {
+      "case": "S001",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 54.694,
+      "timing": {
+        "initialized_seconds": 0.239,
+        "inventory_seconds": 0.308,
+        "thread_started_seconds": 0.398,
+        "turn_complete_seconds": 54.693,
+        "hook_milliseconds": 2129,
+        "tool_milliseconds": 986
+      },
+      "context_characters": 6310,
+      "output_characters": 2276,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "244f703363c7bea72490c10c0f5b9d39efad5c331b98df26c2ede34a750b397b",
+      "token_usage": {
+        "total": {
+          "totalTokens": 49291,
+          "inputTokens": 47439,
+          "cachedInputTokens": 30336,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1852,
+          "reasoningOutputTokens": 233
+        },
+        "last": {
+          "totalTokens": 18498,
+          "inputTokens": 16774,
+          "cachedInputTokens": 16000,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1724,
+          "reasoningOutputTokens": 233
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14573,
+        "inputTokens": 14485,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 88,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 1,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "6f607a8822c5257bd58b3685d7079a4dced2c23ad7733c27645460c79539b8b5"
+      ],
+      "tool_count": 2,
+      "review_id": "R04",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "16条、四类两轮和0.5.0身份清楚；表内八对数据与本地CSV相符。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "复算章节9.86%/26.79%及18.326%中位数，保留综述输入反向，不制造数值矛盾。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "评级来源、跨任务不可加总、费用和返工未知均区分；一次局部改善未变成稳定质量承诺。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "角色及负面停止线明确，但新材料复测没有限定批次或总投入；只有“连续两轮…超过等待预算”的条件，混合结果可能继续。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "完整章节含CSV练习、计算口径、答案与迁移建议。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "语言直接面向负责人，方法建议单列，没有把未知解释成无效。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1433
+    },
+    {
+      "case": "S011",
+      "task": "practical-chapter-complete",
+      "genre": "practical-chapter",
+      "variant": "complete",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 65.812,
+      "timing": {
+        "initialized_seconds": 0.242,
+        "inventory_seconds": 0.298,
+        "thread_started_seconds": 0.396,
+        "turn_complete_seconds": 65.811,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 4072
+      },
+      "context_characters": 0,
+      "output_characters": 2583,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "e612c7e64deaf3f8b07876835e0e0edd46fcd6e2cd24a94c1ee06db1bef928aa",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "50f6aa0f348c5a3dfc64b5112bacdee9390d7b3f73192581c149c115676bbf92",
+        "sources.json": "040169c4a62379ca5027ea181ab54cab41e607f843ed09661d37dc470b3281b1",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "20bb5e9d465b512c01a0ca03b3e80b56395403cbdc8b30c2433d2d5d5182ff57",
+      "token_usage": {
+        "total": {
+          "totalTokens": 72698,
+          "inputTokens": 70494,
+          "cachedInputTokens": 48640,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2204,
+          "reasoningOutputTokens": 150
+        },
+        "last": {
+          "totalTokens": 17589,
+          "inputTokens": 15960,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1629,
+          "reasoningOutputTokens": 104
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12168,
+        "inputTokens": 12090,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 78,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 0,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 7,
+      "review_id": "R07",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "16次四类两轮0.5.0与执行顺序清楚，逐对表准确保留样本和身份。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "章节中位数+18.326%/−18.220%可复算；综述反向及汇报密度未被汇总掩盖。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI评级非独立人/读者，输入缓存非费用，可能少返工没有算成已测收益。"
+        },
+        {
+          "criterion": 4,
+          "grade": "usable",
+          "reason": "提出先五对再换作者/材料五对的有限筛查与复测；责任角色、严重错误和超预算停止条件明确，轮次数是建议。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "亲手筛CSV、逐对公式、核对答案、协作记录和任务分类采用完整可用。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "通篇聚焦实际交付成本，没有虚构清洁资料缺陷；未将建议门槛当实证。"
+        }
+      ],
+      "issue_review": [],
+      "false_findings": [],
+      "chinese_characters": 1336
+    },
+    {
+      "case": "S004",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "full",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 70.537,
+      "timing": {
+        "initialized_seconds": 0.247,
+        "inventory_seconds": 0.329,
+        "thread_started_seconds": 0.414,
+        "turn_complete_seconds": 70.535,
+        "hook_milliseconds": 2110,
+        "tool_milliseconds": 2240
+      },
+      "context_characters": 6333,
+      "output_characters": 2354,
+      "hook_events": [
+        {
+          "event": "sessionStart",
+          "status": "completed"
+        },
+        {
+          "event": "userPromptSubmit",
+          "status": "completed"
+        },
+        {
+          "event": "stop",
+          "status": "completed"
+        }
+      ],
+      "reading_pack_complete": true,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "6eba2639495cfe1ea31d5abc78e7fc18201498c9db87eca1c98c9b6785c8a5da"
+      },
+      "output_sha256": "2981438f618097162af56894c3274d08fb467d0382dfbf07b96c75c9f8c3804a",
+      "token_usage": {
+        "total": {
+          "totalTokens": 103732,
+          "inputTokens": 101368,
+          "cachedInputTokens": 87936,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2364,
+          "reasoningOutputTokens": 71
+        },
+        "last": {
+          "totalTokens": 19997,
+          "inputTokens": 18470,
+          "cachedInputTokens": 17920,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1527,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 14579,
+        "inputTokens": 14488,
+        "cachedInputTokens": 10112,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 91,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 3,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [
+        "ed763912c4470dbfbd6a04e29820271a739c99046ccdd86057e8ceaa0b6b89e8",
+        "d2da5252233f46b23f122645b1e3cd33f6f2dbfe71ab57c8486ee8df1b5c8ffa"
+      ],
+      "tool_count": 4,
+      "review_id": "R09",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "指明历史0.5.0、15条、章节第二轮启用缺行，brief0.6及缺reader附件。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "章节两轮成本中位数不再计算；汇报+25.883%/+25.703%明确纠正简报负号。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "开发AI与独立读者分开；不同M不可合并，缓存输入不是账单，25%金额收益无支持。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "先三类各三份真实材料并分角色，但“一好一坏、成本缺失…就补测”未限定追加批次或总预算。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "work-report逐轮公式与27.080%/24.687%及输入答案可复核，说明方向会改变采用决定。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "谨慎但不把持平写成无价值；来源未联网核验的边界与建议性质说清。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "15条、章节第2轮new缺失，明确不能计算两轮成本中位数。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "reader-checks.csv本地不存在，简报的独立验证不可作采用依据。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "明确source/context0.5对brief0.6，限定历史而非当前效果。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "复算汇报+25.883%/+25.703%，解释负号会反转采用判断。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "独立读者未做、AI所评多数持平，一次章节规则改善不推广。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "缓存是子集，缺价格/账单，不推出省钱25%。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1422
+    },
+    {
+      "case": "S005",
+      "task": "practical-chapter-challenged",
+      "genre": "practical-chapter",
+      "variant": "challenged",
+      "arm": "off",
+      "repetition": 1,
+      "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "elapsed_seconds": 70.935,
+      "timing": {
+        "initialized_seconds": 0.243,
+        "inventory_seconds": 0.298,
+        "thread_started_seconds": 0.385,
+        "turn_complete_seconds": 70.933,
+        "hook_milliseconds": 0,
+        "tool_milliseconds": 2225
+      },
+      "context_characters": 0,
+      "output_characters": 2479,
+      "hook_events": [],
+      "reading_pack_complete": false,
+      "materials_unchanged": true,
+      "project_files": [],
+      "provided_files_sha256": {
+        "records.csv": "1c7b3f889e3ee6dce171605e3ced01bf42824dcee1559e2623b7faf48a8307ac",
+        "context.json": "6c521649dea084a25a599f2234250de856d36acffa2efcf109b17456763281f6",
+        "brief.json": "22d4cebbf516dd273c1314fcb47b4d4ba3d345cdded9254a3ddeaddad52f2f4e",
+        "sources.json": "32ef88a51fd6661ac2f6796458db62626ee294187710ec9958454975eff30b2b",
+        ".kpdm/task.json": "635e972fae23fb658708ffdb6b724a65ab68cc78cb78374c930d065c57db7036",
+        ".kpdm/config.json": "f77c11044b72745c54978c2f76972408ae37230572d165fc748d73aa034bea9d"
+      },
+      "output_sha256": "cf628c013d8579407a4590105192f791cf3911b6404423aeb1e3ec37616c21c2",
+      "token_usage": {
+        "total": {
+          "totalTokens": 87576,
+          "inputTokens": 85099,
+          "cachedInputTokens": 52736,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 2477,
+          "reasoningOutputTokens": 59
+        },
+        "last": {
+          "totalTokens": 17800,
+          "inputTokens": 16195,
+          "cachedInputTokens": 14464,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1605,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      },
+      "first_observed_request_usage": {
+        "totalTokens": 12172,
+        "inputTokens": 12090,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 82,
+        "reasoningOutputTokens": 0
+      },
+      "source_read_command_counts": {
+        "records.csv": 2,
+        "context.json": 1,
+        "brief.json": 1,
+        "sources.json": 1,
+        "reader-checks.csv": 1,
+        "SKILL.md": 0
+      },
+      "hook_context_sha256": [],
+      "tool_count": 4,
+      "review_id": "R06",
+      "criteria_review": [
+        {
+          "criterion": 1,
+          "grade": "usable",
+          "reason": "明确15条、章节第2轮new缺失、reader-checks.csv未提供及0.5/0.6冲突。"
+        },
+        {
+          "criterion": 2,
+          "grade": "usable",
+          "reason": "逐对表将缺行标无法配对，汇报时间和输入均正增长，并指出简报提速方向相反。"
+        },
+        {
+          "criterion": 3,
+          "grade": "usable",
+          "reason": "单一第三项改善不写成全部改善；开发AI与独立读者、缓存与账单均分开。"
+        },
+        {
+          "criterion": 4,
+          "grade": "partial",
+          "reason": "有负责人、作者、记录员、编辑/读者及错误停止线；补缺对以后新的同类复测没有总轮次/时间封顶。"
+        },
+        {
+          "criterion": 5,
+          "grade": "usable",
+          "reason": "综述第1轮练习核对+8.79%、−27.96%、未缓存19468对19607及约−0.71%，可复算且有判断意义。"
+        },
+        {
+          "criterion": 6,
+          "grade": "usable",
+          "reason": "不把缺测填成零，不把机器时间写成人工总工时，章节论证连贯。"
+        }
+      ],
+      "issue_review": [
+        {
+          "id": "missing_pair",
+          "status": "handled",
+          "reason": "15条、章节第2轮new缺失，无法算两轮汇总或收益成本。"
+        },
+        {
+          "id": "missing_attachment",
+          "status": "handled",
+          "reason": "缺reader附件且开发AI并非目标读者，未认证其独立验证说法。"
+        },
+        {
+          "id": "version_conflict",
+          "status": "handled",
+          "reason": "明确0.5历史、简报0.6，不支持当前默认采用。"
+        },
+        {
+          "id": "numeric_direction",
+          "status": "handled",
+          "reason": "汇报两对均增时增输入，明确简报提速25.883%方向相反。"
+        },
+        {
+          "id": "quality_overclaim",
+          "status": "handled",
+          "reason": "正确定位第三项P→M，否定所有标准改善/稳定收益。"
+        },
+        {
+          "id": "bill_overclaim",
+          "status": "handled",
+          "reason": "练习分总/缓存/未缓存，缺价格与账单不能证实25%节省。"
+        }
+      ],
+      "false_findings": [],
+      "chinese_characters": 1473
+    }
+  ]
+}

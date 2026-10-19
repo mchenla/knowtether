@@ -1,4 +1,4 @@
-"""Validate all24 runs, then create a path-sanitized condition-masked review.
+"""Validate every planned run, then create a path-sanitized condition-masked review.
 
 Does not grade content or silently rewrite any original output.
 """

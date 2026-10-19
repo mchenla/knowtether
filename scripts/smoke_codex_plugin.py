@@ -64,7 +64,7 @@ def main():
         market = home / 'fixture-market'
         bundle = market / 'plugins/knowtether'
         bundle.mkdir(parents=True)
-        for name in ('.codex-plugin', 'assets', 'hooks', 'kpdm_hooks', 'skills', 'docs', 'policy', 'framework'):
+        for name in ('.codex-plugin', '.claude-plugin', 'claude', 'assets', 'hooks', 'kpdm_hooks', 'skills', 'docs', 'policy', 'framework'):
             shutil.copytree(workspace / name, bundle / name, ignore=shutil.ignore_patterns('__pycache__'))
         for name in ('README.md', 'README.en.md', 'LICENSE', 'LICENSING.md', 'NOTICE', 'SECURITY.md'):
             shutil.copyfile(workspace / name, bundle / name)
@@ -100,6 +100,11 @@ def main():
     cache = (codex_home / 'plugins/cache').resolve(strict=True)
     assert cache in installed.parents, 'Installation must remain in the isolated cache'
     assert (installed / 'skills/knowtether/SKILL.md').is_file()
+    claude = json.loads((installed / '.claude-plugin/plugin.json').read_text(encoding='utf-8'))
+    assert claude['version'] == expected_version and claude['name'] == 'knowtether'
+    assert (installed / 'claude/skills/release/SKILL.md').is_file()
+    assert (installed / 'claude/agents/verifier.md').is_file()
+    assert (installed / 'claude/templates/README.md').is_file()
     assert (installed / 'framework/kpdm/README.md').is_file()
     assert (installed / 'framework/kpdm/LICENSE').is_file()
     assert (installed / 'framework/kpdm/spec/00 Start/快速入门.md').is_file()
@@ -140,7 +145,7 @@ def main():
         records.append({'event': event, 'response': response, 'exit_code': result.returncode})
     assert list(project.iterdir()) == [], 'Hooks must not create project files'
     (home / 'results.json').write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(json.dumps({'installed': True, 'version': expected_version, 'skill_found': True, 'framework_found': True, 'host_hooks_discovered': 3, 'hook_commands_checked': 3,
+    print(json.dumps({'installed': True, 'version': expected_version, 'skill_found': True, 'framework_found': True, 'claude_components_found': True, 'host_hooks_discovered': 3, 'hook_commands_checked': 3,
                       'source': args.source, 'trust_modified': False,
                       'note': 'Isolated install, host discovery and command execution; no model turn or global configuration changed.'}))
     return 0

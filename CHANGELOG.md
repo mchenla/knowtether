@@ -1,15 +1,12 @@
 # Changelog
 
-## Unreleased
+## 0.7.0 - 2026-10-19
 
-- Add an explicit release gate (`knowtether release`, also `hooks/entry.py release`). It exits 1 when a factual claim lacks a human-verified, located source, placeholders remain, rights are unknown, the released version has no author acceptance record, or workflow labels remain in the final text. Hooks stay advisory and never run it.
-- `/knowtether:release` and the shared Skill run the gate first and stop on failure; only people mark sources verified or record acceptance.
-
-## Unreleased
-
-- Add a Claude Code plugin from the same repository: `.claude-plugin` manifest and marketplace, the shared advisory hooks, and Claude-only commands under `claude/` (start, research, draft, check, release, handoff, adopt) with verifier, researcher and simulated-reader agents.
-- Resolve the hook launcher from `PLUGIN_ROOT` or `CLAUDE_PLUGIN_ROOT`; the plugin yields to an existing project install for the running host (`.codex/hooks.json` or `.claude/settings.local.json`).
-- License adapted Claude Code templates under CC BY 4.0 with attribution and change notes. Claude Code hooks on Windows are not yet run-tested.
+- Preserve the merged Claude Code plugin and explicit release gate contributed in PR #1 and #2. Keep the Managed Agents reviewer in its pending PR #3; cloud runtime, upload/download boundaries and costs are not verified.
+- Include both host manifests, Claude commands/agents and attributed bilingual templates in the plugin ZIP; validate referenced paths and matching versions. Keep marketplace wrappers in the repository/source archive only.
+- Reject malformed claim/source rows, duplicate IDs and missing claim types rather than silently ignoring them. Block denied/prohibited/blocked rights records; reject empty artifacts as input errors. The explicit gate still checks records/text only, never grants human verification, acceptance or publication approval.
+- Complete all 16 preregistered automatic on/off drafts without retry: both conditions handle the planted source faults; no extra semantic-quality advantage, and enabled chapter retest limits regress. Median paired time falls 2% to 11% in this sample while damaged-chapter input rises about 8%. Publish every draft, per-criterion judgment and resource metric; do not claim a version-causal speedup. Automatic guidance remains unchanged.
+- Validate two Claude manifests and execute all three launchers under Windows cmd and Git Bash. Claude model-session/command/agent end-to-end testing remains unavailable without a logged-in CLI.
 
 ## 0.6.0 - 2026-10-18
 

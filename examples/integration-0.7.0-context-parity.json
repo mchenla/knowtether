@@ -1,0 +1,38 @@
+{
+  "comparison": "0.6.0 released focused/evidence context vs0.7.0 frozen candidate; same projects and packets",
+  "normalization": "tool_version and SessionStart version only; source version, claims and evidence unchanged",
+  "records": [
+    {
+      "task": "work-report-complete",
+      "old_characters": 6109,
+      "new_characters": 6109,
+      "equal_after_tool_version_metadata": true,
+      "old_sha256": "5659dd3be4555e10d64aecab65ad246e98a429561fcc25311f8ba3b0713bc106",
+      "new_sha256": "5659dd3be4555e10d64aecab65ad246e98a429561fcc25311f8ba3b0713bc106"
+    },
+    {
+      "task": "work-report-challenged",
+      "old_characters": 6132,
+      "new_characters": 6132,
+      "equal_after_tool_version_metadata": true,
+      "old_sha256": "e57753f65c41c106b4d7d2394cdeaa4179392d6cf8ddba5f41656bf8d1a57bba",
+      "new_sha256": "e57753f65c41c106b4d7d2394cdeaa4179392d6cf8ddba5f41656bf8d1a57bba"
+    },
+    {
+      "task": "practical-chapter-complete",
+      "old_characters": 6033,
+      "new_characters": 6033,
+      "equal_after_tool_version_metadata": true,
+      "old_sha256": "a7e52341d540e16aad6f800045db9a9591dc0a20083244080143b887df7ea9fd",
+      "new_sha256": "a7e52341d540e16aad6f800045db9a9591dc0a20083244080143b887df7ea9fd"
+    },
+    {
+      "task": "practical-chapter-challenged",
+      "old_characters": 6056,
+      "new_characters": 6056,
+      "equal_after_tool_version_metadata": true,
+      "old_sha256": "b45a3972210b78d35fa9a9f74cccb35797a7b40df770e810e6fd4296938bf67f",
+      "new_sha256": "b45a3972210b78d35fa9a9f74cccb35797a7b40df770e810e6fd4296938bf67f"
+    }
+  ]
+}

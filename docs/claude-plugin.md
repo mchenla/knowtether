@@ -56,4 +56,4 @@ Agent：`knowtether:verifier`（独立检查）、`knowtether:researcher`（研�
 
 ## 限度
 
-命令与 Agent 是操作指导，不能保证来源内容正确、权利已经清楚或读者能完成任务；这些仍由人核对与决定。模板改编自 KPDM 模板，沿用 CC BY 4.0，见 [claude/templates/README.md](../claude/templates/README.md)。Windows 上的 Claude Code 插件 Hook 尚未实际运行验证。
+命令与 Agent 是操作指导，不能保证来源内容正确、权利已经清楚或读者能完成任务；这些仍由人核对与决定。模板改编自 KPDM 模板，沿用 CC BY 4.0，见 [claude/templates/README.md](../claude/templates/README.md)。0.7.0已在Windows Git Bash实际执行三条启动器，并通过本机Claude Code2.1.299严格清单校验；CLI未登录，尚无Claude宿主完整模型会话、七个命令或三个Agent的端到端验证。[整合审查](integration-review-0.7.0.md)

@@ -89,7 +89,7 @@ class ReleaseGateTests(unittest.TestCase):
             state[field].append(copy.deepcopy(state[field][0]))
             self.assertIn('RELEASE_SOURCE', self.codes(self.write(state)))
         state = copy.deepcopy(GOOD_STATE)
-        del state['claims'][0]['type']
+        state['claims'].append({'id': 'C2'})
         self.assertIn('RELEASE_SOURCE', self.codes(self.write(state)))
 
     def test_empty_artifact_is_an_input_error(self):

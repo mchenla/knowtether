@@ -123,19 +123,19 @@ knowtether release --root . --artifact final.md
 
 | 规则 | 拦下的情况 |
 | --- | --- |
-| `RELEASE_SOURCE` | `fact`、`data`、`quote`、`cause` 类主张没有来源或 `support_note`；来源缺 `locator`，或 `verification` 不是 `human-verified`；一条主张都没登记，且 `publication.external_facts` 不是 `"none"` |
+| `RELEASE_SOURCE` | 主张/来源行不是含非空ID的对象、ID重复或主张缺type；`fact`、`data`、`quote`、`cause` 类主张没有来源或 `support_note`；来源缺 `locator`，或 `verification` 不是 `human-verified`；没有事实类主张且 `publication.external_facts` 不是 `"none"` |
 | `RELEASE_PLACEHOLDER` | 成品还有 `[citation needed]`、`TODO`、`TBD`、`[待补]`、`【待核实】` 等占位（代码块除外） |
-| `RELEASE_RIGHTS` | 任一来源的 `rights_status` 为空、`unknown`、`blocked-unknown-rights`、`pending` 或「待定」 |
+| `RELEASE_RIGHTS` | 任一来源的 `rights_status` 为空、未知/待定、`pending`、`denied`、`prohibited` 或任何 `blocked-*` |
 | `RELEASE_ACCEPTANCE` | 没有与 `artifact_version` 同版本、带 `evidence_ref` 的 `author_acceptance` 记录 |
 | `RELEASE_WORKFLOW_LABEL` | 成品含「候选发布版」「内部草稿」「供某人审阅」、`DRAFT`、`WIP` 等工作流标签 |
 
 | 结果 | 退出码 |
 | --- | --- |
 | 五条都满足 | `0`，`verdict` 为 `pass` |
-| 任一条不满足 | `1`，`blocking` 列出每一项及行号 |
-| 路径越出项目或输入错误 | `2` |
+| 任一条不满足 | `1`，`blocking` 给出问题；文本命中含行号，记录问题含ID或序号 |
+| 路径越出项目、空白成品或输入错误 | `2` |
 
-硬门检查记录和成品文本，不检查真假。它拦不住从未登记的事实、填假的记录，或来源存在却不支持主张的情况；这些仍要人逐项核对。`human-verified`、`author_acceptance` 和 `external_facts: "none"` 只能由人确认后填写，Agent 不得为通过硬门而改写。Hook 从不运行硬门。
+硬门检查记录和成品文本，不检查真假。它拦不住从未登记或错误分类的事实、填假的记录，或来源存在却不支持主张的情况；这些仍要人逐项核对。接受记录按版本字符串匹配，未绑定文件散列。谈论“DRAFT”等术语的正文也可能命中模式，应核对上下文，不能为通过删除真实限制。`human-verified`、`author_acceptance` 和 `external_facts: "none"` 只能由人确认后填写，Agent 不得为通过硬门而改写。Hook 从不运行硬门。
 
 ## 卸载
 

@@ -1,0 +1,373 @@
+{
+  "method": "Independent direct text counting; Markdown headings/labels and whitespace excluded; Chinese chapter count is descriptive, not a total-word equivalence.",
+  "records": [
+    {
+      "case": "S010",
+      "review_id": "R01",
+      "genre": "practical-chapter",
+      "arm": "off",
+      "chinese_characters": 1419
+    },
+    {
+      "case": "S006",
+      "review_id": "R14",
+      "genre": "practical-chapter",
+      "arm": "full",
+      "chinese_characters": 1519
+    },
+    {
+      "case": "S014",
+      "review_id": "R02",
+      "genre": "practical-chapter",
+      "arm": "off",
+      "chinese_characters": 1332
+    },
+    {
+      "case": "S007",
+      "review_id": "R10",
+      "genre": "practical-chapter",
+      "arm": "full",
+      "chinese_characters": 1478
+    },
+    {
+      "case": "S003",
+      "review_id": "R03",
+      "genre": "work-report",
+      "arm": "full",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 79,
+          "note_non_whitespace_chars": 83
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 112,
+          "note_non_whitespace_chars": 100
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 111,
+          "note_non_whitespace_chars": 107
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 115,
+          "note_non_whitespace_chars": 102
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 112,
+          "note_non_whitespace_chars": 94
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 102,
+          "note_non_whitespace_chars": 92
+        }
+      ]
+    },
+    {
+      "case": "S009",
+      "review_id": "R08",
+      "genre": "work-report",
+      "arm": "off",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 76,
+          "note_non_whitespace_chars": 102
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 115,
+          "note_non_whitespace_chars": 85
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 118,
+          "note_non_whitespace_chars": 88
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 102,
+          "note_non_whitespace_chars": 91
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 110,
+          "note_non_whitespace_chars": 93
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 98,
+          "note_non_whitespace_chars": 97
+        }
+      ]
+    },
+    {
+      "case": "S015",
+      "review_id": "R15",
+      "genre": "work-report",
+      "arm": "full",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 105,
+          "note_non_whitespace_chars": 111
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 108,
+          "note_non_whitespace_chars": 108
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 117,
+          "note_non_whitespace_chars": 121
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 112,
+          "note_non_whitespace_chars": 110
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 109,
+          "note_non_whitespace_chars": 122
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 105,
+          "note_non_whitespace_chars": 106
+        }
+      ]
+    },
+    {
+      "case": "S002",
+      "review_id": "R16",
+      "genre": "work-report",
+      "arm": "off",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 85,
+          "note_non_whitespace_chars": 73
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 110,
+          "note_non_whitespace_chars": 82
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 117,
+          "note_non_whitespace_chars": 71
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 107,
+          "note_non_whitespace_chars": 94
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 98,
+          "note_non_whitespace_chars": 78
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 103,
+          "note_non_whitespace_chars": 86
+        }
+      ]
+    },
+    {
+      "case": "S016",
+      "review_id": "R05",
+      "genre": "work-report",
+      "arm": "off",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 76,
+          "note_non_whitespace_chars": 70
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 103,
+          "note_non_whitespace_chars": 78
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 103,
+          "note_non_whitespace_chars": 76
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 115,
+          "note_non_whitespace_chars": 86
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 95,
+          "note_non_whitespace_chars": 79
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 95,
+          "note_non_whitespace_chars": 89
+        }
+      ]
+    },
+    {
+      "case": "S013",
+      "review_id": "R12",
+      "genre": "work-report",
+      "arm": "full",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 127,
+          "note_non_whitespace_chars": 70
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 116,
+          "note_non_whitespace_chars": 84
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 122,
+          "note_non_whitespace_chars": 85
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 122,
+          "note_non_whitespace_chars": 81
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 122,
+          "note_non_whitespace_chars": 85
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 115,
+          "note_non_whitespace_chars": 84
+        }
+      ]
+    },
+    {
+      "case": "S008",
+      "review_id": "R11",
+      "genre": "work-report",
+      "arm": "off",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 131,
+          "note_non_whitespace_chars": 84
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 117,
+          "note_non_whitespace_chars": 74
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 105,
+          "note_non_whitespace_chars": 78
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 112,
+          "note_non_whitespace_chars": 75
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 111,
+          "note_non_whitespace_chars": 88
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 116,
+          "note_non_whitespace_chars": 85
+        }
+      ]
+    },
+    {
+      "case": "S012",
+      "review_id": "R13",
+      "genre": "work-report",
+      "arm": "full",
+      "pages": 6,
+      "counts": [
+        {
+          "page": 1,
+          "body_non_whitespace_chars": 106,
+          "note_non_whitespace_chars": 114
+        },
+        {
+          "page": 2,
+          "body_non_whitespace_chars": 125,
+          "note_non_whitespace_chars": 86
+        },
+        {
+          "page": 3,
+          "body_non_whitespace_chars": 129,
+          "note_non_whitespace_chars": 86
+        },
+        {
+          "page": 4,
+          "body_non_whitespace_chars": 101,
+          "note_non_whitespace_chars": 96
+        },
+        {
+          "page": 5,
+          "body_non_whitespace_chars": 113,
+          "note_non_whitespace_chars": 95
+        },
+        {
+          "page": 6,
+          "body_non_whitespace_chars": 110,
+          "note_non_whitespace_chars": 99
+        }
+      ]
+    },
+    {
+      "case": "S001",
+      "review_id": "R04",
+      "genre": "practical-chapter",
+      "arm": "full",
+      "chinese_characters": 1433
+    },
+    {
+      "case": "S011",
+      "review_id": "R07",
+      "genre": "practical-chapter",
+      "arm": "off",
+      "chinese_characters": 1336
+    },
+    {
+      "case": "S004",
+      "review_id": "R09",
+      "genre": "practical-chapter",
+      "arm": "full",
+      "chinese_characters": 1422
+    },
+    {
+      "case": "S005",
+      "review_id": "R06",
+      "genre": "practical-chapter",
+      "arm": "off",
+      "chinese_characters": 1473
+    }
+  ]
+}

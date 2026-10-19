@@ -1,0 +1,197 @@
+{
+  "scope": "Unchanged generated final texts copied into a separate check directory with no work.json. No human verification or acceptance records created. Not a claim that the drafts contain false facts.",
+  "records": [
+    {
+      "case": "S010",
+      "review_id": "R01",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.186335
+    },
+    {
+      "case": "S006",
+      "review_id": "R14",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.172014
+    },
+    {
+      "case": "S014",
+      "review_id": "R02",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.17011
+    },
+    {
+      "case": "S007",
+      "review_id": "R10",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.171752
+    },
+    {
+      "case": "S003",
+      "review_id": "R03",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.17185
+    },
+    {
+      "case": "S009",
+      "review_id": "R08",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.175008
+    },
+    {
+      "case": "S015",
+      "review_id": "R15",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.171845
+    },
+    {
+      "case": "S002",
+      "review_id": "R16",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.175801
+    },
+    {
+      "case": "S016",
+      "review_id": "R05",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.171286
+    },
+    {
+      "case": "S013",
+      "review_id": "R12",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.175372
+    },
+    {
+      "case": "S008",
+      "review_id": "R11",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.169403
+    },
+    {
+      "case": "S012",
+      "review_id": "R13",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.171714
+    },
+    {
+      "case": "S001",
+      "review_id": "R04",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.171347
+    },
+    {
+      "case": "S011",
+      "review_id": "R07",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.170154
+    },
+    {
+      "case": "S004",
+      "review_id": "R09",
+      "arm": "full",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.170127
+    },
+    {
+      "case": "S005",
+      "review_id": "R06",
+      "arm": "off",
+      "exit_code": 1,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ],
+      "wall_seconds": 0.168612
+    }
+  ]
+}

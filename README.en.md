@@ -45,11 +45,13 @@ The same hooks provide guidance. Seven commands add an explicit path from a one-
 
 Use it for management slide content, project documents, academic reports and reviews, explanatory articles, practical books, textbooks and publication drafts. Guidance connects claims to evidence, decisions to trade-offs and chapters to executable reader exercises. PPTX/Word creation requires host tools; the plugin itself does not render document files.
 
-A follow-up using the released 0.6.0 completed 24 drafts: reports and practical chapters, complete and deliberately corrupted source packets, plugin off, guidance only, and guidance plus arithmetic, with two reversed-order repeats. All three conditions handled the six planted problems; this did not establish added issue-detection or content-quality gains. Guidance-only also made one false correction in a clean chapter, misreading the third criterion as the fourth and redirecting the follow-up.
+Version 0.7.0 preserves the Claude Code plugin and explicit release checks from other contributors, packages both host components, and rejects six reproducible mechanical false passes. The automatic writing context is unchanged. Claude manifests and Windows Git Bash launchers pass; Claude model-session/command/agent end-to-end validation remains unrun. The cloud reviewer stays in its pending PR. See the [integration review](docs/integration-review-0.7.0.md).
 
-For corrupted packets, arithmetic reduced median paired wall time versus guidance-only by about 8% for reports and 17% for chapters; versus disabled it remained about 8% slower. It injected 6,310 to 6,409 characters versus 1,949 or 1,995 for guidance-only, but fewer tool turns sometimes reduced cumulative input. These are local, two-repeat observations, not reader validation, bills or stable effects. See [all 24 drafts, issue handling, false findings and resource metrics](docs/evaluation-0.6.0-source-quality.md). The actual fixed Before/After example on the [Chinese homepage](README.md) shows both drafts finding problems; it does not manufacture a quality win.
+A new 16-draft automatic on/off comparison used reports and practical chapters with complete or deliberately damaged source packets, twice in reversed order. Both conditions handled all six planted issues. No added source-detection or overall content-quality advantage was established; enabled chapters left follow-up testing without a complete upper bound. Median paired wall time fell about 2% to 11% in this sample. Cumulative input fell about 37% to 38% for reports and 19% for complete chapters, but rose about 8% for damaged chapters. Enabled runs injected 6,310 to 6,409 characters and increased the first observed input; token totals are not bills. Two repeats and development-AI review do not establish stable effects. See [all 16 outputs, quality differences and resource metrics](docs/evaluation-0.7.0.md).
 
-Runtime remains the released 0.6.0. Optional `.kpdm/task.json` enables [paired-data arithmetic and source receipts](docs/project-evidence.md), not general fact checking. Ordinary writing needs no manifest. Earlier [startup measurements](docs/evaluation-0.6.0.md) are separate from this study and must not be mixed into a new effect estimate.
+The preregistered first damaged-report pair on the [Chinese homepage](README.md) handled the same issues in both drafts: 68.334 to 62.986 seconds, 7 to 2 tool calls, 85,965 to 47,741 cumulative input tokens. The enabled draft still needs two speaker notes shortened. This shows one reduction in tool round trips, not a new quality guarantee. Earlier [24-draft results](docs/evaluation-0.6.0-source-quality.md) and [startup measurements](docs/evaluation-0.6.0.md) remain separate; cross-date differences are not a version speedup estimate.
+
+Optional `.kpdm/task.json` enables [paired-data arithmetic and source receipts](docs/project-evidence.md), not general fact checking. Ordinary writing needs no manifest.
 
 An explicit release gate blocks five issues: fact sources not verified by a person, leftover citation placeholders, materials with unknown rights, no acceptance record for the released version, and workflow labels in the final text. It checks records and text, not truth, and hooks never run it. See [release gate](docs/cli.md) (Chinese).
 
@@ -59,7 +61,7 @@ Guidance asks for independent judgment, useful disagreement, conditional MECE, c
 
 ## Open source
 
-Software **0.6.0**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
+Software **0.7.0**; [release downloads](https://github.com/mchenla/knowtether/releases/latest). Software/adaptation material: **MIT**. Original KPDM material under framework/kpdm: **CC BY 4.0**. See [licensing by path](LICENSING.md).
 
 KPDM remains **0.5.0-rc.2 candidate**, with **0.4.0 trial / conditional-pass** as the latest accepted baseline. Software release is not framework acceptance.
 

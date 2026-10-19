@@ -1,4 +1,4 @@
-"""Export all24 outputs and allowlisted metrics after per-output review freeze.
+"""Export every planned output and allowlisted metrics after review freeze.
 
 Issue handling is reported by specific issue, never merged into a quality score.
 """
@@ -88,7 +88,9 @@ def main():
           'records':rows}
     prefix=protocol.get('export_prefix','source-quality-0.6.0')
     for name,value in [(prefix+'-results.json',data),(prefix+'-answers.json',
-        {'redaction':'Only exact local project path prefixes in citations removed; original and published hashes retained, prose unchanged.','records':answers})]:
+        {'redaction':'Only exact local project path prefixes in citations removed; original and published hashes retained, prose unchanged.',
+         'text_hash_encoding':'UTF-8 text after universal-newline reading (LF); these text hashes are not raw Windows CRLF file-byte hashes.',
+         'records':answers})]:
         (repo/'examples'/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'exported':len(rows),'review_frozen_sha256':digest,'private_paths_exported':False}))
 

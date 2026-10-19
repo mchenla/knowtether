@@ -1,5 +1,13 @@
 # Validation records
 
+## 0.7.0: preserved integration, release checks and 16 new writing outputs
+
+The candidate preserves merged PR #1/#2; PR #3 remains pending with no cloud resource/session or manuscript upload. Two strict Claude 2.1.299 manifest checks and all six Windows cmd/Git Bash launcher executions pass. The Claude CLI is not authenticated, so Claude model-session, seven command and three agent end-to-end behavior is not established. Six false passes in the preserved release gate were reproduced and are rejected after the fix; 12 CLI fixture cases have expected exits. All human-labelled fixture records are synthetic, never actual author decisions. See [integration review and limits](integration-review-0.7.0.md).
+
+All 16 frozen Codex writing outputs completed without retry. Eight enabled runs received three completed native callbacks and exact focused contexts; eight controls had no KnowTether hook/Skill. No complete Skill reads or material changes occurred. Every damaged draft handled all six planted source problems; no added source-finding advantage was established. Enabled chapters had incomplete limits on follow-up testing; one disabled clean report allowed insufficiently controlled old-draft reuse, and one enabled damaged report slightly exceeded speaker-note limits. No total quality score, independent review or stable quality claim is made. [All outputs, criterion judgments and resources](evaluation-0.7.0.md).
+
+Review freeze SHA-256 f9bc4ab650673f9c22e718624ad85ca426a8b289cf1f3c4e33438a073309da15 preceded condition mapping reveal. It remains development-AI review, not independent or strict blind. Broad criteria were fixed before generation; detailed interpretation is disclosed in the report. Sixteen generated drafts checked separately without fabricated human records all failed the explicit gate as expected. The test login symlink was removed after checking its exact original target; pre-test isolated configuration restored, daily HOME not edited. Final packaging/public download checks are recorded in the release notes.
+
 ## 0.6.0 supplemental: route-fixed source-quality comparison
 
 All 24 frozen outputs completed without failed attempts, using the exact released 4b6b880 runtime. 16 enabled outputs had 3 completed callbacks with exact focused contexts; 8 controls had no active KnowTether hook/Skill. Materials remained byte-identical; no project files added. All six planted issues were handled in every condition. One guidance-only clean chapter made a false source correction and misdirected the follow-up; another guidance-only plan left extension unbounded. No added semantic-quality or real-reader effect is established.

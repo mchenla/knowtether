@@ -95,7 +95,7 @@ def main():
     raw = subprocess.check_output(['git', 'show', 'origin/content-review-agent:managed-agents/content-reviewer/run_review.py'], cwd=repo)
     ast.parse(raw)
     output['managed_agent'] = {'pr': 3, 'status': 'pending; preserved on original branch', 'python_syntax': 'pass',
-        'cloud_session': 'not-run', 'reasons': ['ant unavailable and no authenticated Claude account',
+        'cloud_session': 'not-run', 'reasons': ['ant unavailable on PATH and Claude CLI not authenticated',
         'cloud schema, repository mount, Python availability and actual costs not verified'],
         'review_findings': ['README network restriction does not prevent the initial manuscript upload to cloud',
                             'downloaded filenames and selected artifact path need containment validation before deployment']}
