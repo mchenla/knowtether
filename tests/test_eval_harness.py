@@ -8,6 +8,7 @@ try:
     paired = importlib.import_module('paired_codex_eval')
     source_quality = importlib.import_module('source_quality_eval')
     source_summary = importlib.import_module('summarize_source_quality_eval')
+    integration = importlib.import_module('integration_eval')
 finally:
     sys.path.pop(0)
 
@@ -50,3 +51,14 @@ class EvaluationHarnessTests(unittest.TestCase):
         text='[CSV]('+prefix.replace('\\','/')+'/records.csv) '+r'\(x\) and C:\other\file'
         self.assertEqual(source_summary.sanitize_answer(text,project),
                          '[CSV](records.csv) '+r'\(x\) and C:\other\file')
+
+    def test_integration_schedule_keeps_all_four_tasks_and_reverses_each_pair(self):
+        tasks = [{'id': n} for n in ('report-complete', 'report-challenged', 'book-complete', 'book-challenged')]
+        blocks = integration.schedule(tasks)
+        ids = [r['id'] for b in blocks for r in b['runs']]
+        self.assertEqual(len(set(ids)), 16)
+        for task in tasks:
+            pair = sorted((b for b in blocks if b['task'] == task['id']), key=lambda b: b['rep'])
+            orders = [[r['arm'] for r in b['runs']] for b in pair]
+            self.assertEqual(orders[0], list(reversed(orders[1])))
+            self.assertEqual(set(orders[0]), {'off', 'full'})

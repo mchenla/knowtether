@@ -1,0 +1,197 @@
+{
+  "scope": "synthetic release-gate fixtures and real local launchers; not Claude end-to-end or independent quality review",
+  "release_cases": [
+    {
+      "case": "synthetic-complete-control",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "wall_seconds": 0.179417,
+      "verdict": "pass",
+      "codes": []
+    },
+    {
+      "case": "unverified",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.17133,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_SOURCE"
+      ]
+    },
+    {
+      "case": "rights-unknown",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.169943,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_RIGHTS"
+      ]
+    },
+    {
+      "case": "rights-denied",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.169119,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_RIGHTS"
+      ]
+    },
+    {
+      "case": "acceptance-wrong-version",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.179519,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE"
+      ]
+    },
+    {
+      "case": "null-claim",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.175761,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_SOURCE"
+      ]
+    },
+    {
+      "case": "duplicate-source",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.175816,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_SOURCE"
+      ]
+    },
+    {
+      "case": "missing-type",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.169411,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_SOURCE"
+      ]
+    },
+    {
+      "case": "placeholder",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.169323,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_PLACEHOLDER"
+      ]
+    },
+    {
+      "case": "workflow-label",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.167284,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_WORKFLOW_LABEL"
+      ]
+    },
+    {
+      "case": "empty-text",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "wall_seconds": 0.169242,
+      "verdict": "input-error",
+      "codes": []
+    },
+    {
+      "case": "no-human-records",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 0.169015,
+      "verdict": "fail",
+      "codes": [
+        "RELEASE_ACCEPTANCE",
+        "RELEASE_SOURCE"
+      ]
+    }
+  ],
+  "launchers": [
+    {
+      "host": "codex-windows",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "wall_seconds": 0.177452,
+      "context_characters": 277,
+      "scope": "launcher executed with real host environment variable; not a Claude model session"
+    },
+    {
+      "host": "codex-windows",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "wall_seconds": 0.187035,
+      "context_characters": 1718,
+      "scope": "launcher executed with real host environment variable; not a Claude model session"
+    },
+    {
+      "host": "codex-windows",
+      "event": "Stop",
+      "exit_code": 0,
+      "wall_seconds": 0.178725,
+      "context_characters": 0,
+      "scope": "launcher executed with real host environment variable; not a Claude model session"
+    },
+    {
+      "host": "claude-git-bash",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "wall_seconds": 0.671461,
+      "context_characters": 277,
+      "scope": "launcher executed with real host environment variable; not a Claude model session"
+    },
+    {
+      "host": "claude-git-bash",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "wall_seconds": 0.681993,
+      "context_characters": 1718,
+      "scope": "launcher executed with real host environment variable; not a Claude model session"
+    },
+    {
+      "host": "claude-git-bash",
+      "event": "Stop",
+      "exit_code": 0,
+      "wall_seconds": 0.659014,
+      "context_characters": 0,
+      "scope": "launcher executed with real host environment variable; not a Claude model session"
+    }
+  ],
+  "claude_validation": [
+    {
+      "target": ".",
+      "exit_code": 0
+    },
+    {
+      "target": ".claude-plugin/plugin.json",
+      "exit_code": 0
+    }
+  ],
+  "claude_version": "2.1.299 (Claude Code)",
+  "managed_agent": {
+    "pr": 3,
+    "status": "pending; preserved on original branch",
+    "python_syntax": "pass",
+    "cloud_session": "not-run",
+    "reasons": [
+      "ant unavailable and no authenticated Claude account",
+      "cloud schema, repository mount, Python availability and actual costs not verified"
+    ],
+    "review_findings": [
+      "README network restriction does not prevent the initial manuscript upload to cloud",
+      "downloaded filenames and selected artifact path need containment validation before deployment"
+    ]
+  }
+}

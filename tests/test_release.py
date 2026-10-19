@@ -75,9 +75,26 @@ class ReleaseGateTests(unittest.TestCase):
         self.assertEqual(self.write(text=GOOD_TEXT + '\nMake a todo list.\n')['verdict'], 'pass')
 
     def test_rule_3_unknown_rights_block(self):
-        for value in ('unknown', 'blocked-unknown-rights', '待定', '', None):
+        for value in ('unknown', 'blocked-unknown-rights', 'blocked-permission-denied', 'denied', 'prohibited', '待定', '', None):
             state = copy.deepcopy(GOOD_STATE); state['sources'][0]['rights_status'] = value
             self.assertEqual(self.codes(self.write(state)), {'RELEASE_RIGHTS'}, value)
+
+    def test_malformed_or_ambiguous_records_never_pass(self):
+        for field in ('claims', 'sources'):
+            for bad in (None, 'not a record', {}, {'id': []}, {'id': ''}):
+                state = copy.deepcopy(GOOD_STATE)
+                state[field].append(bad)
+                self.assertIn('RELEASE_SOURCE', self.codes(self.write(state)))
+            state = copy.deepcopy(GOOD_STATE)
+            state[field].append(copy.deepcopy(state[field][0]))
+            self.assertIn('RELEASE_SOURCE', self.codes(self.write(state)))
+        state = copy.deepcopy(GOOD_STATE)
+        del state['claims'][0]['type']
+        self.assertIn('RELEASE_SOURCE', self.codes(self.write(state)))
+
+    def test_empty_artifact_is_an_input_error(self):
+        with self.assertRaisesRegex(ValueError, 'empty'):
+            self.write(text=' \n\t')
 
     def test_rule_4_acceptance_must_match_the_released_version(self):
         state = copy.deepcopy(GOOD_STATE); state['author_acceptance']['version'] = 'v2'

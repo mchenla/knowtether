@@ -61,7 +61,7 @@ def main():
             r['source_read_command_counts']={n:sum(n in str(t.get('command','')) for t in tools) for n in ['records.csv','context.json','brief.json','sources.json','reader-checks.csv','SKILL.md']}
             r['hook_context_sha256']=[hashlib.sha256(e['text'].encode()).hexdigest() for h in hooks for e in h['entries'] if e['kind']=='context']
             rows.append(r)
-    assert len(rows)==protocol['planned_outputs']==24
+    assert len(rows)==protocol['planned_outputs']
     shuffled=list(rows);random.Random(610122).shuffle(shuffled);packet=[];mapping={}
     for i,r in enumerate(shuffled,1):
         label=f'R{i:02d}';mapping[label]=r['case'];task=tasks[r['task']]

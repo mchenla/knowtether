@@ -20,7 +20,8 @@ def main():
     review=json.loads(raw);packet=json.loads((base/'masked-review.json').read_text(encoding='utf-8'))
     assert review['packet_sha256']==hashlib.sha256((base/'masked-review.json').read_bytes()).hexdigest()
     mapping=json.loads((base/'private-mapping.json').read_text());frozen={r['id']:r for r in packet}
-    assert set(frozen)=={r['id'] for r in review['records']} and len(frozen)==24
+    protocol=json.loads((base/'protocol.json').read_text())
+    assert set(frozen)=={r['id'] for r in review['records']} and len(frozen)==protocol['planned_outputs']
     by={mapping[r['id']]:r for r in review['records']}
     for label,r in [(r['id'],r) for r in review['records']]:
         assert len(r['criteria_review'])==6
@@ -48,7 +49,7 @@ def main():
     groups=[];issue_counts=[];contrasts=[];med=statistics.median
     for task in sorted({r['task'] for r in rows}):
         task_rows=[r for r in rows if r['task']==task]
-        for arm in ['off','lean','full']:
+        for arm in protocol['arms']:
             selected=[r for r in task_rows if r['arm']==arm];assert len(selected)==2
             groups.append({'task':task,'arm':arm,'n':len(selected),
                 'wall_seconds_median':med(r['elapsed_seconds'] for r in selected),
@@ -65,6 +66,8 @@ def main():
                 issue_counts.append({'task':task,'arm':arm,'issue':issue,'n':len(entries),
                     **{s:sum(i['status']==s for i in entries) for s in ['unaddressed','located','handled']}})
         for baseline,treatment in [('off','lean'),('off','full'),('lean','full')]:
+            if baseline not in protocol['arms'] or treatment not in protocol['arms']:
+                continue
             before={r['repetition']:r for r in task_rows if r['arm']==baseline}
             after={r['repetition']:r for r in task_rows if r['arm']==treatment}
             changes=[100*(after[k]['elapsed_seconds']/before[k]['elapsed_seconds']-1) for k in sorted(before)]
@@ -72,8 +75,8 @@ def main():
             contrasts.append({'task':task,'baseline':baseline,'treatment':treatment,'n_pairs':2,
                 'wall_paired_changes_pct':changes,'median_paired_wall_change_pct':med(changes),
                 'input_paired_changes_pct':inputs,'median_paired_input_change_pct':med(inputs)})
-    data={'runtime_commit':results[0]['runtime_commit'],'runtime_version':'0.6.0',
-          'protocol':json.loads((base/'protocol.json').read_text()),'frozen_cases':'source-quality-cases.json',
+    data={'runtime_commit':results[0]['runtime_commit'],'runtime_version':protocol['version'],
+          'protocol':protocol,'frozen_cases':'source-quality-cases.json',
           'review':{k:v for k,v in review.items() if k!='records'},'review_frozen_sha256':digest,
           'read_counts_scope':'Command mentions of each filename, not proof of full reading or comprehension.',
           'group_medians':groups,'paired_performance_contrasts':contrasts,'issue_counts':issue_counts,
@@ -83,7 +86,8 @@ def main():
                          'multiple co-occurring problems do not identify an independent causal effect for each issue',
                          'wall time includes host/tools/hooks/model; input includes cache and multiple requests; not a bill'],
           'records':rows}
-    for name,value in [('source-quality-0.6.0-results.json',data),('source-quality-0.6.0-answers.json',
+    prefix=protocol.get('export_prefix','source-quality-0.6.0')
+    for name,value in [(prefix+'-results.json',data),(prefix+'-answers.json',
         {'redaction':'Only exact local project path prefixes in citations removed; original and published hashes retained, prose unchanged.','records':answers})]:
         (repo/'examples'/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'exported':len(rows),'review_frozen_sha256':digest,'private_paths_exported':False}))

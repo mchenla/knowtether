@@ -44,13 +44,28 @@ def _source_rule(state: dict) -> list[dict]:
     claims, sources = state.get("claims"), state.get("sources", [])
     if not isinstance(claims, list) or not isinstance(sources, list):
         return [finding("RELEASE_SOURCE", "claims与sources必须是列表；发布前需登记成品中的主张。", "error")]
-    by_id = {s["id"]: s for s in sources if isinstance(s, dict) and present(s.get("id"))}
+    notes = []
+    for name, records in (("claims", claims), ("sources", sources)):
+        seen = set()
+        for position, record in enumerate(records, 1):
+            if not isinstance(record, dict) or not present(record.get("id")):
+                notes.append(finding("RELEASE_SOURCE", f"{name}第{position}项必须是含非空字符串id的对象。", "error"))
+                continue
+            identifier = record["id"]
+            if identifier in seen:
+                notes.append(finding("RELEASE_SOURCE", name + "含重复id " + _label(identifier) + "，不能唯一对应记录。", "error"))
+            seen.add(identifier)
+            if name == "claims" and not present(record.get("type")):
+                notes.append(finding("RELEASE_SOURCE", _label(identifier) + "缺少主张type。", "error"))
+    # Do not silently discard malformed rows or overwrite duplicate sources.
+    if notes:
+        return notes
+    by_id = {s["id"]: s for s in sources}
     factual = [c for c in claims if isinstance(c, dict) and c.get("type") in FACTUAL]
     publication = state.get("publication") if isinstance(state.get("publication"), dict) else {}
     if not factual and publication.get("external_facts") != "none":
         return [finding("RELEASE_SOURCE", "没有登记任何事实、数据、引文或因果主张。若成品确实不含外部事实，"
                         "由人在publication.external_facts写\"none\"；否则先登记主张与来源。", "error")]
-    notes = []
     for claim in factual:
         name = _label(str(claim.get("id", "?")))
         refs = claim.get("source_ids")
@@ -77,8 +92,10 @@ def _rights_rule(state: dict) -> list[dict]:
         if not isinstance(source, dict):
             continue
         rights = source.get("rights_status")
-        if not present(rights) or rights.strip().lower() in UNKNOWN_RIGHTS:
-            notes.append(finding("RELEASE_RIGHTS", _label(str(source.get("id", "?"))) + "权利状态未知或未填写。", "error"))
+        if (not present(rights) or rights.strip().lower() in UNKNOWN_RIGHTS
+                or rights.strip().lower().startswith("blocked-")
+                or rights.strip().lower() in {"denied", "prohibited"}):
+            notes.append(finding("RELEASE_RIGHTS", _label(str(source.get("id", "?"))) + "权利状态未知、禁止使用或未填写。", "error"))
     return notes
 
 
@@ -94,7 +111,10 @@ def _acceptance_rule(state: dict) -> list[dict]:
 
 def release_gate(root: Path, artifact: str) -> dict:
     """Return a pass/fail verdict. Every listed finding blocks release."""
-    text = _without_code(read_text(safe_path(root, artifact)))
+    raw = read_text(safe_path(root, artifact))
+    if not raw.strip():
+        raise ValueError("The artifact is empty; select a non-empty final text")
+    text = _without_code(raw)
     blocking = []
     state = load_work(root)
     if state is None or state.get("schema_version") != 1:
