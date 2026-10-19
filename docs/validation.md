@@ -10,6 +10,8 @@ Review freeze SHA-256 f9bc4ab650673f9c22e718624ad85ca426a8b289cf1f3c4e33438a0733
 
 Final Windows regression:145 tests,143 passed and2 POSIX-only skips;72 framework documents and239 links pass. The [results/source commit CI](https://github.com/mchenla/knowtether/actions/runs/39274798382) has five successful jobs. A fresh short-path HOME installed0.7.0 from public GitHub, found the Claude components and all three native hooks, and ran all three cached commands without changing trust. Two deep-path attempts failed (Filename too long, then $GIT_DIR too big even with process-local Git longpaths); this Windows limitation remains documented. A clean wheel environment reports 0.7.0, imports site-packages, honestly degrades prepare without the framework, and fails release without human records. [Installation checks](../examples/integration-0.7.0-installation.json)
 
+The final inventory correction uses NUL-delimited Git paths. A post-generation check confirmed 117 exact runtime/specification blobs (55 non-ASCII paths) and all 72 snapshot document digests in both the actual model cache and extracted ZIP. One added regression requires all snapshot documents to appear in the inventory. No writing output or runtime component was changed. [Integrity erratum](../examples/integration-0.7.0-integrity.json)
+
 ## 0.6.0 supplemental: route-fixed source-quality comparison
 
 All 24 frozen outputs completed without failed attempts, using the exact released 4b6b880 runtime. 16 enabled outputs had 3 completed callbacks with exact focused contexts; 8 controls had no active KnowTether hook/Skill. Materials remained byte-identical; no project files added. All six planted issues were handled in every condition. One guidance-only clean chapter made a false source correction and misdirected the follow-up; another guidance-only plan left extension unbounded. No added semantic-quality or real-reader effect is established.
@@ -104,4 +106,3 @@ These are mechanical and protocol checks. They do not establish that the host ha
 
 The source identities used for this adaptation are recorded in [source-map.json](../policy/source-map.json). The author source keeps its own version and authority; a CC BY 4.0 public snapshot is bundled under framework/kpdm.
 
-The final inventory correction uses NUL-delimited Git paths. A post-generation check confirmed117 exact runtime/specification blobs (55 non-ASCII paths) and all72 snapshot document digests in both the actual model cache and extracted ZIP. One added regression requires all snapshot documents to appear in the inventory. No writing output or runtime component was changed. [Integrity erratum](../examples/integration-0.7.0-integrity.json)

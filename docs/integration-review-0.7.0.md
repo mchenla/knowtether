@@ -24,7 +24,7 @@
 
 四个任务的新旧UserPromptSubmit上下文[逐字一致](../examples/integration-0.7.0-context-parity.json)：完整/缺陷汇报6109/6132字符，完整/缺陷章节6033/6056字符（不含SessionStart）。核算内容与规范选段没有因宿主整合扩张。
 
-Windows回归在正常用户权限下144项：142通过、2项POSIX检查跳过。首次默认沙箱运行因系统临时目录的子目录创建/清理权限失败，保留为环境失败；没有通过删除断言消除故障。另行真实执行Git Bash启动器。72份KPDM正文及239处链接完整性核对通过，规范原文未改。候选[五项CI](https://github.com/mchenla/knowtether/actions/runs/39270113865)通过；最终发行另核对最终提交和ZIP。
+冻结候选时的Windows回归在正常用户权限下144项：142通过、2项POSIX检查跳过。首次默认沙箱运行因系统临时目录的子目录创建/清理权限失败，保留为环境失败；没有通过删除断言消除故障。另行真实执行Git Bash启动器。72份KPDM正文及239处链接完整性核对通过，规范原文未改。候选[五项CI](https://github.com/mchenla/knowtether/actions/runs/39270113865)通过；最终发行另核对最终提交和ZIP。
 
 Codex候选经正常`plugin add`装入既有隔离HOME，原生`hooks/list`返回三个事件启用且已信任；未编辑信任散列，日常HOME配置未变。临时登录只链接既有文件，结束移除链接；不复制或公开凭据。本轮16份任务才是原生三事件与模型会话联动的验证，结果另报。
 
