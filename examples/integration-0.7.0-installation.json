@@ -1,0 +1,51 @@
+{
+  "version": "0.7.0",
+  "source_commit_tested": "4fa8b7764366b6634a7783abc85f5d849779bf95",
+  "source_install_attempts": [
+    {
+      "home_profile": "deep-workspace",
+      "result": "failed",
+      "error": "Filename too long during git checkout",
+      "retained": true
+    },
+    {
+      "home_profile": "short-temp",
+      "result": "pass",
+      "public_source": "mchenla/knowtether",
+      "host_hooks_discovered": 3,
+      "cached_commands_passed": 3,
+      "claude_components_found": true,
+      "trust_modified": false,
+      "model_turn": false
+    },
+    {
+      "home_profile": "deep-workspace-with-process-local-git-longpaths",
+      "result": "failed",
+      "error": "$GIT_DIR too big in plugin source staging",
+      "global_git_settings_modified": false,
+      "retained": true
+    }
+  ],
+  "wheel": {
+    "version": "0.7.0",
+    "file": "kpdm_hooks-0.7.0-py3-none-any.whl",
+    "sha256": "e3e879919cb0195590aaa45b87c5199ec5854f34586b1c7b874f6d1ae11b8073",
+    "clean_venv_install": "pass",
+    "site_packages_import": true,
+    "missing_framework_prepare": {
+      "status": "degraded",
+      "exit_code": 2
+    },
+    "no_human_records_release": {
+      "verdict": "fail",
+      "exit_code": 1
+    },
+    "project_files_written": false
+  },
+  "build_note": "Initial no-build-isolation attempt lacked setuptools; standard pip isolated build succeeded using the declared build requirement. Runtime dependency list remains empty.",
+  "limitations": [
+    "Fresh source installation is discovery/command verification, not a trusted model turn;16 writing turns are recorded separately.",
+    "Deep custom Windows HOME paths remain a host/Git limitation.",
+    "Claude CLI manifests and launchers tested, not a logged-in Claude model session."
+  ]
+}

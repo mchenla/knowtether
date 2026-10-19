@@ -60,6 +60,12 @@ POSIX启动脚本为`hooks/run-posix.sh`。0.6.0的Windows插件入口改为固�
 
 参考：[OpenAI 插件打包与市场说明](https://developers.openai.com/plugins/build/plugins)、[Codex Hooks](https://learn.chatgpt.com/docs/hooks)。分发结构参考 [Ponytail](https://github.com/DietrichGebert/ponytail)；知据的规则、脚本和图标为本项目实现。
 
+## Windows 长路径
+
+0.7.0公开源码安装验证中，较短的隔离HOME安装成功，双宿主文件、三个Hook发现及三个缓存命令均通过。位于深层工作区的自定义`CODEX_HOME`则在Codex内部Git暂存目录报`Filename too long`；仅对进程启用`core.longpaths`后，另一阶段仍报`$GIT_DIR too big`。两次失败保留，不宣称所有Windows路径都能安装。
+
+遇到上述错误时使用较短的自定义HOME重试，保留原配置和登录；不要覆盖或删除现有HOME来解决路径问题。默认安装命令不修改全局Git配置或Hook信任。源码ZIP/插件ZIP可下载，但本次没有证明它们能绕过宿主所有长路径限制。[验证范围](integration-review-0.7.0.md)
+
 ## 随包规范
 
 从 0.3.0 起，插件同时包含 `framework/kpdm/` 的 CC BY 4.0 规范快照；代码与适配 Skill 继续为 MIT。Skill 按需链接到快速入门、模板和相关规范，普通短任务保持轻量。框架与软件版本分别管理，见 [KPDM](../framework/kpdm/README.md) 和 [许可范围](../LICENSING.md)。0.4.0 增加最小原文阅读包；三个入口命令与提示型 Stop 边界保留。
