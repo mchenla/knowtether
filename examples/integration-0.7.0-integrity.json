@@ -1,0 +1,14 @@
+{
+  "runtime_commit": "0f3ebce56132cd2e1b72f22b3f84d76206d5bd7c",
+  "check_timing": "Post-generation full Unicode-aware byte verification; no model outputs or runtime files changed.",
+  "method": "git ls-tree -r -z --name-only, UTF-8 paths, exact git-show bytes plus all72 snapshot document digests",
+  "runtime_files_checked_per_bundle": 117,
+  "non_ascii_paths_included": 55,
+  "snapshot_documents_checked_per_bundle": 72,
+  "bundles_checked": [
+    "actual_model_installed_bundle",
+    "extracted_plugin_zip"
+  ],
+  "all_match": true,
+  "erratum": "Original runner used newline/text ls-tree output; Git quoted Chinese names so prefix filtering omitted them. Future runners fixed. Actual benchmark bundle and ZIP pass the complete post-check."
+}

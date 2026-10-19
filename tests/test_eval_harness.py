@@ -1,4 +1,5 @@
 import importlib
+import json
 from pathlib import Path
 import sys
 import unittest
@@ -14,6 +15,14 @@ finally:
 
 
 class EvaluationHarnessTests(unittest.TestCase):
+    def test_runtime_inventory_includes_every_snapshot_document_with_unicode_names(self):
+        repo = Path(__file__).resolve().parents[1]
+        names = integration.runtime_paths(repo, 'HEAD')
+        snapshot = json.loads((repo / 'framework/kpdm/snapshot.json').read_text(encoding='utf-8'))
+        required = {'framework/kpdm/' + row['path'] for row in snapshot['documents']}
+        self.assertTrue(any(any(ord(c) > 127 for c in name) for name in required))
+        self.assertTrue(required.issubset(set(names)), sorted(required - set(names)))
+
     def test_condition_switch_changes_only_target_flag(self):
         text = '[other]\nenabled = true\n[plugins."knowtether@knowtether"]\nenabled = true\n\n[windows]\nsandbox = "elevated"\n'
         result = paired.switch_config(text, False)

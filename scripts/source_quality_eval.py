@@ -13,6 +13,7 @@ import subprocess
 
 from live_codex_eval import run_case
 from paired_codex_eval import switch_config
+from integration_eval import runtime_paths
 
 RUNTIME='4b6b8809392ae44c61bdfa44e7e53dff5690ed0c'
 
@@ -39,9 +40,7 @@ def main():
     if home==(Path.home()/'.codex').resolve() or base.exists()!=a.resume:p.error('Use an isolated trusted home and fresh output, or explicit --resume')
     repo=Path(__file__).resolve().parents[1]
     # Runtime must match the actual released Git blobs, not this working tree.
-    paths=subprocess.check_output(['git','ls-tree','-r','--name-only',RUNTIME],cwd=repo,text=True).splitlines()
-    runtime=[n for n in paths if n.startswith(('kpdm_hooks/','hooks/','policy/','framework/','skills/')) or n=='.codex-plugin/plugin.json']
-    for name in runtime:assert (bundle/name).read_bytes()==subprocess.check_output(['git','show',RUNTIME+':'+name],cwd=repo),name
+    for name in runtime_paths(repo,RUNTIME):assert (bundle/name).read_bytes()==subprocess.check_output(['git','show',RUNTIME+':'+name],cwd=repo),name
     raw=(repo/'examples/source-quality-cases.json').read_bytes();tasks=json.loads(raw);plan=schedule(tasks)
     protocol={'runtime_commit':RUNTIME,'version':'0.6.0','tasks_sha256':hashlib.sha256(raw).hexdigest(),
               'model':'gpt-6.1-sol','effort':'medium','web_search':'disabled','seed':610018,

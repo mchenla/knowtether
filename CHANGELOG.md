@@ -7,6 +7,7 @@
 - Reject malformed claim/source rows, duplicate IDs and missing claim types rather than silently ignoring them. Block denied/prohibited/blocked rights records; reject empty artifacts as input errors. The explicit gate still checks records/text only, never grants human verification, acceptance or publication approval.
 - Complete all 16 preregistered automatic on/off drafts without retry: both conditions handle the planted source faults; no extra semantic-quality advantage, and enabled chapter retest limits regress. Median paired time falls 2% to 11% in this sample while damaged-chapter input rises about 8%. Publish every draft, per-criterion judgment and resource metric; do not claim a version-causal speedup. Automatic guidance remains unchanged.
 - Validate two Claude manifests and execute all three launchers under Windows cmd and Git Bash. Claude model-session/command/agent end-to-end testing remains unavailable without a logged-in CLI.
+- Fix evaluation inventories omitting Git-quoted Unicode paths; post-check all117 runtime/spec files and72 snapshot digests in the actual benchmark cache and extracted ZIP, without changing or rerunning the16 drafts. Document deep Windows HOME installation failures; fresh short-path source and clean wheel installs pass.
 
 ## 0.6.0 - 2026-10-18
 

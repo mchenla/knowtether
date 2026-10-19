@@ -15,6 +15,13 @@ from live_codex_eval import run_case
 from paired_codex_eval import switch_config
 
 
+def runtime_paths(repo, ref):
+    # Git quotes non-ASCII names without -z; quoted paths evade prefix filters.
+    paths = subprocess.check_output(['git', 'ls-tree', '-r', '-z', '--name-only', ref], cwd=repo).decode('utf-8').split('\0')
+    return [name for name in paths if name.startswith(('kpdm_hooks/', 'hooks/', 'policy/', 'framework/', 'skills/', 'claude/'))
+            or name in ('.codex-plugin/plugin.json', '.claude-plugin/plugin.json')]
+
+
 def schedule(tasks):
     rng = random.Random(700019)
     blocks = []
@@ -46,10 +53,8 @@ def main():
         parser.error('Use an isolated trusted HOME and fresh output, or explicit --resume')
     repo = Path(__file__).resolve().parents[1]
     runtime = subprocess.check_output(['git', 'rev-parse', args.runtime], cwd=repo, text=True).strip()
-    paths = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', runtime], cwd=repo, text=True).splitlines()
-    for name in paths:
-        if name.startswith(('kpdm_hooks/', 'hooks/', 'policy/', 'framework/', 'skills/', 'claude/')) or name in ('.codex-plugin/plugin.json', '.claude-plugin/plugin.json'):
-            assert (bundle / name).read_bytes() == subprocess.check_output(['git', 'show', runtime + ':' + name], cwd=repo), name
+    for name in runtime_paths(repo, runtime):
+        assert (bundle / name).read_bytes() == subprocess.check_output(['git', 'show', runtime + ':' + name], cwd=repo), name
     raw = (repo / 'examples/source-quality-cases.json').read_bytes()
     tasks = json.loads(raw)
     protocol = {
